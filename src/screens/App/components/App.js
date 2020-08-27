@@ -24,15 +24,13 @@ const navItems = [HOME, ABOUT, SKILLS, WORK, CONTACT];
 function App() {
   return (
     <div className="App">
-       
         <Router>  
-        <NavBar navItems={navItems} />
-        <Switch>
-          {routes.map((route, i) => (
-            <RouteWithSubRoutes key={i} {...route} />
-          ))}
-        </Switch>
-       
+          <NavBar navItems={navItems} />
+            <Switch>
+              {routes.map((route, i) => (
+                <RouteWithSubRoutes key={i} {...route} />
+              ))}
+            </Switch>
         </Router>
       </div>
   );

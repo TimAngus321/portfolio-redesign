@@ -72,12 +72,11 @@ Navbar Styling
 }
 
 
-nav.navBar > h1.myName {
+h1.myName {
   font-size: 2rem;
   line-height: 1;
   color: $base-hover-color;
-  padding-top: 50px;
-  margin: 0;
+  margin-top: 50px;
 }
 
 ul.menu > li:hover {
@@ -90,7 +89,7 @@ ul.menu > li:hover {
   flex-direction: column;
   list-style: none;
   padding-inline-start: 0;
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 2px;
   width: 100%;
   text-align: center;
@@ -234,6 +233,7 @@ ul.menu > li:hover {
   height: 100%;
   justify-content: center;
   align-items: center;
+  font-size: 17px;
 }
 
 .social-media > li > a:hover {

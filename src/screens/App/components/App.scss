@@ -16,6 +16,9 @@ html {
   // min-width: 1140px;
 }
 
+a {
+  text-decoration: none;
+}
 // #root > div {
 //   background-color: $base-background-color;
 //   height: 500vh;
@@ -44,6 +47,7 @@ Navbar Styling
   display: flex;
   color: $base-font-color;
   top: 0;
+  left: 0;
   height: 100%;
   width: 100px;
   flex-direction: column;
@@ -99,41 +103,71 @@ ul.menu > li:hover {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  height: 70px;
-  fill: $base-hover-color;
   align-items: center;
+  fill: $base-hover-color;
+  
 }
 
+.menu > li:hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  fill: $base-hover-color;
+  text-decoration: none;
+}
 
-.menu > li.home:hover::after {
+.menu > a > li.home:hover::after {
   visibility: visible;
   content: 'HOME';
   font-size: 11px;
+  display: flex;
+  justify-content: center;
+  color: $base-hover-color;
+  text-decoration: none;
+  
 }
 
-.menu > li.about:hover::after {
+.menu > a > li.about:hover::after {
   visibility: visible;
   content: 'ABOUT';
   font-size: 11px;
+  display: flex;
+  justify-content: center;
+  color: $base-hover-color;
+  text-decoration: none;
 }
 
-.menu > li.tech:hover::after {
+.menu > a > li.skills:hover::after {
   visibility: visible;
   content: 'SKILLS';
   font-size: 11px;
+  display: flex;
+  justify-content: center;
+  color: $base-hover-color;
+  text-decoration: none;
 }
 
-.menu > li.work:hover::after {
+.menu > a > li.work:hover::after {
   visibility: visible;
   content: 'WORK';
   font-size: 11px;
+  display: flex;
+  justify-content: center;
+  color: $base-hover-color;
+  text-decoration: none;
 }
 
-.menu > li.contact:hover::after {
+.menu > a > li.contact:hover::after {
   visibility: visible;
   content: 'CONTACT';
   font-size: 11px;
+  display: flex;
+  justify-content: center;
+  color: $base-hover-color;
   animation: fadeIn 1s 1;
+  text-decoration: none;
 
   @keyframes fadeIn {
     from { opacity: 0;}
@@ -146,6 +180,10 @@ ul.menu > li:hover {
 }
 
 .about:hover .about-icon {
+  display: none;
+}
+
+.skills:hover .tech-icon {
   display: none;
 }
 
@@ -210,6 +248,34 @@ ul.menu > li:hover {
     color: $base-hover-color;
     cursor: pointer;
   }
+}
+
+.navBar > a {
+  color: $base-hover-color;
+  text-decoration: none;
+}
+
+.navBar > li > a {
+  color: $base-hover-color;
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.menu > a > li {
+  color: white;
+  text-decoration: none;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.menu > a:active {
+  text-decoration: none;
 }
 
  ion-icon {

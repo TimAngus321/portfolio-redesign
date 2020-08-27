@@ -24,7 +24,7 @@ const navItems = [HOME, ABOUT, SKILLS, WORK, CONTACT];
 function App() {
   return (
     <div className="App">
-        <h1>App Component</h1>
+       
         <Router>  
         <NavBar navItems={navItems} />
         <Switch>

@@ -287,9 +287,10 @@ Photo Quote Component
 .photo-quote-component {
   display: flex;
   justify-content: flex-start;
-  // background-color: $base-background-grey;
+  margin: 0 40px 0 100px;
+  position: fixed;
+  width: 100%;
   height: 100vh;
-  padding: 0 40px 0 100px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -301,18 +302,29 @@ Photo Quote Component
     position: fixed;
     width: 100%;
     height: 100%;
+    margin: 0 40px 0 70px;
   }
+}
+
+.tim-logo > h1 {
+  margin: 0;
+  padding: 0 50px 0 0;
 }
 
 .tim-logo {
   display: flex;
   justify-content: flex-end;
-  padding-right: 100px;
   align-items: center;
   line-height: 1;
   color: $base-hover-color;
-  font-size: 30rem;
+  font-size: 400px;
   transform: rotate(-20deg);
+}
+
+@media only screen and (max-width: 1200px) {
+  .tim-logo {
+    font-size: 250px;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -326,7 +338,6 @@ Photo Quote Component
   justify-content: space-around;
   width: 100%;
   align-items: center;
-  padding-left: 40px
 }
 
 @media only screen and (max-width: 900px) {
@@ -392,6 +403,7 @@ div.contact-btn {
   margin-top: 25px;
   width: 120px;
   text-align: center;
+  font-weight: 500;
 }
 
 div.contact-btn:hover {
@@ -403,7 +415,6 @@ div.contact-btn:hover {
 .all-headings-btn {
   display: flex;
   justify-content: center;
-  padding-left: 40px;
   flex-direction: column;
 }
 

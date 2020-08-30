@@ -461,6 +461,20 @@ Mobile Nav
    outline: none;
  }
  
+/******************************************************************* 
+Contact
+********************************************************************/
+
+.contact-component {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 40px 0 40px 140px;
+}
+
+.contact-title {
+  color: $base-hover-color;
+}
 
 /******************************************************************* 
 About Me

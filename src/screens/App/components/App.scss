@@ -468,12 +468,35 @@ Contact
 .contact-container {
   display: flex;
   justify-content: flex-start;
-  width: 100%;
+  width: 50%;
   padding: 40px 0 40px 140px;
+  flex-direction: column;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  background: #2b2b2b;
+}
+
+.contact-form > input {
+  background: #2b2b2b;
+  border-style: none;
+  color: #8d8d8d;
+  padding: 20px 0;
+}
+
+.contact-form > textarea {
+  background: #2b2b2b;
+  border-style: none;
+  color: #8d8d8d;
+  padding: 20px 0;
 }
 
 .contact-title {
   color: $base-hover-color;
+  display: flex;
+  justify-content: center;
 }
 
 /******************************************************************* 

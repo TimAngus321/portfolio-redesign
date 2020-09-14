@@ -22,11 +22,15 @@ export default function ContactUs() {
     <div className="contact-container">
     <h1 className="contact-title">Contact Me</h1>
       <form className="contact-form" onSubmit={sendEmail}>
-        <input type="hidden" name="contact_number"/>
-        <input type="text" name="name" placeholder="Name" />
-        <input type="email" name="email" placeholder="Email"/>
-        <input type="subject" name="subject" placeholder="Subject"/>
-        <textarea name="message" placeholder="Message"/>
+          <input type="hidden" name="contact_number"/>
+          <ul className="contact-form-ul">
+          <div className="name-and-email">
+            <li className="name"><input className="name-input" type="text" name="name" placeholder="Name" /></li>
+            <li className="email"><input className="email-input" type="email" name="email" placeholder="Email"/></li> 
+          </div>
+          <li className="subject-li"><input type="subject" name="subject" placeholder="Subject"/></li> 
+          <li className="message-li"><textarea name="message" placeholder="Message"/></li> 
+        </ul>
         <input className="contact-btn" type="submit" value="Send" />
       </form>
     </div>

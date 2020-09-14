@@ -465,6 +465,12 @@ Mobile Nav
 Contact
 ********************************************************************/
 
+.contact-title {
+  color: $base-hover-color;
+  display: flex;
+  justify-content: center;
+}
+
 .contact-container {
   display: flex;
   justify-content: flex-start;
@@ -476,28 +482,52 @@ Contact
 .contact-form {
   display: flex;
   flex-direction: column;
-  background: #2b2b2b;
 }
 
-.contact-form > input {
-  background: #2b2b2b;
-  border-style: none;
-  color: #8d8d8d;
-  padding: 20px 0;
-}
-
-.contact-form > textarea {
+.contact-form > li.input {
   background: #2b2b2b;
   border-style: none;
   color: #8d8d8d;
   padding: 20px 0;
 }
 
-.contact-title {
-  color: $base-hover-color;
+.contact-form > li {
+  background: #2b2b2b;
+  border-style: none;
+  color: #8d8d8d;
+  padding: 20px 0;
+}
+
+.contact-form-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.name-email {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  
 }
+
+.name-email > input {
+  background: #2b2b2b;
+  border-style: none;
+  color: #8d8d8d;
+  padding: 20px 20px;
+  width: 100%;
+}
+
+.name-and-email {
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+  height: 50px;
+
+}
+
+
 
 /******************************************************************* 
 About Me

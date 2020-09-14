@@ -61,14 +61,14 @@ class QuoteLoop extends React.PureComponent {
                 <Section>
                     <Quotes>
                     <span className="pre-loop-quote">                    
-                    <p>"Hi,</p>
-                    <p>I'm Tim,</p>
+                    <p>Hi</p>
+                    <p>I'm Tim</p>
                     </span>
                         <TextLoop className="looping-quote" mask={true} fade={false}>
-                            <span>front-end developer"</span>
-                            <span>backend developer"</span>
-                            <span>full-stack developer"</span>
-                            <span>music lover"</span>
+                            <span>front-end developer</span>
+                            <span>backend developer</span>
+                            <span>full-stack developer</span>
+                            <span>music lover</span>
                         </TextLoop>
                     </Quotes>
                 </Section>

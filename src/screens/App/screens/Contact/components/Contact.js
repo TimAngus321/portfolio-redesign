@@ -20,19 +20,39 @@ export default function ContactUs() {
 
   return (
     <div className="contact-container">
-    <h1 className="contact-title">Contact Me</h1>
-      <form className="contact-form" onSubmit={sendEmail}>
-          <input type="hidden" name="contact_number"/>
-          <ul className="contact-form-ul">
-          <div className="name-and-email">
-            <li className="name"><input className="name-input" type="text" name="name" placeholder="Name" /></li>
-            <li className="email"><input className="email-input" type="email" name="email" placeholder="Email"/></li> 
+      <div className="contact-component">
+      <div className="form-item">
+        <h1 className="contact-title">Contact Me</h1>
+          <p className="contact-blurb">
+          Please feel free to contact me 
+          regarding Ruby on Rails, React.js,
+          javascript and shopify positions you 
+          think I might be suitable for. I am most 
+          interested in full time positions 
+          in Berlin however I am open to
+          freelance work as well. Please contact 
+          me with this form and I'll get back to you
+          as soon as I can. 
+          </p>
+        <form className="contact-form" onSubmit={sendEmail}>
+            <input type="hidden" name="contact_number"/>
+            <ul className="contact-form-ul">
+            <div className="name-and-email">
+              <li className="name"><input className="name-input" type="text" name="name" placeholder="Name" /></li>
+              <li className="email"><input className="email-input" type="email" name="email" placeholder="Email"/></li> 
+            </div>
+            <li className="subject"><input className="subject-input" type="subject" name="subject" placeholder="Subject"/></li> 
+            <li className="message"><textarea className="message-input" name="message" placeholder="Message"/></li> 
+          </ul>
+          <div className="btn-container">
+            <input className="contact-btn" type="submit" value="Send" />
           </div>
-          <li className="subject-li"><input type="subject" name="subject" placeholder="Subject"/></li> 
-          <li className="message-li"><textarea name="message" placeholder="Message"/></li> 
-        </ul>
-        <input className="contact-btn" type="submit" value="Send" />
-      </form>
+        </form>
+      </div>
+      <div className="map">
+
+      </div>
+      </div>
     </div>
   );
 }

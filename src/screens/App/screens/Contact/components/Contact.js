@@ -11,11 +11,13 @@ export default function ContactUs() {
     e.preventDefault();
 
     emailjs.sendForm(service_id, template_id, e.target, user_id)
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+    .then((result) => {
+        console.log('Successfully Sent', result.text);
+        alert('Message Sent!')
+    }, (error) => {
+        console.log('Failed to send', error.text);
+        alert('Failed to send 😕')
+    });
   }
 
   return (
@@ -38,8 +40,20 @@ export default function ContactUs() {
             <input type="hidden" name="contact_number"/>
             <ul className="contact-form-ul">
             <div className="name-and-email">
-              <li className="name"><input className="name-input" type="text" name="name" placeholder="Name" /></li>
-              <li className="email"><input className="email-input" type="email" name="email" placeholder="Email"/></li> 
+              <li className="name">
+                <input 
+                className="name-input" 
+                type="text" 
+                name="name" 
+                placeholder="Name" />
+              </li>
+              <li className="email">
+                <input 
+                className="email-input" 
+                type="email" 
+                name="email" 
+                placeholder="Email"/>
+              </li> 
             </div>
             <li className="subject"><input className="subject-input" type="subject" name="subject" placeholder="Subject"/></li> 
             <li className="message"><textarea className="message-input" name="message" placeholder="Message"/></li> 

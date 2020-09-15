@@ -7,8 +7,9 @@ export const StyledMenu = styled.nav`
   background: ${({ theme }) => theme.primaryLight};
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   height: 100vh;
+  width: 100%;
   background-color: black;
-  text-align: left;
+  text-align: center;
   padding: 2rem;
   position: fixed;
   overflow: hidden;
@@ -20,9 +21,9 @@ export const StyledMenu = styled.nav`
       width: 100%;
     }
   a {
-    font-size: 1rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    padding: 2rem 0;
+    padding: 3rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
     ${'' /* color: ${({ theme }) => theme.primaryDark}; */}

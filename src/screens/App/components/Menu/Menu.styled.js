@@ -21,9 +21,10 @@ export const StyledMenu = styled.nav`
       width: 100%;
     }
   a {
+    position: relative;
     font-size: 2rem;
     text-transform: uppercase;
-    padding: 3rem 0;
+    padding: 20px 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
     ${'' /* color: ${({ theme }) => theme.primaryDark}; */}

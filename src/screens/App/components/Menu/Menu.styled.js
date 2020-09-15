@@ -8,9 +8,9 @@ export const StyledMenu = styled.nav`
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   height: 100vh;
   width: 100%;
+  padding-top: 20px;
   background-color: black;
   text-align: center;
-  padding: 2rem;
   position: fixed;
   overflow: hidden;
   top: 0;

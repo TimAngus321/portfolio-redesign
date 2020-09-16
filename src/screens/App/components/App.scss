@@ -19,25 +19,6 @@ html {
 a {
   text-decoration: none;
 }
-// #root > div {
-//   background-color: $base-background-color;
-//   height: 500vh;
-//   overflow: hidden;
-// }
-
-/******************************************************************* 
-Header Styling
-********************************************************************/
-
-.white-space {
-  padding-top: 40px;
-  height: 100px;
-  width: 100%;
-  // background:
-  // linear-gradient(to top, #2B2B2B 1%, transparent 15%) bottom  no-repeat;
-}
-
-
 
 /******************************************************************* 
 Navbar Styling
@@ -636,109 +617,6 @@ li.message {
 About Me
 ********************************************************************/
 
-.about-me {
-  display: flex;
-  color: white;
-  padding: 80px 0;
-  h3 {
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .about-me {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-.why-container {
-  width: calc(100% / 3);
-  padding: 0 20px 0 40px;
-  border-right: solid 2px;
-  border-image:
-  linear-gradient(
-      to bottom, 
-      orange, 
-      rgba(0, 0, 0, 0)
-    ) 1 100%; 
-}
-
-@media only screen and (max-width: 900px) {
-  .why-container {
-    z-index: 10;
-    align-self: center;
-    padding: 20px;
-    width: 80%;
-    border: none;
-    border-image: none;
-  }
-}
-
-.who-container {
-  width: calc(100% / 3);
-  padding: 0 20px 0 20px;
-}
-
-@media only screen and (max-width: 900px) {
-  .who-container {
-    align-self: center;
-    padding: 20px;
-    width: 80%;
-    border-top: solid 1px orange;
-    border-bottom: solid 1px orange;
-  }
-}
-
-.what-container {
-  width: calc(100% / 3);
-  padding: 0 40px 0 20px;
-  border-left: solid 2px;
-  border-image:
-  linear-gradient(
-      to bottom, 
-      orange, 
-      rgba(0, 0, 0, 0)
-    ) 1 100%; 
-}
-
-@media only screen and (max-width: 900px) {
-  .what-container {
-    width: 80%;
-    align-self: center;
-    padding: 20px;
-    border: none;
-    border-image: none;
-    }
-  }
-
-/******************************************************************* 
-Footer
-********************************************************************/
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  color: white; 
-  padding: 60px 40px;
-}
-
-.built-using {
-  display: flex;
-  flex-direction: row;
-}
-
-.tech-stack > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.packages > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
 
 /******************************************************************* 

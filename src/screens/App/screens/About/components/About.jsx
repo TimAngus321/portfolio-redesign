@@ -40,22 +40,27 @@ class About extends Component {
   render() {
     const { showPersonal, showProfessional, showWhyCode } = this.state;
     return (
-      <div>
-      <div>
-          <button onClick={() => this.hideComponent("showPersonal")}>
-            Personal Info
-          </button>
-          <button onClick={() => this.hideComponent("showProfessional")}>
-            Professional Info
-          </button>
-          <button onClick={() => this.hideComponent("showWhyCode")}>
-            Why I code
-          </button>
+      <div className="about-me-container">
+      <h1 className="about-title">About Me</h1>
+      <div className="about-component">
+      <div className="about-btn-info-container">
+            <div className="about-btn" onClick={() => this.hideComponent("showWhyCode")}>
+              Why Code?
+            </div>
+            <div className="about-btn" onClick={() => this.hideComponent("showProfessional")}>
+              Professional
+            </div>
+            <div className="about-btn" onClick={() => this.hideComponent("showPersonal")}>
+              Personal
+            </div>
+            
+            
         </div>
         <div className="about-me-information-container">
-        { showPersonal && <Personal /> }
-        { showProfessional && <Professional /> }
-        { showWhyCode && <WhyCode /> }
+          { showWhyCode && <WhyCode /> }
+          { showProfessional && <Professional /> }
+          { showPersonal && <Personal /> }
+        </div>
       </div>
   </div>
     )

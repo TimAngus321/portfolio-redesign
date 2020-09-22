@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon, fab } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faCog, faEnvelope, faWrench  } from '@fortawesome/free-solid-svg-icons';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import githubFilled from '@iconify/icons-codicon/github-inverted';
 import linkedinRect from '@iconify/icons-brandico/linkedin-rect';
 import { routeConstants } from 'shared/constants';
@@ -15,7 +15,6 @@ const {
     CONTACT,
   } = routeConstants;
 
-const navItems = [HOME, ABOUT, SKILLS, WORK, CONTACT];
 
 
 function NavBar() {
@@ -54,12 +53,12 @@ function NavBar() {
         }
         <ul className="social-media">
                         <li className="github">
-                            <a href="https://github.com/TimAngus321" target="_blank">
+                            <a href="https://github.com/TimAngus321" target="_blank" rel="noopener noreferrer">
                                 <Icon icon={githubFilled} className="github-icon"/>  
                             </a> 
                         </li>
                         <li className="linkedin">
-                            <a href="https://www.linkedin.com/in/timothy-angus-b94969113/" target="_blank">
+                            <a href="https://www.linkedin.com/in/timothy-angus-b94969113/" target="_blank" rel="noopener noreferrer">
                                 <Icon icon={linkedinRect} className="linkedIn-icon" />
                             </a>
                         </li>

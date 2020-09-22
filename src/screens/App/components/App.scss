@@ -621,20 +621,26 @@ About Me
   display: flex;
   height: 100px;
 }
+
+@media only screen and (max-width: 900px) {
+  .about-me-container {
+    justify-content: center;
+  }
+}
 .about-title {
   color: $base-hover-color;
   display: flex;
   width: 100%;
-  justify-content: flex-end;
-  margin-right: 140px;
-  margin-top: 100px;
+  justify-content: center;
+  margin: 60px 0 0 100px;
   align-items: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 900px) {
   .about-title {
    justify-content: center;
-   margin-right: 0;
+   margin: 120px 0 0 0;
   }
 }
 
@@ -662,6 +668,7 @@ About Me
   width: 20%;
   height: 100%;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 @media only screen and (max-width: 900px) {
@@ -670,7 +677,7 @@ About Me
     flex-direction: column;
     justify-content: center;
     align-self: center;
-    margin: 150px 20px 100px 20px;
+    margin: 180px 20px 100px 20px;
     width: unset;
     height: unset;
   }
@@ -685,11 +692,16 @@ About Me
   text-decoration: none;
   padding: 10px 18px;
   border: 1px solid $base-hover-color;
-  margin-top: 25px;
   width: 120px;
   text-align: center;
   font-weight: 500;
   background-color: transparent;
+}
+
+@media only screen and (max-width: 900px) {
+  .about-btn {
+    margin-top: 25px;
+  }
 }
 
 .about-btn:hover {
@@ -712,10 +724,11 @@ About Me
   .about-me-information-container {
     width: unset;
     height: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-self: center;
     color: white;
-    padding: 0 20px;
+    padding: 0 40px;
+    text-align: left;
   }
 }
 

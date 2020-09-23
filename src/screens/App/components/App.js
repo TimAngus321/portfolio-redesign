@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as HashRouter,
   Switch,
   Route,
   Link
@@ -14,6 +14,7 @@ import Hamburger from './Hamburger/index.js';
 import { useState, useRef } from 'react';
 import Menu from './Menu/index.js';
 import { useOnClickOutside } from './hooks.js';
+// import { history } from './history.js'; 
 
 
 const {
@@ -34,7 +35,7 @@ const node = useRef();
 useOnClickOutside(node, () => setOpen(false)); {
   return (
     <div className="App">
-        <Router>  
+        <HashRouter>  
           <NavBar navItems={navItems} />
           <div ref={node} className="mobile-nav">
             <Hamburger open={open} setOpen={setOpen} />
@@ -45,7 +46,7 @@ useOnClickOutside(node, () => setOpen(false)); {
                 <RouteWithSubRoutes key={i} {...route} />
               ))}
             </Switch>
-        </Router>
+        </HashRouter>
       </div>
     );
   }

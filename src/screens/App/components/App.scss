@@ -684,10 +684,12 @@ About Me
   .about-btn-info-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-self: center;
     width: unset;
     margin-bottom: 40px;
+    height: 250px;
+    position: relative;
   }
 }
 

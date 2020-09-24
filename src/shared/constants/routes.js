@@ -1,7 +1,7 @@
 export default Object.freeze({
     HOME: {
         name: 'Home',
-        route:'/'
+        route:'/home'
     },
     ABOUT: {
         name: 'About',
@@ -10,12 +10,6 @@ export default Object.freeze({
     SKILLS: {
         name: 'Skills',
         route: '/skills',
-        subroutes: {
-            SETTINGS: {
-                name: 'Settings',
-                route: 'me/settings'
-            }
-        }
     },
     WORK: {
         name: 'Work',

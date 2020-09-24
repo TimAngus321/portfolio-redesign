@@ -7,9 +7,12 @@ import { routeConstants } from 'shared/constants';
 
     return (
     <div className="skills-container">
-    <h2>Skills</h2>
-    <p>hi is this working?
-    </p>
+    <h2 className="center-circle">Tech Stack</h2>
+    <h2 className="front-end-circle">Frontend</h2>
+    <h2 className="back-end-circle">Backend</h2>
+    <h2 className="ecommerce-circle">E-commerce</h2>
+    <h2 className="UI-UX-circle">UI/UX</h2>
+    <h2 className="dev-skills">Dev Skills</h2>
     </div>
     )
   }

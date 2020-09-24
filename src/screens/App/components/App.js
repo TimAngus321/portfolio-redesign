@@ -3,6 +3,7 @@ import {
   HashRouter,
   Switch,
   Route,
+  Redirect,
   Link
 } from "react-router-dom";
 import { RouteWithSubRoutes } from 'shared/components';
@@ -45,6 +46,15 @@ useOnClickOutside(node, () => setOpen(false)); {
               {routes.map((route, i) => (
                 <RouteWithSubRoutes key={i} {...route} />
               ))}
+              <Route
+                exact
+                path="/"
+                render={() => {
+                    return (
+                      <Redirect to="/home" />
+                    )
+                }}
+              />
             </Switch>
         </HashRouter>
       </div>

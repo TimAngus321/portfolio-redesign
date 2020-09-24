@@ -41,6 +41,7 @@ Navbar Styling
   position: fixed;
   min-height: 500px;
   background-color: #191919;
+  z-index: 100;
 }
 
 // @media only screen and (max-width: 900px) {
@@ -625,8 +626,9 @@ About Me
 
 .about-me-container {
   display: flex;
-  // height: 100px;
   flex-direction: column;
+  position: fixed;
+  width: 100%;
 }
 
 @media only screen and (max-width: 900px) {
@@ -643,7 +645,7 @@ About Me
   display: flex;
   width: 100%;
   justify-content: center;
-  margin: 60px 0 0 100px;
+  margin: 60px 0 0 0;
   align-items: center;
   text-align: center;
 }

@@ -777,17 +777,18 @@ Skills
 }
 
 .all-skills {
-  position: absolute;
-  animation: fallDown 2s infinite linear;
+  // position: absolute;
+  // animation: fallDown 2s infinite linear;
   content: "Hello";
   color: white;
-  height: 100px;
+  height: 100%;
   width: 100%;
+  display: flex;
 
-  @keyframes fallDown {
-    from {top: 0px}
-    to {top: 100%}
-  }
+  // @keyframes fallDown {
+  //   from {top: 0px}
+  //   to {top: 100%}
+  // }
 }
 
 

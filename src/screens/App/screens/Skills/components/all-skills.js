@@ -1,67 +1,65 @@
-import React from 'react';
-import {useTransition, animated} from 'react-spring'
-import {Transition} from 'react-spring/renderprops'
-
-
+import {useState, useEffect, Fragment} from 'react';
+import {useTransition, animated, loop} from 'react-spring';
+import {Transition} from 'react-spring/renderprops';
+import * as React from 'react';
 
 const AllSkills = () => {
-  // const items = [
-  //   {key: 1, item: "one"},
-  //   {key: 2, item: "two"},
-  //   {key: 3, item: "three"}
-  // ]
 
-const items = ["React.js", "Javascript", "Ruby", "Ruby on Rails", "PostgreSQL", "Redux", "HTML", "SCSS", "CSS", "SQL", "Git", "Github", "Heroku ", "Liquid", "Shopify", "APIs", "Figma", "Postman", "Node.js", "AWS Lambda", "Wordpress",
-"German (B1)", "Presenting", "Teaching", "Managing", "Research", "Copywriting", "Musician" ]  
+const [items] = useState([
+   { key: 1, skill: "React.js" },
+   { key: 2, skill: "javascript" },
+   { key: 3, skill: "Ruby" },
+   { key: 4, skill: "Rails" },
+   { key: 5, skill: "PostgreSQL" },
+   { key: 6, skill: "Redux" },
+   { key: 7, skill: "HTML" },
+   { key: 8, skill: "SCSS" },
+   { key: 9, skill: "CSS" },
+   { key: 10, skill: "SQL" },
+   { key: 11, skill: "Git" },
+   { key: 12, skill: "Github" },
+   { key: 13, skill: "Heroku" },
+   { key: 14, skill: "Liquid" },
+   { key: 15, skill: "Shopify" },
+   { key: 16, skill: "APIs" },
+   { key: 17, skill: "Figma" },
+   { key: 18, skill: "Postman" },
+   { key: 19, skill: "InVision" },
+   { key: 20, skill: "Node.js" },
+   { key: 21, skill: "AWS" },
+   { key: 22, skill: "Lambda" },
+   { key: 23, skill: "Wordpress" },
+   { key: 24, skill: "German (B1)" },
+   { key: 25, skill: "Presenting" },
+   { key: 26, skill: "Teaching" },
+   { key: 27, skill: "Managing" },
+   { key: 28, skill: "Research" },
+   { key: 29, skill: "Copywriting" },
+   { key: 30, skill: "Musician" }
+     ]);
 
-// const items = [
-//    { item: "React.js" },
-//    { item: "javascript" },
-//    { item: "Ruby" },
-//    { item: "Rails" },
-//    { item: "PostgreSQL" },
-//    { item: "Redux" },
-//    { item: "HTML" },
-//    { item: "SCSS" },
-//    { item: "CSS" },
-//    { item: "SQL" },
-//    { item: "Git" },
-//    { item: "Github" },
-//    { item: "Heroku" },
-//    { item: "Liquid" },
-//    { item: "Shopify" },
-//    { item: "APIs" },
-//    { item: "Figma" },
-//    { item: "Postman" },
-//    { item: "InVision" },
-//    { item: "Node.js" },
-//    { item: "AWS" },
-//    { item: "Lambda" },
-//    { item: "Wordpress" },
-//    { item: "German (B1)" },
-//    { item: "Presenting" },
-//    { item: "Teaching" },
-//    { item: "Managing" },
-//    { item: "Research" },
-//    { item: "Copywriting" },
-//    { item: "Musician" }
-//      ];
-  // const transitions = useTransition(items, item => item.key, {
-  //   from: { transform: 'translate3d(0,-40px,0)', color: 'white', width: '100%', height: '100%' },
-  //   enter: { transform: 'translate3d(0,0px,0)' },
-  //   leave: { transform: 'translate3d(0,-40px,0)' },
-     
-  //   })
+  // const [index, setIndex] = useState(0);
+ 
+  let fallingSkills = useTransition(items[Math.floor(Math.random()*items.length)], item => item.key, {
+    loop: true,
+    from: { transform: 'translate3d(0,-100%,0)' },
+    enter: { transform: 'translate3d(0,0px,0)' },
+    leave: { transform: 'translate3d(0,-100%,0)' },
+    animate: { delay: 1000},
+    style: { width: '100%', height: '100%', color: 'white'},
+    });
+
   return (
+  
     <div className="all-skills">
-   <Transition
-  items={items} keys={item => item.key}
-  from={{ transform: 'translate3d(0,-40px,0)' }}
-  enter={{ transform: 'translate3d(0,0px,0)' }}
-  leave={{ transform: 'translate3d(0,-40px,0)' }}>
-  {item => props => <div style={props}>{item.item}</div>}
-</Transition>
-</div>
+      {fallingSkills.map(({ item, props, key}) =>
+      <animated.div
+          key ={key}
+          style={props}>
+          <p>{item.skill}</p>
+        </animated.div>
+      )}
+    </div>
   )
 }
 export default AllSkills;

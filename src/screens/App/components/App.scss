@@ -791,37 +791,11 @@ Skills
   // }
 }
 
-
-
-// .center-circle {
-//   color: $base-hover-color;
-//   border-radius: 50%;
-//   padding: 50px;
-//   border: 2px solid $base-hover-color;
-//   position: relative;
-//   animation: rotateAround 5s infinite linear;
-// }
-
-// .front-end-circle {
-//   color: $base-hover-color;
-//   padding: 40px;
-//   border-radius: 50%;
-//   border: 2px solid $base-hover-color;
-//   } 
-
-
-  // @keyframes spinAround {
-  //   from {left: 0px; }
-  //   0% {transform: rotate(-360deg)}
-  //   to {left: 50px;}
-  // }
-  // transform: rotate(0dgeg);
-
-// @keyframes rotateAround {
-//   0% {
-//     transform: rotate(-360deg)
-//   }
-// }
+.falling-skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 /******************************************************************* 
 Keep for rotating circles for what frameworks/languages I know 

@@ -9,14 +9,15 @@ import MySkills from './my-skills';
     
    render() {
 
-    return (
+    return (    
+      <div>
     <div className="skills-container">
     <h2 className="skills-title">Tech Stack</h2>
       <div className="falling-skills-container">
-      <MySkills />
+      <AllSkills />
       </div>
     </div>
-
+</div>
     )
   }
 }

@@ -45,7 +45,7 @@ const [index, setIndex] = useState(0)
     from: { opacity: 0, transform: 'translate3d(0,-100%,0) rotate(-90deg)'},
     enter: { opacity: 1, transform: 'translate3d(0, 0%,0)' },
     leave: { opacity: 0, transform: 'translate3d(0, 100%,0)' },
-    config: { tension: 220, friction: 120, duration: 2000 },
+    // config: { tension: 220, friction: 120, duration: 2000 },
   })
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const [index, setIndex] = useState(0)
     {fallingSkills.map(({ item, props, key }) => (
       <animated.div
         key={key}
-        style={{ ...props, width: '100%', height: '100%'}}
+        style={{ ...props, position: 'absolute'}}
       >
         <p className='falling-skills'>
           {item.skill}

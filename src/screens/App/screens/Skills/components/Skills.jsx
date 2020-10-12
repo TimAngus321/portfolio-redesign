@@ -6,9 +6,9 @@ import MySkills from './my-skills';
 import AllMySkills from './all-my-skills';
 import AllTheSkills from './all-the-skills';
 
+
   class Skills extends Component {
-    
-    
+ 
    render() {
 
     return (    

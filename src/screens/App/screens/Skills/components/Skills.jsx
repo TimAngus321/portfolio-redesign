@@ -3,6 +3,8 @@ import { routeConstants } from 'shared/constants';
 import AllSkills from './all-skills';
 import WorldSlider from './staggered-bars';
 import MySkills from './my-skills';
+import AllMySkills from './all-my-skills';
+import AllTheSkills from './all-the-skills';
 
   class Skills extends Component {
     
@@ -14,7 +16,7 @@ import MySkills from './my-skills';
     <div className="skills-container">
     <h2 className="skills-title">Tech Stack</h2>
       <div className="falling-skills-container">
-      <AllSkills />
+      <AllTheSkills />
       </div>
     </div>
 </div>

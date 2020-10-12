@@ -6,6 +6,7 @@ $base-background-color: #1E1E1E;
 $base-background-grey: #1b1b1b; 
 $base-font-color: white;
 $base-hover-color: #BD4517;
+$secondary-font-color: #8d8d8d;
 
 
 /******************************************************************* 
@@ -418,7 +419,7 @@ div.contact-btn:hover {
   justify-content: left;
   font-family: "Open Sans",sans-serif;
   letter-spacing: 3px;
-  color: #8d8d8d;
+  color: $secondary-font-color;
   font-weight: 400;
   font-size: 11px;
   margin: 0;
@@ -759,11 +760,13 @@ Skills
 .skills-container {
   display: flex;
   flex-direction: row;
+  position: fixed;
+  width: 100%;
 }
 
 .skills-title {
   color: white;
-  justify-content: flex-start;
+  justify-content: center;
   // align-items: center;
   height: 100vh;
   margin: 50px 0 0 120px;
@@ -772,29 +775,21 @@ Skills
 
 .falling-skills-container {
   display: flex;
-  color: white;
-  width: 100%;
+  color: $secondary-font-color;
+  width: 75%;
   position: relative;
-}
-
-.all-skills {
-  // position: absolute;
-  // animation: fallDown 2s infinite linear;
-  content: "Hello";
-  color: white;
-  height: 100%;
-  width: 100%;
-  display: flex;
-
-  // @keyframes fallDown {
-  //   from {top: 0px}
-  //   to {top: 100%}
-  // }
 }
 
 .falling-skills {
   position: absolute;
   color: white;
+}
+
+.animated-skills-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 100px;
+  width: 100%;
 }
 
 /******************************************************************* 

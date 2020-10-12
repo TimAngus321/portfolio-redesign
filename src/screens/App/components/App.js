@@ -47,15 +47,15 @@ useOnClickOutside(node, () => setOpen(false)); {
                 <RouteWithSubRoutes key={i} {...route} />
               ))}
               <Route
-                exact
                 path="/"
+                exact
                 render={() => {
                     return (
                       <Redirect to="/home" />
                     )
                 }}
               />
-            </Switch>
+            </Switch> 
         </HashRouter>
       </div>
     );

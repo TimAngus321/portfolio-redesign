@@ -768,7 +768,7 @@ Skills
   color: white;
   justify-content: center;
   // align-items: center;
-  height: 100vh;
+  // height: 100vh;
   margin: 50px 0 0 120px;
   width: 25%;
 }
@@ -790,6 +790,18 @@ Skills
   justify-content: space-evenly;
   margin-left: 100px;
   width: 100%;
+}
+
+.select-skills-container {
+  color: white;
+}
+
+.select-skills {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 50px 0 0 120px;
+  width: 25%;
 }
 
 /******************************************************************* 

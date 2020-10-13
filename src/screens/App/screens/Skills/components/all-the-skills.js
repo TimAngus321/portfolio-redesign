@@ -70,7 +70,10 @@ const AllTheSkills = () => {
         each: 0.7,
         from: "random",
         repeat: -1 
-      } }} duration={5} opacity={0.2} />
+      } }} 
+        duration={5} 
+        opacity={0.2}   
+        />
         {/* <Tween
         from={{ y: '0px' }} 
         to={{ y: '100%', stagger: {

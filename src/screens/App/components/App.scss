@@ -765,11 +765,11 @@ Skills
 }
 
 .skills-title {
-  color: white;
+  color: $base-hover-color;
   justify-content: center;
   // align-items: center;
   // height: 100vh;
-  margin: 50px 0 0 120px;
+  // margin: 50px 0 0 120px;
   width: 25%;
 }
 
@@ -802,6 +802,14 @@ Skills
   height: 100vh;
   margin: 50px 0 0 120px;
   width: 25%;
+}
+
+.specific-skillsets {
+  color: white;
+}
+
+.sub-heading-skills {
+  color: $secondary-font-color;
 }
 
 /******************************************************************* 

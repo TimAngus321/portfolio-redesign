@@ -45,7 +45,7 @@ const AllTheSkills = () => {
         target={
           <React.Fragment>
             <SplitWords
-                wrapper={<p
+                wrapper={<div
                 style={{ 
                     display: 'flex',
                     justifyContent: 'space-evenly',

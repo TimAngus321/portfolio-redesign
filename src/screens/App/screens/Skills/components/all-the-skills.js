@@ -53,7 +53,7 @@ const AllTheSkills = () => {
                     height: '100%',
                     width: '15px',
                     transform: 'rotate(90deg)', 
-                    transformOrigin: '100px -20% 0' }} />}
+                    transformOrigin: '120px -20% 0' }} />}
             >
             React.js javascript Ruby Rails PostgreSQL
             Redux HTML SCSS CSS SQL Git Github Heroku
@@ -69,10 +69,11 @@ const AllTheSkills = () => {
         to={{ y: '115%', stagger: {
         each: 0.7,
         from: "random",
-        repeat: -1 
+        repeat: -1,
       } }} 
         duration={5} 
-        opacity={0.2}   
+        opacity={0.2}
+           
         />
         {/* <Tween
         from={{ y: '0px' }} 

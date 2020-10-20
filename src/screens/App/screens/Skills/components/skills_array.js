@@ -1,4 +1,4 @@
-export const skillSets = {
+export const SkillSets = {
     frontend: ["React.js", "Javascript", "HTML", "SCSS", "CSS", "APIs"],
     backend: ["Ruby on Rails", "PostgreSQL", "Ruby", "SQL"],
     fullstack: ["React.js", "Javascript", "HTML", "SCSS", "CSS", "APIs","Ruby on Rails", "PostgreSQL", "Ruby", "SQL" ],

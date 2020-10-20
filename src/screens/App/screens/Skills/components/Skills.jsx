@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
 import { routeConstants } from 'shared/constants';
-import AllSkills from './all-skills';
-import WorldSlider from './staggered-bars';
-import MySkills from './my-skills';
-import AllMySkills from './all-my-skills';
 import AllTheSkills from './all-the-skills';
-import AboutSkills from './about-skills';
 
+const SkillSets = {
+  frontend: ["React.js", "Javascript", "HTML", "SCSS", "CSS", "APIs"],
+  backend: ["Ruby on Rails", "PostgreSQL", "Ruby", "SQL"],
+  fullstack: ["React.js", "Javascript", "HTML", "SCSS", "CSS", "APIs","Ruby on Rails", "PostgreSQL", "Ruby", "SQL" ],
+  eccomerce: ["Shopify", "Liquid", "Node.js", "AWS", "Lambda"],
+  mobile: ["React Navtive", "HTML", "SCSS"],
+  softskills: ["German(B1)", "Presenting", "Teaching", "Managing", "Research", "Copywriting", "Musician"]
+  
+} 
 
   class Skills extends Component {
+    constructor() {
+      super();
+
+    }
  
    render() {
 

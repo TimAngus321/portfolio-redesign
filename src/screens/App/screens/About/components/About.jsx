@@ -19,7 +19,7 @@ class About extends Component {
     switch (name) {
       case "showPersonal": 
       this.setState({ showPersonal: !this.state.showPersonal });
-      this.setState({ showProfessional: false})
+      this.setState({ showProfessional: false});
       this.setState({ showWhyCode: false });
       break;
       case "showProfessional":
@@ -30,7 +30,7 @@ class About extends Component {
       case "showWhyCode":
       this.setState({ showWhyCode: !this.state.showWhyCode });
       this.setState({ showPersonal: false });
-      this.setState({ showProfessional: false })
+      this.setState({ showProfessional: false });
       break;
       default:
       return null;

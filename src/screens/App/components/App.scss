@@ -767,10 +767,6 @@ Skills
 .skills-title {
   color: $base-hover-color;
   justify-content: center;
-  // align-items: center;
-  // height: 100vh;
-  // margin: 50px 0 0 120px;
-  width: 25%;
 }
 
 .falling-skills-container {
@@ -778,6 +774,7 @@ Skills
   color: $secondary-font-color;
   width: 75%;
   position: relative;
+  margin-left: 120px;
 }
 
 .falling-skills {
@@ -787,21 +784,21 @@ Skills
 
 .animated-skills-container {
   display: flex;
+  position: absolute;
   justify-content: space-evenly;
   margin-left: 100px;
   width: 100%;
-}
-
-.select-skills-container {
-  color: white;
+  height: 100%;
 }
 
 .select-skills {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  margin: 50px 0 0 120px;
+  margin: 0 0 0 120px;
   width: 25%;
+  justify-content: center;
+  z-index: 1;
 }
 
 .about-my-skills {
@@ -814,25 +811,22 @@ Skills
 
 .fade-in-skills {
   color: $base-hover-color;
+  cursor: pointer;
+  width: 100%;
 }
 
-/******************************************************************* 
-Keep for rotating circles for what frameworks/languages I know 
-********************************************************************/
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reveal-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.selected-skillset {
+  width: 60%;
+  color: $base-hover-color;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 100px;
 }
-
-// End of stuff needed for rotating with CSS

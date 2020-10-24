@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Personal from './personal';
-import Professional from './professional'
-import WhyCode from './why-code'
+import Professional from './professional';
+import WhyCode from './why-code';
 
 class About extends Component {
   constructor() {

@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, useRef, useEffect } from 'react';
 import { routeConstants } from 'shared/constants';
 import AllTheSkills from './all-the-skills';
+import { Timeline, Tween } from 'react-gsap';
 
 const skillSets = {
   frontend: ["React.js", "Javascript", "HTML", "SCSS", "CSS", "APIs"],
   backend: ["Ruby on Rails", "PostgreSQL", "Ruby", "SQL"],
   fullstack: ["React.js", "Javascript", "HTML", "SCSS", "CSS", "APIs","Ruby on Rails", "PostgreSQL", "Ruby", "SQL" ],
   eccomerce: ["Shopify", "Liquid", "Node.js", "AWS", "Lambda"],
-  mobile: ["React Navtive", "HTML", "SCSS"],
+  mobile: ["React Navtive"],
   softskills: ["German(B1)", "Presenting", "Teaching", "Managing", "Research", "Copywriting", "Musician"]
 } 
+
 
   class Skills extends Component {
     constructor() {
@@ -105,42 +107,77 @@ const skillSets = {
     <div className="skills-container">
     <div className="select-skills">
     <h2 className="skills-title">Tech Stack</h2>
-    <h3 className="about-my-skills">
-      As a 
+    <h4 className="about-my-skills">
+      Although my most recent work exprience was primarily focused on
+      <span 
+      className="fade-in-skills" 
+      onClick={() => this.hideComponent("showEccomerce")}
+      // onMouseOver={() => this.hideComponent('showEccomerce')}
+      >
+      &nbsp;E-commerce&nbsp;
+      </span>
+      I am a 
       <span 
       className="fade-in-skills" 
       onClick={() => this.hideComponent("showFullstack")}
-      onMouseOver={() => this.hideComponent('showFullstack')}>
+      // onMouseOver={() => this.hideComponent('showFullstack')}
+      >
       &nbsp;Fullstack developer&nbsp;
       </span>
-      my skillset covers
-      the
+      with skillsets that covers
       <span 
       className="fade-in-skills" 
       onClick={() => this.hideComponent("showFrontend")}
-      onMouseOver={() => this.hideComponent('showFrontend')}>
+      // onMouseOver={() => this.hideComponent('showFrontend')}
+      >
       &nbsp;Front-end&nbsp;
       </span>
-      as well as the 
+      as well as  
       <span
       className="fade-in-skills" 
       onClick={() => this.hideComponent("showBackend")}
-      onMouseOver={() => this.hideComponent('showBackend')}>
+      // onMouseOver={() => this.hideComponent('showBackend')}
+      >
       &nbsp;Backend&nbsp;
-       </span>
-      . Additionally
-      I have softskills and I am learning new skills all 
-      the time. 
-    </h3>
+      </span>
+      . Additionally my previous experience working in the education sector
+     has provided me with
+     <span
+      className="fade-in-skills" 
+      onClick={() => this.hideComponent("showSoftskills")}
+      // onMouseOver={() => this.hideComponent('showSoftskills')}
+      >
+      &nbsp;softskills&nbsp;
+      </span>
+      that help me excel at communicating 
+      and working in teams. I am always learning new skills all 
+      the time and hope soon to delve into
+      <span
+      className="fade-in-skills" 
+      onClick={() => this.hideComponent("showMobile")}
+      // onMouseOver={() => this.hideComponent('showMobile')}
+      >
+      &nbsp;Mobile Development&nbsp;
+      </span>
+      and 
+      full-stack Javscript with the MERN stack.
+    </h4>
     <p className="sub-heading-skills">
-      Hover or click on a skillset to see my various skillsets
+      Click on a skillset to see my various skillsets
     </p>
     </div>
       <div className="falling-skills-container">
       <AllTheSkills />
-      {showFrontend && skillSets.frontend}
-      {showBackend && skillSets.backend}
-      {showFullstack && skillSets.fullstack}
+      <div className="reveal-skills">
+        <div className="selected-skillset">
+        {showFrontend && skillSets.frontend.join(' ')}
+        {showBackend && skillSets.backend.join(' ')}
+        {showFullstack && skillSets.fullstack.join(' ')}
+        {showEccomerce && skillSets.eccomerce.join(' ')}
+        {showSoftskills && skillSets.softskills.join(' ')}
+        {showMobile && skillSets.mobile.join(' ')}
+        </div>
+      </div>
       </div>
     </div>
 </div>

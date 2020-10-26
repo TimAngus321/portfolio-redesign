@@ -66,7 +66,7 @@ const AllTheSkills = () => {
       >
         <Tween 
         from={{ y: '0px' }}
-        to={{ y: '105%', stagger: {
+        to={{ y: '113%', stagger: {
         each: 0.7,
         from: "random",
         repeat: -1,

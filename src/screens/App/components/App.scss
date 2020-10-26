@@ -764,6 +764,13 @@ Skills
   width: 100%;
 }
 
+@media only screen and (max-width: 900px) {
+  .skills-container {
+    flex-direction: column;
+    position: relative;
+  }
+}
+
 .skills-title {
   color: $base-hover-color;
   justify-content: center;
@@ -807,6 +814,7 @@ Skills
 
 .sub-heading-skills {
   color: $secondary-font-color;
+  font-size: 10px;
 }
 
 .fade-in-skills {

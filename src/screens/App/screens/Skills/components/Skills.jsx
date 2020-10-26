@@ -163,7 +163,7 @@ const skillSets = {
       full-stack Javscript with the MERN stack.
     </h4>
     <p className="sub-heading-skills">
-      Click on a skillset to see my various skillsets
+     * Click on a skillset (in orange) to see my various skillsets
     </p>
     </div>
       <div className="falling-skills-container">

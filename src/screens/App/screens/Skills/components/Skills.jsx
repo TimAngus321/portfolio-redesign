@@ -2,6 +2,7 @@ import React, { Component, useRef, useEffect } from 'react';
 import { routeConstants } from 'shared/constants';
 import AllTheSkills from './all-the-skills';
 import { Timeline, Tween } from 'react-gsap';
+import AnimatedStatefulSkills from './all-my-skills';
 
 const skillSets = {
   frontend: ["React.js", "Javascript", "HTML", "SCSS", "CSS", "APIs"],
@@ -162,12 +163,10 @@ const skillSets = {
       and 
       full-stack Javscript with the MERN stack.
     </h4>
-    <p className="sub-heading-skills">
-     * Click on a skillset (in orange) to see my various skillsets
-    </p>
     </div>
       <div className="falling-skills-container">
       <AllTheSkills />
+      {/* <AnimatedStatefulSkills /> */}
       <div className="reveal-skills">
         <div className="selected-skillset">
         {showFrontend && skillSets.frontend.join(' ')}

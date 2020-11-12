@@ -13,28 +13,8 @@ const Section = cxs("div")({
 });
 
 class QuoteLoop extends React.PureComponent {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         interval: 0,
-    //     };
-    // }
-
-    // componentDidMount() {
-    //     setTimeout(() => {
-    //         this.setState({
-    //             interval: 1000,
-    //         });
-    //         setTimeout(() => {
-    //             this.setState({
-    //                 interval: 0,
-    //             });
-    //         }, 10000);
-    //     }, 5000);
-    // }
-
+  
     render() {
-         const interval = this.state;
 
         return (
             // <div>

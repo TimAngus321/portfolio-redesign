@@ -46,7 +46,6 @@ class Work extends Component {
   //   })
   // }
 
-
 render() {
     return (
         <div className="animated-skills-container">

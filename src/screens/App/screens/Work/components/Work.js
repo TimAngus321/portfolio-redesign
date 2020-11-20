@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useRef } from 'react';
 import { Timeline, Tween, SplitWords } from 'react-gsap';
 import { gsap, TweenLite, TimelineLite } from 'gsap/all';
+// import { Timeline, Tween, SplitWords } from 'react-gsap';
 
 //TODO
 // Redo animation on skills page but this time from a list with keys

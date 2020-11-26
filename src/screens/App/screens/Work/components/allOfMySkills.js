@@ -2,12 +2,7 @@ import React, { Component, useEffect, useRef } from 'react';
 import { Timeline, Tween, SplitWords } from 'react-gsap';
 import { gsap, TweenLite, TimelineLite } from 'gsap/all';
 // import { Timeline, Tween, SplitWords } from 'react-gsap';
-import { AllOfMySkills } from './allOfMySkills.js';
 
-//TODO
-// Redo animation on skills page but this time from a list with keys
-// Then use timeline and tween to have certain keys animate, change color and enlarge
-// to the middle of the right half of the screen
 
 const skillSetStyle = {
   display: 'flex',
@@ -19,8 +14,7 @@ const individualSkillStyle = {
   transformOrigin: '0px 0% 0',
 }
 
-class Work extends Component {
-  
+class AllOfMySkills extends Component {
   state = {
     skillSets: [
         {id: "frontend", skillset: ["React.js", "Javascript", "HTML", "SCSS", "CSS", "APIs"] },
@@ -30,33 +24,7 @@ class Work extends Component {
         {id: "mobile", skillset: ["React Navtive", "HTML", "SCSS"] },
         {id: "softskills", skillset: ["German(B1)", "Presenting", "Teaching", "Managing", "Research", "Copywriting", "Musician"] }
     ], 
-
-    fallingSkills: new TimelineLite,
-    modalWrap: null,
   };
- 
-
-  // constructor(props) {
-  // super(props)
-  // this.timeline = new TimelineLite;
-  // }
-
-  // componentDidMount(){
-  //   this.timeline.staggerTo( this.skillSets,  0.5, { autoAlpha: 1, y: -20 }, 0.1 );
-  // }
-
-  // useEffect(() => {
-  //   const timeLine = gsap.timeline();
-  //   timeline.to('.fullstack', {
-  //     y: '100%',
-  //     duration: 5,
-  //   })
-  // }
-
-  componentDidMount() {
-    this.fallingSkills
-      .to(this.modalWrap, {y: '113%'})
-  }
 
 render() {
     return (
@@ -76,4 +44,4 @@ render() {
   }
 }
 
-export default Work;
+export default AllOfMySkills;

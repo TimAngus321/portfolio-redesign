@@ -27,8 +27,10 @@ class Work extends Component {
         {id: "eccommerce", skillset: ["Shopify", "Liquid", "Node.js", "AWS", "Lambda"] },
         {id: "mobile", skillset: ["React Navtive", "HTML", "SCSS"] },
         {id: "softskills", skillset: ["German(B1)", "Presenting", "Teaching", "Managing", "Research", "Copywriting", "Musician"] }
-    ],
+    ], 
   };
+
+  fallingSkills = new TimelineLite;
 
   // constructor(props) {
   // super(props)
@@ -39,13 +41,18 @@ class Work extends Component {
   //   this.timeline.staggerTo( this.skillSets,  0.5, { autoAlpha: 1, y: -20 }, 0.1 );
   // }
 
-  // useEffect() => {
+  // useEffect(() => {
   //   const timeLine = gsap.timeline();
   //   timeline.to('.fullstack', {
   //     y: '100%',
   //     duration: 5,
   //   })
   // }
+
+  componentDidMount() {
+    fallingSkills 
+      .to({y: '113%'})
+  }
 
 render() {
     return (

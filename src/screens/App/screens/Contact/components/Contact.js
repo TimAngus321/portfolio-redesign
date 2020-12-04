@@ -1,25 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
 import emailjs from 'emailjs-com';
+import ReactFormInputValidation from "react-form-input-validation";
 
-export default function ContactUs() {
+const user_id = process.env.REACT_APP_EMAILJS_USER_ID;
+const template_id = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const service_id = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 
-  const user_id = process.env.REACT_APP_EMAILJS_USER_ID;
-  const template_id = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-  const service_id = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+function sendEmail(e) {
+  e.preventDefault();
 
-  function sendEmail(e) {
-    e.preventDefault();
+  emailjs.sendForm(service_id, template_id, e.target, user_id)
+  .then((result) => {
+      console.log('Successfully Sent', result.text);
+      alert('Message Sent!')
+  }, (error) => {
+      console.log('Failed to send', error.text);
+      alert('Failed to send 😕')
+  });
+}
 
-    emailjs.sendForm(service_id, template_id, e.target, user_id)
-    .then((result) => {
-        console.log('Successfully Sent', result.text);
-        alert('Message Sent!')
-    }, (error) => {
-        console.log('Failed to send', error.text);
-        alert('Failed to send 😕')
-    });
-  }
+class ContactMe extends Component {
+  constructor() {
+    super();
+  this.state = {
+    fields: {
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
+    },
+    errors: {}
+  };
 
+  this.form = new ReactFormInputValidation(this);
+  this.form.useRules({
+    name: "required",
+    email: "required|email",
+    subject: "required",
+    message: "required"
+  });
+}
+
+
+  
+render() {
   return (
     <div className="contact-container">
       <div className="contact-component">
@@ -36,7 +60,7 @@ export default function ContactUs() {
           me with this form and I'll get back to you
           as soon as I can. 
           </p>
-        <form className="contact-form" onSubmit={sendEmail}>
+        <form className="contact-form" onSubmit={sendEmail, this.form.handleSubmit} >
             <input type="hidden" name="contact_number"/>
             <ul className="contact-form-ul">
             <div className="name-and-email">
@@ -45,23 +69,52 @@ export default function ContactUs() {
                 className="name-input" 
                 type="text" 
                 name="name" 
-                placeholder="Name" />
+                placeholder="Name"
+                onChange={this.form.handleChangeEvent}
+                value={this.state.fields.name} />
               </li>
               <li className="email">
                 <input 
                 className="email-input" 
                 type="email" 
                 name="email" 
-                placeholder="Email"/>
+                placeholder="Email"
+                onChange={this.form.handleChangeEvent}
+                value={this.state.fields.email}
+                />
               </li> 
             </div>
-            <li className="subject"><input className="subject-input" type="subject" name="subject" placeholder="Subject"/></li> 
-            <li className="message"><textarea className="message-input" name="message" placeholder="Message"/></li> 
+            <li className="subject">
+            <input 
+            className="subject-input" 
+            type="subject" 
+            name="subject" 
+            placeholder="Subject"
+            onChange={this.form.handleChangeEvent}
+            value={this.state.fields.subject}
+            />
+            </li> 
+            <li className="message">
+            <textarea 
+            className="message-input" 
+            name="message" 
+            placeholder="Message"
+            onChange={this.form.handleChangeEvent}
+            value={this.state.fields.message}
+            /></li> 
           </ul>
           <div className="btn-container">
             <input className="contact-btn" type="submit" value="Send" />
           </div>
         </form>
+      </div>
+      <div className="error-messages">
+        <label className='error'>
+        {this.state.errors.name ? this.state.errors.name : ""}
+        {this.state.errors.email ? this.state.errors.email : ""}
+        {this.state.errors.subject ? this.state.errors.subject : ""}
+        {this.state.errors.message ? this.state.errors.message : ""}
+        </label>
       </div>
       <div className="map">
 
@@ -69,4 +122,7 @@ export default function ContactUs() {
       </div>
     </div>
   );
+  }
 }
+
+export default ContactMe;

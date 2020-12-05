@@ -268,6 +268,8 @@ ul.menu > a:active {
    color: white;
  }
 
+
+
 /******************************************************************* 
 Photo Quote Component
 ********************************************************************/
@@ -618,6 +620,11 @@ li.message {
   background-color:$base-hover-color;
   color: $base-background-color;
   border-color: $base-hover-color;
+}
+
+.error-messages {
+  padding: 20px 0;
+  color: white;
 }
 
 

@@ -623,9 +623,11 @@ li.message {
 }
 
 .error-messages {
+  display: flex;
   padding: 20px 0;
   color: white;
 }
+
 
 
 /******************************************************************* 

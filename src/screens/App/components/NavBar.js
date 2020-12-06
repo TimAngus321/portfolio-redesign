@@ -36,7 +36,7 @@ function NavBar() {
                     </Link>
                     <Link to={SKILLS.route}>
                         <li className="skills">
-                            <FontAwesomeIcon icon={faCog} className="tech-icon" spin/>
+                            <FontAwesomeIcon icon={faCog} className="tech-icon" />
                         </li>
                     </Link>
                     <Link to={WORK.route}>

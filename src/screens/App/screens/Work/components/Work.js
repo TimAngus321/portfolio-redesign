@@ -53,15 +53,15 @@ class Work extends Component {
   //   })
   // }
 
-  componentDidMount() {
-    this.fallingSkills
-      .to(this.modalWrap, {y: '113%'})
-  }
+  // componentDidMount() {
+  //   this.fallingSkills
+  //     .to(this.modalWrap, {y: '113%'})
+  // }
 
 render() {
     return (
         <div className="animated-skills-container">
-          {this.state.skillSets.map(({skillset, id}) => (
+          {/* {this.state.skillSets.map(({skillset, id}) => (
             <div className={id} style={skillSetStyle}>
               {skillset.map((skillset, skills) =>
                <p key={skills} style={individualSkillStyle}>
@@ -70,7 +70,7 @@ render() {
                )} 
             </div>
           ))
-        }
+        } */}
         </div>
     )
   }

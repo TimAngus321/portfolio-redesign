@@ -112,10 +112,10 @@ render() {
       </div>
       <div className="error-messages">
         <label className='error'>
-        {this.state.errors.name ? this.state.errors.name : ""}
-        {this.state.errors.email ? this.state.errors.email : ""}
-        {this.state.errors.subject ? this.state.errors.subject : ""}
-        {this.state.errors.message ? this.state.errors.message : ""}
+          <p>{this.state.errors.name ? this.state.errors.name : ""}</p>
+          <p>{this.state.errors.email ? this.state.errors.email : ""}</p>
+          <p>{this.state.errors.subject ? this.state.errors.subject : ""}</p> 
+          <p>{this.state.errors.message ? this.state.errors.message : ""}</p> 
         </label>
       </div>
       <div className="map">

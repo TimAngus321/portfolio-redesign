@@ -7,12 +7,14 @@ const ContactMe = () => {
   const { register, handleSubmit, formState: {errors} } = useForm();
   const onSubmit = (data, e) => {
       e.preventDefault();
-      alert(`Thank you ${data.name} for your message!`)
       const userID = process.env.REACT_APP_EMAILJS_USER_ID;
       const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
       const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-      sendForm(serviceID, templateId, {from_name: data.name, email: data.email, subject: data.subject, message: data.message }, userID)
+      sendForm(serviceID, templateId, {from_name: data.name, email: data.email, subject: data.subject, message: data.message }, userID);
+      console.log("Email Sent")
+      alert(`Thank you ${data.name} for your message!`);
       e.target.reset();
+      
       }
 
       const sendForm = (serviceID, templateId, userID, variables) => {

@@ -1,6 +1,8 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import { useForm } from "react-hook-form";
+import { ErrorMessage } from '@hookform/error-message';
+import _ from "lodash/fp";
 
 
 const ContactMe = () => {
@@ -52,9 +54,10 @@ const ContactMe = () => {
                     name="name" 
                     placeholder="Name"
                     {...register("name", { 
-                            required: true
+                            required: 'Please enter your name',
                         })
                     }
+
                  />
                  
                   </li>
@@ -64,9 +67,12 @@ const ContactMe = () => {
                     type="email" 
                     name="email" 
                     placeholder="Email"
-                    {...register("email",{
-                            required: true,
-                            pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+                    {...register("email", {
+                            required: 'Please enter your email',
+                            pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                            message: 'Please enter a valid email'
+                            },
                           })
                     }
                     />
@@ -79,7 +85,7 @@ const ContactMe = () => {
                 name="subject" 
                 placeholder="Subject"
                 {...register("subject",{
-                            required: true
+                            required: 'Please enter a subject line'
                         })
                     } 
                 />
@@ -90,7 +96,7 @@ const ContactMe = () => {
                 name="message" 
                 placeholder="Message"
                 {...register("message", {
-                            required: true
+                            required: `Please don't forget to write a message!`
                         })
                     } 
                 /></li> 
@@ -100,14 +106,31 @@ const ContactMe = () => {
               </div>
             </form>
           </div>
-          <div className="error-messages">
-            <label className='error'>
-              <p>{errors['name'] && "Please enter your name"} </p>
-              <p>{errors.email && "Please enter your email"}</p>
-              <p>{errors.subject && "You forgot to add a subject!"}</p> 
-              <p>{errors.message && "You forgot to add a message!"}</p> 
-            </label>
-          </div>
+              {/* <p className="error animate-slideInOutRight">{errors['name'] && "Please enter your name"} </p>
+              <p className="error animate-slideInOutRight">{errors.email && "Please enter your email"}</p>
+              <p className="error animate-slideInOutRight">{errors.subject && "You forgot to add a subject!"}</p> 
+              <p className="error animate-slideInOutRight">{errors.message && "You forgot to add a message!"}</p>  */}
+              <ErrorMessage
+                errors={errors}
+                name="name"
+                render={({ message }) => <p className="error animate-slideInOutRight">{message}</p>}
+              />
+              <ErrorMessage
+                errors={errors}
+                name="email"
+                render={({ message }) => <p className="error animate-slideInOutRight">{message}</p>}
+              />
+              <ErrorMessage
+                errors={errors}
+                name="subject"
+                render={({ message }) => <p className="error animate-slideInOutRight">{message}</p>}
+              />
+              <ErrorMessage
+                errors={errors}
+                name="message"
+                render={({ message }) => <p className="error animate-slideInOutRight">{message}</p>}
+              />
+              
           <div className="map">
 
           </div>

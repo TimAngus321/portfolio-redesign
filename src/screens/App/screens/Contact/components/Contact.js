@@ -2,7 +2,6 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from '@hookform/error-message';
-import _ from "lodash/fp";
 
 
 const ContactMe = () => {
@@ -113,22 +112,22 @@ const ContactMe = () => {
               <ErrorMessage
                 errors={errors}
                 name="name"
-                render={({ message }) => <p className="error animate-slideInOutRight">{message}</p>}
+                render={({ message }) => <p className="error animate-slideInOutRight self-end bottom-0 my-4 absolute z-10">{message}</p>}
               />
               <ErrorMessage
                 errors={errors}
                 name="email"
-                render={({ message }) => <p className="error animate-slideInOutRight">{message}</p>}
+                render={({ message }) => <p className="error animate-slideInOutRight self-end bottom-10 my-4 absolute z-10">{message}</p>}
               />
               <ErrorMessage
                 errors={errors}
                 name="subject"
-                render={({ message }) => <p className="error animate-slideInOutRight">{message}</p>}
+                render={({ message }) => <p className="error animate-slideInOutRight self-end bottom-20 my-4 absolute z-10">{message}</p>}
               />
               <ErrorMessage
                 errors={errors}
                 name="message"
-                render={({ message }) => <p className="error animate-slideInOutRight">{message}</p>}
+                render={({ message }) => <p className="error animate-slideInOutRight self-end bottom-35 my-4 absolute z-10">{message}</p>}
               />
               
           <div className="map">

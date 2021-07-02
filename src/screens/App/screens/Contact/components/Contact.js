@@ -1,31 +1,45 @@
 import React from 'react';
-import emailjs from 'emailjs-com';
+import emailjs, { send } from 'emailjs-com';
 import { useForm } from "react-hook-form";
-import { ErrorMessage } from '@hookform/error-message';
+import { toast } from 'react-toastify';
 
+
+toast.configure();
 
 const ContactMe = () => {
+
   const { register, handleSubmit, formState: {errors} } = useForm();
   const onSubmit = (data, e) => {
       e.preventDefault();
       const userID = process.env.REACT_APP_EMAILJS_USER_ID;
       const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
       const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-      sendForm(serviceID, templateId, {from_name: data.name, email: data.email, subject: data.subject, message: data.message }, userID);
+      if (!errors.name && !errors.email && !errors.subject && !errors.message) {
+      sendForm(serviceID, templateId, {from_name: data.name, name: data.name, email: data.email, subject: data.subject, message: data.message }, userID);
       console.log("Email Sent")
-      alert(`Thank you ${data.name} for your message!`);
+      toast(`Thank you ${data.name} for your message!`);
       e.target.reset();
-      
+      } else {
+        notify();
+      }
       }
 
       const sendForm = (serviceID, templateId, userID, variables) => {
+        if (!errors.name && !errors.email && !errors.subject && !errors.message) {
         emailjs.send(
           serviceID,templateId,userID,variables).then(res => {
             console.log("Email Sent")
+            send.reset();
           })
           .catch(err => console.error("Submission Error. Error details: ", err))
+        }
       }
 
+      const notify = () => {
+        toast('Please fill in all the required fields!');
+      }
+      
+      
 
       return (
         <div className="contact-container">
@@ -49,11 +63,11 @@ const ContactMe = () => {
                   <li className="name">
                     <input 
                     className="name-input" 
-                    type="text" 
+                    type="name" 
                     name="name" 
                     placeholder="Name"
                     {...register("name", { 
-                            required: 'Please enter your name',
+                            required: true,
                         })
                     }
 
@@ -67,11 +81,8 @@ const ContactMe = () => {
                     name="email" 
                     placeholder="Email"
                     {...register("email", {
-                            required: 'Please enter your email',
-                            pattern: {
-                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                            message: 'Please enter a valid email'
-                            },
+                            required: true,
+                            pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
                           })
                     }
                     />
@@ -84,7 +95,7 @@ const ContactMe = () => {
                 name="subject" 
                 placeholder="Subject"
                 {...register("subject",{
-                            required: 'Please enter a subject line'
+                            required: true,
                         })
                     } 
                 />
@@ -95,43 +106,17 @@ const ContactMe = () => {
                 name="message" 
                 placeholder="Message"
                 {...register("message", {
-                            required: `Please don't forget to write a message!`
+                            required: true,
                         })
                     } 
                 /></li> 
               </ul>
               <div className="btn-container">
-                <input className="contact-btn" type="submit" value="Send" />
+                <input onClick={notify} className="contact-btn" type="submit" value="Send" />
               </div>
             </form>
           </div>
-              {/* <p className="error animate-slideInOutRight">{errors['name'] && "Please enter your name"} </p>
-              <p className="error animate-slideInOutRight">{errors.email && "Please enter your email"}</p>
-              <p className="error animate-slideInOutRight">{errors.subject && "You forgot to add a subject!"}</p> 
-              <p className="error animate-slideInOutRight">{errors.message && "You forgot to add a message!"}</p>  */}
-              <ErrorMessage
-                errors={errors}
-                name="name"
-                render={({ message }) => <p className="error animate-slideInOutRight self-end bottom-0 my-4 absolute z-10">{message}</p>}
-              />
-              <ErrorMessage
-                errors={errors}
-                name="email"
-                render={({ message }) => <p className="error animate-slideInOutRight self-end bottom-10 my-4 absolute z-10">{message}</p>}
-              />
-              <ErrorMessage
-                errors={errors}
-                name="subject"
-                render={({ message }) => <p className="error animate-slideInOutRight self-end bottom-20 my-4 absolute z-10">{message}</p>}
-              />
-              <ErrorMessage
-                errors={errors}
-                name="message"
-                render={({ message }) => <p className="error animate-slideInOutRight self-end bottom-35 my-4 absolute z-10">{message}</p>}
-              />
-              
           <div className="map">
-
           </div>
           </div>
         </div>

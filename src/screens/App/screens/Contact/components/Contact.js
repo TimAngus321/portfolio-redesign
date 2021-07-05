@@ -14,10 +14,12 @@ const ContactMe = () => {
       const userID = process.env.REACT_APP_EMAILJS_USER_ID;
       const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
       const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-      if (!errors.name && !errors.email && !errors.subject && !errors.message) {
+      if (data.email && data.message !== '')  {
       sendForm(serviceID, templateId, {from_name: data.name, name: data.name, email: data.email, subject: data.subject, message: data.message }, userID);
       console.log("Email Sent")
-      toast(`Thank you ${data.name} for your message!`);
+      toast.success(`Thank you ${data.name} for your message!`,
+      {position: toast.POSITION.BOTTOM_RIGHT,
+        hideProgressBar: true });
       e.target.reset();
       } else {
         notify();
@@ -25,7 +27,7 @@ const ContactMe = () => {
       }
 
       const sendForm = (serviceID, templateId, userID, variables) => {
-        if (!errors.name && !errors.email && !errors.subject && !errors.message) {
+        if (variables) {
         emailjs.send(
           serviceID,templateId,userID,variables).then(res => {
             console.log("Email Sent")
@@ -36,7 +38,9 @@ const ContactMe = () => {
       }
 
       const notify = () => {
-        toast('Please fill in all the required fields!');
+        toast.error('😀 Please fill in all the required fields!',
+        {position: toast.POSITION.BOTTOM_RIGHT,
+        hideProgressBar: true });
       }
       
       

@@ -9,7 +9,7 @@ toast.configure();
 
 const ContactMe = () => {
 
-  const {inputs, handleChange, clearForm, resetForm } = useForm({
+  const {inputs, handleChange } = useForm({
     name: '',
     email: '',
     subject: '',
@@ -28,13 +28,17 @@ const ContactMe = () => {
   //   control
   // });
 
-  function handleValidation() {
+  function handleValidation(e) {
+    e.preventDefault();
+
     let fields = inputs;
     let errors = {};
     let isFormValid = true;
 
-    if(!fields["email"]){
+    if(!fields["email"] || !fields["message"]){
       notifyErrors();
+    } else {
+      successMessageTest();
     }
   }
 
@@ -75,6 +79,14 @@ const ContactMe = () => {
         });
       }
 
+      const successMessageTest = () => {
+        toast.success(`😀 Thank you ${inputs.name} for your message!`,
+        {position: toast.POSITION.BOTTOM_RIGHT,
+          hideProgressBar: true });
+      }
+
+      // Stop allowing submissions after 2 to prevent spamming and overloading emailJS. 
+
       const notifyMessageReceived = () => {
         toast.warning('🔂 I have received your message. I will get back to you!',
         {
@@ -101,7 +113,7 @@ const ContactMe = () => {
               me with this form and I'll get back to you
               as soon as I can. 
               </p>
-            <form className="contact-form" onSubmit={onSubmit} >
+            <form className="contact-form"  >
                 <ul className="contact-form-ul">
                 <div className="name-and-email">
                   <li className="name">

@@ -1,30 +1,101 @@
-import React from 'react';
-import emailjs from 'emailjs-com';
-import { useForm } from "react-hook-form";
+import { React } from 'react';
+import { emailjs } from 'emailjs-com';
+// import { useForm, useFormState } from "react-hook-form";
+import { toast } from 'react-toastify';
+import useForm from '/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/lib/useForm.js';
 
+
+toast.configure();
 
 const ContactMe = () => {
-  const { register, handleSubmit, formState: {errors} } = useForm();
-  const onSubmit = (data, e) => {
+
+  const {inputs, handleChange } = useForm({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  // const { register, reset, handleSubmit, control, formState } = useForm();
+  // const {submitCount} = formState;
+
+  // React.useEffect(() => {
+  //   // console.log("formState Info", formState.errors);
+  // },[formState]);
+
+
+  // const { dirtyFields, errors } = useFormState({ 
+  //   control
+  // });
+
+  function handleValidation(e) {
+    e.preventDefault();
+
+    let fields = inputs;
+    let errors = {};
+    let isFormValid = true;
+
+    if(!fields["email"] || !fields["message"]){
+      notifyErrors();
+    } else {
+      successMessageTest();
+    }
+  }
+
+  const onSubmit = (inputs, e) => {
       e.preventDefault();
       const userID = process.env.REACT_APP_EMAILJS_USER_ID;
       const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
       const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-      sendForm(serviceID, templateId, {from_name: data.name, email: data.email, subject: data.subject, message: data.message }, userID);
+
+
+      sendForm(serviceID, templateId, {from_name: inputs.name, name: inputs.name, email: inputs.email, subject: inputs.subject, message: inputs.message }, userID);
       console.log("Email Sent")
-      alert(`Thank you ${data.name} for your message!`);
-      e.target.reset();
-      
+      toast.success(`😀 Thank you ${inputs.name} for your message!`,
+      {position: toast.POSITION.BOTTOM_RIGHT,
+        hideProgressBar: true });
+      }
+
+      const test = (inputs) => {
+          toast.success(`😀 Thank you ${inputs.name} for your message!`,
+          {position: toast.POSITION.BOTTOM_RIGHT,
+            hideProgressBar: true });
       }
 
       const sendForm = (serviceID, templateId, userID, variables) => {
         emailjs.send(
           serviceID,templateId,userID,variables).then(res => {
             console.log("Email Sent")
+            emailjs.send.reset();
           })
           .catch(err => console.error("Submission Error. Error details: ", err))
       }
 
+      const notifyErrors = () => {
+        toast.error('😨 Please fill in all the form fields!',
+        {
+          position: toast.POSITION.BOTTOM_RIGHT,
+          hideProgressBar: true 
+        });
+      }
+
+      const successMessageTest = () => {
+        toast.success(`😀 Thank you ${inputs.name} for your message!`,
+        {position: toast.POSITION.BOTTOM_RIGHT,
+          hideProgressBar: true });
+      }
+
+      // Stop allowing submissions after 2 to prevent spamming and overloading emailJS. 
+
+      const notifyMessageReceived = () => {
+        toast.warning('🔂 I have received your message. I will get back to you!',
+        {
+          position: toast.POSITION.BOTTOM_RIGHT,
+          hideProgressBar: true 
+        });
+      }
+      
+      
 
       return (
         <div className="contact-container">
@@ -42,46 +113,50 @@ const ContactMe = () => {
               me with this form and I'll get back to you
               as soon as I can. 
               </p>
-            <form className="contact-form" onSubmit={handleSubmit(onSubmit)} >
+            <form className="contact-form"  >
                 <ul className="contact-form-ul">
                 <div className="name-and-email">
                   <li className="name">
                     <input 
                     className="name-input" 
-                    type="text" 
+                    type="name" 
                     name="name" 
                     placeholder="Name"
-                    {...register("name", { 
-                            required: true
-                        })
-                    }
+                    value={inputs.name}
+                    // {...register("name", { 
+                    //         required: true,
+                    //     })
+                    // }
+                    onChange={handleChange}
                  />
                  
                   </li>
                   <li className="email">
                     <input 
                     className="email-input" 
-                    type="email" 
                     name="email" 
                     placeholder="Email"
-                    {...register("email",{
-                            required: true,
-                            pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
-                          })
-                    }
+                    value={inputs.email}
+                    onChange={handleChange}
+                    // {...register("email", {
+                    //         required: true,
+                    //         pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+                    //       })
+                    // }
                     />
                   </li> 
                 </div>
                 <li className="subject">
                 <input 
                 className="subject-input" 
-                type="subject" 
                 name="subject" 
                 placeholder="Subject"
-                {...register("subject",{
-                            required: true
-                        })
-                    } 
+                value={inputs.subject}
+                onChange={handleChange}
+                // {...register("subject",{
+                //             required: true,
+                //         })
+                //     } 
                 />
                 </li> 
                 <li className="message">
@@ -89,27 +164,20 @@ const ContactMe = () => {
                 className="message-input" 
                 name="message" 
                 placeholder="Message"
-                {...register("message", {
-                            required: true
-                        })
-                    } 
+                value={inputs.message}
+                onChange={handleChange}
+                // {...register("message", {
+                //             required: true,
+                //         })
+                //     } 
                 /></li> 
               </ul>
               <div className="btn-container">
-                <input className="contact-btn" type="submit" value="Send" />
+                <input onClick={handleValidation} className="contact-btn" type="submit" value="Send" />
               </div>
             </form>
           </div>
-          <div className="error-messages">
-            <label className='error'>
-              <p>{errors['name'] && "Please enter your name"} </p>
-              <p>{errors.email && "Please enter your email"}</p>
-              <p>{errors.subject && "You forgot to add a subject!"}</p> 
-              <p>{errors.message && "You forgot to add a message!"}</p> 
-            </label>
-          </div>
           <div className="map">
-
           </div>
           </div>
         </div>

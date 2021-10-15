@@ -15,6 +15,9 @@ import Hamburger from './Hamburger/index.js';
 import { useState, useRef } from 'react';
 import Menu from './Menu/index.js';
 import { useOnClickOutside } from './hooks.js';
+import 'animate.css/animate.min.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import { history } from './history.js'; 
 
 
@@ -31,11 +34,12 @@ const navItems = [HOME, ABOUT, SKILLS, WORK, CONTACT];
 function App() {
 
 const [open, setOpen] = useState(false);
-
 const node = useRef(); 
+
 useOnClickOutside(node, () => setOpen(false)); {
   return (
     <div className="App">
+    <ToastContainer />
         <HashRouter>  
           <NavBar navItems={navItems} />
           <div ref={node} className="mobile-nav">

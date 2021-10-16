@@ -20,7 +20,7 @@
     "emailjs-com": "^2.6.4",
     "gsap": "^3.6.0",
     "history": "^5.0.0",
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "node-forge": "^0.10.0",
     "react": "^16.13.1",
     "react-alertify-js": "^0.0.1",

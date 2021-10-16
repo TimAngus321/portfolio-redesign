@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/portfolio-redesign/static/css/main.05bce56c.chunk.css",
-    "main.js": "/portfolio-redesign/static/js/main.c4b12a70.chunk.js",
-    "main.js.map": "/portfolio-redesign/static/js/main.c4b12a70.chunk.js.map",
-    "runtime-main.js": "/portfolio-redesign/static/js/runtime-main.a357a2fd.js",
-    "runtime-main.js.map": "/portfolio-redesign/static/js/runtime-main.a357a2fd.js.map",
-    "static/js/2.8c30abf6.chunk.js": "/portfolio-redesign/static/js/2.8c30abf6.chunk.js",
-    "static/js/2.8c30abf6.chunk.js.map": "/portfolio-redesign/static/js/2.8c30abf6.chunk.js.map",
+    "main.css": "/portfolio-redesign/static/css/main.f8accba4.chunk.css",
+    "main.js": "/portfolio-redesign/static/js/main.de13628b.chunk.js",
+    "main.js.map": "/portfolio-redesign/static/js/main.de13628b.chunk.js.map",
+    "runtime-main.js": "/portfolio-redesign/static/js/runtime-main.872dd170.js",
+    "runtime-main.js.map": "/portfolio-redesign/static/js/runtime-main.872dd170.js.map",
+    "static/css/2.b54c7428.chunk.css": "/portfolio-redesign/static/css/2.b54c7428.chunk.css",
+    "static/js/2.6aecc05d.chunk.js": "/portfolio-redesign/static/js/2.6aecc05d.chunk.js",
+    "static/js/2.6aecc05d.chunk.js.map": "/portfolio-redesign/static/js/2.6aecc05d.chunk.js.map",
     "index.html": "/portfolio-redesign/index.html",
-    "precache-manifest.5ba003befc664c072c5ee1e6c940c5dd.js": "/portfolio-redesign/precache-manifest.5ba003befc664c072c5ee1e6c940c5dd.js",
-    "service-worker.js": "/portfolio-redesign/service-worker.js",
-    "static/css/main.05bce56c.chunk.css.map": "/portfolio-redesign/static/css/main.05bce56c.chunk.css.map",
-    "static/js/2.8c30abf6.chunk.js.LICENSE.txt": "/portfolio-redesign/static/js/2.8c30abf6.chunk.js.LICENSE.txt"
+    "static/css/2.b54c7428.chunk.css.map": "/portfolio-redesign/static/css/2.b54c7428.chunk.css.map",
+    "static/css/main.f8accba4.chunk.css.map": "/portfolio-redesign/static/css/main.f8accba4.chunk.css.map",
+    "static/js/2.6aecc05d.chunk.js.LICENSE.txt": "/portfolio-redesign/static/js/2.6aecc05d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a357a2fd.js",
-    "static/js/2.8c30abf6.chunk.js",
-    "static/css/main.05bce56c.chunk.css",
-    "static/js/main.c4b12a70.chunk.js"
+    "static/js/runtime-main.872dd170.js",
+    "static/css/2.b54c7428.chunk.css",
+    "static/js/2.6aecc05d.chunk.js",
+    "static/css/main.f8accba4.chunk.css",
+    "static/js/main.de13628b.chunk.js"
   ]
 }

@@ -34,7 +34,7 @@ const ContactMe = () => {
 
   }
 
-   
+  //  YOU NEED TO UPDATE SERVICE ID IN EMAILJS
 
     const userID = process.env.REACT_APP_EMAILJS_USER_ID;
     const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
@@ -43,7 +43,8 @@ const ContactMe = () => {
     const sendEmail = (e) => {
 
 
-      console.log(inputs.email)
+      console.log(inputs.email);
+      console.log(serviceID);
 
         send(
           serviceID,templateId,inputs,userID).then(res => {

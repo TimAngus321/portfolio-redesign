@@ -1,100 +1,148 @@
-import { React } from 'react';
-import { emailjs } from 'emailjs-com';
-// import { useForm, useFormState } from "react-hook-form";
+import { React, useRef } from 'react';
 import { toast } from 'react-toastify';
+import { emailjs, send } from 'emailjs-com';
+// import { useForm, useFormState } from "react-hook-form";
+
 import useForm from '/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/lib/useForm.js';
 
 
 toast.configure();
 
 const ContactMe = () => {
+  const form = useRef();
 
   const {inputs, handleChange } = useForm({
-    name: '',
-    email: '',
+    from_name: '',
+    from_email: '',
     subject: '',
     message: '',
   });
 
-  // const { register, reset, handleSubmit, control, formState } = useForm();
-  // const {submitCount} = formState;
-
-  // React.useEffect(() => {
-  //   // console.log("formState Info", formState.errors);
-  // },[formState]);
 
 
-  // const { dirtyFields, errors } = useFormState({ 
-  //   control
-  // });
-
-  function handleValidation(e) {
+  const onSubmit = (e) => {
     e.preventDefault();
 
-    let fields = inputs;
-    let errors = {};
-    let isFormValid = true;
+    console.log(inputs.email)
 
-    if(!fields["email"] || !fields["message"]){
+    if(!inputs.email || !inputs.message){
       notifyErrors();
     } else {
+      sendEmail();
       successMessageTest();
     }
+
   }
 
-  const onSubmit = (inputs, e) => {
-      e.preventDefault();
-      const userID = process.env.REACT_APP_EMAILJS_USER_ID;
-      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-      const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  //  YOU NEED TO UPDATE SERVICE ID IN EMAILJS
+
+    const userID = process.env.REACT_APP_EMAILJS_USER_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+
+    const sendEmail = (e) => {
 
 
-      sendForm(serviceID, templateId, {from_name: inputs.name, name: inputs.name, email: inputs.email, subject: inputs.subject, message: inputs.message }, userID);
-      console.log("Email Sent")
-      toast.success(`😀 Thank you ${inputs.name} for your message!`,
-      {position: toast.POSITION.BOTTOM_RIGHT,
-        hideProgressBar: true });
+      console.log(inputs.email);
+      console.log(serviceID);
+
+        send(
+          serviceID,templateId,inputs,userID).then(res => {
+            // emailjs.send.reset();
+            console.log(res.text)
+          })
+          .catch(err => console.error("Submission Error. Error details: ", err))
+         
       }
+    
 
-      const test = (inputs) => {
+  
+
+        const notifyErrors = () => {
+          toast.error('😨 Please fill in all the form fields!',
+          {
+            position: toast.POSITION.BOTTOM_RIGHT,
+            hideProgressBar: true 
+          });
+        }
+  
+        const successMessageTest = () => {
           toast.success(`😀 Thank you ${inputs.name} for your message!`,
           {position: toast.POSITION.BOTTOM_RIGHT,
             hideProgressBar: true });
-      }
+        }
 
-      const sendForm = (serviceID, templateId, userID, variables) => {
-        emailjs.send(
-          serviceID,templateId,userID,variables).then(res => {
-            console.log("Email Sent")
-            emailjs.send.reset();
-          })
-          .catch(err => console.error("Submission Error. Error details: ", err))
-      }
-
-      const notifyErrors = () => {
-        toast.error('😨 Please fill in all the form fields!',
-        {
-          position: toast.POSITION.BOTTOM_RIGHT,
-          hideProgressBar: true 
-        });
-      }
-
-      const successMessageTest = () => {
-        toast.success(`😀 Thank you ${inputs.name} for your message!`,
-        {position: toast.POSITION.BOTTOM_RIGHT,
-          hideProgressBar: true });
-      }
-
-      // Stop allowing submissions after 2 to prevent spamming and overloading emailJS. 
-
-      const notifyMessageReceived = () => {
-        toast.warning('🔂 I have received your message. I will get back to you!',
-        {
-          position: toast.POSITION.BOTTOM_RIGHT,
-          hideProgressBar: true 
-        });
-      }
       
+ 
+
+ 
+
+
+
+
+
+    // const onSubmit = (e) => {
+    //       e.preventDefault();
+
+    //   
+
+
+
+    //     // let fields = inputs;
+    //         // let errors = {};
+    //         // let isFormValid = true;
+
+    //         if(!inputs["email"] || !inputs["message"]){
+    //             notifyErrors();
+    //         } else {
+    //             sendForm();
+    //         }
+
+    //     }
+
+    //     const userID = process.env.REACT_APP_EMAILJS_USER_ID;
+    //     const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    //     const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+
+    //     // const sendEmail = (e) => {
+       
+    //     const sendForm = (e) => {
+
+    //         let { value, name} = e.target;
+
+    //         e.preventDefault();
+    //         emailjs.send(
+    //           serviceID,templateId,userID,inputs).then(res => {
+    //             successMessageTest();
+    //             // emailjs.send.reset();
+    //           })
+    //           .catch(err => console.error("Submission Error. Error details: ", err))
+          
+
+    //         emailjs.sendForm(serviceID, templateId, '.contact-form', {from_name: inputs.name, name: inputs.name, email: inputs.email, subject: inputs.subject, message: inputs.message }, userID);
+    //       console.log("Email Sent")
+    //       toast.success(`😀 Thank you ${inputs.name} for your message!`,
+    //       {position: toast.POSITION.BOTTOM_RIGHT,
+    //         hideProgressBar: true });
+    //       }
+
+        
+        
+
+  
+       
+  
+      
+  
+    //     // Stop allowing submissions after 2 to prevent spamming and overloading emailJS. 
+  
+    //     const notifyMessageReceived = () => {
+    //       toast.warning('🔂 I have received your message. I will get back to you!',
+    //       {
+    //         position: toast.POSITION.BOTTOM_RIGHT,
+    //         hideProgressBar: true 
+    //       });
+    //     }
       
 
       return (
@@ -127,6 +175,8 @@ const ContactMe = () => {
                     //         required: true,
                     //     })
                     // }
+                    // onChange={handleChange}
+                 
                     onChange={handleChange}
                  />
                  
@@ -173,7 +223,7 @@ const ContactMe = () => {
                 /></li> 
               </ul>
               <div className="btn-container">
-                <input onClick={handleValidation} className="contact-btn" type="submit" value="Send" />
+                <input ref={form} onClick={onSubmit} className="contact-btn" type="submit" value="Send" />
               </div>
             </form>
           </div>

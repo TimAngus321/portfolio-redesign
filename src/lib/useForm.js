@@ -1,13 +1,21 @@
-import {useState}  from 'react';
+import {useState, useRef}  from 'react';
+import { toast } from 'react-toastify';
+import { emailjs } from 'emailjs-com';
+
+
 
 export default function useForm(initial = {}) {
 
     const [inputs, setInputs] = useState(initial);
+    const form = useRef();
+
 
     function handleChange(e) {
+
+
         e.preventDefault();
         
-        let { value, name, type} = e.target;
+        let { value, name} = e.target;
 
         if (inputs === '') {
             console.log('Inputs cannot be empty')
@@ -17,7 +25,7 @@ export default function useForm(initial = {}) {
         setInputs({
             // copy existing state
             ...inputs,
-            [e.target.name]: e.target.value
+            [name]: value,
         })
     }
     
@@ -34,13 +42,15 @@ export default function useForm(initial = {}) {
     // function clearForm() {
     //     const blankState = Object.fromEntries(Object.entries(inputs).map(([key, value]) => [key, '']));
     //     setInputs(blankState);
-    // }
+    // }        
  
-    return {
-        inputs,
-        handleChange,
-        // resetForm,
-        // clearForm,
-        checkErrors,
-    };
+        return {
+            inputs,
+            handleChange,
+            // resetForm,
+            // clearForm,
+            checkErrors,
+            // onSubmit,
+        };
+
 }

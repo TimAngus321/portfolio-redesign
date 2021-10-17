@@ -1,6 +1,6 @@
 import { React, useRef } from 'react';
 import { toast } from 'react-toastify';
-import { emailjs, send } from 'emailjs-com';
+import { send } from 'emailjs-com';
 // import { useForm, useFormState } from "react-hook-form";
 
 import useForm from '/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/lib/useForm.js';
@@ -25,11 +25,14 @@ const ContactMe = () => {
 
     console.log(inputs.email)
 
-    if(!inputs.email || !inputs.message){
+    const emailReg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if(!inputs.email || !inputs.message || !inputs.name || !inputs.subject){
       notifyErrors();
+    } else if (!emailReg.test(inputs.email)) {
+      notifyEmailIssue();
     } else {
       sendEmail();
-      successMessageTest();
     }
 
   }
@@ -46,17 +49,18 @@ const ContactMe = () => {
       console.log(inputs.email);
       console.log(serviceID);
 
+      
+
         send(
           serviceID,templateId,inputs,userID).then(res => {
             // emailjs.send.reset();
             console.log(res.text)
+            notifySuccess();
+
           })
-          .catch(err => console.error("Submission Error. Error details: ", err))
+          .catch(err => console.error("Submission Error. Error details: ", err, notifyFailure()))
          
       }
-    
-
-  
 
         const notifyErrors = () => {
           toast.error('😨 Please fill in all the form fields!',
@@ -66,72 +70,27 @@ const ContactMe = () => {
           });
         }
   
-        const successMessageTest = () => {
+        const notifySuccess = () => {
           toast.success(`😀 Thank you ${inputs.name} for your message!`,
           {position: toast.POSITION.BOTTOM_RIGHT,
             hideProgressBar: true });
         }
 
-      
- 
+        const notifyEmailIssue = () => {
+          toast.warning(`There was a problem with your email. Please check it is correct`,
+          {position: toast.POSITION.BOTTOM_RIGHT,
+            hideProgressBar: true });
+        }
 
- 
-
-
-
-
-
-    // const onSubmit = (e) => {
-    //       e.preventDefault();
-
-    //   
-
-
-
-    //     // let fields = inputs;
-    //         // let errors = {};
-    //         // let isFormValid = true;
-
-    //         if(!inputs["email"] || !inputs["message"]){
-    //             notifyErrors();
-    //         } else {
-    //             sendForm();
-    //         }
-
-    //     }
-
-    //     const userID = process.env.REACT_APP_EMAILJS_USER_ID;
-    //     const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-    //     const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-
-    //     // const sendEmail = (e) => {
-       
-    //     const sendForm = (e) => {
-
-    //         let { value, name} = e.target;
-
-    //         e.preventDefault();
-    //         emailjs.send(
-    //           serviceID,templateId,userID,inputs).then(res => {
-    //             successMessageTest();
-    //             // emailjs.send.reset();
-    //           })
-    //           .catch(err => console.error("Submission Error. Error details: ", err))
-          
-
-    //         emailjs.sendForm(serviceID, templateId, '.contact-form', {from_name: inputs.name, name: inputs.name, email: inputs.email, subject: inputs.subject, message: inputs.message }, userID);
-    //       console.log("Email Sent")
-    //       toast.success(`😀 Thank you ${inputs.name} for your message!`,
-    //       {position: toast.POSITION.BOTTOM_RIGHT,
-    //         hideProgressBar: true });
-    //       }
-
-        
+        const notifyFailure = () => {
+          toast.error(`${inputs.name} unforutnately there was a problem sending your message. Please try again later.`,
+          {
+            position: toast.POSITION.BOTTOM_RIGHT,
+            hideProgressBar: true 
+          });
+        }
         
 
-  
-       
-  
       
   
     //     // Stop allowing submissions after 2 to prevent spamming and overloading emailJS. 

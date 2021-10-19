@@ -83,7 +83,7 @@ const ContactMe = () => {
         }
 
         const notifyFailure = () => {
-          toast.error(`${inputs.name} unforutnately there was a problem sending your message. Please try again later.`,
+          toast.error(`Unforutnately there was a problem sending your message. Please try again later.`,
           {
             position: toast.POSITION.BOTTOM_RIGHT,
             hideProgressBar: true 
@@ -120,7 +120,7 @@ const ContactMe = () => {
               me with this form and I'll get back to you
               as soon as I can. 
               </p>
-            <form className="contact-form"  >
+            <form className="contact-form">
                 <ul className="contact-form-ul">
                 <div className="name-and-email">
                   <li className="name">

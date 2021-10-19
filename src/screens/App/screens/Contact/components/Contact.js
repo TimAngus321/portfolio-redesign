@@ -1,8 +1,6 @@
-import { React, useRef } from 'react';
+import { React, useRef, useState } from 'react';
 import { toast } from 'react-toastify';
 import { send } from 'emailjs-com';
-// import { useForm, useFormState } from "react-hook-form";
-
 import useForm from '/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/lib/useForm.js';
 
 
@@ -11,19 +9,12 @@ toast.configure();
 const ContactMe = () => {
   const form = useRef();
 
-  const {inputs, handleChange } = useForm({
-    from_name: '',
-    from_email: '',
-    subject: '',
-    message: '',
-  });
-
-
+  const {inputs, handleChange } = useForm();
+  const [subCount, setSubCount] = useState(0);
 
   const onSubmit = (e) => {
     e.preventDefault();
-
-    console.log(inputs.email)
+     
 
     const emailReg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -31,31 +22,29 @@ const ContactMe = () => {
       notifyErrors();
     } else if (!emailReg.test(inputs.email)) {
       notifyEmailIssue();
+    } else if (subCount >= 1) {
+      notifyMessageReceived();
     } else {
       sendEmail();
     }
 
   }
 
-  //  YOU NEED TO UPDATE SERVICE ID IN EMAILJS
-
     const userID = process.env.REACT_APP_EMAILJS_USER_ID;
     const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 
-    const sendEmail = (e) => {
-
-
-      console.log(inputs.email);
-      console.log(serviceID);
-
-      
+    const sendEmail = () => {      
 
         send(
           serviceID,templateId,inputs,userID).then(res => {
             // emailjs.send.reset();
             console.log(res.text)
             notifySuccess();
+
+            // After successful submission update submission count state
+            setSubCount(subCount + 1)
+            console.log(subCount)
 
           })
           .catch(err => console.error("Submission Error. Error details: ", err, notifyFailure()))
@@ -89,19 +78,16 @@ const ContactMe = () => {
             hideProgressBar: true 
           });
         }
-        
-
-      
+    
+        // Stop allowing submissions after 2 to prevent spamming and overloading emailJS. 
   
-    //     // Stop allowing submissions after 2 to prevent spamming and overloading emailJS. 
-  
-    //     const notifyMessageReceived = () => {
-    //       toast.warning('🔂 I have received your message. I will get back to you!',
-    //       {
-    //         position: toast.POSITION.BOTTOM_RIGHT,
-    //         hideProgressBar: true 
-    //       });
-    //     }
+        const notifyMessageReceived = () => {
+          toast.warning('🙏 I have received your message. I will get back to you!',
+          {
+            position: toast.POSITION.BOTTOM_RIGHT,
+            hideProgressBar: true 
+          });
+        }
       
 
       return (
@@ -130,12 +116,6 @@ const ContactMe = () => {
                     name="name" 
                     placeholder="Name"
                     value={inputs.name}
-                    // {...register("name", { 
-                    //         required: true,
-                    //     })
-                    // }
-                    // onChange={handleChange}
-                 
                     onChange={handleChange}
                  />
                  
@@ -146,12 +126,7 @@ const ContactMe = () => {
                     name="email" 
                     placeholder="Email"
                     value={inputs.email}
-                    onChange={handleChange}
-                    // {...register("email", {
-                    //         required: true,
-                    //         pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
-                    //       })
-                    // }
+                    onChange={handleChange}                  
                     />
                   </li> 
                 </div>
@@ -162,10 +137,6 @@ const ContactMe = () => {
                 placeholder="Subject"
                 value={inputs.subject}
                 onChange={handleChange}
-                // {...register("subject",{
-                //             required: true,
-                //         })
-                //     } 
                 />
                 </li> 
                 <li className="message">
@@ -174,11 +145,7 @@ const ContactMe = () => {
                 name="message" 
                 placeholder="Message"
                 value={inputs.message}
-                onChange={handleChange}
-                // {...register("message", {
-                //             required: true,
-                //         })
-                //     } 
+                onChange={handleChange}              
                 /></li> 
               </ul>
               <div className="btn-container">

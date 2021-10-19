@@ -1,8 +1,4 @@
 import {useState}  from 'react';
-import { toast } from 'react-toastify';
-
-
-
 
 export default function useForm(initial = {}) {
 
@@ -21,22 +17,11 @@ export default function useForm(initial = {}) {
             ...inputs,
             [name]: value,
         })
-    }
-
-    // function resetForm() {
-    //     setInputs(initial);
-    // }
-
-    // function clearForm() {
-    //     const blankState = Object.fromEntries(Object.entries(inputs).map(([key, value]) => [key, '']));
-    //     setInputs(blankState);
-    // }        
+    }      
  
         return {
             inputs,
             handleChange,
-            // resetForm,
-            // clearForm,
         };
 
 }

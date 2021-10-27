@@ -3,15 +3,8 @@ import { routeConstants } from 'shared/constants';
 import AllTheSkills from './all-the-skills';
 import { Timeline, Tween } from 'react-gsap';
 import AnimatedStatefulSkills from './all-my-skills';
-
-const skillSets = {
-  frontend: ["React.js", "Javascript", "HTML", "SCSS", "CSS", "APIs"],
-  backend: ["Ruby on Rails", "PostgreSQL", "Ruby", "SQL"],
-  fullstack: ["React.js", "Javascript", "HTML", "SCSS", "CSS", "APIs","Ruby on Rails", "PostgreSQL", "Ruby", "SQL" ],
-  eccomerce: ["Shopify", "Liquid", "Node.js", "AWS", "Lambda"],
-  mobile: ["React Navtive"],
-  softskills: ["German(B1)", "Presenting", "Teaching", "Managing", "Research", "Copywriting", "Musician"]
-} 
+import SkillCard from './skill-card';
+import frontEndSkills from '../front-end-skills.js';
 
 
   class Skills extends Component {
@@ -25,15 +18,15 @@ const skillSets = {
           showFullstack: false,
           showEccomerce: false,
           showMobile: false,
-          showSoftskills: false
+          showSoftskills: false,
+          onLoadFrontend: true,
         } 
       };
-      this.hideComponent = this.hideComponent.bind(this);
+      this.toggleComponent = this.toggleComponent.bind(this);
     }
-
     
 
-    hideComponent(name) {
+    toggleComponent(name) {
       switch (name) {
         case "showFrontend": 
         this.setState({ showFrontend: !this.state.showFrontend });
@@ -42,7 +35,8 @@ const skillSets = {
           showFullstack: false,
           showEccomerce: false,
           showMobile: false,
-          showSoftskills: false
+          showSoftskills: false,
+          onLoadFrontend: false
         });
         break;
         case "showBackend":
@@ -52,7 +46,8 @@ const skillSets = {
           showFullstack: false,
           showEccomerce: false,
           showMobile: false,
-          showSoftskills: false
+          showSoftskills: false,
+          onLoadFrontend: false
         });
         break;
         case "showFullstack":
@@ -62,7 +57,8 @@ const skillSets = {
           showBackend: false,
           showEccomerce: false,
           showMobile: false,
-          showSoftskills: false
+          showSoftskills: false,
+          onLoadFrontend: false,
         });
         break;
         case "showEccomerce":
@@ -72,7 +68,8 @@ const skillSets = {
           showBackend: false,
           showFullstack: false,
           showMobile: false,
-          showSoftskills: false
+          showSoftskills: false,
+          onLoadFrontend: false,
         });
         break;
         case "showMobile":
@@ -82,7 +79,8 @@ const skillSets = {
           showBackend: false,
           showFullstack: false,
           showEccomerce: false,
-          showSoftskills: false
+          showSoftskills: false,
+          onLoadFrontend: false,
         });
         break;
         case "showSoftskills":
@@ -92,94 +90,74 @@ const skillSets = {
           showBackend: false,
           showFullstack: false,
           showMobile: false,
-          showEccomerce: false
+          showEccomerce: false,
+          onLoadFrontend: false,
         });
         break;
         default:
         return null;
       }
     }
+
+    renderFrontend = () => {
+      alert('test');
+    }
  
    render() {
-     const { showFrontend, showBackend, showFullstack, showEccomerce, showMobile, showSoftskills } = this.state;
+     const { onLoadFrontend, showFrontend, showBackend, showFullstack, showEccomerce, showMobile, showSoftskills } = this.state;
 
     return (    
-      <div>
     <div className="skills-container">
     <div className="select-skills">
     <h2 className="skills-title">Tech Stack</h2>
-    <h4 className="about-my-skills">
-      Although my most recent work exprience was primarily focused on
+    <div className="about-my-skills">
       <span 
-      className="fade-in-skills" 
-      onClick={() => this.hideComponent("showEccomerce")}
-      // onMouseOver={() => this.hideComponent('showEccomerce')}
-      >
-      &nbsp;E-commerce&nbsp;
-      </span>
-      I am a 
-      <span 
-      className="fade-in-skills" 
-      onClick={() => this.hideComponent("showFullstack")}
-      // onMouseOver={() => this.hideComponent('showFullstack')}
-      >
-      &nbsp;Fullstack developer&nbsp;
-      </span>
-      with skillsets that covers
-      <span 
-      className="fade-in-skills" 
-      onClick={() => this.hideComponent("showFrontend")}
-      // onMouseOver={() => this.hideComponent('showFrontend')}
+      className="about-btn" 
+      onClick={() => this.toggleComponent("showFrontend")}
       >
       &nbsp;Front-end&nbsp;
       </span>
-      as well as  
       <span
-      className="fade-in-skills" 
-      onClick={() => this.hideComponent("showBackend")}
-      // onMouseOver={() => this.hideComponent('showBackend')}
+      className="about-btn" 
+      onClick={() => this.toggleComponent("showBackend")}
       >
       &nbsp;Backend&nbsp;
       </span>
-      . Additionally my previous experience working in the education sector
-     has provided me with
-     <span
-      className="fade-in-skills" 
-      onClick={() => this.hideComponent("showSoftskills")}
-      // onMouseOver={() => this.hideComponent('showSoftskills')}
+      <span 
+      className="about-btn" 
+      onClick={() => this.toggleComponent("showEccomerce")}
       >
-      &nbsp;softskills&nbsp;
+      &nbsp;Shopify&nbsp;
       </span>
-      that help me excel at communicating 
-      and working in teams. I am always learning new skills all 
-      the time and hope soon to delve into
+      <span 
+      className="about-btn" 
+      onClick={() => this.toggleComponent("showFullstack")}
+      >
+      &nbsp;Fullstack&nbsp;
+      </span>
       <span
-      className="fade-in-skills" 
-      onClick={() => this.hideComponent("showMobile")}
-      // onMouseOver={() => this.hideComponent('showMobile')}
+      className="about-btn" 
+      onClick={() => this.toggleComponent("showMobile")}
       >
       &nbsp;Mobile Development&nbsp;
       </span>
-      and 
-      full-stack Javscript with the MERN stack.
-    </h4>
     </div>
-      <div className="falling-skills-container">
-      <AllTheSkills />
-      {/* <AnimatedStatefulSkills /> */}
+    </div>
+       <div className="falling-skills-container">
+      
       <div className="reveal-skills">
         <div className="selected-skillset">
-        {showFrontend && skillSets.frontend.join(' ')}
-        {showBackend && skillSets.backend.join(' ')}
+        {onLoadFrontend && <SkillCard  />}
+        {showFrontend && <SkillCard frontEndSkills={frontEndSkills.skill1.name} image={frontEndSkills.skill1.image} />}
+        {/* {showBackend && skillSets.backend.join(' ')}
         {showFullstack && skillSets.fullstack.join(' ')}
         {showEccomerce && skillSets.eccomerce.join(' ')}
         {showSoftskills && skillSets.softskills.join(' ')}
-        {showMobile && skillSets.mobile.join(' ')}
+        {showMobile && skillSets.mobile.join(' ')} */}
         </div>
       </div>
       </div>
     </div>
-</div>
     )
   }
 }

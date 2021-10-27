@@ -271,7 +271,7 @@ ul.menu > a:active {
 
 
 /******************************************************************* 
-Photo Quote Component
+Home Page
 ********************************************************************/
 
 .photo-quote-component {
@@ -517,6 +517,7 @@ Contact
   list-style: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .name-and-email {
@@ -827,7 +828,23 @@ Skills
 }
 
 .about-my-skills {
-  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0px;
+  position: sticky;
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+  .about-component {
+    flex-direction: column;
+    margin: 0;
+    align-content: center;
+  }
 }
 
 .sub-heading-skills {

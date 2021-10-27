@@ -18,6 +18,9 @@ const ContactMe = () => {
 
     const emailReg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+
+    // TODO - Save message has been sent in session storage then give them an option to redo it (in a notification) if they made a mistake in the form. 
+
     if(!inputs.email || !inputs.message || !inputs.name || !inputs.subject){
       notifyErrors();
     } else if (!emailReg.test(inputs.email)) {
@@ -97,12 +100,8 @@ const ContactMe = () => {
             <h1 className="contact-title">Contact Me</h1>
               <p className="contact-blurb">
               Please feel free to contact me 
-              regarding Ruby on Rails, React.js,
-              javascript and shopify positions you 
-              think I might be suitable for. I am most 
-              interested in full time positions 
-              in Berlin however I am open to
-              freelance work as well. Please contact 
+              regarding Rails, React,
+              Javascript and shopify projects. Please contact 
               me with this form and I'll get back to you
               as soon as I can. 
               </p>

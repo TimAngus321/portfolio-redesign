@@ -1,4 +1,4 @@
-const frontEndSkills = {
+const frontendSkillSets = {
     skill1: {
         name: "React",
         image: "/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/public/images/logo192.png"
@@ -9,7 +9,7 @@ const frontEndSkills = {
     }
 }
 
-export default frontEndSkills;
+export default frontendSkillSets;
 
 // const skillSets = {
 //     frontend: ["React.js", "Javascript", "HTML", "SCSS", "CSS", "APIs"],

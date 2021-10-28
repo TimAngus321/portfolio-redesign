@@ -1,10 +1,10 @@
 import React from 'react';
-import frontEndSkills from '../front-end-skills';
+import frontendSkillSets from '../front-end-skills';
 
-const SkillCard = ({frontEndSkills, image }) => (
+const SkillCard = () => (
     <li>
-        <h3>{frontEndSkills}</h3>
-        <img src={image} alt="Skill"></img>
+        <h3>{frontendSkillSets.skill1.name}</h3>
+        <img src={frontendSkillSets.skill1.image} alt="Skill"></img>
         
     </li>
 

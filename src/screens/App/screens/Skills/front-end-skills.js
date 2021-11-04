@@ -1,34 +1,42 @@
-const frontendSkillSets = {
+import API from "./images/API.jpeg";
+
+
+const frontendSkillSet = {
     skill1: {
         name: "React",
-        image: "images/react-logo.png",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         alt: "Picture of React Logo" 
     },
     skill2: {
+        name: "Redux",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+        alt: "Picture of Redux Logo"
+    },
+    skill3: {
         name: "Javascript",
-        image: "",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
         alt: "Picture of JS logo"
     }, 
-    skill3: {
+    skill4: {
         name: "HTML",
-        image: "",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
         alt: "Picture of HTML logo"
     },
-    skill4: {
+    skill5: {
         name: "SCSS",
-        image: "",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
         alt: "Picture of SCSS logo"
+    },
+    skill6: {
+        name: "CSS",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        alt: "Picture of CSS logo"
+    },
+    skill7: {
+        name: "APIs",
+        image: API,
+        alt: "Picture of an API logo"
     }
 };
 
-export default frontendSkillSets;
-
-// const skillSets = {
-//     frontend: ["React.js", "Javascript", "HTML", "SCSS", "CSS", "APIs"],
-//     backend: ["Ruby on Rails", "PostgreSQL", "Ruby", "SQL"],
-//     fullstack: ["React.js", "Javascript", "HTML", "SCSS", "CSS", "APIs","Ruby on Rails", "PostgreSQL", "Ruby", "SQL" ],
-//     eccomerce: ["Shopify", "Liquid", "Node.js", "AWS", "Lambda"],
-//     mobile: ["React Navtive"]
-//     //  save this for about 
-//     // softskills: ["German(B1)", "Presenting", "Teaching", "Managing", "Research", "Copywriting", "Musician"]
-//   } 
+export default frontendSkillSet;

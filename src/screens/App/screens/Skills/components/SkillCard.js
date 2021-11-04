@@ -1,5 +1,5 @@
 import React from 'react';
-import frontendSkillSets from '../front-end-skills';
+
 
 
 
@@ -16,7 +16,7 @@ class SkillCard extends React.Component {
                <h3 className="skill-name">
                 {name}
                </h3>
-               { <img src={image} alt={alt} className="skill-image" /> }
+            <img src={image} alt={alt} className="skill-image" />
            </li> 
         )
     }

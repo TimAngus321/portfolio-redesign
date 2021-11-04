@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import frontendSkillSets from '../front-end-skills';
+import frontendSkillSet from '../front-end-skills';
+import backendSkillSet from '../backend-skills';
+import shopifySkillSet from '../shopify-skills'
+import mobileSkills from '../mobile-dev-skills';
 import SkillCard from './SkillCard';
-
-
-
-
 
   class Skills extends React.Component {
 
@@ -13,19 +12,35 @@ import SkillCard from './SkillCard';
     skillSets: {}
    }
 
+  
+
   loadFrontEndSkills = () => {
-   this.setState({ skillSets: frontendSkillSets})
+   this.setState({ skillSets: frontendSkillSet})
   };
+
+  loadBackendSkills = () => {
+    this.setState({ skillSets: backendSkillSet})
+  }
+
+  loadShopifySkills = () => {
+    this.setState({ skillSets: shopifySkillSet})
+  }
  
+  loadMobileSkills = () => {
+    this.setState({ skillSets: mobileSkills})
+  }
 
     //  const { onLoadFrontend, showFrontend, showBackend, showFullstack, showEccomerce, showMobile, showSoftskills } = this.state;
 
     render() {
-    return (    
+    return (   
     <div className="skills-container">
     <div className="select-skills">
     <h2 className="skills-title">Tech Stack</h2>
     <div className="about-my-skills">
+
+
+
       <span 
       className="about-btn" 
       onClick={this.loadFrontEndSkills}
@@ -34,25 +49,19 @@ import SkillCard from './SkillCard';
       </span>
       <span
       className="about-btn" 
-      // onClick={() => loadSkillComponent("showBackend")}
+     onClick={this.loadBackendSkills}
       >
       &nbsp;Backend&nbsp;
       </span>
       <span 
       className="about-btn" 
-      // onClick={() => loadSkillComponent("showEccomerce")}
+      onClick={this.loadShopifySkills}
       >
       &nbsp;Shopify&nbsp;
       </span>
-      <span 
-      className="about-btn" 
-      // onClick={() => loadSkillComponent("showFullstack")}
-      >
-      &nbsp;Fullstack&nbsp;
-      </span>
       <span
       className="about-btn" 
-      // onClick={() => loadSkillComponent("showMobile")}
+       onClick={this.loadMobileSkills}
       >
       &nbsp;Mobile Development&nbsp;
       </span>

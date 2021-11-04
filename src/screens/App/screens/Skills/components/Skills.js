@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import frontendSkillSet from '../front-end-skills';
 import backendSkillSet from '../backend-skills';
 import shopifySkillSet from '../shopify-skills'
@@ -9,10 +9,8 @@ import SkillCard from './SkillCard';
 
 
   state = {
-    skillSets: {}
+    skillSets: frontendSkillSet
    }
-
-  
 
   loadFrontEndSkills = () => {
    this.setState({ skillSets: frontendSkillSet})
@@ -33,14 +31,12 @@ import SkillCard from './SkillCard';
     //  const { onLoadFrontend, showFrontend, showBackend, showFullstack, showEccomerce, showMobile, showSoftskills } = this.state;
 
     render() {
-    return (   
+    return (
+      <div className="photo-quote">  
     <div className="skills-container">
     <div className="select-skills">
     <h2 className="skills-title">Tech Stack</h2>
     <div className="about-my-skills">
-
-
-
       <span 
       className="about-btn" 
       onClick={this.loadFrontEndSkills}
@@ -83,6 +79,7 @@ import SkillCard from './SkillCard';
         </div>
       </div>
       </div>
+    </div>
     </div>
     )
     }

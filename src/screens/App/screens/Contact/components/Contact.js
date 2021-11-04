@@ -69,7 +69,7 @@ const ContactMe = () => {
         }
 
         const notifyEmailIssue = () => {
-          toast.warning(`There was a problem with your email. Please check it is correct`,
+          toast.warning(`There is a problem with your email. Please check it is correct`,
           {position: toast.POSITION.BOTTOM_RIGHT,
             hideProgressBar: true });
         }
@@ -82,7 +82,7 @@ const ContactMe = () => {
           });
         }
     
-        // Stop allowing submissions after 2 to prevent spamming and overloading emailJS. 
+        // Stop allowing submissions after 2 to prevent spamming and overloading emailJS. If they need to correct something allow them to click within the notification to send again.
   
         const notifyMessageReceived = () => {
           toast.warning('🙏 I have received your message. I will get back to you!',

@@ -1,15 +1,10 @@
 import React from 'react';
 
-
-
-
 class SkillCard extends React.Component {
 
     render() {
 
         const {name, image, alt} = this.props.skill;
-
-
 
         return (
            <li className="skill-card">
@@ -24,5 +19,3 @@ class SkillCard extends React.Component {
   
 }
 export default SkillCard;
-
-

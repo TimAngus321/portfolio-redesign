@@ -1,19 +1,23 @@
 const frontendSkillSets = {
     skill1: {
         name: "React",
-        image: "/portfolio-redesign/logo192.png" 
+        image: "images/react-logo.png",
+        alt: "Picture of React Logo" 
     },
     skill2: {
         name: "Javascript",
-        image: ""
+        image: "",
+        alt: "Picture of JS logo"
     }, 
     skill3: {
         name: "HTML",
-        image: ""
+        image: "",
+        alt: "Picture of HTML logo"
     },
     skill4: {
         name: "SCSS",
-        image: ""
+        image: "",
+        alt: "Picture of SCSS logo"
     }
 };
 

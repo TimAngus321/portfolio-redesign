@@ -1,27 +1,21 @@
 import React, { useState } from 'react';
 import frontendSkillSets from '../front-end-skills';
-import SkillCard from './front-end-skill-card';
+import SkillCard from './SkillCard';
 
 
-  class Skills extends React.component {
-  
-  //   const [skillsComponent, setSkillComponent] = useState();
-    
-    
 
-  //  const loadSkillComponent = async location => {
-  //    const { default: skillsComponent } = await import(`/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/screens/App/screens/Skills/components/${location}`);
-  //    setSkillComponent(skillsComponent)
-  //  }
 
-   state = {
-    frontendSkillSets: {}
+
+  class Skills extends React.Component {
+
+
+  state = {
+    skillSets: {}
    }
 
-   loadFrontEndSkills = () => {
-     this.setState({ SkillCard: frontendSkillSets})
-   };
-  
+  loadFrontEndSkills = () => {
+   this.setState({ skillSets: frontendSkillSets})
+  };
  
 
     //  const { onLoadFrontend, showFrontend, showBackend, showFullstack, showEccomerce, showMobile, showSoftskills } = this.state;
@@ -34,7 +28,7 @@ import SkillCard from './front-end-skill-card';
     <div className="about-my-skills">
       <span 
       className="about-btn" 
-      onClick={this.props.loadFrontEndSkills}
+      onClick={this.loadFrontEndSkills}
       >
       &nbsp;Front-end&nbsp;
       </span>
@@ -68,8 +62,15 @@ import SkillCard from './front-end-skill-card';
       
       <div className="reveal-skills">
         <div className="selected-skillset">
-
-        {<SkillCard />}
+          <ul className="skill-cards">
+        {Object.keys(this.state.skillSets).map(key => 
+        <SkillCard 
+        key={key} 
+        skill={this.state.skillSets[key]}
+        image={this.state.skillSets[key]}
+        />
+        )}
+        </ul>
         </div>
       </div>
       </div>

@@ -96,9 +96,8 @@ const ContactMe = () => {
         <div className="form-item">
           <h1 className="contact-title">Contact Me</h1>
           <p className="contact-blurb">
-            Please feel free to contact me regarding Rails, React, Javascript
-            and shopify projects. Please contact me with this form and I'll get
-            back to you as soon as I can.
+            Please feel free to contact me regarding Shopify, React, Rails and Javascript projects. Please contact me with this form and I'll get
+            back to you.
           </p>
           <form className="contact-form">
             <ul className="contact-form-ul">

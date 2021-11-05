@@ -5,11 +5,12 @@ import React from "react";
 
 class SkillCard extends React.Component {
   render() {
-    const { name, image, alt } = this.props.skill;
+    const { name, image, image2, alt, alt2 } = this.props.skill;
 
     return (
       <li className="skill-card">
         <img className="skill-image" src={image} alt={alt} />
+        <img className="skill-image" src={image2} alt={alt2} />
         <h3 className="skill-name">{name}</h3>
       </li>
     );

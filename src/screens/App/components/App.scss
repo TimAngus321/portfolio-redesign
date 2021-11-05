@@ -898,8 +898,8 @@ Skills
   display: flex;
   flex-direction: column;
   height: 100vh;
-  margin: 0 0 0 40px;
-  width: 25%;
+  margin: 0 0 0 30px;
+  width: 30%;
   justify-content: center;
   z-index: 1;
 }
@@ -907,6 +907,8 @@ Skills
 @media only screen and (max-width: 900px) {
   .select-skills { 
     margin: 0;
+    width: 95%;
+    padding-top: 20px;
   }
 }
 
@@ -956,6 +958,15 @@ Skills
   }
 }
 
+.skills-blurb {
+  color: white;
+  width: 100%;  
+}
+
+.contact-link {
+  color: $base-hover-color;
+}
+
 
 /******************************************************************* 
 Skill Card
@@ -986,6 +997,7 @@ img.skill-image {
 li.skill-card {
   display: flex;
   align-items: center;
+  padding: 10px;
 }
 
 ul.skill-cards {

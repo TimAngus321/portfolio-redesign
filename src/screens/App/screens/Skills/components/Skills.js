@@ -1,9 +1,15 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+import { routeConstants } from 'shared/constants';
 import frontendSkillSet from "../front-end-skills";
 import backendSkillSet from "../backend-skills";
 import shopifySkillSet from "../shopify-skills";
 import mobileSkills from "../mobile-dev-skills";
 import SkillCard from "./SkillCard";
+
+const {
+  CONTACT,
+} = routeConstants;
 
 class Skills extends React.Component {
   state = {
@@ -35,7 +41,9 @@ class Skills extends React.Component {
           <div className="select-skills">
             <h2 className="skills-title">Tech Stack</h2>
             <p className="skills-blurb">
-              
+              After studying at LeWagon and doing additional studies online I have learnt and built projects with numerous languages, frameworkds and tools.
+              Feel free to check out my current tech stack and what I'm currently learning. If you use these technologies in your project and need help feel free 
+              to get in <Link className="contact-link" to={CONTACT.route}>contact </Link> with me. 
             </p>
             <div className="about-my-skills">
               <span className="about-btn" onClick={this.loadFrontEndSkills}>
@@ -61,6 +69,7 @@ class Skills extends React.Component {
                       key={key}
                       skill={this.state.skillSets[key]}
                       image={this.state.skillSets[key]}
+                      image2={this.state.skillSets[key]}
                     />
                   ))}
                 </ul>

@@ -1,33 +1,39 @@
+import shopifyLogo from './images/Shopify-Logo.png'
+import shopifyLiquid from './images/Shopify-liquid.webp'
+import tools from './images/tools.png'
+import appInt from './images/app-integration.png'
+import ui from './images/UI.png'
 
 const shopifySkillSet = {
     skill1: {
-        name: "Shopify",
-        image: "",
+        name: "Shopify Platform",
+        image: shopifyLogo,
         alt: "Shopify Logo"
     },
     skill2: {
         name: "Liquid",
-        image: "",
+        image: shopifyLiquid,
         alt: "Liquid Logo"
     },
     skill3: {
         name: "Themekit",
-        image: "",
+        image: tools,
         alt: "Themekit image"
     },
     skill4: {
         name: "Theme Development",
-        image: "",
+        image: ui,
         alt: "Theme Dev Image"
     },
     skill5: {
         name: "App Development",
-        image: "",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg",
+        image2: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
         alt: "App Dev Image"
     },
     skill6: {
         name: "3rd Party App Customization",
-        image: "",
+        image: appInt,
         alt: "3rd Party App Image"
     },
     skill7: {

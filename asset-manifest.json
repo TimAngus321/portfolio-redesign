@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/portfolio-redesign/static/css/main.a48e77db.chunk.css",
-    "main.js": "/portfolio-redesign/static/js/main.f3769496.chunk.js",
-    "main.js.map": "/portfolio-redesign/static/js/main.f3769496.chunk.js.map",
-    "runtime-main.js": "/portfolio-redesign/static/js/runtime-main.872dd170.js",
-    "runtime-main.js.map": "/portfolio-redesign/static/js/runtime-main.872dd170.js.map",
-    "static/css/2.b54c7428.chunk.css": "/portfolio-redesign/static/css/2.b54c7428.chunk.css",
-    "static/js/2.80c42497.chunk.js": "/portfolio-redesign/static/js/2.80c42497.chunk.js",
-    "static/js/2.80c42497.chunk.js.map": "/portfolio-redesign/static/js/2.80c42497.chunk.js.map",
+    "main.css": "/portfolio-redesign/static/css/main.5d0b9277.chunk.css",
+    "main.js": "/portfolio-redesign/static/js/main.68b26a1f.chunk.js",
+    "main.js.map": "/portfolio-redesign/static/js/main.68b26a1f.chunk.js.map",
+    "runtime-main.js": "/portfolio-redesign/static/js/runtime-main.082e7019.js",
+    "runtime-main.js.map": "/portfolio-redesign/static/js/runtime-main.082e7019.js.map",
+    "static/css/2.4e65da0b.chunk.css": "/portfolio-redesign/static/css/2.4e65da0b.chunk.css",
+    "static/js/2.0fa837d1.chunk.js": "/portfolio-redesign/static/js/2.0fa837d1.chunk.js",
+    "static/js/2.0fa837d1.chunk.js.map": "/portfolio-redesign/static/js/2.0fa837d1.chunk.js.map",
     "index.html": "/portfolio-redesign/index.html",
-    "static/css/2.b54c7428.chunk.css.map": "/portfolio-redesign/static/css/2.b54c7428.chunk.css.map",
-    "static/css/main.a48e77db.chunk.css.map": "/portfolio-redesign/static/css/main.a48e77db.chunk.css.map",
-    "static/js/2.80c42497.chunk.js.LICENSE.txt": "/portfolio-redesign/static/js/2.80c42497.chunk.js.LICENSE.txt"
+    "static/css/2.4e65da0b.chunk.css.map": "/portfolio-redesign/static/css/2.4e65da0b.chunk.css.map",
+    "static/css/main.5d0b9277.chunk.css.map": "/portfolio-redesign/static/css/main.5d0b9277.chunk.css.map",
+    "static/js/2.0fa837d1.chunk.js.LICENSE.txt": "/portfolio-redesign/static/js/2.0fa837d1.chunk.js.LICENSE.txt",
+    "static/media/API.4206a2ec.jpeg": "/portfolio-redesign/static/media/API.4206a2ec.jpeg",
+    "static/media/SQL-logo.666de00e.png": "/portfolio-redesign/static/media/SQL-logo.666de00e.png",
+    "static/media/Shopify-Logo.d4673fa8.png": "/portfolio-redesign/static/media/Shopify-Logo.d4673fa8.png",
+    "static/media/Shopify-liquid.21ce141e.webp": "/portfolio-redesign/static/media/Shopify-liquid.21ce141e.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.872dd170.js",
-    "static/css/2.b54c7428.chunk.css",
-    "static/js/2.80c42497.chunk.js",
-    "static/css/main.a48e77db.chunk.css",
-    "static/js/main.f3769496.chunk.js"
+    "static/js/runtime-main.082e7019.js",
+    "static/css/2.4e65da0b.chunk.css",
+    "static/js/2.0fa837d1.chunk.js",
+    "static/css/main.5d0b9277.chunk.css",
+    "static/js/main.68b26a1f.chunk.js"
   ]
 }

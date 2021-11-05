@@ -30,10 +30,13 @@ class Skills extends React.Component {
 
   render() {
     return (
-      <div className="photo-quote">
+      <div className="page-container-fixed-skills">
         <div className="skills-container">
           <div className="select-skills">
             <h2 className="skills-title">Tech Stack</h2>
+            <p className="skills-blurb">
+              
+            </p>
             <div className="about-my-skills">
               <span className="about-btn" onClick={this.loadFrontEndSkills}>
                 &nbsp;Front-end&nbsp;
@@ -49,7 +52,7 @@ class Skills extends React.Component {
               </span>
             </div>
           </div>
-          <div className="falling-skills-container">
+          <div className="revealed-skills-container">
             <div className="reveal-skills">
               <div className="selected-skillset">
                 <ul className="skill-cards">

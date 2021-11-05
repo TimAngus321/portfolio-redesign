@@ -268,13 +268,11 @@ ul.menu > a:active {
    color: white;
  }
 
-
-
 /******************************************************************* 
-Home Page
+Basic Page Containers
 ********************************************************************/
 
-.photo-quote-component {
+.page-container-fixed {
   display: flex;
   justify-content: flex-start;
   margin: 0 40px 0 100px;
@@ -284,7 +282,7 @@ Home Page
 }
 
 @media only screen and (max-width: 900px) {
-  .photo-quote-component {
+  .page-container-fixed {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -295,6 +293,33 @@ Home Page
     margin: 0;
   }
 }
+
+.page-container-scroll {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 40px 0 100px;
+  width: 100%;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 900px) {
+  .page-container-scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+
+/******************************************************************* 
+Home Page
+********************************************************************/
+
+
 
 .tim-logo > h1 {
   margin: 0;
@@ -462,13 +487,14 @@ Mobile Nav
 Contact
 ********************************************************************/
 
-.contact-container {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0px 60px 0px 140px;
-  position: fixed;
-  height: 100vh;
-}
+// .contact-container {
+//   display: flex;
+//   justify-content: flex-start;
+//   margin: 0px 60px 0px 140px;
+//   position: fixed;
+//   height: 100vh;
+//   width: 88%;
+// }
 
 .top-buffer {
   display: none;
@@ -482,17 +508,27 @@ Contact
 }
 
 
-@media only screen and (max-width: 900px) {
-  .contact-container {
-    margin: 20px 40px 20px 20px;
-    position: relative;
-  }
-}
+// @media only screen and (max-width: 900px) {
+//   .contact-container {
+//     margin: 20px 40px 20px 20px;
+//     position: relative;
+//   }
+// }
 
 .contact-component {
   display: flex;
   flex-direction: column;
   align-self: center;
+  padding: 0 140px 0 20px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .contact-component {
+    width: 90%;
+    margin: 0px 50px 0 40px;
+    padding: 0;
+  }
 }
 
 .contact-title {
@@ -528,13 +564,13 @@ Contact
   padding-bottom: 20px;
 }
 
-// @media only screen and (max-width: 900px) {
-//   .name-and-email {
-//     flex-direction: column;
-//     justify-content: unset;
-//     height: 100px;
-//   }
-// }
+@media only screen and (max-width: 900px) {
+  .name-and-email {
+    flex-direction: column;
+    justify-content: space-between;;
+    height: 120px;
+  }
+}
 
 input.name-input {
     width: 100%;
@@ -553,6 +589,8 @@ input.email-input {
     padding-left: 20px;
     color: white;
 }
+
+
 
 input.subject-input {
   width: 100%;
@@ -580,9 +618,25 @@ li.name {
   padding-right: 20px;
 }
 
+@media only screen and (max-width: 900px) {
+  li.name { 
+    width: 100%;
+    padding-right: 20px;
+    height: 50px;
+  }
+}
+
 li.email {
   width: 100%;
-  padding-left: 20px;
+  padding: 0 0 0 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  li.email { 
+    width: 100%;
+    padding: 0 20px 0 0;
+    height: 50px;
+  }
 }
 
 li.subject {
@@ -775,6 +829,29 @@ About Me
 Skills
 ********************************************************************/
 
+
+.page-container-fixed-skills {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 40px 0 100px;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+// Skills page needs to scroll in mobile
+@media only screen and (max-width: 900px) {
+  .page-container-fixed-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: unset;
+  }
+}
+
 .skills-container {
   display: flex;
   flex-direction: row;
@@ -785,6 +862,7 @@ Skills
   .skills-container {
     flex-direction: column;
     position: relative;
+    align-items: center;
   }
 }
 
@@ -793,7 +871,15 @@ Skills
   justify-content: center;
 }
 
-.falling-skills-container {
+@media only screen and (max-width: 900px) {
+  .skills-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.revealed-skills-container {
   display: flex;
   color: $secondary-font-color;
   width: 75%;
@@ -801,28 +887,27 @@ Skills
   margin-left: 120px;
 }
 
-.falling-skills {
-  position: absolute;
-  color: white;
-}
-
-.animated-skills-container {
-  display: flex;
-  position: absolute;
-  justify-content: space-evenly;
-  margin-left: 100px;
+@media only screen and (max-width: 900px) {
+.revealed-skills-container {
+  margin: 0;
   width: 100%;
-  height: 100%;
+  } 
 }
 
 .select-skills {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  margin: 0 0 0 120px;
+  margin: 0 0 0 40px;
   width: 25%;
   justify-content: center;
   z-index: 1;
+}
+
+@media only screen and (max-width: 900px) {
+  .select-skills { 
+    margin: 0;
+  }
 }
 
 .about-my-skills {
@@ -832,10 +917,14 @@ Skills
   margin: 0px;
   position: sticky;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
 }
 
-
+@media only screen and (max-width: 900px) {
+  .about-my-skills { 
+    align-items: center;
+  }
+}
 
 @media only screen and (max-width: 900px) {
   .about-component {
@@ -843,17 +932,6 @@ Skills
     margin: 0;
     align-content: center;
   }
-}
-
-.sub-heading-skills {
-  color: $secondary-font-color;
-  font-size: 10px;
-}
-
-.fade-in-skills {
-  color: $base-hover-color;
-  cursor: pointer;
-  width: 100%;
 }
 
 .reveal-skills {
@@ -872,3 +950,45 @@ Skills
   margin-right: 100px;
 }
 
+@media only screen and (max-width: 900px) {
+  .selected-skillset {
+    margin: 0;
+  }
+}
+
+
+/******************************************************************* 
+Skill Card
+********************************************************************/
+
+li.skill-card {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin: 0 0 40px 0;
+  padding: 10px 0;
+  justify-content: space-around;
+  border: solid $secondary-font-color 1px;
+  background-color: $base-background-grey;
+  border-radius: 10px;
+}
+
+img.skill-image {
+  display: flex;
+  height: 50px;
+  color: white;
+  font-size: 12px;
+  align-items: center;
+}
+
+li.skill-card {
+  display: flex;
+  align-items: center;
+}
+
+ul.skill-cards {
+  margin: 0;
+  padding: 0;
+}

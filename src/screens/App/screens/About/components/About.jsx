@@ -5,7 +5,6 @@ import WhyCode from './why-code';
 
 
 // ToDo - redo this with setState this is pretty clunky
-
 class About extends Component {
   constructor() {
     super();

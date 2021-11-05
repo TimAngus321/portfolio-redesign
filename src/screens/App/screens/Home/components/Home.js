@@ -11,7 +11,7 @@ const {
 
 function Home() {
       return (
-          <div className="photo-quote-component">
+          <div className="page-container-fixed">
           <div className="photo-quote">
             <div className="all-headings-btn">
                   <p className="animated-quotes react-reveal"> 

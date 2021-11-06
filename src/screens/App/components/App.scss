@@ -26,6 +26,53 @@ body {
 }
 
 /******************************************************************* 
+Basic Page Containers
+********************************************************************/
+
+.page-container-fixed {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 40px 0 100px;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 900px) {
+  .page-container-fixed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+.page-container-scroll {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 40px 0 100px;
+  width: 100%;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 900px) {
+  .page-container-scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+
+/******************************************************************* 
 Navbar Styling
 ********************************************************************/
 
@@ -268,52 +315,6 @@ ul.menu > a:active {
    color: white;
  }
 
-/******************************************************************* 
-Basic Page Containers
-********************************************************************/
-
-.page-container-fixed {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0 40px 0 100px;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-}
-
-@media only screen and (max-width: 900px) {
-  .page-container-fixed {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-}
-
-.page-container-scroll {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0 40px 0 100px;
-  width: 100%;
-  height: 100vh;
-}
-
-@media only screen and (max-width: 900px) {
-  .page-container-scroll {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-}
-
 
 /******************************************************************* 
 Home Page
@@ -379,34 +380,6 @@ Home Page
     width: 300px;
   }
 }
-
-// @media only screen and (max-width: 600px) {
-//   .animated-quotes > div {
-//     text-align: left;
-//     width: 200px;
-//     justify-content: center;
-//   }
-// }
-
-// @media only screen and (max-width: 600px) {
-// .pre-loop-quote > p {
-//   font-size: 16px;
-//   }
-// }
-
-// @media only screen and (max-width: 600px) {
-//   .looping-quote {
-//     font-size: 16px;
-//     }
-//   }
-
-// .react-reveal {
-//   min-width: 350px;
-//   display: flex;
-//   justify-content: center;
-//   margin: 0;
-// }
-
 
 div.contact-btn {
   color: $base-hover-color;
@@ -487,15 +460,6 @@ Mobile Nav
 Contact
 ********************************************************************/
 
-// .contact-container {
-//   display: flex;
-//   justify-content: flex-start;
-//   margin: 0px 60px 0px 140px;
-//   position: fixed;
-//   height: 100vh;
-//   width: 88%;
-// }
-
 .top-buffer {
   display: none;
 }
@@ -506,14 +470,6 @@ Contact
     width: 100%;
   }
 }
-
-
-// @media only screen and (max-width: 900px) {
-//   .contact-container {
-//     margin: 20px 40px 20px 20px;
-//     position: relative;
-//   }
-// }
 
 .contact-component {
   display: flex;
@@ -697,54 +653,73 @@ li.message {
 About Me
 ********************************************************************/
 
-.about-me-container {
+.page-container-about {
   display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%;
-}
-
-@media only screen and (max-width: 900px) {
-  .about-me-container {
-    justify-content: center;
-    align-self: center;
-    text-align: center;
-    position: sticky;
-    width: 100%;
-  }
-}
-.about-title {
-  color: $base-hover-color;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin: 60px 0 0 0;
-  align-items: center;
-  text-align: center;
-}
-
-@media only screen and (max-width: 900px) {
-  .about-title {
-   justify-content: center;
-   margin: 120px 0 0 0;
-  }
-}
-
-.about-component {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin: 0 40px 0 100px;
-  position: sticky;
+  position: fixed;
   width: 100%;
   height: 100vh;
 }
 
 @media only screen and (max-width: 900px) {
-  .about-component {
+  .page-container-about {
+    display: flex;
     flex-direction: column;
-    margin: 0;
+    justify-content: center;
     align-content: center;
+    position: unset;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+.about-me-sub-container {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+}
+
+@media only screen and (max-width: 900px) {
+  .about-me-sub-container {
+    flex-direction: column;
+    height: 100vh;
+    padding: 40px 0 0 0;
+  }
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 100%;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  .about-me-container {
+    width: 100%;
+    padding: 0 0 20px 0;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
+
+.about-title {
+  color: $base-hover-color;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin: 60px 0 0 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  .about-title {
+   justify-content: center;
+   margin: 60px 0 0 0;
   }
 }
 
@@ -820,10 +795,49 @@ About Me
   }
 }
 
-.br-tag:before {
-  content: '<br/>';
-  font-family: 'La Belle Aurore', cursive;;
+.about-me-blurb {
+  color: white;
+  width: 100%;
+  margin: 60px 0 0 20px;
 }
+
+@media only screen and (max-width: 900px) {
+  .about-me-blurb {
+    margin: 60px 0 20px 0;
+    text-align: center;
+  }
+}
+.work-experience-container {
+  display: flex;
+  width: 45%;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  .work-experience-container {
+    width: 100%;
+    padding: 20px 0 0 0;
+  }
+}
+
+/******************************************************************* 
+Work Experience Card
+********************************************************************/
+
+.work-exp-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: solid $secondary-font-color 1px;
+  background-color: $base-background-grey;
+  border-radius: 10px;
+  margin: 0 0 40px 0;
+  padding: 20px;
+  color: white;
+}
+
 
 /******************************************************************* 
 Skills
@@ -976,7 +990,6 @@ li.skill-card {
   display: flex;
   flex-direction: row;
   height: 50px;
-  display: flex;
   align-items: center;
   margin: 0 0 40px 0;
   padding: 10px 0;

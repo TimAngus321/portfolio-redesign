@@ -7,14 +7,12 @@ const {
   CONTACT,
 } = routeConstants;
 
-
-
 function Home() {
       return (
           <div className="page-container-fixed">
           <div className="photo-quote">
             <div className="all-headings-btn">
-                  <p className="animated-quotes react-reveal"> 
+                  <p className="animated-quotes"> 
                   <QuoteLoop />
                   </p>
                   <p className="sub-heading">
@@ -33,6 +31,5 @@ function Home() {
           </div>   
       )
   }
-
 
 export default Home;

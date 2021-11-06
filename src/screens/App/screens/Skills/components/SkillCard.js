@@ -1,6 +1,5 @@
 import React from "react";
 
-// Todo create card component (style work)
 // Animate slide in when clicked
 
 class SkillCard extends React.Component {

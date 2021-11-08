@@ -74,8 +74,8 @@ class Skills extends React.Component {
                       classNames="skill-card"
                       key={key}
                       timeout={{
-                        enter: 500,
-                        exit: 500
+                        enter: 1000,
+                        exit: 1000
                       }}
                     >
                       <SkillCard

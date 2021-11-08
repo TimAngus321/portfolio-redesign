@@ -1017,3 +1017,30 @@ ul.skill-cards {
   margin: 0;
   padding: 0;
 }
+
+/******************************************************************* 
+Skill Card Animations
+********************************************************************/
+
+// li.skill-card-enter {
+//   opacity: 0;
+//   transform: translateX(120%)
+// }
+
+// li.skill-card-active {
+//   transform: translateX(0%);
+//   transition: opacity 0.5s ease-in;
+//   opacity: 1;
+// }
+
+
+
+
+li.skill-card-exit {
+  transition: 0.5s;
+  transform: translateX(0);
+  & li.skill-card-exit-active {
+    transition: 0.5s;
+    transform: translateX(-120%);
+  }
+}

@@ -964,6 +964,10 @@ Skills
   font-weight: bold;
   text-align: center;
   margin-right: 100px;
+  height: 100%;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 900px) {
@@ -997,6 +1001,9 @@ li.skill-card {
   border: solid $secondary-font-color 1px;
   background-color: $base-background-grey;
   border-radius: 10px;
+  padding: 10px;
+  width: 90%;
+  align-self: center;
 }
 
 img.skill-image {
@@ -1007,15 +1014,15 @@ img.skill-image {
   align-items: center;
 }
 
-li.skill-card {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-}
-
 ul.skill-cards {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /******************************************************************* 
@@ -1024,25 +1031,47 @@ Skill Card Animations
 
 .skill-card-enter {
   opacity: 0.01;
-  transition: 1s;
-  transform: translateX(120%);
+  transition: 1.5s;
+  transform: translateX(220%);
+
   &.skill-card-enter-active {
-    transition: 1s;
+    transition: 1.5s;
     transform: translateX(0%);
-    transform: center;
     opacity: 1;
    }
 }
 
-
-
 .skill-card-exit {
   opacity: 1;
-  transition: 1s;
+  transition: 0.5s;
   transform: translateX(0);
   &.skill-card-exit-active {
-    transition: 1s;
-    transform: translateX(120%);
+    transition: 0.5s;
+    transform: translateX(220%);
     opacity: 0.01;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .skill-card-enter {
+    opacity: 0.01;
+    transition: 1.5s;
+    transform: unset;
+    &.skill-card-enter-active {
+      transition: 1.5s;
+      opacity: 1;
+      transform: unset;
+     }
+  }
+
+  .skill-card-exit {
+    opacity: 1;
+    transition: 0.5s;
+    transform: unset;
+    &.skill-card-exit-active {
+      transition: 0.5s;
+      opacity: 0.01;
+      transform: unset;
+    }
   }
 }

@@ -12,26 +12,46 @@ const { CONTACT } = routeConstants;
 
 class Skills extends React.Component {
   state = {
-    skillSets: { frontendSkillSet },
+    skillSets: {},
+  };
+
+  componentDidMount() {
+    this.setState({ skillSets: frontendSkillSet });
+  }
+
+  clearState = () => {
+    let currentState = { ...this.state.skillSets };
+    currentState = {};
+    this.setState({ skillSets: currentState });
   };
 
   loadFrontEndSkills = () => {
-    this.setState({ skillSets: frontendSkillSet });
+    this.clearState();
+    setTimeout(() => {
+      this.setState({ skillSets: frontendSkillSet });
+    }, 500);
   };
 
   loadBackendSkills = () => {
-    this.setState({ skillSets: backendSkillSet });
+    this.clearState();
+    setTimeout(() => {
+      this.setState({ skillSets: backendSkillSet });
+    }, 500);
   };
 
   loadShopifySkills = () => {
-    this.setState({ skillSets: shopifySkillSet });
+    this.clearState();
+    setTimeout(() => {
+      this.setState({ skillSets: shopifySkillSet });
+    }, 500);
   };
 
   loadMobileSkills = () => {
-    this.setState({ skillSets: mobileSkills });
+    this.clearState();
+    setTimeout(() => {
+      this.setState({ skillSets: mobileSkills });
+    }, 500);
   };
-
-  //  const { onLoadFrontend, showFrontend, showBackend, showFullstack, showEccomerce, showMobile, showSoftskills } = this.state;
 
   render() {
     return (
@@ -74,8 +94,8 @@ class Skills extends React.Component {
                       classNames="skill-card"
                       key={key}
                       timeout={{
-                        enter: 1000,
-                        exit: 1000
+                        enter: 2000,
+                        exit: 2000,
                       }}
                     >
                       <SkillCard

@@ -1023,21 +1023,26 @@ Skill Card Animations
 ********************************************************************/
 
 .skill-card-enter {
-  transition: 0.5s;
+  opacity: 0.01;
+  transition: 1s;
   transform: translateX(120%);
   &.skill-card-enter-active {
-    transition: 0.5s;
+    transition: 1s;
     transform: translateX(0%);
+    transform: center;
+    opacity: 1;
    }
 }
 
 
 
 .skill-card-exit {
-  transition: 0.5s;
+  opacity: 1;
+  transition: 1s;
   transform: translateX(0);
   &.skill-card-exit-active {
-    transition: 0.5s;
+    transition: 1s;
     transform: translateX(120%);
+    opacity: 0.01;
   }
 }

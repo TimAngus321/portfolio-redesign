@@ -1031,11 +1031,11 @@ Skill Card Animations
 
 .skill-card-enter {
   opacity: 0.01;
-  transition: 1.5s;
+  transition: 1s;
   transform: translateX(220%);
 
   &.skill-card-enter-active {
-    transition: 1.5s;
+    transition: 1s;
     transform: translateX(0%);
     opacity: 1;
    }
@@ -1055,10 +1055,10 @@ Skill Card Animations
 @media only screen and (max-width: 900px) {
   .skill-card-enter {
     opacity: 0.01;
-    transition: 1.5s;
+    transition: 1s;
     transform: unset;
     &.skill-card-enter-active {
-      transition: 1.5s;
+      transition: 1s;
       opacity: 1;
       transform: unset;
      }

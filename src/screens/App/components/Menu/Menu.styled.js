@@ -11,7 +11,7 @@ export const StyledMenu = styled.nav`
   padding-top: 20px;
   background-color: black;
   text-align: center;
-  position: fixed;
+  position: absolute;
   overflow: hidden;
   top: 0;
   left: 0;

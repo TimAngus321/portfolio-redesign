@@ -16,13 +16,13 @@ const ContactMe = () => {
 
     const emailReg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    // TODO - Save message has been sent in session storage then give them an option to redo it (in a notification) if they made a mistake in the form.
+    // TODO - Save message has been sent in local storage/persist with firebase then give them an option to redo it (in a notification) if they made a mistake in the form.
 
     if (!inputs.email || !inputs.message || !inputs.name || !inputs.subject) {
       notifyErrors();
     } else if (!emailReg.test(inputs.email)) {
       notifyEmailIssue();
-    } else if (subCount >= 1) {
+    } else if (subCount <= 1) {
       notifyMessageReceived();
     } else {
       sendEmail();

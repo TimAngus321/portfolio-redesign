@@ -1,5 +1,11 @@
+$base-background-color: #1E1E1E;
+$base-background-grey: #1b1b1b; 
+$base-font-color: white;
+$base-hover-color: #BD4517;
+$secondary-font-color: #8d8d8d;
+
 .background {
-    background: linear-gradient(#e66465, #9198e5);
+    background: linear-gradient($base-background-color);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -14,7 +20,7 @@
     font-size: 1.5rem;
   }
   
-  .card {
+  .stickyCard {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,23 +30,27 @@
     text-align: center;
     border-radius: 10px;
   }
-  
+
+  /* .projectCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    width: 40%;
+    margin-right: 5%;
+  }
+   */
   .parallax {
     margin-right: 15%;
   }
   
   .sticky {
-    margin-left: 15%;
-    background-color: #ff6d6d;
-  }
-  
-  .blue {
-    background-color: #5b65ad;
-    color: white;
-  }
-  
-  .purple {
-    background-color: #9d65d0;
+    color: $base-font-color;
+    margin-left: 5%;
+    background-color: $base-background-grey;
+    border-radius: 10px;
+    border: $secondary-font-color solid 1px;
   }
   
   @media (max-width: 750px) {

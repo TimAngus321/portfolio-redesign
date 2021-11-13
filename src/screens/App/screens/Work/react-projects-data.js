@@ -9,12 +9,14 @@ const reactProjects = {
     reactApp2: {
         name: "React Gifs",
         techStack: "React, HTML, SCSS & google maps API",
-        desc: "Le Wagon React & Redux tutorial that goes through the basics of building React apps with Redux. Unfortunately this is now a bit outdated for modern development projects"
+        desc: "Le Wagon React & Redux tutorial that goes through the basics of building React apps with Redux. Unfortunately this is now a bit outdated for modern development projects",
+        link: ""
     },
     reactApp3: {
         name: "React Gifs",
         techStack: "React, SCSS, HTML & Giphy API",
-        desc: "Le Wagon React & Redux tutorial that goes through the basics of building React apps with Redux. Unfortunately this is now a bit outdated for modern development projects"
+        desc: "Le Wagon React & Redux tutorial that goes through the basics of building React apps with Redux. Unfortunately this is now a bit outdated for modern development projects",
+        link: ""
     }
 }
 

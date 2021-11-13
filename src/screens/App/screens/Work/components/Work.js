@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 import WorkExpCard from './workExpCard';
+import PersonalProjCard from "./personalProjCard";
 import railsProjects from '../rails-projects-data';
 import reactProjects from '../react-projects-data';
 import previousClients from '../work-project-data';
@@ -12,7 +13,6 @@ class Work extends React.Component {
   state = {
     workExperience: previousClients,
     reactProj: reactProjects,
-    offsetIncrease: 1.5,
   };
 
 
@@ -40,10 +40,10 @@ class Work extends React.Component {
           </ParallaxLayer>
 
           <ParallaxLayer
-            sticky={{ start: 1, end: 5 }}
+            sticky={{ start: 1, end: 5}}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
-            <div className={`${styles.card} ${styles.sticky}`}>
+            <div className={`${styles.stickyCard } ${styles.sticky}`}>
               <p>Shopify Clients</p>
             </div>
           </ParallaxLayer>
@@ -55,24 +55,17 @@ class Work extends React.Component {
             speed={1.5}
             style={{ ...alignCenter, justifyContent: "flex-end" }}
           >
-            <div 
-              key={key}
-              className={`${styles.card} ${styles.parallax} ${styles.purple}`}
+            <WorkExpCard
+            className={`${styles.projectCard} ${styles.parallax}`}
+            key={key}
+            client={this.state.workExperience[key]}
+            company={this.state.workExperience[key]}
+            project={this.state.workExperience[key]}
+            desc={this.state.workExperience[key]}
+            link={this.state.workExperience[key]}
             >
-
-            {/* ToDO use a workExpCard component */}
-            {/* <WorkExpCard
-            key={key}>
-              <p>{key}</p>
-            </WorkExpCard> */}
-              <h3 className="client">{previousClients[key].client}</h3> 
-              <h3 className="company">{previousClients[key].company}</h3>
-              <h4 className="project">{previousClients[key].project}</h4>
-              <p className="desc">{previousClients[key].desc}</p>
-              <a href={previousClients[key].link} className="link">
-              {previousClients[key].company}
-              </a>
-             </div>
+              
+            </WorkExpCard>
           </ParallaxLayer>
           ))}
 
@@ -93,14 +86,16 @@ class Work extends React.Component {
             speed={1.5}
             style={{ ...alignCenter, justifyContent: "flex-end" }}
           >
-            <div 
-              key={key}
-              className={`${styles.card} ${styles.parallax} ${styles.purple}`}
+          <PersonalProjCard
+            className={`${styles.projectCard} ${styles.parallax}`}
+            key={key}
+            name={this.state.reactProj[key]}
+            techStack={this.state.reactProj[key]}
+            desc={this.state.reactProj[key]}
+            link={this.state.reactProj[key]}
             >
-
-            <p>{key}</p>
-
-            </div>
+          </PersonalProjCard>
+           
             </ParallaxLayer>
             ))}
            

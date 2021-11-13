@@ -11,6 +11,7 @@ class Work extends React.Component {
 
   state = {
     workExperience: previousClients,
+    reactProj: reactProjects,
     offsetIncrease: 1.5,
   };
 
@@ -24,7 +25,7 @@ class Work extends React.Component {
       <div className="work-container">
 
         <Parallax 
-        pages={7}
+        pages={11}
         style={{
           display: 'flex',
 
@@ -39,7 +40,7 @@ class Work extends React.Component {
           </ParallaxLayer>
 
           <ParallaxLayer
-            sticky={{ start: 1, end: 7 }}
+            sticky={{ start: 1, end: 5 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles.card} ${styles.sticky}`}>
@@ -74,9 +75,38 @@ class Work extends React.Component {
              </div>
           </ParallaxLayer>
           ))}
-           
 
-        </Parallax>
+   
+       
+          <ParallaxLayer
+            sticky={{ start: 6, end: 9 }}
+            style={{ ...alignCenter, justifyContent: "flex-start" }}
+          >
+            <div className={`${styles.card} ${styles.sticky}`}>
+              <p>React Projects</p>
+            </div>
+          </ParallaxLayer>
+
+          {Object.keys(this.state.reactProj).map((key, i) => (
+          <ParallaxLayer
+            offset={6.5 + i} 
+            speed={1.5}
+            style={{ ...alignCenter, justifyContent: "flex-end" }}
+          >
+            <div 
+              key={key}
+              className={`${styles.card} ${styles.parallax} ${styles.purple}`}
+            >
+
+            <p>{key}</p>
+
+            </div>
+            </ParallaxLayer>
+            ))}
+           
+            </Parallax>
+
+       
       </div>
     </div>
     );

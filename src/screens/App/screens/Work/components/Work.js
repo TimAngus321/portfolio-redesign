@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import styles from "./styles.module.scss";
 import WorkExpCard from './workExpCard';
@@ -6,6 +6,9 @@ import PersonalProjCard from "./personalProjCard";
 import railsProjects from '../rails-projects-data';
 import reactProjects from '../react-projects-data';
 import previousClients from '../work-project-data';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+
 
 
 class Work extends React.Component {
@@ -13,6 +16,7 @@ class Work extends React.Component {
   state = {
     workExperience: previousClients,
     reactProj: reactProjects,
+    railsProj: railsProjects,
   };
 
 
@@ -25,7 +29,7 @@ class Work extends React.Component {
       <div className="work-container">
 
         <Parallax 
-        pages={11}
+        pages={12}
         style={{
           display: 'flex',
 
@@ -36,7 +40,16 @@ class Work extends React.Component {
             className="work-title"
             style={{ alignItems: "flex-start", justifyContent: "flex-start" }}
           >
-            <p className={styles.scrollText}>My Projects</p>
+          <div className={styles.scrollText}>
+            <p >My Projects</p>
+            <p >Scroll Down</p>
+          <FontAwesomeIcon 
+          className="work-page-arrow faa-bounce faa-reverse" 
+          icon={faArrowDown} 
+          fade
+          />
+          </div>
+
           </ParallaxLayer>
 
           <ParallaxLayer
@@ -72,10 +85,10 @@ class Work extends React.Component {
    
        
           <ParallaxLayer
-            sticky={{ start: 6, end: 9 }}
+            sticky={{ start: 6, end: 8 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
-            <div className={`${styles.card} ${styles.sticky}`}>
+            <div className={`${styles.stickyCard} ${styles.sticky}`}>
               <p>React Projects</p>
             </div>
           </ParallaxLayer>
@@ -93,6 +106,34 @@ class Work extends React.Component {
             techStack={this.state.reactProj[key]}
             desc={this.state.reactProj[key]}
             link={this.state.reactProj[key]}
+            >
+          </PersonalProjCard>
+           
+            </ParallaxLayer>
+            ))}
+
+            <ParallaxLayer
+            sticky={{ start: 9, end: 12 }}
+            style={{ ...alignCenter, justifyContent: "flex-start" }}
+          >
+            <div className={`${styles.stickyCard} ${styles.sticky}`}>
+              <p>Rails Projects</p>
+            </div>
+          </ParallaxLayer>
+
+            {Object.keys(this.state.railsProj).map((key, i) => (
+          <ParallaxLayer
+            offset={9.5 + i} 
+            speed={1.5}
+            style={{ ...alignCenter, justifyContent: "flex-end" }}
+          >
+          <PersonalProjCard
+            className={`${styles.projectCard} ${styles.parallax}`}
+            key={key}
+            name={this.state.railsProj[key]}
+            techStack={this.state.railsProj[key]}
+            desc={this.state.railsProj[key]}
+            link={this.state.railsProj[key]}
             >
           </PersonalProjCard>
            

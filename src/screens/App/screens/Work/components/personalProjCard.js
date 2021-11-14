@@ -5,13 +5,14 @@ class PersonalProjCard extends React.Component {
     const { name, techStack, desc, link } = this.props.name;
 
     return (
-      <div className="work-exp-card">
-        <h4 className="name">{name}</h4>
+      <div
+        className="proj-card"
+        onclick={`window.location=${link}`}
+        style={{ cursor: "pointer;" }}
+      >
+        <h4 class="name">{name}</h4>
         <p className="tech-stack">{techStack}</p>
         <p className="desc">{desc}</p>
-        <a href={link} className="link">
-          {name}
-        </a>
       </div>
     );
   }

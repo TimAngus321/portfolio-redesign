@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio-redesign/static/css/main.435de618.chunk.css",
-    "main.js": "/portfolio-redesign/static/js/main.1e77c83a.chunk.js",
-    "main.js.map": "/portfolio-redesign/static/js/main.1e77c83a.chunk.js.map",
+    "main.css": "/portfolio-redesign/static/css/main.fff1809a.chunk.css",
+    "main.js": "/portfolio-redesign/static/js/main.ed07906f.chunk.js",
+    "main.js.map": "/portfolio-redesign/static/js/main.ed07906f.chunk.js.map",
     "runtime-main.js": "/portfolio-redesign/static/js/runtime-main.082e7019.js",
     "runtime-main.js.map": "/portfolio-redesign/static/js/runtime-main.082e7019.js.map",
     "static/css/2.4e65da0b.chunk.css": "/portfolio-redesign/static/css/2.4e65da0b.chunk.css",
-    "static/js/2.d7965983.chunk.js": "/portfolio-redesign/static/js/2.d7965983.chunk.js",
-    "static/js/2.d7965983.chunk.js.map": "/portfolio-redesign/static/js/2.d7965983.chunk.js.map",
+    "static/js/2.c1e2d82d.chunk.js": "/portfolio-redesign/static/js/2.c1e2d82d.chunk.js",
+    "static/js/2.c1e2d82d.chunk.js.map": "/portfolio-redesign/static/js/2.c1e2d82d.chunk.js.map",
     "index.html": "/portfolio-redesign/index.html",
     "static/css/2.4e65da0b.chunk.css.map": "/portfolio-redesign/static/css/2.4e65da0b.chunk.css.map",
-    "static/css/main.435de618.chunk.css.map": "/portfolio-redesign/static/css/main.435de618.chunk.css.map",
-    "static/js/2.d7965983.chunk.js.LICENSE.txt": "/portfolio-redesign/static/js/2.d7965983.chunk.js.LICENSE.txt",
+    "static/css/main.fff1809a.chunk.css.map": "/portfolio-redesign/static/css/main.fff1809a.chunk.css.map",
+    "static/js/2.c1e2d82d.chunk.js.LICENSE.txt": "/portfolio-redesign/static/js/2.c1e2d82d.chunk.js.LICENSE.txt",
     "static/media/API.4206a2ec.jpeg": "/portfolio-redesign/static/media/API.4206a2ec.jpeg",
     "static/media/SQL-logo.666de00e.png": "/portfolio-redesign/static/media/SQL-logo.666de00e.png",
     "static/media/Shopify-Logo.d4673fa8.png": "/portfolio-redesign/static/media/Shopify-Logo.d4673fa8.png",
@@ -20,8 +20,8 @@
   "entrypoints": [
     "static/js/runtime-main.082e7019.js",
     "static/css/2.4e65da0b.chunk.css",
-    "static/js/2.d7965983.chunk.js",
-    "static/css/main.435de618.chunk.css",
-    "static/js/main.1e77c83a.chunk.js"
+    "static/js/2.c1e2d82d.chunk.js",
+    "static/css/main.fff1809a.chunk.css",
+    "static/js/main.ed07906f.chunk.js"
   ]
 }

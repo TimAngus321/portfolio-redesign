@@ -22,7 +22,7 @@ class Work extends React.Component {
 
   render() {
 
-    const alignCenter = { display: "flex", alignItems: "center" };
+    const alignCenter = { display: "flex", alignItems: "center", pointerEvent: 'all' };
 
   return (
     <div className="page-container-scroll-work">
@@ -63,6 +63,7 @@ class Work extends React.Component {
           {Object.keys(this.state.workExperience).map((key, i) => (
 
           <ParallaxLayer
+            className={`${styles.projectCard}`}
             offset={1.5 + i} 
             speed={1.5}
             style={{ ...alignCenter, justifyContent: "flex-end" }}
@@ -94,6 +95,7 @@ class Work extends React.Component {
 
           {Object.keys(this.state.reactProj).map((key, i) => (
           <ParallaxLayer
+            className={`${styles.projectCard}`}
             offset={6.5 + i} 
             speed={1.5}
             style={{ ...alignCenter, justifyContent: "flex-end" }}
@@ -122,6 +124,7 @@ class Work extends React.Component {
 
             {Object.keys(this.state.railsProj).map((key, i) => (
           <ParallaxLayer
+            className={`${styles.projectCard}`}
             offset={9.5 + i} 
             speed={1.5}
             style={{ ...alignCenter, justifyContent: "flex-end" }}
@@ -150,8 +153,3 @@ class Work extends React.Component {
 
 export default Work;
 
-/* <h2 className="client">{this.props.previousClients.client}</h2>
-<h3 className="company"></h3>
-<p className="project"></p>
-<p className="desc"></p>
-<link rel="" href="" /> */

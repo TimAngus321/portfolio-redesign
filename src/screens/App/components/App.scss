@@ -1116,11 +1116,37 @@ Work Page
 }
 
 /******************************************************************* 
-Work Experience Card
+Project Card
 ********************************************************************/
 
-.work-exp-card {
-  color: white;
+.proj-card {
   margin-right: 10%;
-  width: 50%;
+  width: 40%;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: solid $secondary-font-color 1px;
+  background-color: $base-background-grey;
+  border-radius: 10px;
+  margin-right: 10%;
+  padding: 20px;
+  color: white;
+}
+
+a.test-link {
+  padding: 10px 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  pointer-events: all;
+  position: relative;
+  z-index: 1000;
+  color: white;
+}
+
+a.test-link:hover {
+  cursor: pointer;
+  pointer-events: all;
+
 }

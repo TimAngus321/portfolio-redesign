@@ -5,7 +5,7 @@ class WorkExpCard extends React.Component {
     const { client, company, project, desc, link } = this.props.client;
 
     return (
-      <div className="work-exp-card">
+      <div className="proj-card">
         <h3 className="client">{client}</h3>
         <h3 className="company">{company}</h3>
         <h4 className="project">{project}</h4>

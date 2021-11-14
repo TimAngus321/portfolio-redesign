@@ -6,7 +6,6 @@ $secondary-font-color: #8d8d8d;
 
 .background {
     background: linear-gradient($base-background-color);
-    position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
@@ -24,6 +23,7 @@ $secondary-font-color: #8d8d8d;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
   }
 
   
@@ -36,20 +36,17 @@ $secondary-font-color: #8d8d8d;
     width: 25%;
     text-align: center;
     border-radius: 10px;
+
   }
 
-  /* .projectCard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 10px;
-    width: 40%;
-    margin-right: 5%;
+.projectCard {
+  pointer-events: all;
   }
-   */
+
+   
   .parallax {
     margin-right: 15%;
+
   }
   
   .sticky {
@@ -58,19 +55,27 @@ $secondary-font-color: #8d8d8d;
     background-color: $base-background-grey;
     border-radius: 10px;
     border: $secondary-font-color solid 1px;
+
   }
+  
   
   @media (max-width: 750px) {
     .card {
       width: 40%;
+
+
     }
   
     .parallax {
       margin-right: 1.5rem;
+
+
     }
   
     .sticky {
       margin-left: 1.5rem;
+
+
     }
   }
   

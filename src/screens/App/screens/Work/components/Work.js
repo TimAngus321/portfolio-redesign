@@ -42,11 +42,10 @@ class Work extends React.Component {
           >
           <div className={styles.scrollText}>
             <p >My Projects</p>
-            <p >Scroll Down</p>
           <FontAwesomeIcon 
-          className="work-page-arrow faa-bounce faa-reverse" 
+          className="work-page-arrow" 
           icon={faArrowDown} 
-          fade
+          beat
           />
           </div>
 

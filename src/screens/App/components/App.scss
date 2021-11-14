@@ -1104,6 +1104,17 @@ Work Page
   }
 }
 
+.work-page-arrow {
+  padding-top: 20px;
+  -webkit-animation: arrow-animation 2s ease-in-out infinite ;
+}
+
+@keyframes arrow-animation {
+  0%   { transform:translate(0,-20px); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,20px); opacity: 0; }
+}
+
 /******************************************************************* 
 Work Experience Card
 ********************************************************************/

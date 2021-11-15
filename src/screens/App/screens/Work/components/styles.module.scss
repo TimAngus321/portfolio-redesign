@@ -13,6 +13,7 @@ $secondary-font-color: #8d8d8d;
     width: 100%;
     height: 100%;
     display: flex;
+    position: 'relative'
   }
   
   .scrollText {
@@ -23,7 +24,7 @@ $secondary-font-color: #8d8d8d;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    position: 'relative'
   }
 
   
@@ -36,17 +37,21 @@ $secondary-font-color: #8d8d8d;
     width: 25%;
     text-align: center;
     border-radius: 10px;
-
+    position: 'relative'
   }
 
 .projectCard {
   pointer-events: all;
+  position: 'relative';
+  margin-right: 15%;
+  z-index: 99999;
   }
 
    
   .parallax {
     margin-right: 15%;
-
+    z-index: 99999;
+    position: relative;
   }
   
   .sticky {
@@ -57,19 +62,27 @@ $secondary-font-color: #8d8d8d;
     border: $secondary-font-color solid 1px;
 
   }
-  
+
+  .workExpLink {
+    position: relative;
+    isolation: isolate;
+    z-index: 99999;
+    color: white;
+    cursor: pointer;
+  }
   
   @media (max-width: 750px) {
     .card {
       width: 40%;
-
+      z-index: 99999;
 
     }
   
     .parallax {
       margin-right: 1.5rem;
-
-
+      position: relative;
+      z-index: 99999;
+  
     }
   
     .sticky {

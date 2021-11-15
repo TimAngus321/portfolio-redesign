@@ -1066,7 +1066,7 @@ Work Page
   margin: 0 0 0 100px;
   width: 100%;
   height: 100vh;
-  position: fixed;
+  position: relative;
 }
 
 @media only screen and (max-width: 900px) {
@@ -1078,7 +1078,7 @@ Work Page
     width: 100%;
     height: 100%;
     margin: 0;
-    position: unset;
+    position: relative;
   }
 }
 
@@ -1132,21 +1132,29 @@ Project Card
   margin-right: 10%;
   padding: 20px;
   color: white;
+  position: relative;
+  cursor: pointer;
 }
 
 a.test-link {
   padding: 10px 0;
-  width: 100%;
-  height: 100%;
   cursor: pointer;
   pointer-events: all;
   position: relative;
-  z-index: 1000;
+  z-index: 99999;
   color: white;
+  isolation: isolate;
 }
 
 a.test-link:hover {
   cursor: pointer;
   pointer-events: all;
 
+}
+
+.work-exp-link {
+  position: relative;
+  isolation: isolate;
+  z-index: 99999;
+  cursor: pointer;
 }

@@ -1132,29 +1132,51 @@ Project Card
   margin-right: 10%;
   padding: 20px;
   color: white;
-  position: relative;
-  cursor: pointer;
+  // position: relative !important;
+  // cursor: pointer;
+  // z-index: 99999;
 }
 
 a.test-link {
   padding: 10px 0;
-  cursor: pointer;
-  pointer-events: all;
-  position: relative;
-  z-index: 99999;
-  color: white;
-  isolation: isolate;
+  // cursor: pointer;
+  // pointer-events: all;
+  // z-index: 1 !important;
+  // position: relative;
+  // z-index: 99999;
+  // color: white;
 }
 
 a.test-link:hover {
-  cursor: pointer;
-  pointer-events: all;
+  // cursor: pointer;
+  // pointer-events: all;
 
 }
 
 .work-exp-link {
-  position: relative;
-  isolation: isolate;
-  z-index: 99999;
-  cursor: pointer;
+  // position: relative !important;
+  // z-index: 99999;
+  // cursor: pointer;
 }
+
+// .shopify-group {
+//   // display: flex;
+//   // flex-direction: row;
+//   // position: unset !important;
+// }
+
+// .react-group {
+//   display: flex;
+//   // flex-direction: row;
+//   position: unset !important;
+// }
+
+// .rails-group {
+//   display: flex;
+//   // flex-direction: row;
+//   position: unset !important;
+// }
+
+// .all-parallax {
+//   position: relative !important;
+// }

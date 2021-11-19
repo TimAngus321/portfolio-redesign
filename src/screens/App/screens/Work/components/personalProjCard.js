@@ -10,7 +10,7 @@ class PersonalProjCard extends React.Component {
         className="test-link proj-card"
         target="_blank"
         rel="noopener noreferrer"
-        style={{zIndex: '99999', position: "relative"}}
+        style={{position: 'relative', zIndex: '99999' }}
       >
         <div>
           <h4 class="name">{name}</h4>

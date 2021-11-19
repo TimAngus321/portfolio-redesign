@@ -22,17 +22,18 @@ class Work extends React.Component {
 
   render() {
 
-    const alignCenter = { display: "flex", alignItems: "center", pointerEvent: 'all' };
+    const alignCenter = { display: "flex", alignItems: "center", position: 'relative !important' };
 
   return (
     <div className="page-container-scroll-work">
       <div className="work-container">
 
         <Parallax 
-        pages={15}
+        // className={`${styles.allParallax}`}
+        pages={16}
         style={{
           display: 'flex',
-          position: 'relative'
+          height: '100%'
         }}>
           <ParallaxLayer
             offset={0}
@@ -52,8 +53,9 @@ class Work extends React.Component {
           </ParallaxLayer>
 
           <ParallaxLayer
+            className="shopify-group"
             sticky={{ start: 1, end: 7}}
-            style={{ ...alignCenter, justifyContent: "flex-start", position: 'relative' }}
+            style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles.stickyCard } ${styles.sticky}`}>
               <p>Shopify Clients</p>
@@ -63,10 +65,10 @@ class Work extends React.Component {
           {Object.keys(this.state.workExperience).map((key, i) => (
 
           <ParallaxLayer
-            className={`${styles.projectCard}`}
+            className={`${styles.projectCard} ${styles.parallax}`}
             offset={1.5 + i} 
             speed={1.5}
-            style={{ ...alignCenter, justifyContent: "flex-end", position: 'relative' }}
+            style={{ ...alignCenter, justifyContent: "flex-end" }}
           >
             <WorkExpCard
             key={key}
@@ -84,20 +86,23 @@ class Work extends React.Component {
    
        
           <ParallaxLayer
-            sticky={{ start: 8, end: 11 }}
-            style={{ ...alignCenter, justifyContent: "flex-start", position: 'relative' }}
+            className={`${styles.reactGroup}`}
+            sticky={{ start: 8, end: 11}}
+            style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
-            <div className={`${styles.stickyCard} ${styles.sticky}`}>
+            <div className={`${styles.stickyCard} ${styles.sticky}`}
+                 >
               <p>React Projects</p>
             </div>
           </ParallaxLayer>
 
           {Object.keys(this.state.reactProj).map((key, i) => (
           <ParallaxLayer
-            className={`${styles.projectCard}`}
+            className={`${styles.projectCard} ${styles.parallax}`}
             offset={6.5 + i} 
             speed={1.5}
-            style={{ ...alignCenter, justifyContent: "flex-end", position: 'relative' }}
+            style={{ ...alignCenter, justifyContent: "flex-end", position: 'relative'}}
+            link={{}}
           >
           <PersonalProjCard
             className={`${styles.projectCard} ${styles.parallax}`}
@@ -113,23 +118,24 @@ class Work extends React.Component {
             ))}
 
             <ParallaxLayer
-            sticky={{ start: 12, end: 14 }}
-            style={{ ...alignCenter, justifyContent: "flex-start", position: 'relative' }}
+             className="rails-group"
+            sticky={{ start: 12, end: 16}}
+            style={{ ...alignCenter, justifyContent: "flex-start", position: 'relative', height: '100%'}}
           >
-            <div className={`${styles.stickyCard} ${styles.sticky}`}>
+            <div className={`${styles.stickyCard} ${styles.sticky}`}
+            >
               <p>Rails Projects</p>
             </div>
           </ParallaxLayer>
 
             {Object.keys(this.state.railsProj).map((key, i) => (
           <ParallaxLayer
-            className={`${styles.projectCard}`}
+            className={`${styles.projectCard} ${styles.parallax}`}
             offset={9.5 + i} 
             speed={1.5}
-            style={{ ...alignCenter, justifyContent: "flex-end", position: 'relative' }}
+            style={{ ...alignCenter, justifyContent: "flex-end", position: 'relative'}}
           >
           <PersonalProjCard
-            className={`${styles.projectCard} ${styles.parallax}`}
             key={key}
             name={this.state.railsProj[key]}
             techStack={this.state.railsProj[key]}
@@ -141,11 +147,11 @@ class Work extends React.Component {
             </ParallaxLayer>
             ))}
            
-            </Parallax>
+        </Parallax>
 
        
-      </div>
-    </div>
+     </div>
+     </div>
     );
   }
 };

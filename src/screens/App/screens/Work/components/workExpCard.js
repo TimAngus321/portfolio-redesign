@@ -10,7 +10,7 @@ class WorkExpCard extends React.Component {
         className="test-link proj-card"
         target="_blank"
         rel="noopener noreferrer"
-        style={{position: 'relative', zIndex: '99999' }}
+        style={{alignSelf: 'flex-end'}}
       >
         <div>
           <h3 className="client">{client}</h3>

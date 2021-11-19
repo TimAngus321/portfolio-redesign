@@ -22,7 +22,7 @@ class Work extends React.Component {
 
   render() {
 
-    const alignCenter = { display: "flex", alignItems: "center", position: 'relative !important' };
+    const alignCenter = { display: "flex", alignItems: "center" };
 
   return (
     <div className="page-container-scroll-work">
@@ -31,6 +31,7 @@ class Work extends React.Component {
         <Parallax 
         // className={`${styles.allParallax}`}
         pages={16}
+        innerStyle={{ zIndex: '9999'}}
         style={{
           display: 'flex',
           height: '100%'
@@ -53,8 +54,8 @@ class Work extends React.Component {
           </ParallaxLayer>
 
           <ParallaxLayer
-            className="shopify-group"
-            sticky={{ start: 1, end: 7}}
+            factor={0.5}
+            sticky={{ start: 1, end: 5}}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles.stickyCard } ${styles.sticky}`}>
@@ -69,6 +70,7 @@ class Work extends React.Component {
             offset={1.5 + i} 
             speed={1.5}
             style={{ ...alignCenter, justifyContent: "flex-end" }}
+            
           >
             <WorkExpCard
             key={key}
@@ -86,8 +88,7 @@ class Work extends React.Component {
    
        
           <ParallaxLayer
-            className={`${styles.reactGroup}`}
-            sticky={{ start: 8, end: 11}}
+            sticky={{ start: 6, end: 8}}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles.stickyCard} ${styles.sticky}`}
@@ -101,8 +102,7 @@ class Work extends React.Component {
             className={`${styles.projectCard} ${styles.parallax}`}
             offset={6.5 + i} 
             speed={1.5}
-            style={{ ...alignCenter, justifyContent: "flex-end", position: 'relative'}}
-            link={{}}
+            style={{ ...alignCenter, justifyContent: "flex-end"}}
           >
           <PersonalProjCard
             className={`${styles.projectCard} ${styles.parallax}`}
@@ -119,8 +119,8 @@ class Work extends React.Component {
 
             <ParallaxLayer
              className="rails-group"
-            sticky={{ start: 12, end: 16}}
-            style={{ ...alignCenter, justifyContent: "flex-start", position: 'relative', height: '100%'}}
+            sticky={{ start: 9, end: 11}}
+            style={{ ...alignCenter, justifyContent: "flex-start"}}
           >
             <div className={`${styles.stickyCard} ${styles.sticky}`}
             >
@@ -133,7 +133,7 @@ class Work extends React.Component {
             className={`${styles.projectCard} ${styles.parallax}`}
             offset={9.5 + i} 
             speed={1.5}
-            style={{ ...alignCenter, justifyContent: "flex-end", position: 'relative'}}
+            style={{ ...alignCenter, justifyContent: "flex-end"}}
           >
           <PersonalProjCard
             key={key}

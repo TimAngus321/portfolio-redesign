@@ -25,10 +25,10 @@ class QuoteLoop extends React.PureComponent {
                     <p>I'm Tim a</p>
                     </span>
                         <TextLoop className="looping-quote" mask={true} fade={false}>
-                            <span>front-end developer</span>
-                            <span>backend developer</span>
-                            <span>full-stack developer</span>
-                            <span>music lover</span>
+                            <span>Frontend Developer</span>
+                            <span>Full-Stack Developer</span>
+                            <span>Shopify Developer</span>
+                            <span>Music Lover</span>
                         </TextLoop>
                     </Quotes>
                 </Section>

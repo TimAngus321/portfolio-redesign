@@ -60,11 +60,12 @@ class Skills extends React.Component {
           <div className="select-skills">
             <h2 className="skills-title">Tech Stack</h2>
             <p className="skills-blurb">
-              After studying at LeWagon and doing additional studies online I
+              After studying at Le Wagon and doing additional studies online I
               have learnt and built projects with numerous languages,
-              frameworkds and tools. Feel free to check out my current tech
-              stack and what I'm currently learning. If you use these
-              technologies in your project and need help feel free to get in{" "}
+              frameworks, platforms and tools to help comapnies and clients
+              achieve their goals. Feel free to check out my current tech stack
+              and what I'm currently learning. If you use these technologies in
+              your project and need help feel free to get in{" "}
               <Link className="contact-link" to={CONTACT.route}>
                 contact{" "}
               </Link>{" "}

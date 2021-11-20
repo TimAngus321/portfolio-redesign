@@ -20,7 +20,7 @@ const {
 function NavBar() {
     return <nav className="navBar">
     <Link to={HOME.route}>
-        <h1 className="myName">T</h1>
+    <h1 className="myName">T</h1>
      </Link>
         {
                 <ul className="menu">

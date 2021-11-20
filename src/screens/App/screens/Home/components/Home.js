@@ -2,6 +2,7 @@ import React from 'react';
 import QuoteLoop from './quote-text-loop';
 import { Link } from 'react-router-dom';
 import { routeConstants } from 'shared/constants';
+import vinylPlayer from '/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/screens/App/screens/Home/images/vinylPlayer.gif'
 
 const {
   CONTACT,
@@ -25,7 +26,7 @@ function Home() {
                   </Link>
                   </div>
               <div className="tim-logo">
-                  <h1>T</h1>
+                  <img src={vinylPlayer} alt="Vinyl Player" />
               </div>
               </div>
           </div>   

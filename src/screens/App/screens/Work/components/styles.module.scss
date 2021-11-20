@@ -23,12 +23,18 @@ $secondary-font-color: #8d8d8d;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    margin-right: 100px;
   }
 
-  
+  @media only screen and (max-width: 900px) {
+    .scrollText {
+      margin: 0;
+    }
+  }
+
   .stickyCard {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 1.25rem;
@@ -36,17 +42,10 @@ $secondary-font-color: #8d8d8d;
     width: 25%;
     text-align: center;
     border-radius: 10px;
-
   }
-
-.projectCard {
-  pointer-events: all;
-  }
-
    
   .parallax {
     margin-right: 15%;
-
   }
   
   .sticky {
@@ -55,27 +54,23 @@ $secondary-font-color: #8d8d8d;
     background-color: $base-background-grey;
     border-radius: 10px;
     border: $secondary-font-color solid 1px;
-
   }
-  
-  
-  @media (max-width: 750px) {
+
+  .workExpLink {
+    color: white;
+  }
+
+  @media (max-width: 900px) {
     .card {
       width: 40%;
-
-
     }
   
     .parallax {
       margin-right: 1.5rem;
-
-
     }
   
     .sticky {
       margin-left: 1.5rem;
-
-
     }
   }
   

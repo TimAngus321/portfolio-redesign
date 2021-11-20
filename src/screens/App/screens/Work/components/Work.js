@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import styles from "./styles.module.scss";
 import WorkExpCard from './workExpCard';
@@ -8,21 +8,18 @@ import reactProjects from '../react-projects-data';
 import previousClients from '../work-project-data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import shopifyLogo from '/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/screens/App/screens/Skills/images/Shopify-Logo.png'
 
 
 
-class Work extends React.Component {
+const Work = () => {
 
-  state = {
-    workExperience: previousClients,
-    reactProj: reactProjects,
-    railsProj: railsProjects,
-  };
+  const [workExperience] = useState(previousClients);
+  const [reactProj] = useState(reactProjects);
+  const [railsProj] = useState(railsProjects)
 
 
-  render() {
-
-    const alignCenter = { display: "flex", alignItems: "center", pointerEvent: 'all' };
+    const alignCenter = { display: "flex", alignItems: "center" };
 
   return (
     <div className="page-container-scroll-work">
@@ -30,9 +27,10 @@ class Work extends React.Component {
 
         <Parallax 
         pages={12}
+        innerStyle={{ zIndex: '1'}}
         style={{
           display: 'flex',
-
+          height: '100%'
         }}>
           <ParallaxLayer
             offset={0}
@@ -41,41 +39,42 @@ class Work extends React.Component {
             style={{ alignItems: "flex-start", justifyContent: "flex-start" }}
           >
           <div className={styles.scrollText}>
-            <p >My Projects</p>
+            <p >Previous Work & Personal Projects</p>
           <FontAwesomeIcon 
           className="work-page-arrow" 
           icon={faArrowDown} 
-          beat
           />
           </div>
 
           </ParallaxLayer>
 
           <ParallaxLayer
+            factor={0.5}
             sticky={{ start: 1, end: 5}}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles.stickyCard } ${styles.sticky}`}>
-              <p>Shopify Clients</p>
+              <p>Shopify Development</p>
+              <img src={shopifyLogo} alt="Shopify Logo" className="sicky-card-image" />
             </div>
           </ParallaxLayer>
 
-          {Object.keys(this.state.workExperience).map((key, i) => (
+          {Object.keys(workExperience).map((key, i) => (
 
           <ParallaxLayer
-            className={`${styles.projectCard}`}
+            className={`${styles.projectCard} ${styles.parallax}`}
             offset={1.5 + i} 
             speed={1.5}
             style={{ ...alignCenter, justifyContent: "flex-end" }}
+            
           >
             <WorkExpCard
-            className={`${styles.projectCard} ${styles.parallax}`}
             key={key}
-            client={this.state.workExperience[key]}
-            company={this.state.workExperience[key]}
-            project={this.state.workExperience[key]}
-            desc={this.state.workExperience[key]}
-            link={this.state.workExperience[key]}
+            client={workExperience[key]}
+            company={workExperience[key]}
+            project={workExperience[key]}
+            desc={workExperience[key]}
+            link={workExperience[key]}
             >
               
             </WorkExpCard>
@@ -85,28 +84,30 @@ class Work extends React.Component {
    
        
           <ParallaxLayer
-            sticky={{ start: 6, end: 8 }}
+            sticky={{ start: 6, end: 8}}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
-            <div className={`${styles.stickyCard} ${styles.sticky}`}>
-              <p>React Projects</p>
+            <div className={`${styles.stickyCard} ${styles.sticky}`}
+                 >
+              <p>React Apps</p>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Logo" className="sicky-card-image" />
             </div>
           </ParallaxLayer>
 
-          {Object.keys(this.state.reactProj).map((key, i) => (
+          {Object.keys(reactProj).map((key, i) => (
           <ParallaxLayer
-            className={`${styles.projectCard}`}
+            className={`${styles.projectCard} ${styles.parallax}`}
             offset={6.5 + i} 
             speed={1.5}
-            style={{ ...alignCenter, justifyContent: "flex-end" }}
+            style={{ ...alignCenter, justifyContent: "flex-end"}}
           >
           <PersonalProjCard
             className={`${styles.projectCard} ${styles.parallax}`}
             key={key}
-            name={this.state.reactProj[key]}
-            techStack={this.state.reactProj[key]}
-            desc={this.state.reactProj[key]}
-            link={this.state.reactProj[key]}
+            name={reactProj[key]}
+            techStack={reactProj[key]}
+            desc={reactProj[key]}
+            link={reactProj[key]}
             >
           </PersonalProjCard>
            
@@ -114,42 +115,43 @@ class Work extends React.Component {
             ))}
 
             <ParallaxLayer
-            sticky={{ start: 9, end: 12 }}
-            style={{ ...alignCenter, justifyContent: "flex-start" }}
+             className="rails-group"
+            sticky={{ start: 9, end: 11}}
+            style={{ ...alignCenter, justifyContent: "flex-start"}}
           >
-            <div className={`${styles.stickyCard} ${styles.sticky}`}>
-              <p>Rails Projects</p>
+            <div className={`${styles.stickyCard} ${styles.sticky}`}
+            >
+              <p>Rails Apps</p>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg" alt="Rails Logo" className="sicky-card-image" />
+
             </div>
           </ParallaxLayer>
 
-            {Object.keys(this.state.railsProj).map((key, i) => (
+            {Object.keys(railsProj).map((key, i) => (
           <ParallaxLayer
-            className={`${styles.projectCard}`}
+            className={`${styles.projectCard} ${styles.parallax}`}
             offset={9.5 + i} 
             speed={1.5}
-            style={{ ...alignCenter, justifyContent: "flex-end" }}
+            style={{ ...alignCenter, justifyContent: "flex-end"}}
           >
           <PersonalProjCard
-            className={`${styles.projectCard} ${styles.parallax}`}
             key={key}
-            name={this.state.railsProj[key]}
-            techStack={this.state.railsProj[key]}
-            desc={this.state.railsProj[key]}
-            link={this.state.railsProj[key]}
+            name={railsProj[key]}
+            techStack={railsProj[key]}
+            desc={railsProj[key]}
+            link={railsProj[key]}
             >
           </PersonalProjCard>
            
             </ParallaxLayer>
             ))}
            
-            </Parallax>
+        </Parallax>
 
        
-      </div>
-    </div>
+     </div>
+     </div>
     );
-  }
 };
 
 export default Work;
-

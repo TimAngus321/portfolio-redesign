@@ -95,7 +95,7 @@ Navbar Styling
 @media only screen and (max-width: 900px) {
   .navBar {
     background-color: $base-background-color;
-    visibility: hidden;
+    display: none;
   }
 }
 
@@ -1066,7 +1066,7 @@ Work Page
   margin: 0 0 0 100px;
   width: 100%;
   height: 100vh;
-  position: relative;
+  position: fixed;
 }
 
 @media only screen and (max-width: 900px) {
@@ -1078,7 +1078,8 @@ Work Page
     width: 100%;
     height: 100%;
     margin: 0;
-    position: relative;
+    padding: 0;
+    position: unset;
   }
 }
 
@@ -1091,7 +1092,8 @@ Work Page
 .work-title {
   display: flex;
   color: $base-hover-color;
-  justify-content: flex-start;
+  justify-content: center;
+  text-align: center;
   height: 100%;
   align-self: center;
 }
@@ -1125,7 +1127,7 @@ Project Card
   pointer-events: all;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   border: solid $secondary-font-color 1px;
   background-color: $base-background-grey;
   border-radius: 10px;
@@ -1134,19 +1136,23 @@ Project Card
   color: white;
 }
 
+.scroll-cards {
+  padding: 20px;
+  text-align: center;
+}
+
 a.test-link {
   padding: 10px 0;
-  // cursor: pointer;
-  // pointer-events: all;
-  // z-index: 1 !important;
-  // position: relative;
-  // z-index: 99999;
-  // color: white;
+  margin-right: 12%;
 }
 
 a.test-link:hover {
-  // cursor: pointer;
-  // pointer-events: all;
-
+  filter: drop-shadow(0 0 0.75rem $secondary-font-color);
+  border: $secondary-font-color solid 2px;
 }
 
+@media only screen and (max-width: 900px) {
+  a.test-link {
+    margin-right: 8%;
+  }
+}

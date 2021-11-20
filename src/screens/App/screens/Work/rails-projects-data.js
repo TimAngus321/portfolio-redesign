@@ -11,7 +11,7 @@ const railsProjects = {
       name: "BearBnB",
       techStack: "Rails, Ruby, Bootstrap, HTML, CSS, PostgreSQL, Heroku and more",
       desc: "A fun clone of AirBnB for Bears",
-      link: "https://github.com/TimAngus321/BearBnB"
+      link: "https://bearbnbheroku.herokuapp.com/"
   }
 };
 

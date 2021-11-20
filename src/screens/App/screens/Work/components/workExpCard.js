@@ -12,7 +12,7 @@ class WorkExpCard extends React.Component {
         rel="noopener noreferrer"
         style={{alignSelf: 'flex-end'}}
       >
-        <div>
+        <div className="scroll-cards">
           <h3 className="client">{client}</h3>
           <h3 className="company">{company}</h3>
           <h4 className="project">{project}</h4>

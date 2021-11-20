@@ -12,7 +12,7 @@ class PersonalProjCard extends React.Component {
         rel="noopener noreferrer"
         style={{alignSelf: 'flex-end'}}
       >
-        <div>
+        <div className="scroll-cards">
           <h4 class="name">{name}</h4>
           <p className="tech-stack">{techStack}</p>
           <p className="desc">{desc}</p>

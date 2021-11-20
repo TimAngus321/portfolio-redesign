@@ -3,36 +3,36 @@ const previousClients = {
     project1: {
         client: "Agency: Merconic GmbH",
         company: "Company: Josephinen Hütte",
-        project: "Project: Improve Shopify store",
-        desc: "Description: Shopify Theme Development",
+        project: "Project: Shopify Theme Development",
+        desc: "Description: Deal with issues regarding pricing and images and adding or modifying components and pages",
         link: "https://josephinen.com/"
     },
     project2: {
         client: "Agency: Merconic GmbH",
         company: "Company: Costaboard",
-        project: "Project: Deploy, debug and customise a backend Fulfillment Automation App",
-        desc: "Description: Deploy, debug and improve an Express app hosted in AWS Lambda that uses Node, AWS, FTP and fulifllment company called Wolanski",
+        project: "Project: Private Shopify Express App deployment, bebugging and customsiation repsonsible for fulillment and shopify theme development.",
+        desc: "Description: Fix issues with prices of certatin options on particular boards and other theme improvements and the deployment, debugging and customisation of a backend Fulfillment Automation App called shopify-wolanski-fulfillment that used AWS Lambda, Express, Node, FTP and Shopify Rest APIs",
         link: "https://costaboard.com"
     },
     project3: {
-        client: "Merconic GmbH",
-        company: "Fleeky",
-        project: "Add Compnents and other features to Shopify Store",
-        desc: "Improve, add components and features to a shopify store",
+        client: "Agency: Merconic GmbH",
+        company: "Company: Fleeky",
+        project: "Project: Shopify Theme Development",
+        desc: "Description: Implement a redesign by adding components including sticky navbar, responsive card components, sections, fonts and more to Shopify Theme",
         link: "https://fleeky.de"
     },
     project4: {
-        client: "Merconic GmbH",
-        company: "Cosmetic Beate Bulang",
-        project: "Fix and improve javascript/jQuery issues",
-        desc: "Javascript/jQuery issues caused updating prices when quantities were changed or the coutner for reviews required a reload rather than being updated in the DOM as desired needed to be fixed",
+        client: "Agency: Merconic GmbH",
+        company: "Company: Cosmetic Beate Bulang",
+        project: "Project: Shopify Theme Development",
+        desc: "Description: Fix Javascript/jQuery issues caused when updating prices when quantities were changed or the coutner for reviews required a reload rather than being updated in the DOM as desired needed to be fixed",
         link: "https://www.cosmetic-beate-bulang.de/"
     },
     project5: {
-        client: "MilkRun",
-        company: "",
-        project: "Set up a Shopify Store that can deal with multiple cities",
-        desc: "Large project integrating different stores into one store that incldued a lot of use of APIs, 3rd party app customisation and more",
+        client: "Full Time Contractor",
+        company: "Comapny: MilkRun",
+        project: "Project: Set up a Shopify Store that can deal with multiple cities",
+        desc: "Description: Large project integrating different stores into one store that incldued a lot of use of APIs, 3rd party app customisation and more",
         link: "https://www.localmilkrun.com/"
     }
 }

@@ -8,6 +8,7 @@ import reactProjects from '../react-projects-data';
 import previousClients from '../work-project-data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import shopifyLogo from '/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/screens/App/screens/Skills/images/Shopify-Logo.png'
 
 
 
@@ -54,6 +55,7 @@ const Work = () => {
           >
             <div className={`${styles.stickyCard } ${styles.sticky}`}>
               <p>Shopify Development</p>
+              <img src={shopifyLogo} alt="Shopify Logo" className="sicky-card-image" />
             </div>
           </ParallaxLayer>
 
@@ -88,6 +90,7 @@ const Work = () => {
             <div className={`${styles.stickyCard} ${styles.sticky}`}
                  >
               <p>React Apps</p>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Logo" className="sicky-card-image" />
             </div>
           </ParallaxLayer>
 
@@ -119,6 +122,8 @@ const Work = () => {
             <div className={`${styles.stickyCard} ${styles.sticky}`}
             >
               <p>Rails Apps</p>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg" alt="Rails Logo" className="sicky-card-image" />
+
             </div>
           </ParallaxLayer>
 
@@ -150,4 +155,3 @@ const Work = () => {
 };
 
 export default Work;
-

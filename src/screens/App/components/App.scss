@@ -1117,6 +1117,13 @@ Work Page
   100% { transform:translate(0,20px); opacity: 0; }
 }
 
+.sicky-card-image {
+  display: flex;
+  height: 50px;
+  color: white;
+  align-items: center;
+}
+
 /******************************************************************* 
 Project Card
 ********************************************************************/

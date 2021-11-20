@@ -31,10 +31,11 @@ const previousClients = {
     project5: {
         client: "Full Time Contractor",
         company: "Comapny: MilkRun",
-        project: "Project: Set up a new Shopify Store that can deal with multiple cities",
-        desc: "Description: Large project integrating different stores into one store that incldued a lot of use of APIs, 3rd party app customisation and more",
+        project: "Project: Large project integrating different stores into one store that incldued a lot of use of APIs, 3rd party app customisation and more.",
+        desc: "Description: Set up a new Shopify Store that needed some complex features including: being able to sell products from multiple cities, deal with subscriptions, have a cart checker to ensure cart contained products from only one city and above the minimum limit and work extensively with 3rd party apps like ReCharge, Ariagto and OnFleet from the Shopify store to add features to their customer facing frontends and automate processes making extensive use of Shopify's REST API and AJAX API as well as third party APIs.",
         link: "https://www.localmilkrun.com/"
     }
 }
 
 export default previousClients;
+

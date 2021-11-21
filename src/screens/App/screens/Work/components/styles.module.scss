@@ -29,6 +29,7 @@ $secondary-font-color: #8d8d8d;
   @media only screen and (max-width: 900px) {
     .scrollText {
       margin: 0;
+      font-size: 1rem;
     }
   }
 
@@ -70,7 +71,9 @@ $secondary-font-color: #8d8d8d;
     }
   
     .sticky {
-      margin-left: 1.5rem;
+      margin-left: 2%;
+      font-size: 12px;
+      width: 25%;
     }
   }
   

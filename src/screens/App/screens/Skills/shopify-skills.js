@@ -28,6 +28,7 @@ const shopifySkillSet = {
     skill5: {
         name: "App Development",
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg",
+        image2: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
         alt: "App Dev Image"
     },
     skill6: {

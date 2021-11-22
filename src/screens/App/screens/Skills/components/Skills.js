@@ -4,7 +4,7 @@ import { routeConstants } from "shared/constants";
 import frontendSkillSet from "../front-end-skills";
 import backendSkillSet from "../backend-skills";
 import shopifySkillSet from "../shopify-skills";
-import mobileSkills from "../mobile-dev-skills";
+import developingSkills from "../developing-skills";
 import SkillCard from "./SkillCard";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -45,10 +45,10 @@ const Skills = () => {
     }, 500);
   };
 
-  const loadMobileSkills = () => {
+  const loadDevelopingSkills = () => {
     clearState();
     setTimeout(() => {
-      setSkillset(mobileSkills);
+      setSkillset(developingSkills);
     }, 500);
   };
 
@@ -79,8 +79,8 @@ const Skills = () => {
               <span className="about-btn" onClick={loadShopifySkills}>
                 &nbsp;Shopify&nbsp;
               </span>
-              <span className="about-btn" onClick={loadMobileSkills}>
-                &nbsp;Mobile Development&nbsp;
+              <span className="about-btn" onClick={loadDevelopingSkills}>
+                &nbsp;Learning&nbsp;
               </span>
             </div>
           </div>

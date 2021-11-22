@@ -8,7 +8,7 @@ import developingSkills from "../developing-skills";
 import SkillCard from "./SkillCard";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-const { CONTACT } = routeConstants;
+const { CONTACT, WORK } = routeConstants;
 
 const Skills = () => {
 
@@ -59,7 +59,7 @@ const Skills = () => {
             <h2 className="skills-title">Tech Stack</h2>
             <p className="skills-blurb">
               After studying at Le Wagon and doing additional studies online I
-              have learnt and built projects with numerous languages,
+              have learnt and <Link className="contact-link" to={WORK.route}>built projects</Link> with numerous languages,
               frameworks, platforms and tools to help comapnies and clients
               achieve their goals. Feel free to check out my current tech stack
               and what I'm currently learning. If you use these technologies in

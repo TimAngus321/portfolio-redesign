@@ -19,6 +19,7 @@
     "animate.css-react": "^1.1.0",
     "emailjs": "^3.3.0",
     "emailjs-com": "^2.6.4",
+    "firebase": "^9.5.0",
     "gsap": "^3.6.0",
     "history": "^5.0.0",
     "i": "^0.3.7",

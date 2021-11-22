@@ -35,6 +35,11 @@ const developingSkills = {
         name: 'Shopify Hydrogen',
         image: ShopifyHydrogen,
         alt: 'Shopify Hydrogen Logo'
+    },
+    skill8: {
+        name: 'Firebase',
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+        alt: 'Firebase Logo'
     }
 }
 

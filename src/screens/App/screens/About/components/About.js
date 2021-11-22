@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { routeConstants } from "shared/constants";
 import workExpInfo from '../work-exp-info';
@@ -7,12 +7,13 @@ import WorkExpCard from './work-exp-card';
 const { SKILLS } = routeConstants;
 
 // ToDo - redo this with setState this is pretty clunky
-const About = () => {
+class About extends React.Component {
 
-  const [workExp] = useState(workExpInfo)
- 
+  state = {
+    workExp: workExpInfo,
+  };
 
-
+  render() {
     return (
       <div className="page-container-about">
       <div className="about-me-sub-container">
@@ -42,13 +43,13 @@ const About = () => {
         </div>
         <div className="work-experience-container">
         <ul className="work-exp-cards">
-                  {Object.keys(workExp).map((key) => (
+                  {Object.keys(this.state.workExp).map((key) => (
                     <WorkExpCard
                       key={key}
-                      role={workExp[key]}
-                      company={workExp[key]}
-                      period={workExp[key]}
-                      companyDesc={workExp[key]}
+                      role={this.state.workExp[key]}
+                      company={this.state.workExp[key]}
+                      period={this.state.workExp[key]}
+                      companyDesc={this.state.workExp[key]}
                     />
                   ))}
                 </ul>
@@ -56,6 +57,7 @@ const About = () => {
         </div>
       </div>
     );
+  }
 }
 
 export default About;

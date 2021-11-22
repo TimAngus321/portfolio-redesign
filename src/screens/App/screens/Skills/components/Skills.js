@@ -1,57 +1,59 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { routeConstants } from "shared/constants";
 import frontendSkillSet from "../front-end-skills";
 import backendSkillSet from "../backend-skills";
 import shopifySkillSet from "../shopify-skills";
-import developingSkills from "../developing-skills";
+import mobileSkills from "../mobile-dev-skills";
 import SkillCard from "./SkillCard";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const { CONTACT } = routeConstants;
 
-const Skills = () => {
+class Skills extends React.Component {
+  state = {
+    skillSets: {},
+  };
 
-  const [skillSets, setSkillset] = useState({}) 
+  componentDidMount() {
+    this.setState({ skillSets: frontendSkillSet });
+  }
 
-  useEffect(() => {
-    setSkillset(frontendSkillSet);
-  }, []);
-
-  const clearState = () => {
-    let currentState = skillSets;
+  clearState = () => {
+    let currentState = { ...this.state.skillSets };
     currentState = {};
-    setSkillset(currentState);
+    this.setState({ skillSets: currentState });
   };
 
-  const loadFrontEndSkills = () => {
-    clearState();
+  loadFrontEndSkills = () => {
+    this.clearState();
     setTimeout(() => {
-      setSkillset(frontendSkillSet);
+      this.setState({ skillSets: frontendSkillSet });
     }, 500);
   };
 
-  const loadBackendSkills = () => {
-    clearState();
+  loadBackendSkills = () => {
+    this.clearState();
     setTimeout(() => {
-      setSkillset(backendSkillSet );
+      this.setState({ skillSets: backendSkillSet });
     }, 500);
   };
 
-  const loadShopifySkills = () => {
-    clearState();
+  loadShopifySkills = () => {
+    this.clearState();
     setTimeout(() => {
-      setSkillset(shopifySkillSet);
+      this.setState({ skillSets: shopifySkillSet });
     }, 500);
   };
 
-  const loadDevelopingSkills = () => {
-    clearState();
+  loadMobileSkills = () => {
+    this.clearState();
     setTimeout(() => {
-      setSkillset(developingSkills);
+      this.setState({ skillSets: mobileSkills });
     }, 500);
   };
 
+  render() {
     return (
       <div className="page-container-fixed-skills">
         <div className="skills-container">
@@ -70,17 +72,17 @@ const Skills = () => {
               with me.
             </p>
             <div className="about-my-skills">
-              <span className="about-btn" onClick={loadFrontEndSkills}>
+              <span className="about-btn" onClick={this.loadFrontEndSkills}>
                 &nbsp;Front-end&nbsp;
               </span>
-              <span className="about-btn" onClick={loadBackendSkills}>
+              <span className="about-btn" onClick={this.loadBackendSkills}>
                 &nbsp;Backend&nbsp;
               </span>
-              <span className="about-btn" onClick={loadShopifySkills}>
+              <span className="about-btn" onClick={this.loadShopifySkills}>
                 &nbsp;Shopify&nbsp;
               </span>
-              <span className="about-btn" onClick={loadDevelopingSkills}>
-                &nbsp;Learning&nbsp;
+              <span className="about-btn" onClick={this.loadMobileSkills}>
+                &nbsp;Mobile Development&nbsp;
               </span>
             </div>
           </div>
@@ -88,7 +90,7 @@ const Skills = () => {
             <div className="reveal-skills">
               <div className="selected-skillset">
                 <TransitionGroup component="ul" className="skill-cards">
-                  {Object.keys(skillSets).map((key) => (
+                  {Object.keys(this.state.skillSets).map((key) => (
                     <CSSTransition
                       classNames="skill-card"
                       key={key}
@@ -99,9 +101,9 @@ const Skills = () => {
                     >
                       <SkillCard
                         key={key}
-                        skill={skillSets[key]}
-                        image={skillSets[key]}
-                        image2={skillSets[key]}
+                        skill={this.state.skillSets[key]}
+                        image={this.state.skillSets[key]}
+                        image2={this.state.skillSets[key]}
                       />
                     </CSSTransition>
                   ))}
@@ -112,6 +114,7 @@ const Skills = () => {
         </div>
       </div>
     );
+  }
 }
 
 export default Skills;

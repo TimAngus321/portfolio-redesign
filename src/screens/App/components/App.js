@@ -36,6 +36,7 @@ function App() {
 const [open, setOpen] = useState(false);
 const node = useRef(); 
 
+useOnClickOutside(node, () => setOpen(false)); {
   return (
     <div className="App">
     <ToastContainer />
@@ -63,5 +64,6 @@ const node = useRef();
       </div>
     );
   }
+}
 
 export default App;

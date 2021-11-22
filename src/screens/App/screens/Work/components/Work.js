@@ -21,8 +21,7 @@ const Work = () => {
     width: "100%",
     position: "fixed",
     margin: '0',
-    padding: '0',
-    overflowX: 'hidden',
+    padding: '0'
   };
 
   return (

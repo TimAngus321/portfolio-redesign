@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import { routeConstants } from "shared/constants";
 import frontendSkillSet from "../front-end-skills";
@@ -10,51 +10,48 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const { CONTACT } = routeConstants;
 
-class Skills extends React.Component {
+const Skills = () => {
 
-  state = {
-    skillSets: {},
-  };
+  const [skillSets, setSkillset] = useState({}) 
 
-  componentDidMount() {
-    this.setState({ skillSets: frontendSkillSet });
-  }
+  useEffect(() => {
+    setSkillset(frontendSkillSet);
+  }, []);
 
-  clearState = () => {
-    let currentState = { ...this.state.skillSets };
+  const clearState = () => {
+    let currentState = skillSets;
     currentState = {};
-    this.setState({ skillSets: currentState });
+    setSkillset(currentState);
   };
 
-  loadFrontEndSkills = () => {
-    this.clearState();
+  const loadFrontEndSkills = () => {
+    clearState();
     setTimeout(() => {
-      this.setState({ skillSets: frontendSkillSet });
+      setSkillset(frontendSkillSet);
     }, 500);
   };
 
-  loadBackendSkills = () => {
-    this.clearState();
+  const loadBackendSkills = () => {
+    clearState();
     setTimeout(() => {
-      this.setState({ skillSets: backendSkillSet });
+      setSkillset(backendSkillSet );
     }, 500);
   };
 
-  loadShopifySkills = () => {
-    this.clearState();
+  const loadShopifySkills = () => {
+    clearState();
     setTimeout(() => {
-      this.setState({ skillSets: shopifySkillSet });
+      setSkillset(shopifySkillSet);
     }, 500);
   };
 
-  loadMobileSkills = () => {
-    this.clearState();
+  const loadMobileSkills = () => {
+    clearState();
     setTimeout(() => {
-      this.setState({ skillSets: mobileSkills });
+      setSkillset(mobileSkills);
     }, 500);
   };
 
-  render() {
     return (
       <div className="page-container-fixed-skills">
         <div className="skills-container">
@@ -73,16 +70,16 @@ class Skills extends React.Component {
               with me.
             </p>
             <div className="about-my-skills">
-              <span className="about-btn" onClick={this.loadFrontEndSkills}>
+              <span className="about-btn" onClick={loadFrontEndSkills}>
                 &nbsp;Front-end&nbsp;
               </span>
-              <span className="about-btn" onClick={this.loadBackendSkills}>
+              <span className="about-btn" onClick={loadBackendSkills}>
                 &nbsp;Backend&nbsp;
               </span>
-              <span className="about-btn" onClick={this.loadShopifySkills}>
+              <span className="about-btn" onClick={loadShopifySkills}>
                 &nbsp;Shopify&nbsp;
               </span>
-              <span className="about-btn" onClick={this.loadMobileSkills}>
+              <span className="about-btn" onClick={loadMobileSkills}>
                 &nbsp;Mobile Development&nbsp;
               </span>
             </div>
@@ -91,7 +88,7 @@ class Skills extends React.Component {
             <div className="reveal-skills">
               <div className="selected-skillset">
                 <TransitionGroup component="ul" className="skill-cards">
-                  {Object.keys(this.state.skillSets).map((key) => (
+                  {Object.keys(skillSets).map((key) => (
                     <CSSTransition
                       classNames="skill-card"
                       key={key}
@@ -102,9 +99,9 @@ class Skills extends React.Component {
                     >
                       <SkillCard
                         key={key}
-                        skill={this.state.skillSets[key]}
-                        image={this.state.skillSets[key]}
-                        image2={this.state.skillSets[key]}
+                        skill={skillSets[key]}
+                        image={skillSets[key]}
+                        image2={skillSets[key]}
                       />
                     </CSSTransition>
                   ))}
@@ -115,7 +112,6 @@ class Skills extends React.Component {
         </div>
       </div>
     );
-  }
 }
 
 export default Skills;

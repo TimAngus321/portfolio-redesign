@@ -838,6 +838,11 @@ Work Experience Card
 }
 
 
+.work-exp-card:hover {
+  filter: drop-shadow(0 0 0.75rem $secondary-font-color);
+}
+
+
 /******************************************************************* 
 Skills Page
 ********************************************************************/
@@ -1190,7 +1195,7 @@ a.test-link {
 
 a.test-link:hover {
   filter: drop-shadow(0 0 0.75rem $secondary-font-color);
-  border: $secondary-font-color solid 2px;
+  // border: $secondary-font-color solid 2px;
 }
 
 @media only screen and (max-width: 1800px) {

@@ -22,7 +22,7 @@ const ContactMe = () => {
       notifyErrors();
     } else if (!emailReg.test(inputs.email)) {
       notifyEmailIssue();
-    } else if (subCount <= 1) {
+    } else if (subCount >= 2) {
       notifyMessageReceived();
     } else {
       sendEmail();

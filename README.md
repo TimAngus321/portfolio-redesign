@@ -1,3 +1,19 @@
-<h1> Redesigned Portfolio: </h1>
+# Portfolio: 
 
-<h3>I'm currently working on my new portfolio desgin in react.js! You can check out my progress here: https://timangus321.github.io/portfolio-redesign/</h3>
+## Purpose of this App:
+- To demonstrate my skills, experiences, and attributes.
+- Build a react application with multiple pages that properly uses react-router
+- Use a dark theme 
+- Experiement with different React based technologies
+
+## Technologies Used:
+
+### Experimented with:
+
+### Currently Using:
+
+##TodDo
+
+## Deployed on Github Pages:
+
+[Check it out here ](https://timangus321.github.io/portfolio-redesign/)

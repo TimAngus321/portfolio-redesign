@@ -17,9 +17,14 @@ const backendSkillSet = {
         alt: "Ruby Logo"
     },
     skill4: {
-        name: "SQL",
-        image: sqlLogo,
-        alt: "SQL Logo"
+        name: "mysql",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+        alt: "mysql Logo"
+    },
+    skill5: {
+        name: "Heroku",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg",
+        alt: "Heroku Logo"
     }
 }
 

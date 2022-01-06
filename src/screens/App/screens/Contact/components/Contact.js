@@ -8,24 +8,32 @@ toast.configure();
 const ContactMe = () => {
   const form = useRef();
 
-  const { inputs, handleChange } = useForm();
+  const { inputs, handleChange, clearForm } = useForm();
   const [subCount, setSubCount] = useState(0);
+  const [allowUserRedo, setAllowUserRedo] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
 
     const emailReg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    // TODO - Save message has been sent in local storage/persist with firebase then give them an option to redo it (in a notification) if they made a mistake in the form.
-
     if (!inputs.email || !inputs.message || !inputs.name || !inputs.subject) {
       notifyErrors();
     } else if (!emailReg.test(inputs.email)) {
       notifyEmailIssue();
-    } else if (subCount >= 2) {
-      notifyMessageReceived();
-    } else {
+    } else if (subCount === 0 && allowUserRedo === false) {
       sendEmail();
+    } else if (subCount === 1 && allowUserRedo === false) {
+      sendEmail();
+      notifyLastAttempt();
+      clearForm();
+      setAllowUserRedo(true);
+    } else if (allowUserRedo === true) {
+      allowRedoMesage();
+      sendEmail();
+      setAllowUserRedo(false);
+    } else {
+      notifyMessageReceived();
     }
   };
 
@@ -83,7 +91,22 @@ const ContactMe = () => {
   // Stop allowing submissions after 2 to prevent spamming and overloading emailJS. If they need to correct something allow them to click within the notification to send again.
 
   const notifyMessageReceived = () => {
-    toast.warning("🙏 I have received your message. I will get back to you!", {
+    toast.warning(`🙏 I have received your message. I will get back to you!`, {
+      position: toast.POSITION.BOTTOM_RIGHT,
+      hideProgressBar: true,
+    });
+  };
+
+  const notifyLastAttempt = () => {
+    toast.warning(`Please take care with your next message as I provide 3 attempts maximum. This is to prevent spamming and overwhelming EmailJS`, {
+      position: toast.POSITION.BOTTOM_RIGHT,
+      hideProgressBar: true,
+      autoClose: 20000,
+    });
+  };
+
+  const allowRedoMesage = () => {
+    toast.warning(`🙏 This is was your last attempt to redo the message. If you still made an error don't worry I will get back to you regardless`, {
       position: toast.POSITION.BOTTOM_RIGHT,
       hideProgressBar: true,
     });
@@ -95,8 +118,9 @@ const ContactMe = () => {
         <div className="form-item">
           <h1 className="contact-title">Contact Me</h1>
           <p className="contact-blurb">
-            Please feel free to contact me regarding Shopify, React, Rails and Javascript projects. Please contact me with this form and I'll get
-            back to you.
+            Please feel free to contact me regarding React, Shopify, Javascript and Rails projects and positions. 
+            Send me a message with this form and I'll get back to you and let you know if I can help you with your
+             project or be a good fit for your company.  
           </p>
           <form className="contact-form">
             <ul className="contact-form-ul">

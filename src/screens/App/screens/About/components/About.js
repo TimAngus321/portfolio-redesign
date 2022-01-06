@@ -21,23 +21,24 @@ const About = () => {
           <p className="about-me-blurb">
             I am a Le Wagon alumni that learnt full-stack development with the
             Rails framework. Since then I have continued delving deeper into
-            Javascript and building projects with React and stores Shopify.
+            Javascript and building projects with React and Shopify.
             <br />
             <br />
-            After working as full-stack developer at the digital agency Merconic
-            and the US based company MilkRun I have used technology stacks for
-            the frontend and backend. To see what technologies I use{" "}
+            I've worked fulltime as a full-stack developer for the digital agency Merconic
+            and the US based company MilkRun as well as freelance for various clients. 
+            I have used a variety technology stacks for frontend and backend projects.
+            To see what technologies I use{" "}
             <Link className="contact-link" to={SKILLS.route}>
               check here
             </Link>.
             <br />
             <br />
             When I’m not coding I love travelling, making and listening to
-            music, Rock climbing, running and biking.
+            music, Rock climbing, running, biking and watching films.
             <br />
             <br />
-            To keep my mind sharp I enjoy reading news and dev articles, novels
-            and watching documenteries (not just about coding!){" "}
+            To keep my mind sharp I enjoy reading news, dev articles, novels
+            and watching documenteries.{" "}
           </p>
         </div>
         <div className="work-experience-container">

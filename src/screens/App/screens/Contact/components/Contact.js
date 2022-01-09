@@ -10,7 +10,7 @@ const ContactMe = () => {
 
   const { inputs, handleChange, clearForm } = useForm();
   const [subCount, setSubCount] = useState(0);
-  const [allowUserRedo, setAllowUserRedo] = useState(false);
+  const [allowRedoMessage, setAllowRedoMessage] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -21,17 +21,19 @@ const ContactMe = () => {
       notifyErrors();
     } else if (!emailReg.test(inputs.email)) {
       notifyEmailIssue();
-    } else if (subCount === 0 && allowUserRedo === false) {
+    } else if (subCount === 0 && !allowRedoMessage) {
       sendEmail();
-    } else if (subCount === 1 && allowUserRedo === false) {
+      notifySuccess();
+      clearForm();
+    } else if (subCount === 1 && !allowRedoMessage) {
       sendEmail();
       notifyLastAttempt();
       clearForm();
-      setAllowUserRedo(true);
-    } else if (allowUserRedo === true) {
+      setAllowRedoMessage(true);
+    } else if (allowRedoMessage === true) {
       allowRedoMesage();
       sendEmail();
-      setAllowUserRedo(false);
+      setAllowRedoMessage(false);
     } else {
       notifyMessageReceived();
     }
@@ -46,7 +48,6 @@ const ContactMe = () => {
       .then((res) => {
         // emailjs.send.reset();
         console.log(res.text);
-        notifySuccess();
 
         // After successful submission update submission count state
         setSubCount(subCount + 1);
@@ -98,7 +99,7 @@ const ContactMe = () => {
   };
 
   const notifyLastAttempt = () => {
-    toast.warning(`Please take care with your next message as I provide 3 attempts maximum. This is to prevent spamming and overwhelming EmailJS`, {
+    toast.success(`😀 Thank you ${inputs.name} for your message!. I will get back to you! Your next message will be your last attempt. Take care!`, {
       position: toast.POSITION.BOTTOM_RIGHT,
       hideProgressBar: true,
       autoClose: 20000,
@@ -106,9 +107,10 @@ const ContactMe = () => {
   };
 
   const allowRedoMesage = () => {
-    toast.warning(`🙏 This is was your last attempt to redo the message. If you still made an error don't worry I will get back to you regardless`, {
+    toast.warning(`🙏 This was your last attempt to redo the message. If you still made an error don't worry I will get back to you regardless`, {
       position: toast.POSITION.BOTTOM_RIGHT,
       hideProgressBar: true,
+      autoClose: 20000,
     });
   };
 

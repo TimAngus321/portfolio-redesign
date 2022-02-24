@@ -38,11 +38,10 @@ $secondary-font-color: #8d8d8d;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.25rem;
+    font-size: 5rem;
     height: 10rem;
     width: 25%;
     text-align: center;
-    border-radius: 10px;
   }
    
   .parallax {
@@ -52,9 +51,6 @@ $secondary-font-color: #8d8d8d;
   .sticky {
     color: $base-font-color;
     margin-left: 5%;
-    background-color: $base-background-grey;
-    border-radius: 10px;
-    border: $secondary-font-color solid 1px;
   }
 
   .workExpLink {

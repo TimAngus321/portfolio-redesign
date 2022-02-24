@@ -14,7 +14,8 @@ const developingSkills = {
     skill3: {
         name: "Next.js",
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg",
-        alt: 'Next.js Logo'
+        alt: 'Next.js Logo',
+        styleClass: 'inverseWhite'
     },
     skill4: {
         name: "Node.js",
@@ -24,7 +25,8 @@ const developingSkills = {
     skill5: {
         name: 'Express.js',
         image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
-        alt: 'Express.js Logo'
+        alt: 'Express.js Logo',
+        styleClass: 'inverseWhite'
     },
     skill6: {
         name: 'GraphQL',

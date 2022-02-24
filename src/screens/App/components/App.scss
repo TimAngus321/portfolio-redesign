@@ -1019,9 +1019,12 @@ li.skill-card {
 img.skill-image {
   display: flex;
   height: 50px;
-  color: white;
   font-size: 12px;
   align-items: center;
+}
+
+img.inverseWhite {
+  filter: invert(1);
 }
 
 ul.skill-cards {
@@ -1158,7 +1161,8 @@ Work Page
 
 .sicky-card-image {
   display: flex;
-  height: 50px;
+  width: 100%;
+  max-width: 210px;
   color: white;
   align-items: center;
 }

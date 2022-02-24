@@ -1,6 +1,5 @@
 import API from "./images/API.jpeg";
 
-
 const frontendSkillSet = {
     skill1: {
         name: "React",
@@ -13,29 +12,35 @@ const frontendSkillSet = {
         alt: "JS logo"
     }, 
     skill3: {
+        name: "Typescript",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        alt: "Typescript logo"
+    },
+    skill4: {
         name: "HTML",
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
         alt: "HTML logo"
     },
-    skill4: {
+    skill5: {
         name: "SCSS",
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
         alt: "SCSS logo"
     },
-    skill5: {
+    skill6: {
         name: "CSS",
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
         alt: "CSS logo"
     },
-    skill6: {
+    skill7: {
         name: "APIs",
         image: API,
         alt: "API logo"
     },
-    skill7: {
+    skill8: {
         name: "Github Pages",
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-        alt: "Github Pages Logo"
+        alt: "Github Pages Logo",
+        styleClass: 'inverseWhite'
     } 
 
 };

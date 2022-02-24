@@ -101,7 +101,7 @@ const Skills = () => {
                         key={key}
                         skill={skillSets[key]}
                         image={skillSets[key]}
-                        image2={skillSets[key]}
+                        styleClass={skillSets[key]}
                       />
                     </CSSTransition>
                   ))}

@@ -5,7 +5,7 @@ import { TransitionGroup } from "react-transition-group";
 
 class SkillCard extends React.Component {
   render() {
-    const { name, image, image2, alt, alt2 } = this.props.skill;
+    const { name, image, styleClass, alt } = this.props.skill;
 
     return (
 
@@ -14,8 +14,7 @@ class SkillCard extends React.Component {
     component="li"
     className="skill-card">
 
-        <img className="skill-image" src={image} alt={alt} />
-        <img className="skill-image" src={image2} alt={alt2} />
+        <img className={`skill-image ${styleClass}`} src={image} alt={alt} />
         <h3 className="skill-name">{name}</h3>
 
         </TransitionGroup>

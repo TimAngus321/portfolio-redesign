@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { routeConstants } from "shared/constants";
 import frontendSkillSet from "../front-end-skills";
@@ -8,110 +8,98 @@ import developingSkills from "../developing-skills";
 import SkillCard from "./SkillCard";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
+
 const { CONTACT, WORK } = routeConstants;
 
 const Skills = () => {
-
-  const [skillSets, setSkillset] = useState({}) 
-
-  useEffect(() => {
-    setSkillset(frontendSkillSet);
-  }, []);
+  const [skillSets, setSkillset] = useState({});
+  const [skillsetName, setskillsetName] = useState(frontendSkillSet);
 
   const clearState = () => {
-    let currentState = skillSets;
-    currentState = {};
+    let currentState = {};
     setSkillset(currentState);
   };
 
-  const loadFrontEndSkills = () => {
+  useEffect(() => {
     clearState();
     setTimeout(() => {
-      setSkillset(frontendSkillSet);
+      setSkillset(skillsetName);
     }, 500);
-  };
+  }, [skillsetName]);
 
-  const loadBackendSkills = () => {
-    clearState();
-    setTimeout(() => {
-      setSkillset(backendSkillSet );
-    }, 500);
-  };
-
-  const loadShopifySkills = () => {
-    clearState();
-    setTimeout(() => {
-      setSkillset(shopifySkillSet);
-    }, 500);
-  };
-
-  const loadDevelopingSkills = () => {
-    clearState();
-    setTimeout(() => {
-      setSkillset(developingSkills);
-    }, 500);
-  };
-
-    return (
-      <div className="page-container-fixed-skills">
-        <div className="skills-container">
-          <div className="select-skills">
-            <h2 className="skills-title">Tech Stack</h2>
-            <p className="skills-blurb">
-              After studying at Le Wagon and doing additional studies online I
-              have learnt and <Link className="contact-link" to={WORK.route}>built projects</Link> with numerous languages,
-              frameworks, platforms and tools to help comapnies and clients
-              achieve their goals. Feel free to check out my current tech stack
-              and what I'm currently learning. If you use these technologies in
-              your project and need help feel free to get in{" "}
-              <Link className="contact-link" to={CONTACT.route}>
-                contact{" "}
-              </Link>{" "}
-              with me.
-            </p>
-            <div className="about-my-skills">
-              <span className="about-btn" onClick={loadFrontEndSkills}>
-                &nbsp;Front-end&nbsp;
-              </span>
-              <span className="about-btn" onClick={loadBackendSkills}>
-                &nbsp;Backend&nbsp;
-              </span>
-              <span className="about-btn" onClick={loadShopifySkills}>
-                &nbsp;Shopify&nbsp;
-              </span>
-              <span className="about-btn" onClick={loadDevelopingSkills}>
-                &nbsp;Learning&nbsp;
-              </span>
-            </div>
+  return (
+    <div className="page-container-fixed-skills">
+      <div className="skills-container">
+        <div className="select-skills">
+          <h2 className="skills-title">Tech Stack</h2>
+          <p className="skills-blurb">
+            After studying at Le Wagon and doing additional studies online I
+            have learnt and{" "}
+            <Link className="contact-link" to={WORK.route}>
+              built projects
+            </Link>{" "}
+            with numerous languages, frameworks, platforms and tools to help
+            comapnies and clients achieve their goals. Feel free to check out my
+            current tech stack and what I'm currently learning. If you use these
+            technologies in your project and need help feel free to get in{" "}
+            <Link className="contact-link" to={CONTACT.route}>
+              contact{" "}
+            </Link>{" "}
+            with me.
+          </p>
+          <div className="about-my-skills">
+            <span
+              className="about-btn"
+              onClick={(e) => setskillsetName(frontendSkillSet)}
+            >
+              &nbsp;Front-end&nbsp;
+            </span>
+            <span
+              className="about-btn"
+              onClick={(e) => setskillsetName(backendSkillSet)}
+            >
+              &nbsp;Backend&nbsp;
+            </span>
+            <span
+              className="about-btn"
+              onClick={(e) => setskillsetName(shopifySkillSet)}
+            >
+              &nbsp;Shopify&nbsp;
+            </span>
+            <span
+              className="about-btn"
+              onClick={(e) => setskillsetName(developingSkills)}
+            >
+              &nbsp;Learning&nbsp;
+            </span>
           </div>
-          <div className="revealed-skills-container">
-            <div className="reveal-skills">
-              <div className="selected-skillset">
-                <TransitionGroup component="ul" className="skill-cards">
-                  {Object.keys(skillSets).map((key) => (
-                    <CSSTransition
-                      classNames="skill-card"
+        </div>
+        <div className="revealed-skills-container">
+          <div className="reveal-skills">
+            <div className="selected-skillset">
+              <TransitionGroup component="ul" className="skill-cards">
+                {Object.keys(skillSets).map((key) => (
+                  <CSSTransition
+                    classNames="skill-card"
+                    key={key}
+                    timeout={{
+                      enter: 1000,
+                      exit: 500,
+                    }}
+                  >
+                    <SkillCard
                       key={key}
-                      timeout={{
-                        enter: 1000,
-                        exit: 500,
-                      }}
-                    >
-                      <SkillCard
-                        key={key}
-                        skill={skillSets[key]}
-                        image={skillSets[key]}
-                        styleClass={skillSets[key]}
-                      />
-                    </CSSTransition>
-                  ))}
-                </TransitionGroup>
-              </div>
+                      skill={skillSets[key]}
+                    />
+                  </CSSTransition>
+                ))}
+              </TransitionGroup>
             </div>
           </div>
         </div>
       </div>
-    );
-}
+    </div>
+  );
+};
 
 export default Skills;

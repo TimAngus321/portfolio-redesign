@@ -37,7 +37,7 @@ Basic Page Containers
   margin: 0 40px 0 100px;
   position: fixed;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 @media only screen and (max-width: 900px) {
@@ -46,7 +46,7 @@ Basic Page Containers
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    position: fixed;
+    position: unset;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -362,6 +362,7 @@ Home Page
   justify-content: space-around;
   width: 100%;
   align-items: center;
+  min-height: 100vh;
 }
 
 @media only screen and (max-width: 900px) {
@@ -370,6 +371,7 @@ Home Page
     flex-direction: column;
     justify-content: center;
     padding: 100px 0 0 0;
+    min-height: 100vh;
   }
 }
 
@@ -460,6 +462,7 @@ Mobile Nav
  
  .mobile-nav > button {
    outline: none;
+   position: fixed;
  }
  
 /******************************************************************* 
@@ -759,6 +762,7 @@ About Me Page
   text-align: center;
   font-weight: 500;
   background-color: transparent;
+  margin: 30px 0;
 }
 
 @media only screen and (max-width: 900px) {
@@ -860,11 +864,13 @@ Skills Page
 .page-container-fixed-skills {
   display: flex;
   justify-content: flex-start;
-  margin: 0 40px 0 100px;
-  position: fixed;
+  // margin: 0 40px 0 100px;
+  // position: fixed;
   width: 100%;
+  min-height: 100vh;
   height: 100vh;
   overflow-y: scroll;
+  padding: 0 0 0 100px;
 }
 // Skills page needs to scroll in mobile
 @media only screen and (max-width: 900px) {
@@ -874,9 +880,10 @@ Skills Page
     justify-content: center;
     align-content: center;
     width: 100%;
-    height: 100%;
     margin: 0;
+    padding: 0;
     position: unset;
+    height: unset;
   }
 }
 
@@ -891,6 +898,8 @@ Skills Page
     flex-direction: column;
     position: relative;
     align-items: center;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -919,13 +928,14 @@ Skills Page
 .revealed-skills-container {
   margin: 0;
   width: 100%;
+  display: inline-block;
+  padding: 20px 0;
   } 
 }
 
 .select-skills {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   margin: 0 0 0 30px;
   width: 30%;
   justify-content: center;
@@ -937,6 +947,7 @@ Skills Page
     margin: 0;
     width: 95%;
     padding-top: 20px;
+    display: inline-block;
   }
 }
 
@@ -947,7 +958,7 @@ Skills Page
   margin: 0px;
   position: sticky;
   width: 100%;
-  height: 50vh;
+
 }
 
 @media only screen and (max-width: 900px) {

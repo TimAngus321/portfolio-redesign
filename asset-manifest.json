@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-redesign/static/css/main.3b830ffe.chunk.css",
+    "main.css": "/portfolio-redesign/static/css/main.097f8b6f.chunk.css",
     "main.js": "/portfolio-redesign/static/js/main.2bcbf92a.chunk.js",
     "main.js.map": "/portfolio-redesign/static/js/main.2bcbf92a.chunk.js.map",
     "runtime-main.js": "/portfolio-redesign/static/js/runtime-main.6ad115a1.js",
@@ -10,7 +10,7 @@
     "static/js/2.0ff59627.chunk.js.map": "/portfolio-redesign/static/js/2.0ff59627.chunk.js.map",
     "index.html": "/portfolio-redesign/index.html",
     "static/css/2.4e65da0b.chunk.css.map": "/portfolio-redesign/static/css/2.4e65da0b.chunk.css.map",
-    "static/css/main.3b830ffe.chunk.css.map": "/portfolio-redesign/static/css/main.3b830ffe.chunk.css.map",
+    "static/css/main.097f8b6f.chunk.css.map": "/portfolio-redesign/static/css/main.097f8b6f.chunk.css.map",
     "static/js/2.0ff59627.chunk.js.LICENSE.txt": "/portfolio-redesign/static/js/2.0ff59627.chunk.js.LICENSE.txt",
     "static/media/API.4206a2ec.jpeg": "/portfolio-redesign/static/media/API.4206a2ec.jpeg",
     "static/media/HydrogenLogo.84aff684.png": "/portfolio-redesign/static/media/HydrogenLogo.84aff684.png",
@@ -23,7 +23,7 @@
     "static/js/runtime-main.6ad115a1.js",
     "static/css/2.4e65da0b.chunk.css",
     "static/js/2.0ff59627.chunk.js",
-    "static/css/main.3b830ffe.chunk.css",
+    "static/css/main.097f8b6f.chunk.css",
     "static/js/main.2bcbf92a.chunk.js"
   ]
 }

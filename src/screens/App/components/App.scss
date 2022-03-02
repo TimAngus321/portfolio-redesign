@@ -23,6 +23,8 @@ a {
 body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /******************************************************************* 
@@ -90,6 +92,7 @@ Navbar Styling
   min-height: 500px;
   background-color: #191919;
   z-index: 100;
+  overflow-y: scroll;
 }
 
 @media only screen and (max-width: 900px) {
@@ -861,6 +864,7 @@ Skills Page
   position: fixed;
   width: 100%;
   height: 100vh;
+  overflow-y: scroll;
 }
 // Skills page needs to scroll in mobile
 @media only screen and (max-width: 900px) {
@@ -908,7 +912,7 @@ Skills Page
   color: $secondary-font-color;
   width: 75%;
   position: relative;
-  margin-left: 120px;
+  margin: 40px 0 40px 120px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -1031,11 +1035,11 @@ ul.skill-cards {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 /******************************************************************* 

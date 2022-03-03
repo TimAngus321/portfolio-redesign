@@ -1,8 +1,12 @@
+
 import React from "react";
 
-class PersonalProjCard extends React.Component {
-  render() {
-    const { name, techStack, desc, link } = this.props.name;
+const ReactProjCard = ({ allReactApps }) =>  {
+
+  // console.log(allReactApps)
+
+  const {link, name, techStack, desc} = allReactApps;
+  // console.log([link, name, techStack, desc])
 
     return (
       <a
@@ -19,7 +23,7 @@ class PersonalProjCard extends React.Component {
         </div>
       </a>
     );
-  }
+  
 }
 
-export default PersonalProjCard;
+export default ReactProjCard;

@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import styles from "./styles.module.scss";
 import WorkExpCard from "./workExpCard";
-import PersonalProjCard from "./personalProjCard";
+import ReactProjCard from "./reactProjCard";
+import RailsProjCard from "./railsProjCard";
 import railsProjects from "../rails-projects-data";
 import reactProjects from "../react-projects-data";
 import previousClients from "../work-project-data";
@@ -28,7 +29,7 @@ const Work = () => {
     <div className="page-container-scroll-work">
       <div className="work-container">
         <Parallax
-          pages={12}
+          pages={13}
           innerStyle={{
             zIndex: "1",
           }}
@@ -73,17 +74,13 @@ const Work = () => {
             >
               <WorkExpCard
                 key={key}
-                client={workExperience[key]}
-                company={workExperience[key]}
-                project={workExperience[key]}
-                desc={workExperience[key]}
-                link={workExperience[key]}
+                shopifyProj={workExperience[key]}
               ></WorkExpCard>
             </ParallaxLayer>
           ))}
 
           <ParallaxLayer
-            sticky={{ start: 6, end: 8 }}
+            sticky={{ start: 6, end: 9 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles.stickyCard} ${styles.sticky}`}>
@@ -95,27 +92,24 @@ const Work = () => {
             </div>
           </ParallaxLayer>
 
-          {Object.keys(reactProj).map((key, i) => (
+          {Object.keys(reactProj).map((reactApp, i) => (
             <ParallaxLayer
               className={`${styles.projectCard} ${styles.parallax}`}
               offset={6.5 + i}
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
-              <PersonalProjCard
+              <ReactProjCard
                 className={`${styles.projectCard} ${styles.parallax}`}
-                key={key}
-                name={reactProj[key]}
-                techStack={reactProj[key]}
-                desc={reactProj[key]}
-                link={reactProj[key]}
-              ></PersonalProjCard>
+                key={i}
+                allReactApps={reactProj[reactApp]}
+              ></ReactProjCard>
             </ParallaxLayer>
           ))}
 
           <ParallaxLayer
             className="rails-group"
-            sticky={{ start: 9, end: 11 }}
+            sticky={{ start: 10, end: 12 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles.stickyCard} ${styles.sticky}`}>
@@ -130,17 +124,14 @@ const Work = () => {
           {Object.keys(railsProj).map((key, i) => (
             <ParallaxLayer
               className={`${styles.projectCard} ${styles.parallax}`}
-              offset={9.5 + i}
+              offset={10.5 + i}
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
-              <PersonalProjCard
-                key={key}
-                name={railsProj[key]}
-                techStack={railsProj[key]}
-                desc={railsProj[key]}
-                link={railsProj[key]}
-              ></PersonalProjCard>
+              <RailsProjCard
+                key={i}
+                allRailsProj={railsProj[key]}
+              ></RailsProjCard>
             </ParallaxLayer>
           ))}
         </Parallax>

@@ -1,8 +1,8 @@
 import React from "react";
 
-class WorkExpCard extends React.Component {
-  render() {
-    const { client, company, project, desc, link } = this.props.client;
+const WorkExpCard = ({shopifyProj}) => {
+
+    const { client, company, project, desc, link } = shopifyProj;
 
     return (
       <a
@@ -20,6 +20,5 @@ class WorkExpCard extends React.Component {
         </div>
       </a>
     );
-  }
 }
 export default WorkExpCard;

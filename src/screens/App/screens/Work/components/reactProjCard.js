@@ -12,7 +12,7 @@ const ReactProjCard = ({ allReactApps }) => {
       style={{ alignSelf: "flex-end" }}
     >
       <div className="scroll-cards">
-        <h4 class="name">{name}</h4>
+        <h4 className="name">{name}</h4>
         <p className="tech-stack">{techStack}</p>
         <p className="desc">{desc}</p>
       </div>

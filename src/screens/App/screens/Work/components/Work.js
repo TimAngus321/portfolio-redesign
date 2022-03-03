@@ -65,7 +65,7 @@ const Work = () => {
             </div>
           </ParallaxLayer>
 
-          {Object.keys(workExperience).map((key, i) => (
+          {Object.keys(workExperience).map((workProj, i) => (
             <ParallaxLayer
               className={`${styles.projectCard} ${styles.parallax}`}
               offset={1.5 + i}
@@ -73,8 +73,8 @@ const Work = () => {
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
               <WorkExpCard
-                key={key}
-                shopifyProj={workExperience[key]}
+                key={workProj}
+                shopifyProj={workExperience[workProj]}
               ></WorkExpCard>
             </ParallaxLayer>
           ))}
@@ -101,7 +101,7 @@ const Work = () => {
             >
               <ReactProjCard
                 className={`${styles.projectCard} ${styles.parallax}`}
-                key={i}
+                key={reactApp}
                 allReactApps={reactProj[reactApp]}
               ></ReactProjCard>
             </ParallaxLayer>
@@ -121,7 +121,7 @@ const Work = () => {
             </div>
           </ParallaxLayer>
 
-          {Object.keys(railsProj).map((key, i) => (
+          {Object.keys(railsProj).map((railsApp, i) => (
             <ParallaxLayer
               className={`${styles.projectCard} ${styles.parallax}`}
               offset={10.5 + i}
@@ -129,8 +129,8 @@ const Work = () => {
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
               <RailsProjCard
-                key={i}
-                allRailsProj={railsProj[key]}
+                key={railsApp}
+                allRailsProj={railsProj[railsApp]}
               ></RailsProjCard>
             </ParallaxLayer>
           ))}

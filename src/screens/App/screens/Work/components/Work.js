@@ -21,8 +21,8 @@ const Work = () => {
     alignItems: "center",
     width: "100%",
     position: "fixed",
-    margin: '0',
-    padding: '0'
+    margin: "0",
+    padding: "0",
   };
 
   return (
@@ -36,7 +36,7 @@ const Work = () => {
           style={{
             display: "flex",
             height: "100%",
-            overflowX: 'hidden !important'
+            overflowX: "hidden !important",
           }}
         >
           <ParallaxLayer

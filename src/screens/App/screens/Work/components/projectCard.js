@@ -1,7 +1,7 @@
 import React from "react";
 
-const ReactProjCard = ({ allReactApps }) => {
-  const { link, name, techStack, desc } = allReactApps;
+const ProjectCard = ({ appProj }) => {
+  const { link, name, techStack, desc } = appProj;
 
   return (
     <a
@@ -20,4 +20,4 @@ const ReactProjCard = ({ allReactApps }) => {
   );
 };
 
-export default ReactProjCard;
+export default ProjectCard;

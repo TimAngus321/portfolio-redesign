@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import styles from "./styles.module.scss";
 import WorkExpCard from "./workExpCard";
-import ReactProjCard from "./reactProjCard";
-import RailsProjCard from "./railsProjCard";
 import railsProjects from "../rails-projects-data";
 import reactProjects from "../react-projects-data";
 import previousClients from "../work-project-data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import shopifyLogo from "/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/screens/App/screens/Skills/images/Shopify-Logo.png";
+import ProjectCard from './projectCard';
 
 const Work = () => {
   const [workExperience] = useState(previousClients);
@@ -99,11 +98,11 @@ const Work = () => {
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
-              <ReactProjCard
+              <ProjectCard
                 className={`${styles.projectCard} ${styles.parallax}`}
                 key={reactApp}
-                allReactApps={reactProj[reactApp]}
-              ></ReactProjCard>
+                appProj={reactProj[reactApp]}
+              ></ProjectCard>
             </ParallaxLayer>
           ))}
 
@@ -128,10 +127,10 @@ const Work = () => {
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
-              <RailsProjCard
+              <ProjectCard
                 key={railsApp}
-                allRailsProj={railsProj[railsApp]}
-              ></RailsProjCard>
+                appProj={railsProj[railsApp]}
+              ></ProjectCard>
             </ParallaxLayer>
           ))}
         </Parallax>

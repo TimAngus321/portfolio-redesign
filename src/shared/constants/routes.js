@@ -1,22 +1,22 @@
 export default Object.freeze({
     HOME: {
         name: 'Home',
-        route:'/portfolio/home'
+        route:'/home'
     },
     ABOUT: {
         name: 'About',
-        route: '/portfolio/about'
+        route: '/about'
     },
     SKILLS: {
         name: 'Skills',
-        route: '/portfolio/skills',
+        route: '/skills',
     },
     WORK: {
         name: 'Work',
-        route: '/portfolio/work'
+        route: '/work'
     },
     CONTACT: {
         name: 'Contact',
-        route: '/portfolio/contact'
+        route: '/contact'
     }
 })

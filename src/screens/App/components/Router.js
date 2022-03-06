@@ -47,16 +47,16 @@ const Router = () => {
             <Menu open={open} setOpen={setOpen} />
           </div> 
         <Switch>
-            <Route exact path="/" component={App} render={() => {
+            <Route exact path="/portfolio-redesign/" component={App} render={() => {
                     return (
-                      <Redirect to="/home" />
+                      <Redirect to="/portfolio-redesign/home" />
                     )
                 }} />
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/skills" component={Skills} />
-            <Route exact path="/work" component={Work} />
+            <Route path="/portfolio-redesign/home" component={Home} />
+            <Route path="/portfolio-redesign/about" component={About} />
+            <Route path="/portfolio-redesign/contact" component={Contact} />
+            <Route path="/portfolio-redesign/skills" component={Skills} />
+            <Route path="/portfolio-redesign/work" component={Work} />
             <Route component={NotFound} />
         </Switch>
     </BrowserRouter>

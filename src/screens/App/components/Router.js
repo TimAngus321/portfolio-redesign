@@ -33,10 +33,6 @@ const Router = () => {
     const [open, setOpen] = useState(false);
     const node = useRef(); 
 
-    // useEffect (() => {
-    //     this.ref = base.syncState()
-    // }, [])
-
   return (
     <div className="App">
     <ToastContainer />
@@ -47,7 +43,7 @@ const Router = () => {
             <Menu open={open} setOpen={setOpen} />
           </div> 
         <Switch>
-            <Route exact path="/portfolio-redesign/" component={App} render={() => {
+            <Route exact path="/" component={App} render={() => {
                     return (
                       <Redirect to="/portfolio-redesign/home" />
                     )

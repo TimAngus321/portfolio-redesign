@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/portfolio-redesign/static/css/main.a7f54eea.chunk.css",
-    "main.js": "/portfolio-redesign/static/js/main.205ee0bc.chunk.js",
-    "main.js.map": "/portfolio-redesign/static/js/main.205ee0bc.chunk.js.map",
-    "runtime-main.js": "/portfolio-redesign/static/js/runtime-main.b5a392bd.js",
-    "runtime-main.js.map": "/portfolio-redesign/static/js/runtime-main.b5a392bd.js.map",
-    "static/css/2.68b64559.chunk.css": "/portfolio-redesign/static/css/2.68b64559.chunk.css",
-    "static/js/2.77920e10.chunk.js": "/portfolio-redesign/static/js/2.77920e10.chunk.js",
-    "static/js/2.77920e10.chunk.js.map": "/portfolio-redesign/static/js/2.77920e10.chunk.js.map",
-    "index.html": "/portfolio-redesign/index.html",
-    "static/css/2.68b64559.chunk.css.map": "/portfolio-redesign/static/css/2.68b64559.chunk.css.map",
-    "static/css/main.a7f54eea.chunk.css.map": "/portfolio-redesign/static/css/main.a7f54eea.chunk.css.map",
-    "static/js/2.77920e10.chunk.js.LICENSE.txt": "/portfolio-redesign/static/js/2.77920e10.chunk.js.LICENSE.txt",
-    "static/media/API.4206a2ec.jpeg": "/portfolio-redesign/static/media/API.4206a2ec.jpeg",
-    "static/media/HydrogenLogo.84aff684.png": "/portfolio-redesign/static/media/HydrogenLogo.84aff684.png",
-    "static/media/SQL-logo.666de00e.png": "/portfolio-redesign/static/media/SQL-logo.666de00e.png",
-    "static/media/Shopify-Logo.d4673fa8.png": "/portfolio-redesign/static/media/Shopify-Logo.d4673fa8.png",
-    "static/media/Shopify-liquid.21ce141e.webp": "/portfolio-redesign/static/media/Shopify-liquid.21ce141e.webp",
-    "static/media/vinylPlayer.9dd86879.gif": "/portfolio-redesign/static/media/vinylPlayer.9dd86879.gif"
+    "main.css": "/portfolio/static/css/main.097f8b6f.chunk.css",
+    "main.js": "/portfolio/static/js/main.84c71e67.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.84c71e67.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.bf545497.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.bf545497.js.map",
+    "static/css/2.68b64559.chunk.css": "/portfolio/static/css/2.68b64559.chunk.css",
+    "static/js/2.bc06ff0e.chunk.js": "/portfolio/static/js/2.bc06ff0e.chunk.js",
+    "static/js/2.bc06ff0e.chunk.js.map": "/portfolio/static/js/2.bc06ff0e.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/2.68b64559.chunk.css.map": "/portfolio/static/css/2.68b64559.chunk.css.map",
+    "static/css/main.097f8b6f.chunk.css.map": "/portfolio/static/css/main.097f8b6f.chunk.css.map",
+    "static/js/2.bc06ff0e.chunk.js.LICENSE.txt": "/portfolio/static/js/2.bc06ff0e.chunk.js.LICENSE.txt",
+    "static/media/API.4206a2ec.jpeg": "/portfolio/static/media/API.4206a2ec.jpeg",
+    "static/media/HydrogenLogo.84aff684.png": "/portfolio/static/media/HydrogenLogo.84aff684.png",
+    "static/media/SQL-logo.666de00e.png": "/portfolio/static/media/SQL-logo.666de00e.png",
+    "static/media/Shopify-Logo.d4673fa8.png": "/portfolio/static/media/Shopify-Logo.d4673fa8.png",
+    "static/media/Shopify-liquid.21ce141e.webp": "/portfolio/static/media/Shopify-liquid.21ce141e.webp",
+    "static/media/vinylPlayer.9dd86879.gif": "/portfolio/static/media/vinylPlayer.9dd86879.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.b5a392bd.js",
+    "static/js/runtime-main.bf545497.js",
     "static/css/2.68b64559.chunk.css",
-    "static/js/2.77920e10.chunk.js",
-    "static/css/main.a7f54eea.chunk.css",
-    "static/js/main.205ee0bc.chunk.js"
+    "static/js/2.bc06ff0e.chunk.js",
+    "static/css/main.097f8b6f.chunk.css",
+    "static/js/main.84c71e67.chunk.js"
   ]
 }

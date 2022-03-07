@@ -2,7 +2,7 @@ import React from 'react';
 import QuoteLoop from './quote-text-loop';
 import { Link } from 'react-router-dom';
 import { routeConstants } from 'shared/constants';
-import vinylPlayer from '/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/screens/App/screens/Home/images/vinylPlayer.gif'
+import vinylPlayer from '/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/app/screens/Home/images/vinylPlayer.gif'
 
 const {
   CONTACT,

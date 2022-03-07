@@ -1,4 +1,4 @@
-import ShopifyHydrogen from '/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/screens/App/screens/Skills/images/HydrogenLogo.png';
+import ShopifyHydrogen from '/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/app/screens/Skills/images/HydrogenLogo.png';
 
 const developingSkills = {
     skill1: {

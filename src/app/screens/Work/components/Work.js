@@ -7,7 +7,7 @@ import reactProjects from "../react-projects-data";
 import previousClients from "../work-project-data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import shopifyLogo from "/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/screens/App/screens/Skills/images/Shopify-Logo.png";
+import shopifyLogo from "/Users/timothyangus/code/TimAngus321/personal-projects/portfolio-redesign/src/app/screens/Skills/images/Shopify-Logo.png";
 import ProjectCard from './projectCard';
 
 const Work = () => {

@@ -25,7 +25,7 @@
 
 ## Deployed on Netlify with custom domain:
 
-[Check it out here ](www.tim-angus.com)
+[Check it out here ](https://www.tim-angus.com/)
 
 ## Deployed on GH pages: 
 

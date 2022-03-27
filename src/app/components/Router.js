@@ -35,18 +35,6 @@ const Router = () => {
             <Hamburger open={open} setOpen={setOpen} />
             <Menu open={open} setOpen={setOpen} />
           </div>
-        {/* <Switch>
-            <Route exact path="/" component={Router} render={() => {
-                    return (
-                      <Redirect to="home" />
-                    )
-                }} />
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/skills" component={Skills} />
-            <Route exact path="/work" component={Work} />
-        </Switch> */}
         <Switch>
               {routes.map((route, i) => (
                 <RouteWithSubRoutes key={i} {...route} />

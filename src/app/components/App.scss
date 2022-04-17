@@ -866,6 +866,7 @@ Skills Page
   // margin: 0 40px 0 100px;
   // position: fixed;
   width: 100%;
+  width: calc(100% - 100px);
   min-height: 100vh;
   height: 100vh;
   overflow-y: scroll;
@@ -921,6 +922,7 @@ Skills Page
   width: 75%;
   position: relative;
   margin: 40px 0 40px 120px;
+  height: 100%;
 }
 
 @media only screen and (max-width: 900px) {
@@ -932,22 +934,31 @@ Skills Page
   } 
 }
 
-.select-skills {
+.select-skills-container {
   display: flex;
   flex-direction: column;
-  margin: 0 0 0 30px;
+  margin: 40px 0 0 30px;
   width: 30%;
   justify-content: center;
   z-index: 1;
+  height: 100%;
 }
 
 @media only screen and (max-width: 900px) {
-  .select-skills { 
+  .select-skills-container { 
     margin: 0;
     width: 95%;
     padding-top: 20px;
     display: inline-block;
   }
+}
+
+.select-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
 }
 
 .about-my-skills {
@@ -987,11 +998,13 @@ Skills Page
   color: $base-hover-color;
   font-weight: bold;
   text-align: center;
-  margin-right: 100px;
-  height: 100%;
+  // margin-right: 100px;
+  // height: 100%;
   width: 100%;
   align-content: center;
   justify-content: center;
+  overflow: auto;
+  max-height: 100vh;
 }
 
 @media only screen and (max-width: 900px) {

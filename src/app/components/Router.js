@@ -9,6 +9,7 @@ import Menu from './Menu/index.js';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import routes from '../route';
+import { RouteWithSubRoutes } from 'shared/components';
 
 const {
     HOME,

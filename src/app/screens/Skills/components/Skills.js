@@ -28,10 +28,13 @@ const Skills = () => {
   }, [skillsetName]);
 
   return (
-    <div className="page-container-fixed-skills">
-      <div className="skills-container">
+    <section className="page-container-fixed-skills">
+      <main className="skills-container">
+        <div className="select-skills-container">
         <div className="select-skills">
+        <header>
           <h2 className="skills-title">Tech Stack</h2>
+          </header>
           <p className="skills-blurb">
             After studying at Le Wagon and doing additional studies online I
             have learnt and{" "}
@@ -73,6 +76,7 @@ const Skills = () => {
               &nbsp;Learning&nbsp;
             </span>
           </div>
+          </div>
         </div>
         <div className="revealed-skills-container">
           <div className="reveal-skills">
@@ -97,8 +101,8 @@ const Skills = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </main>
+    </section>
   );
 };
 

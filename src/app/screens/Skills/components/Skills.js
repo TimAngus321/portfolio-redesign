@@ -5,6 +5,9 @@ import frontendSkillSet from "../front-end-skills";
 import backendSkillSet from "../backend-skills";
 import shopifySkillSet from "../shopify-skills";
 import developingSkills from "../developing-skills";
+import hostingUsed from "../hosting-used";
+import mobileSkillset from "../mobile-skills";
+import languages from "../languages";
 import SkillCard from "./SkillCard";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -13,7 +16,7 @@ const { CONTACT, WORK } = routeConstants;
 
 const Skills = () => {
   const [skillSets, setSkillset] = useState({});
-  const [skillsetName, setskillsetName] = useState(frontendSkillSet);
+  const [skillsetName, setskillsetName] = useState(languages);
 
   const clearState = () => {
     let currentState = {};
@@ -36,21 +39,23 @@ const Skills = () => {
           <h2 className="skills-title">Tech Stack</h2>
           </header>
           <p className="skills-blurb">
-            After studying at Le Wagon and doing additional studies online I
-            have learnt and{" "}
+            Feel free to check out my tech stack and{" "}
             <Link className="contact-link" to={WORK.route}>
-              built projects
+              projects I've built
             </Link>{" "}
-            with numerous languages, frameworks, platforms and tools to help
-            comapnies and clients achieve their goals. Feel free to check out my
-            current tech stack and what I'm currently learning. If you use these
-            technologies in your project and need help feel free to get in{" "}
+            using the following tech. If you use these
+            technologies in your projects or company and need help feel free to get in{" "}
             <Link className="contact-link" to={CONTACT.route}>
               contact{" "}
-            </Link>{" "}
-            with me.
+            </Link>{" "}.
           </p>
           <div className="about-my-skills">
+          <span
+              className="about-btn"
+              onClick={(e) => setskillsetName(languages)}
+            >
+              &nbsp;Languages&nbsp;
+            </span>
             <span
               className="about-btn"
               onClick={(e) => setskillsetName(frontendSkillSet)}
@@ -59,9 +64,21 @@ const Skills = () => {
             </span>
             <span
               className="about-btn"
+              onClick={(e) => setskillsetName(mobileSkillset)}
+            >
+              &nbsp;Mobile&nbsp;
+            </span>
+            <span
+              className="about-btn"
               onClick={(e) => setskillsetName(backendSkillSet)}
             >
               &nbsp;Backend&nbsp;
+            </span>
+            <span
+              className="about-btn"
+              onClick={(e) => setskillsetName(hostingUsed)}
+            >
+              &nbsp;Hosting&nbsp;
             </span>
             <span
               className="about-btn"

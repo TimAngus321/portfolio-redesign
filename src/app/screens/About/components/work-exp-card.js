@@ -1,11 +1,8 @@
 import React from "react";
 
-// Animate slide in when clicked
+const WorkExpCard = (props) => {
 
-class WorkExpCard extends React.Component {
-  render() {
-    const { role, compnayName, workPeriod, companyDesc, link } =
-      this.props.company;
+    const { role, compnayName, workPeriod, companyDesc, link } = props.company;
 
     return (
       <a href={link} target="_blank" rel="noopener noreferrer">
@@ -17,6 +14,5 @@ class WorkExpCard extends React.Component {
         </li>
       </a>
     );
-  }
 }
 export default WorkExpCard;

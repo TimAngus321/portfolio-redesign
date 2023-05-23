@@ -19,17 +19,16 @@ const About = () => {
         <div className="about-me-container">
           <h1 className="about-title">About Me</h1>
           <p className="about-me-blurb">
-            I am a Le Wagon alumni that learnt full-stack development with the
+            Le Wagon alumni that learnt full-stack development with the
             Rails framework. Since then I have continued delving deeper into
-            Javascript and building projects with React and Shopify.
+            Javascript and building projects with React, React Native, Express and Shopify.
             <br />
             <br />
-            I've worked fulltime as a full-stack developer for the digital agency Merconic
-            and the US based company MilkRun as well as freelance for various clients. 
-            I have used a variety technology stacks for frontend and backend projects.
-            To see what technologies I use{" "}
+            I've worked fulltime as a full-stack developer for Gavel, MilkRun and Merconic 
+            as well as freelance for various clients. 
+            I have used a variety technologies and you can see what technologies I use{" "}
             <Link className="contact-link" to={SKILLS.route}>
-              check here
+            here
             </Link>.
             <br />
             <br />

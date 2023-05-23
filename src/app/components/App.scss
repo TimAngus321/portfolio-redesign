@@ -840,6 +840,23 @@ Work Experience Card
   margin: 0 0 40px 0;
   padding: 20px;
   color: white;
+
+  .work-exp-role {
+    margin: 5px 0;
+  }
+  
+  .company-name {
+    margin: 5px 0;
+  }
+  
+  .work-period {
+    margin: 5px 0;
+  }
+  
+  .company-desc {
+    margin: 5px 0;
+  }
+  
 }
 
 @media only screen and (max-width: 900px) {

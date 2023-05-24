@@ -1,7 +1,20 @@
 import React from "react";
 
-const WorkExpCard = ({ shopifyProj }) => {
-  const { client, company, project, desc, link } = shopifyProj;
+const WorkExpCard = ({ workProjects }) => {
+
+
+  const { companyTitle, company, projectTitle, project, link, img } = workProjects;
+
+  const cardStyle = { 
+    backgroundImage: `url(${img} )`,
+    backgroundPosition: 'top',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    alignSelf: `flex-end`,
+    height: `300px`,
+    width: '100%',
+    borderRadius: '10px 10px 0 0',
+  }
 
   return (
     <a
@@ -9,13 +22,18 @@ const WorkExpCard = ({ shopifyProj }) => {
       className="test-link proj-card"
       target="_blank"
       rel="noopener noreferrer"
-      style={{ alignSelf: "flex-end" }}
     >
+      <div style={{...cardStyle}}>
+      </div>
       <div className="scroll-cards">
-        <h3 className="client">{client}</h3>
-        <h3 className="company">{company}</h3>
-        <h4 className="project">{project}</h4>
-        <p className="desc">{desc}</p>
+        <div className="company-info">
+          <h3 className="company">{companyTitle}</h3>
+          <p className="company-name">{company}</p>
+        </div>
+        <div className="project-info">
+          <h3 className="project">{projectTitle}</h3>
+          <p className="project-info">{project}</p>
+        </div>
       </div>
     </a>
   );

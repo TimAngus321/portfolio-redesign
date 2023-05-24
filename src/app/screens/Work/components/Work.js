@@ -9,11 +9,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import shopifyLogo from "./Shopify-Logo.png";
 import ProjectCard from './projectCard';
+import expressProjects from '../express-project-data';
 
 const Work = () => {
   const [workExperience] = useState(previousClients);
   const [reactProj] = useState(reactProjects);
   const [railsProj] = useState(railsProjects);
+  const [expressProj] = useState(expressProjects);
 
   const alignCenter = {
     display: "flex",
@@ -28,7 +30,7 @@ const Work = () => {
     <div className="page-container-scroll-work">
       <div className="work-container">
         <Parallax
-          pages={13}
+          pages={17}
           innerStyle={{
             zIndex: "1",
           }}
@@ -51,35 +53,7 @@ const Work = () => {
           </ParallaxLayer>
 
           <ParallaxLayer
-            factor={0.5}
             sticky={{ start: 1, end: 5 }}
-            style={{ ...alignCenter, justifyContent: "flex-start" }}
-          >
-            <div className={`${styles.stickyCard} ${styles.sticky}`}>
-              <img
-                src={shopifyLogo}
-                alt="Shopify Logo"
-                className="sicky-card-image"
-              />
-            </div>
-          </ParallaxLayer>
-
-          {Object.keys(workExperience).map((workProj, i) => (
-            <ParallaxLayer
-              className={`${styles.projectCard} ${styles.parallax}`}
-              offset={1.5 + i}
-              speed={1.5}
-              style={{ ...alignCenter, justifyContent: "flex-end" }}
-            >
-              <WorkExpCard
-                key={workProj}
-                workProjects={workExperience[workProj]}
-              ></WorkExpCard>
-            </ParallaxLayer>
-          ))}
-
-          <ParallaxLayer
-            sticky={{ start: 6, end: 9 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles.stickyCard} ${styles.sticky}`}>
@@ -94,13 +68,13 @@ const Work = () => {
           {Object.keys(reactProj).map((reactApp, i) => (
             <ParallaxLayer
               className={`${styles.projectCard} ${styles.parallax}`}
-              offset={6.5 + i}
+              offset={1.5 + i}
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
               <ProjectCard
                 className={`${styles.projectCard} ${styles.parallax}`}
-                key={reactApp}
+                key={i}
                 appProj={reactProj[reactApp]}
               ></ProjectCard>
             </ParallaxLayer>
@@ -108,7 +82,7 @@ const Work = () => {
 
           <ParallaxLayer
             className="rails-group"
-            sticky={{ start: 10, end: 12 }}
+            sticky={{ start: 6, end: 7 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles.stickyCard} ${styles.sticky}`}>
@@ -123,14 +97,70 @@ const Work = () => {
           {Object.keys(railsProj).map((railsApp, i) => (
             <ParallaxLayer
               className={`${styles.projectCard} ${styles.parallax}`}
-              offset={10.5 + i}
+              offset={6.5 + i}
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
               <ProjectCard
-                key={railsApp}
+                key={i}
                 appProj={railsProj[railsApp]}
               ></ProjectCard>
+            </ParallaxLayer>
+          ))}
+
+          <ParallaxLayer
+            factor={0.5}
+            sticky={{ start: 8, end: 10 }}
+            style={{ ...alignCenter, justifyContent: "flex-start" }}
+          >
+            <div className={`${styles.stickyCard} ${styles.sticky}`}>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                alt="Express Logo"
+                className="sicky-card-image inverseWhite"
+              />
+            </div>
+          </ParallaxLayer>
+
+          {Object.keys(expressProj).map((expressApp, i) => (
+            <ParallaxLayer
+              className={`${styles.projectCard} ${styles.parallax}`}
+              offset={8.5 + i}
+              speed={1.5}
+              style={{ ...alignCenter, justifyContent: "flex-end" }}
+            >
+              <ProjectCard
+                key={i}
+                appProj={expressProj[expressApp]}
+              ></ProjectCard>
+            </ParallaxLayer>
+          ))}
+
+          <ParallaxLayer
+            factor={0.5}
+            sticky={{ start: 11, end: 16 }}
+            style={{ ...alignCenter, justifyContent: "flex-start" }}
+          >
+            <div className={`${styles.stickyCard} ${styles.sticky}`}>
+              <img
+                src={shopifyLogo}
+                alt="Shopify Logo"
+                className="sicky-card-image"
+              />
+            </div>
+          </ParallaxLayer>
+
+          {Object.keys(workExperience).map((workProj, i) => (
+            <ParallaxLayer
+              className={`${styles.projectCard} ${styles.parallax}`}
+              offset={11.5 + i}
+              speed={1.5}
+              style={{ ...alignCenter, justifyContent: "flex-end" }}
+            >
+              <WorkExpCard
+                key={i}
+                workProjects={workExperience[workProj]}
+              ></WorkExpCard>
             </ParallaxLayer>
           ))}
         </Parallax>

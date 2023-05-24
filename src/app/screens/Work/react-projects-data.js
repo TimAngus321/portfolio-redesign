@@ -34,7 +34,7 @@ const reactProjects = {
         name: "Personal Portfolio",
         desc: "A personal portfolio to let people know about my skills and advertise myself.",
         techTitle: "Tech Used",
-        techStack: "React, SCSS, Quote Loop, CSS Transition, CSS in JS and figma. Design based off an Awwards winnder.",
+        techStack: "React, SCSS, Quote Loop, CSS Transition, CSS in JS and figma. Design based off an Awwards winner.",
         link: "www.tim-angus.com",
         img: personalPortfolioImg,
     },

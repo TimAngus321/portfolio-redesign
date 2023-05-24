@@ -1,22 +1,23 @@
-import costaboardImg from './images/costaboardImg.png'
+import costaboardImg from './images/costaboardImg.png';
+import gavelLandingPage from './images/gavelLandingPageImg.png';
 
-const expressPojects = {
-project1: {
-    companyTitle: "Company",
-    company: "Costaboard",
-    projectTitle: "Project",
-    project: "Express App Deployed on AWS Lambda. Debugging, customising a Private Shopify App repsonsible for fulillment",
-    link: "https://costaboard.com",
-    img: costaboardImg,
-},
-project2: {
-    companyTitle: "Company",
-    company: "Gavel",
-    projectTitle: "Project",
-    project: "Deploying on AWS Lambda, debugging and and customising a Private Shopify Express App repsonsible for fulillment and shopify theme development.",
-    link: "https://costaboard.com",
-    img: costaboardImg,
-},
+const expressProjects = {
+    project1: {
+        name: "Costaboard",
+        desc: "Express App Deployed on AWS Lambda. Debugging, customising a Private Shopify App repsonsible for fulillment",
+        techTitle: "Tech Used",
+        techStack: "Express, Node, AWS, Lambda & Shopify",
+        link: "https://costaboard.com",
+        img: costaboardImg,
+    },
+    project2: {
+        name: "Gavel",
+        desc: "Fixed bugs, built apis & socket events, added queries and created & joined tables",
+        techTitle: "Tech Used",
+        techStack: "Express, Node, AWS, Prisma, MySql, APIs & Socket IO",
+        link: "https://www.joingavel.com/",
+        img: gavelLandingPage,
+    }
 }
 
-export default expressPojects;
+export default expressProjects;

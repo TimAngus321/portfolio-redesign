@@ -1,39 +1,50 @@
+import josephinenHutteImg from './images/josephinenHutteImg.png';
+import costaboardImg from './images/costaboardImg.png';
+import fleekyImg from './images/fleekyImg.png';
+import cosmeticBeateBulangImg from './images/cosmeticBeateBulangImg.png';
+import mikrunImg from './images/milkrunImg.png';
+
 
 const previousClients = {
     project1: {
-        client: "Agency: Merconic GmbH",
-        company: "Company: Josephinen Hütte",
-        project: "Project: Shopify Theme Development",
-        desc: "Description: Deal with issues regarding pricing and images and adding or modifying components and pages",
-        link: "https://josephinen.com/"
+        companyTitle: "Company",
+        company: "Josephinen Hütte",
+        projectTitle: "Project",
+        project: "Shopify Theme Development. Deal with issues regarding pricing, images and adding or modifying components and pages",
+        link: "https://josephinen.com/",
+        img: josephinenHutteImg,
     },
     project2: {
-        client: "Agency: Merconic GmbH",
-        company: "Company: Costaboard",
-        project: "Project: Deploying, debugging and and customising a Private Shopify Express App repsonsible for fulillment and shopify theme development.",
-        desc: "Description: Fix issues with prices of certatin options on particular boards and other theme improvements and the deployment, debugging and customisation of a backend Fulfillment Automation App called shopify-wolanski-fulfillment that used AWS Cloud Services, Express, Node, FTP and Shopify Rest APIs",
-        link: "https://costaboard.com"
+        companyTitle: "Company",
+        company: "Costaboard",
+        projectTitle: "Project",
+        project: "Shopify theme development. Debugging their theme and theme editor and  automating fulfillments for their store. ",
+        link: "https://costaboard.com",
+        img: costaboardImg,
     },
     project3: {
-        client: "Agency: Merconic GmbH",
-        company: "Company: Fleeky",
-        project: "Project: Shopify Theme Development",
-        desc: "Description: Implement a redesign by adding components including: sticky navbars, responsive card components, sections, fonts and more to the Shopify Theme",
-        link: "https://fleeky.de"
+        companyTitle: "Company",
+        company: "Fleeky",
+        projectTitle: "Project",
+        project: "Shopify Theme Development. Implement a redesign by adding components like: sticky navbars, cards, sections, fonts and responsiveness",
+        link: "https://fleeky.de",
+        img: fleekyImg,
     },
     project4: {
-        client: "Agency: Merconic GmbH",
-        company: "Company: Cosmetic Beate Bulang",
-        project: "Project: Shopify Theme Development",
-        desc: "Description: Fix Javascript/jQuery issues caused when updating prices when quantities were changed, the coutner for reviews required and insure information is updating in the DOM rather than being updated only once page has reloaded (was not available from theme)",
-        link: "https://www.cosmetic-beate-bulang.de/"
+        companyTitle: "Company",
+        company: "Cosmetic Beate Bulang",
+        projectTitle: "Project",
+        project: "Shopify Theme Development. Fix issues caused when updating prices when quantities changed, add coutner for reviews required and ensure information is updating immediately rather than on load",
+        link: "https://cosmetic-bulang.de/",
+        img: cosmeticBeateBulangImg,
     },
     project5: {
-        client: "Full Time Contractor",
-        company: "Comapny: MilkRun",
-        project: "Project: Large project integrating different stores into one store that incldued a lot of use of APIs, 3rd party app customisation and more.",
-        desc: "Description: Set up a new Shopify Store that needed some complex features including: being able to sell products from multiple cities, deal with subscriptions, have a cart checker to ensure cart contained products from only one city and above the minimum limit and work extensively with 3rd party apps like ReCharge, Ariagto and OnFleet from the Shopify store to add features to their customer facing frontends and automate processes making extensive use of Shopify's REST API and AJAX API as well as third party APIs.",
-        link: "https://www.localmilkrun.com/"
+        companyTitle: "Company",
+        company: "MilkRun",
+        projectTitle: "Project",
+        project: "Large project integrating different stores into one store that incldued a lot of use of APIs, 3rd party app customisation, cart validation and more.",
+        link: "https://farmersmarket.localmilkrun.com/",
+        img: mikrunImg,
     }
 }
 

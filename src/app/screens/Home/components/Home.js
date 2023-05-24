@@ -17,7 +17,7 @@ function Home() {
                   <QuoteLoop />
                   </p>
                   <p className="sub-heading">
-                    Full-Stack | React | Express | Rails | Shopify  
+                    Full-Stack / React / Express / Rails / Shopify  
                   </p>
                   <Link to={CONTACT.route}>
                     <div className="contact-btn">

@@ -1236,8 +1236,20 @@ Project Card
 }
 
 .scroll-cards {
-  padding: 20px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .company-info {
+    padding: 0 15px 0 10px;
+    text-align: left;
+  }
+
+  .project-info {
+    padding-right: 10px;
+    text-align: left;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -1250,6 +1262,8 @@ a.test-link {
   padding: 10px 0;
   margin-right: 10%;
   width: 50%;
+  border-radius: 10px;
+  padding: 0;
 }
 
 a.test-link:hover {

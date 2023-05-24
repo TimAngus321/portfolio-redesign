@@ -73,7 +73,7 @@ const Work = () => {
             >
               <WorkExpCard
                 key={workProj}
-                shopifyProj={workExperience[workProj]}
+                workProjects={workExperience[workProj]}
               ></WorkExpCard>
             </ParallaxLayer>
           ))}

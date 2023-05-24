@@ -1,4 +1,5 @@
 import ShopifyLiquid from './images/Shopify-liquid.webp'
+import sqlLogo from './images/sql.png'
 
 const languages = {
     skill1: {
@@ -35,6 +36,11 @@ const languages = {
         name: "Liquid",
         image: ShopifyLiquid,
         alt: "Shopify Liquid Logo"
+    }, 
+    skill8: {
+        name: "SQL",
+        image: sqlLogo,
+        alt: "SQL Logo"
     }
 }
 

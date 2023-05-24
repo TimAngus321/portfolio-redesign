@@ -1,7 +1,18 @@
 import React from "react";
 
 const ProjectCard = ({ appProj }) => {
-  const { link, name, techStack, desc } = appProj;
+  const { link, name, desc, techTitle, techStack, img } = appProj;
+
+  const cardStyle = { 
+    backgroundImage: `url(${img} )`,
+    backgroundPosition: 'top',
+    backgroundSize: `${name === 'Gavel Mobile' ? 'contain' : 'cover'}`,
+    backgroundRepeat: 'no-repeat',
+    alignSelf: `flex-end`,
+    height: `300px`,
+    width: '100%',
+    borderRadius: '10px 10px 0 0',
+  }
 
   return (
     <a
@@ -11,10 +22,17 @@ const ProjectCard = ({ appProj }) => {
       rel="noopener noreferrer"
       style={{ alignSelf: "flex-end" }}
     >
+      <div style={{...cardStyle}}>
+      </div>
       <div className="scroll-cards">
-        <h4 className="name">{name}</h4>
-        <p className="tech-stack">{techStack}</p>
-        <p className="desc">{desc}</p>
+        <div className="company-info">
+          <h4 className="company">{name}</h4>
+          <p className="company-name">{desc}</p>
+        </div>
+        <div className="project-info">
+          <h4 className="project">{techTitle}</h4>
+          <p className="project-info">{techStack}</p>
+        </div>
       </div>
     </a>
   );

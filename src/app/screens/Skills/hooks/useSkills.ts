@@ -2,14 +2,14 @@ import { useState } from "react";
 import languages from "../languages";
 
 const useSkills = () => {
-  const [skillSet, setSkillSet] = useState<object>(languages);
+  const [skillSet, setSkillSet] = useState<any>(languages);
 
   const clearState = () => {
     let currentState = {};
     setSkillSet(currentState);
   };
 
-  const updateSkillSet = (skillSet: object) => {
+  const updateSkillSet = (skillSet: any) => {
     clearState();
     setTimeout(() => {
       setSkillSet(skillSet);

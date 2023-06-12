@@ -1,7 +1,7 @@
 import { TransitionGroup } from "react-transition-group";
 import styles from "../style/skillCard.module.scss";
 
-const SkillCard = (skillSet: Array<object>) => {
+const SkillCard = (skillSet: any) => {
   console.log(skillSet)
   const { name, image, styleClass, alt } = skillSet?.skill;
 

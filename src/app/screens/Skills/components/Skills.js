@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { routeConstants } from "shared/constants";
 import frontendSkillSet from "../front-end-skills";
@@ -10,25 +9,16 @@ import mobileSkillset from "../mobile-skills";
 import languages from "../languages";
 import SkillCard from "./SkillCard";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-
+import useSkills from "../hooks/useSkills";
 
 const { CONTACT, WORK } = routeConstants;
 
 const Skills = () => {
-  const [skillSets, setSkillset] = useState({});
-  const [skillsetName, setskillsetName] = useState(languages);
-
-  const clearState = () => {
-    let currentState = {};
-    setSkillset(currentState);
-  };
-
-  useEffect(() => {
-    clearState();
-    setTimeout(() => {
-      setSkillset(skillsetName);
-    }, 500);
-  }, [skillsetName]);
+  
+  const {
+    skillSet,
+    updateSkillSet,
+  } = useSkills();
 
   return (
     <section className="page-container-fixed-skills">
@@ -52,43 +42,43 @@ const Skills = () => {
           <div className="about-my-skills">
           <span
               className="about-btn"
-              onClick={(e) => setskillsetName(languages)}
+              onClick={(e) => updateSkillSet(languages)}
             >
               &nbsp;Languages&nbsp;
             </span>
             <span
               className="about-btn"
-              onClick={(e) => setskillsetName(frontendSkillSet)}
+              onClick={(e) => updateSkillSet(frontendSkillSet)}
             >
               &nbsp;Front-end&nbsp;
             </span>
             <span
               className="about-btn"
-              onClick={(e) => setskillsetName(mobileSkillset)}
+              onClick={(e) => updateSkillSet(mobileSkillset)}
             >
               &nbsp;Mobile&nbsp;
             </span>
             <span
               className="about-btn"
-              onClick={(e) => setskillsetName(backendSkillSet)}
+              onClick={(e) => updateSkillSet(backendSkillSet)}
             >
               &nbsp;Backend&nbsp;
             </span>
             <span
               className="about-btn"
-              onClick={(e) => setskillsetName(hostingUsed)}
+              onClick={(e) => updateSkillSet(hostingUsed)}
             >
               &nbsp;Hosting&nbsp;
             </span>
             <span
               className="about-btn"
-              onClick={(e) => setskillsetName(shopifySkillSet)}
+              onClick={(e) => updateSkillSet(shopifySkillSet)}
             >
               &nbsp;Shopify&nbsp;
             </span>
             <span
               className="about-btn"
-              onClick={(e) => setskillsetName(developingSkills)}
+              onClick={(e) => updateSkillSet(developingSkills)}
             >
               &nbsp;Learning&nbsp;
             </span>
@@ -98,8 +88,8 @@ const Skills = () => {
         <div className="revealed-skills-container">
           <div className="reveal-skills">
             <div className="selected-skillset">
-              <TransitionGroup component="ul" className="skill-cards">
-                {Object.keys(skillSets).map((key) => (
+              <TransitionGroup component="ul">
+                {Object.keys(skillSet).map((key) => (
                   <CSSTransition
                     classNames="skill-card"
                     key={key}
@@ -110,7 +100,7 @@ const Skills = () => {
                   >
                     <SkillCard
                       key={key}
-                      skill={skillSets[key]}
+                      skill={skillSet[key]}
                     />
                   </CSSTransition>
                 ))}

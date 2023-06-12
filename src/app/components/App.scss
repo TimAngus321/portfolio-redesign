@@ -1045,47 +1045,6 @@ Skills Page
 }
 
 
-/******************************************************************* 
-Skill Card
-********************************************************************/
-
-li.skill-card {
-  display: flex;
-  flex-direction: row;
-  height: 50px;
-  align-items: center;
-  margin: 0 0 40px 0;
-  padding: 10px 0;
-  justify-content: space-around;
-  border: solid $secondary-font-color 1px;
-  background-color: $base-background-grey;
-  border-radius: 10px;
-  padding: 10px;
-  width: 85%;
-  align-self: center;
-}
-
-img.skill-image {
-  display: flex;
-  height: 50px;
-  font-size: 12px;
-  align-items: center;
-}
-
-img.inverseWhite {
-  filter: invert(1);
-}
-
-ul.skill-cards {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
 
 /******************************************************************* 
 Skill Card Animations

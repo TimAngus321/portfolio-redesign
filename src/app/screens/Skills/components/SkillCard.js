@@ -1,13 +1,13 @@
-import React from "react";
 import { TransitionGroup } from "react-transition-group";
+import styles from '../style/skillCard.module.scss';
 
 const SkillCard = ({ skill }) => {
   const { name, image, styleClass, alt } = skill;
 
   return (
-    <TransitionGroup component="li" className="skill-card">
-      <img className={`skill-image ${styleClass}`} src={image} alt={alt} />
-      <h3 className="skill-name">{name}</h3>
+    <TransitionGroup component="li" className={styles.skillCard}>
+      <img loading="lazy" className={`${styles.skillImage} ${styleClass}`} src={image} alt={alt} />
+      <h3 className={styles.skillName}>{name}</h3>
     </TransitionGroup>
   );
 };

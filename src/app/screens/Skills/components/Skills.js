@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { routeConstants } from "shared/constants";
-import frontendSkillSet from "../front-end-skills";
 import backendSkillSet from "../backend-skills";
 import shopifySkillSet from "../shopify-skills";
 import developingSkills from "../developing-skills";
@@ -10,6 +9,7 @@ import languages from "../languages";
 import SkillCard from "./SkillCard";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import useSkills from "../hooks/useSkills";
+import frontendSkillSet from "../front-end-skills";
 
 const { CONTACT, WORK } = routeConstants;
 

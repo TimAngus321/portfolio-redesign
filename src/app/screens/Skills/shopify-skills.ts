@@ -1,6 +1,3 @@
-import shopifyLogo from './images/Shopify-Logo.png'
-import shopifyLiquid from './images/Shopify-liquid.webp'
-import tools from './images/tools.png'
 import appInt from './images/app-integration.png'
 import ui from './images/UI.png'
 

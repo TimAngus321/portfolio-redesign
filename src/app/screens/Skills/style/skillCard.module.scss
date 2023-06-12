@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-.inverseWhite {
+:global(.inverseWhite) {
   filter: invert(1);
 }
 

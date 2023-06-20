@@ -86,7 +86,7 @@ const Skills = () => {
           <div className="reveal-skills">
             <div className="selected-skillset">
               <TransitionGroup component="ul">
-                {Object.keys(skillSet).map((key) => (
+                {Object.keys(skillSet).map((key, i) => (
                   <CSSTransition
                     classNames="skill-card"
                     key={key}
@@ -97,7 +97,7 @@ const Skills = () => {
                   >
                     <SkillCard
                       key={key}
-                      skill={skillSet[key]}
+                      skill={skillSet[i]}
                     />
                   </CSSTransition>
                 ))}

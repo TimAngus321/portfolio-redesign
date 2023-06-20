@@ -13,6 +13,7 @@ const PageRoutes = () => {
         <Route path="/skills" element={<Skills />} />
         <Route path="/work" element={<Work />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Home />} />
       </Routes>
   );
 };

@@ -97,7 +97,10 @@ const Skills = () => {
                   >
                     <SkillCard
                       key={key}
-                      skill={skillSet[i]}
+                      name={skillSet[i]?.name}
+                      image={skillSet[i]?.image}
+                      alt={skillSet[i]?.alt}
+                      styleClass={skillSet[i]?.styleClass}
                     />
                   </CSSTransition>
                 ))}

@@ -36,13 +36,14 @@ const About = () => {
         </div>
         <div className="work-experience-container">
         <ul className="work-exp-cards">
-                  {Object.keys(workExpInfo).map((key) => (
+                  {Object.keys(workExpInfo).map((key, i) => (
                     <WorkExpCard
                       key={key}
-                      role={workExpInfo[key]}
-                      company={workExpInfo[key]}
-                      period={workExpInfo[key]}
-                      companyDesc={workExpInfo[key]}
+                      role={workExpInfo[i]?.role}
+                      companyName={workExpInfo[i]?.companyName}
+                      workPeriod={workExpInfo[i]?.workPeriod}
+                      companyDesc={workExpInfo[i]?.companyDesc}
+                      link={workExpInfo[i]?.link}
                     />
                   ))}
                 </ul>

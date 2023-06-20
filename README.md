@@ -1,8 +1,8 @@
 # Portfolio: 
 
 ## Purpose of this App:
-- To demonstrate my skills, experiences, and attributes.
-- Build a react application with multiple pages with react-router
+- Demonstrate skills, experiences, and attributes.
+- Build a react application with multiple pages 
 - Use a dark theme 
 - Experiement with different React based technologies
 
@@ -11,17 +11,21 @@
 - SCSS
 - HTML
 - Javascript
+- Typescript
 - EmailJS
 - CSS Transition
 - Media Queries
 - Key Frames
 - Yarn
+- SCSS modules
+- Custom Hooks
 
 ## TodDo
-- Fix Work Cards
-- Make sure responsiveness works for rotated mobile and smaller laptop screens
-- Split up SCSS 
-- Redo code done with packages and tools 
+- New animations using framer motion
+- Redo routes in a more traditional manner
+- Sunlight github pages app
+- Redo parallax scroll
+- Clean up code with typescript, code splitting with custom hooks, SCSS modules & more
 
 ## Deployed on Netlify with custom domain:
 

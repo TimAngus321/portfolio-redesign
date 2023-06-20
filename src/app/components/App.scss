@@ -108,6 +108,9 @@ h1.myName {
   line-height: 1;
   color: $base-hover-color;
   margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
 }
 
 ul.menu > li:hover {
@@ -146,7 +149,7 @@ ul.menu > li:hover {
   text-decoration: none;
 }
 
-.menu > a > li.home:hover::after {
+.menu > li.home:hover::after {
   visibility: visible;
   content: 'HOME';
   font-size: 11px;
@@ -157,7 +160,7 @@ ul.menu > li:hover {
   
 }
 
-.menu > a > li.about:hover::after {
+.menu > li.about:hover::after {
   visibility: visible;
   content: 'ABOUT';
   font-size: 11px;
@@ -167,7 +170,7 @@ ul.menu > li:hover {
   text-decoration: none;
 }
 
-.menu > a > li.skills:hover::after {
+.menu > li.skills:hover::after {
   visibility: visible;
   content: 'SKILLS';
   font-size: 11px;
@@ -177,7 +180,7 @@ ul.menu > li:hover {
   text-decoration: none;
 }
 
-.menu > a > li.work:hover::after {
+.menu > li.work:hover::after {
   visibility: visible;
   content: 'WORK';
   font-size: 11px;
@@ -187,7 +190,7 @@ ul.menu > li:hover {
   text-decoration: none;
 }
 
-.menu > a > li.contact:hover::after {
+.menu > li.contact:hover::after {
   visibility: visible;
   content: 'CONTACT';
   font-size: 11px;
@@ -279,12 +282,12 @@ ul.menu > li:hover {
   }
 }
 
-.navBar > a {
+.navBar {
   color: $base-hover-color;
   text-decoration: none;
 }
 
-.navBar > li > a {
+.navBar > li {
   color: $base-hover-color;
   text-decoration: none;
   display: flex;
@@ -294,7 +297,7 @@ ul.menu > li:hover {
   align-items: center;
 }
 
-ul.menu > a > li {
+ul.menu > li {
   color: white;
   text-decoration: none;
   height: 70px;
@@ -303,7 +306,7 @@ ul.menu > a > li {
   align-items: center;
 }
 
-ul.menu > a:active {
+ul.menu:active {
   text-decoration: none;
 }
 
@@ -1042,6 +1045,7 @@ Skills Page
 
 .contact-link {
   color: $base-hover-color;
+  cursor: pointer;
 }
 
 

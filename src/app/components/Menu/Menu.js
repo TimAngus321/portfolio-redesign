@@ -1,18 +1,7 @@
-import React from 'react';
 import { bool, func } from 'prop-types';
 import { StyledMenu } from './Menu.styled';
-import { Link } from 'react-router-dom';
-import { routeConstants } from 'shared/constants';
+import { useNavigate } from 'react-router-dom';
 
-const {
-  HOME,
-  ABOUT,
-  SKILLS,
-  WORK,
-  CONTACT,
-} = routeConstants;
-
-const navItems = [HOME, ABOUT, SKILLS, WORK, CONTACT];
 
 const Menu = ({ open, setOpen, ...props }) => {
   
@@ -20,30 +9,36 @@ const Menu = ({ open, setOpen, ...props }) => {
   const tabIndex = isHidden ? 0 : -1;
   const isExpanded = open ? true : false;
 
+  const navigate = useNavigate();
+
+  const mobileTogglePage = (page) => {
+    setOpen(!open)
+    navigate(page);
+  }
+
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-      <Link to={HOME.route} aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => setOpen(!open)} {...props}>
+      <div aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => mobileTogglePage('/')} {...props}>
         <span aria-hidden="true">
          Home
          </span>
-      </Link>
-      <Link to={ABOUT.route} aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => setOpen(!open)} {...props}>
+      </div>
+      <div  aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => mobileTogglePage('/about')} {...props}>
         <span aria-hidden="true"></span>
         About
-      </Link>
-      <Link to={SKILLS.route} aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => setOpen(!open)} {...props}>
+      </div>
+      <div aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => mobileTogglePage('/skills')} {...props}>
         <span aria-hidden="true"></span>
         SKILLS
-      </Link>
-      <Link to={WORK.route} aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => setOpen(!open)} {...props}>
+      </div>
+      <div aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => mobileTogglePage('/work')} {...props}>
         <span aria-hidden="true"></span>
         WORK
-        </Link>
-      <Link to={CONTACT.route} aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => setOpen(!open)} {...props}>
+        </div>
+      <div aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => mobileTogglePage('/contact')} {...props}>
         <span aria-hidden="true"></span>
         Contact
-        </Link>
-       
+        </div>
     </StyledMenu>
   )
 }

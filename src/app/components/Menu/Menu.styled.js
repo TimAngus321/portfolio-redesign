@@ -27,7 +27,7 @@ export const StyledMenu = styled.nav`
     padding: 25px 0;
     height: 100vh;
   }
-  a {
+  div {
     position: relative;
     font-size: 2rem;
     text-transform: uppercase;

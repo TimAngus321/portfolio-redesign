@@ -37,48 +37,48 @@ const Skills = () => {
             </span>{" "}.
           </p>
           <div className="about-my-skills">
-          <span
+          <button
               className="about-btn"
               onClick={(e) => updateSkillSet(languages)}
             >
               &nbsp;Languages&nbsp;
-            </span>
-            <span
+            </button>
+            <button
               className="about-btn"
               onClick={(e) => updateSkillSet(frontendSkillSet)}
             >
               &nbsp;Front-end&nbsp;
-            </span>
-            <span
+            </button>
+            <button
               className="about-btn"
               onClick={(e) => updateSkillSet(mobileSkillset)}
             >
               &nbsp;Mobile&nbsp;
-            </span>
-            <span
+            </button>
+            <button
               className="about-btn"
               onClick={(e) => updateSkillSet(backendSkillSet)}
             >
               &nbsp;Backend&nbsp;
-            </span>
-            <span
+            </button>
+            <button
               className="about-btn"
               onClick={(e) => updateSkillSet(hostingUsed)}
             >
               &nbsp;Hosting&nbsp;
-            </span>
-            <span
+            </button>
+            <button
               className="about-btn"
               onClick={(e) => updateSkillSet(shopifySkillSet)}
             >
               &nbsp;Shopify&nbsp;
-            </span>
-            <span
+            </button>
+            <button
               className="about-btn"
               onClick={(e) => updateSkillSet(developingSkills)}
             >
               &nbsp;Learning&nbsp;
-            </span>
+            </button>
           </div>
           </div>
         </div>

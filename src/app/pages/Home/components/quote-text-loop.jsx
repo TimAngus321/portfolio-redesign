@@ -3,8 +3,9 @@ import TextLoop from "./TextLoop.jsx"
 import cxs from "cxs/component";
 import styles from './quoteLoopStyle.module.scss'
 
-const Quotes = cxs("div")({
-    fontSize: "35px",
+const Quotes = cxs("div")
+({
+    // fontSize: "100px",
     color: "white"
 });
 
@@ -27,7 +28,7 @@ class QuoteLoop extends React.PureComponent {
                     </span>
                         <TextLoop className="looping-quote" mask={true} fade={false}>
                             <span>Frontend Developer</span>
-                            <span>Full-Stack Developer</span>
+                            <span>Fullstack Developer</span>
                             <span>Shopify Developer</span>
                             <span>Music Lover</span>
                         </TextLoop>

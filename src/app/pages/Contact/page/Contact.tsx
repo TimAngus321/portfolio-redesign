@@ -56,13 +56,13 @@ const ContactMe = () => {
               </li>
             </ul>
             <div className="btn-container">
-              <input
+              <button
                 ref={form}
                 onClick={onSubmit}
                 className="contact-btn"
                 type="submit"
                 value="Send"
-              />
+              >Send</button>
             </div>
           </form>
         </div>

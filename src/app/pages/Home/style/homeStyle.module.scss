@@ -1,0 +1,130 @@
+@import "../../../globalStyle/colours.scss";
+
+.pageContainerFixedHome {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 40px 0 100px;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 900px) {
+  .pageContainerFixedHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+.timLogo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+  color: $base-hover-color;
+  flex-direction: column;
+  width: 40%;
+  padding-right: 50px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .timLogo {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .timLogo {
+    display: none;
+  }
+}
+
+.photoQuote {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 900px) {
+  .photoQuote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .animatedQuotes {
+    div {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 300px;
+    }
+  }
+}
+
+.contactBtn {
+  color: $base-hover-color;
+  cursor: pointer;
+  font-size: 13px;
+  letter-spacing: 4px;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  padding: 10px 18px;
+  border: 1px solid $base-hover-color;
+  margin-top: 25px;
+  width: 150px;
+  text-align: center;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.contactBtn:hover {
+  background-color: $base-hover-color;
+  color: $base-background-color;
+  border-color: $base-hover-color;
+}
+
+.allHeadingsBtn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+    a {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+.subHeading {
+  width: 350px;
+  display: flex;
+  justify-content: left;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 3px;
+  color: $secondary-font-color;
+  font-weight: 400;
+  font-size: 11px;
+  margin: 0;
+  padding-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .subHeading {
+    width: 200px;
+    padding-top: 0;
+  }
+}

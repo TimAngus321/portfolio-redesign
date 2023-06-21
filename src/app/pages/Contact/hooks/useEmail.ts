@@ -14,7 +14,7 @@ export default function useEmail() {
 
   const initial: object = {};
 
-  const form = useRef<HTMLInputElement>(null);
+  const form = useRef<HTMLButtonElement>(null);
   const [inputs, setInputs] = useState<inputs>(initial);
 
   function handleChange(e: any) {
@@ -51,7 +51,7 @@ export default function useEmail() {
       );
   };
 
-  const onSubmit = (e: React.MouseEvent<HTMLInputElement>) => {
+  const onSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
     const emailReg =

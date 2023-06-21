@@ -24,6 +24,8 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src", 
+    "types",
+    "dancingLines.d.ts"  
   ]
 }

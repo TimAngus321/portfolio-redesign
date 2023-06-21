@@ -13,15 +13,40 @@ const developingSkills = [
         alt: "GraphQL Logo"
     },
     {
-        name: 'Shopify Hydrogen',
-        image: ShopifyHydrogen,
-        alt: 'Shopify Hydrogen Logo'
+        name: 'Svelte',
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg',
+        alt: 'Svelte Logo',
+    },
+    {
+        name: 'Go',
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg',
+        alt: 'Go Mascot',
+    },
+    {
+        name: 'Vue',
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
+        alt: 'Vue Logo',
+    },
+    {
+        name: 'Flutter',
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg',
+        alt: 'Flutter Logo'
+    },
+    {
+        name: 'Dart',
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg',
+        alt: 'Dart Logo',
     },
     {
         name: 'Firebase',
         image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
         alt: 'Firebase Logo'
-    }
+    },
+    {
+        name: 'Shopify Hydrogen',
+        image: ShopifyHydrogen,
+        alt: 'Shopify Hydrogen Logo'
+    },
 ];
 
 export default developingSkills;

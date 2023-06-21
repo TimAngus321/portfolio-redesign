@@ -12,7 +12,7 @@ import PageRoutes from '../Routes/routes';
 const Router = () => {
 
     const [open, setOpen] = useState(false);
-    const node = useRef();
+    const node = useRef<HTMLDivElement>(null);
 
   return (
     <div className="App">

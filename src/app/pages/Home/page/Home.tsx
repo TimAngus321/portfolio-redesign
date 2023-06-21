@@ -11,9 +11,9 @@ const Home = () => {
       <DancingLines backgroundColor="rgb(30,30,30)" />
       <div className={styles?.photoQuote}>
         <div className={styles?.allHeadingsBtn}>
-          <p className={styles?.animatedQuotes}>
+          <div className={styles?.animatedQuotes}>
             <QuoteLoop />
-          </p>
+          </div>
           <p className={styles?.subHeading}>
             Full-Stack / React / Express / Rails / Shopify
           </p>

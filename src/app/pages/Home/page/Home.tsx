@@ -21,9 +21,9 @@ const Home = () => {
             Contact Me
           </button>
         </div>
-        <div className={styles?.timLogo}>
-          {/* <img src={vinylPlayer} alt="Vinyl Player" /> */}
-        </div>
+        {/* <div className={styles?.timLogo}>
+          <img src={vinylPlayer} alt="Vinyl Player" />
+        </div> */}
       </div>
     </div>
   );

@@ -1,8 +1,4 @@
-$base-background-color: #1E1E1E;
-$base-background-grey: #1b1b1b; 
-$base-font-color: white;
-$base-hover-color: #BD4517;
-$secondary-font-color: #8d8d8d;
+@import '../../../globalStyle/colours.scss';
 
 .background {
     background: linear-gradient($base-background-color);

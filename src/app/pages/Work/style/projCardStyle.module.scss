@@ -1,0 +1,81 @@
+@import "../../../globalStyle/colours.scss";
+
+.projCard {
+  margin-right: 10%;
+  width: 40%;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid $secondary-font-color 1px;
+  background-color: $base-background-grey;
+  border-radius: 10px;
+  margin-right: 10%;
+  padding: 20px;
+  color: white;
+}
+
+.scrollCards {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .companyInfo {
+    padding: 0 15px 0 10px;
+    text-align: left;
+  }
+
+  .projectInfo {
+    padding-right: 10px;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .scrollCards {
+    padding: 10px;
+  }
+}
+
+.testLink {
+  padding: 10px 0;
+  margin-right: 10%;
+  width: 50%;
+  border-radius: 10px;
+  padding: 0;
+}
+
+.testLink:hover {
+  filter: drop-shadow(0 0 0.75rem $secondary-font-color);
+  // border: $secondary-font-color solid 2px;
+}
+
+@media only screen and (max-width: 1800px) {
+  .testLink {
+    margin-right: 17%;
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .testLink {
+    margin-right: 17%;
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .testLink {
+    margin-right: 8%;
+    width: 55%;
+  }
+  .scroll-cards {
+    h4 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+}

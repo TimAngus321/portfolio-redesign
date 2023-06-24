@@ -22,16 +22,12 @@
 
 ## TodDo
 - New animations using framer motion
-- Redo routes in a more traditional manner
-- Sunlight github pages app
-- Redo parallax scroll
-- Clean up code with typescript, code splitting with custom hooks, SCSS modules & more
+- Redo routes in a more traditional manner ✅
+- Optimize Images ⚙️
+- Update parallax scroll ⚙️
+- Clean up code with typescript, code splitting with custom hooks, SCSS modules & more ⚙️
 
 ## Deployed on Netlify with custom domain:
 
 [Check it out here ](https://www.tim-angus.com/)
-
-## Deployed on GH pages: 
-
-[Check it out here ](https://timangus321.github.io/portfolio-redesign/#/home)
 

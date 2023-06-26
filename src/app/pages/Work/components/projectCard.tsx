@@ -1,4 +1,5 @@
 import { personalProj } from "../types/workTypes";
+import styles from '../style/projCardStyle.module.scss';
 
 const ProjectCard = (props: personalProj) => {
   const { link, name, desc, techTitle, techStack, img } = props;
@@ -17,10 +18,9 @@ const ProjectCard = (props: personalProj) => {
   return (
     <a
       href={link}
-      className="test-link proj-card"
+      className={`${styles?.testLink} ${styles?.projCard} ${styles?.cardStyle}`}
       target="_blank"
       rel="noopener noreferrer"
-      style={{ alignSelf: "flex-end" }}
     >
       <div style={{ ...cardStyle }}>
         <div className="scroll-cards">

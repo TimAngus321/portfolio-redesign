@@ -15,6 +15,16 @@
   color: white;
 }
 
+.cardStyle {
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-self: flex-end;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px 10px 10px 0;
+}
+
 .scrollCards {
   text-align: center;
   display: flex;

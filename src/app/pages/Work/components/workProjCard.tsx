@@ -5,18 +5,25 @@ const WorkProjCard = (workProjects: workProj) => {
   const { companyTitle, company, projectTitle, project, link, img } =
     workProjects;
 
-  const cardImg = {
+  const cardStyle = {
     backgroundImage: `url(${img} )`,
+    backgroundPosition: "top",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    alignSelf: `flex-end`,
+    height: `600px`,
+    width: "100%",
+    borderRadius: "10px 10px 0 0",
   };
 
   return (
     <a
       href={link}
-      className={`${styles?.testLink} ${styles?.projCard} ${styles?.cardStyle}`}
+      className={`${styles?.testLink} ${styles?.projCard}`}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className={`${styles?.cardStyle} ${cardImg}`}>
+      <div style={{ ...cardStyle }}>
         <div className={styles?.scrollCards}>
           <div className={styles?.companyInfo}>
             <h3 className={styles?.company}>{companyTitle}</h3>

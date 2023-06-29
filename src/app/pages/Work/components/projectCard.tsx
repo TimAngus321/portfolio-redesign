@@ -4,33 +4,28 @@ import styles from '../style/projCardStyle.module.scss';
 const ProjectCard = (props: personalProj) => {
   const { link, name, desc, techTitle, techStack, img } = props;
 
-  const cardStyle = {
-    backgroundImage: `url(${img} )`,
-    backgroundPosition: "top",
-    backgroundSize: `${name === "Gavel Mobile" ? "contain" : "cover"}`,
-    backgroundRepeat: "no-repeat",
-    alignSelf: `flex-end`,
-    height: `300px`,
-    width: "100%",
-    borderRadius: "10px 10px 0 0",
-  };
+  const mobileStyle = {
+    justifyContent: `${name === "Gavel Mobile" ? "unset" : "flex-end"}`,
+  }
 
   return (
     <a
       href={link}
-      className={`${styles?.testLink} ${styles?.projCard} ${styles?.cardStyle}`}
+      className={styles?.cardLink}
       target="_blank"
       rel="noopener noreferrer"
+      style={mobileStyle}
     >
-      <div style={{ ...cardStyle }}>
-        <div className="scroll-cards">
-          <div className="company-info">
-            <h4 className="company">{name}</h4>
-            <p className="company-name">{desc}</p>
+      <div className={styles?.projCard}>
+        <img src={img} alt={name} className={styles?.projCardImg} />
+        <div className={styles?.scrollCards}>
+          <div className={styles?.companyInfo}>
+            <h4 className={styles?.company}>{name}</h4>
+            <p className={styles?.companyName}>{desc}</p>
           </div>
-          <div className="project-info">
-            <h4 className="project">{techTitle}</h4>
-            <p className="project-info">{techStack}</p>
+          <div className={styles?.projectInfo}>
+            <h4 className={styles?.project}>{techTitle}</h4>
+            <p className={styles?.projectInfo}>{techStack}</p>
           </div>
         </div>
       </div>

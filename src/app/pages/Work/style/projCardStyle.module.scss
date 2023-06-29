@@ -2,43 +2,65 @@
 
 .projCard {
   margin-right: 10%;
-  width: 40%;
-  pointer-events: all;
+  width: 60%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid $secondary-font-color 1px;
-  background-color: $base-background-grey;
   border-radius: 10px;
-  margin-right: 10%;
-  padding: 20px;
-  color: white;
-}
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-self: flex-end;
+  justify-content: center;
+  position: relative;
 
-.cardStyle {
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    align-self: flex-end;
-    height: 300px;
+  .projCardImg {
     width: 100%;
-    border-radius: 10px 10px 10px 0;
-}
-
-.scrollCards {
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-
-  .companyInfo {
-    padding: 0 15px 0 10px;
-    text-align: left;
+    align-self: flex-end;
+    display: flex;
   }
 
-  .projectInfo {
-    padding-right: 10px;
-    text-align: left;
+  .scrollCards {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    color: $base-font-color;
+    opacity: 0;
+
+    .companyInfo {
+      text-align: left;
+      text-shadow: 0 1px 0 black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .projectInfo {
+      text-align: left;
+      text-shadow: 0 1px 0 black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &:hover {
+    filter: drop-shadow(0 0 0.75rem $secondary-font-color);
+    img {
+      opacity: 0.4;
+    }
+    .scroll-cards {
+      opacity: 1;
+    }
   }
 }
 
@@ -48,35 +70,52 @@
   }
 }
 
-.testLink {
-  padding: 10px 0;
-  margin-right: 10%;
-  width: 50%;
-  border-radius: 10px;
-  padding: 0;
-}
-
-.testLink:hover {
+.projCard:hover {
   filter: drop-shadow(0 0 0.75rem $secondary-font-color);
-  // border: $secondary-font-color solid 2px;
+  // background-color: opacify($color: #000000, $amount: 0);
+  // opacity: 1;
+  // visibility: visible;
+
+  // .scroll-cards {
+  //   opacity: 1;
+  //   h4 {
+  //     opacity: 1;
+
+  //   }
+  //   p {
+  //     opacity: 1;
+
+  //   }
+  // }
 }
 
-@media only screen and (max-width: 1800px) {
-  .testLink {
-    margin-right: 17%;
-    width: 45%;
+.scrollCards:hover {
+  opacity: 0.4;
+
+  h4 {
+    opacity: 1;
+    visibility: visible;
+  }
+  p {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
+.cardLink {
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media only screen and (max-width: 1200px) {
-  .testLink {
-    margin-right: 17%;
-    width: 45%;
+  .projCard {
+    margin-right: 15%;
+    width: 50%;
   }
 }
 
 @media only screen and (max-width: 900px) {
-  .testLink {
+  .projCard {
     margin-right: 8%;
     width: 55%;
   }

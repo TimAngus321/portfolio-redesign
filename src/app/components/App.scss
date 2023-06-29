@@ -967,158 +967,158 @@ Skill Card Animations
 Work Page
 ********************************************************************/
 
-.page-container-scroll-work {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0 0 0 100px;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
-}
+// .page-container-scroll-work {
+//   display: flex;
+//   justify-content: flex-start;
+//   margin: 0 0 0 100px;
+//   width: 100%;
+//   height: 100vh;
+//   position: fixed;
+//   display: inline-block;
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//        box-sizing: border-box;
+// }
 
-@media only screen and (max-width: 900px) {
-  .page-container-scroll-work {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    position: unset;
-    position: fixed;
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-         box-sizing: border-box;
-  }
-}
+// @media only screen and (max-width: 900px) {
+//   .page-container-scroll-work {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-content: center;
+//     width: 100%;
+//     height: 100%;
+//     margin: 0;
+//     padding: 0;
+//     position: unset;
+//     position: fixed;
+//     display: inline-block;
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//          box-sizing: border-box;
+//   }
+// }
 
-.work-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
+// .work-container {
+//   display: flex;
+//   flex-direction: row;
+//   width: 100%;
+// }
 
-.work-title {
-  display: flex;
-  color: $base-hover-color;
-  justify-content: center;
-  text-align: center;
-  height: 100%;
-  align-self: center;
-}
+// .work-title {
+//   display: flex;
+//   color: $base-hover-color;
+//   justify-content: center;
+//   text-align: center;
+//   height: 100%;
+//   align-self: center;
+// }
 
-@media only screen and (max-width: 900px) {
-  .work-title {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-  }
-}
+// @media only screen and (max-width: 900px) {
+//   .work-title {
+//     display: flex;
+//     align-items: flex-start;
+//     width: 100%;
+//   }
+// }
 
-.work-page-arrow {
-  padding-top: 20px;
-  -webkit-animation: arrow-animation 2s ease-in-out infinite ;
-}
+// .work-page-arrow {
+//   padding-top: 20px;
+//   -webkit-animation: arrow-animation 2s ease-in-out infinite ;
+// }
 
-@keyframes arrow-animation {
-  0%   { transform:translate(0,-20px); opacity: 0;  }
-  50%  { opacity: 1;  }
-  100% { transform:translate(0,20px); opacity: 0; }
-}
+// @keyframes arrow-animation {
+//   0%   { transform:translate(0,-20px); opacity: 0;  }
+//   50%  { opacity: 1;  }
+//   100% { transform:translate(0,20px); opacity: 0; }
+// }
 
-.sicky-card-image {
-  display: flex;
-  width: 100%;
-  max-width: 210px;
-  color: white;
-  align-items: center;
-}
+// .sicky-card-image {
+//   display: flex;
+//   width: 100%;
+//   max-width: 210px;
+//   color: white;
+//   align-items: center;
+// }
 
 /******************************************************************* 
 Project Card
 ********************************************************************/
 
-.proj-card {
-  margin-right: 10%;
-  width: 40%;
-  pointer-events: all;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: solid $secondary-font-color 1px;
-  background-color: $base-background-grey;
-  border-radius: 10px;
-  margin-right: 10%;
-  padding: 20px;
-  color: white;
-}
+// .proj-card {
+//   margin-right: 10%;
+//   width: 40%;
+//   pointer-events: all;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   border: solid $secondary-font-color 1px;
+//   background-color: $base-background-grey;
+//   border-radius: 10px;
+//   margin-right: 10%;
+//   padding: 20px;
+//   color: white;
+// }
 
-.scroll-cards {
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+// .scroll-cards {
+//   text-align: center;
+//   display: flex;
+//   justify-content: space-between;
+//   width: 100%;
 
-  .company-info {
-    padding: 0 15px 0 10px;
-    text-align: left;
-  }
+//   .company-info {
+//     padding: 0 15px 0 10px;
+//     text-align: left;
+//   }
 
-  .project-info {
-    padding-right: 10px;
-    text-align: left;
-  }
-}
+//   .project-info {
+//     padding-right: 10px;
+//     text-align: left;
+//   }
+// }
 
-@media only screen and (max-width: 900px) {
-  .scroll-cards {
-    padding: 10px;
-  }
-}
+// @media only screen and (max-width: 900px) {
+//   .scroll-cards {
+//     padding: 10px;
+//   }
+// }
 
-a.test-link {
-  padding: 10px 0;
-  margin-right: 10%;
-  width: 50%;
-  border-radius: 10px;
-  padding: 0;
-}
+// a.test-link {
+//   padding: 10px 0;
+//   margin-right: 10%;
+//   width: 50%;
+//   border-radius: 10px;
+//   padding: 0;
+// }
 
-a.test-link:hover {
-  filter: drop-shadow(0 0 0.75rem $secondary-font-color);
-  // border: $secondary-font-color solid 2px;
-}
+// a.test-link:hover {
+//   filter: drop-shadow(0 0 0.75rem $secondary-font-color);
+//   // border: $secondary-font-color solid 2px;
+// }
 
-@media only screen and (max-width: 1800px) {
-  a.test-link {
-    margin-right: 17%;
-    width: 45%;
-  }
-}
+// @media only screen and (max-width: 1800px) {
+//   a.test-link {
+//     margin-right: 17%;
+//     width: 45%;
+//   }
+// }
 
-@media only screen and (max-width: 1200px) {
-  a.test-link {
-    margin-right: 17%;
-    width: 45%;
-  }
-}
+// @media only screen and (max-width: 1200px) {
+//   a.test-link {
+//     margin-right: 17%;
+//     width: 45%;
+//   }
+// }
 
-@media only screen and (max-width: 900px) {
-  a.test-link {
-    margin-right: 8%;
-    width: 55%;
-  }
-  .scroll-cards > h4 {
-    font-size: 14px;
-  }
-  .scroll-cards > p {
-    font-size: 12px;
-  }
-}
+// @media only screen and (max-width: 900px) {
+//   a.test-link {
+//     margin-right: 8%;
+//     width: 55%;
+//   }
+//   .scroll-cards > h4 {
+//     font-size: 14px;
+//   }
+//   .scroll-cards > p {
+//     font-size: 12px;
+//   }
+// }

@@ -1,0 +1,146 @@
+@import '../../../globalStyle/colours.scss';
+
+.background {
+    background: linear-gradient($base-background-color);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .scrollText {
+    font-size: 2.5rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .scrollText {
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+
+  .stickyCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    height: 10rem;
+    width: 25%;
+    text-align: center;
+  }
+   
+  .parallax {
+    margin-right: 15%;
+  }
+  
+  .sticky {
+    color: $base-font-color;
+    margin-left: 5%;
+  }
+
+  .workExpLink {
+    color: white;
+  }
+
+  @media (max-width: 900px) {
+    .card {
+      width: 40%;
+    }
+  
+    .parallax {
+      margin-right: 1.5rem;
+    }
+  
+    .sticky {
+      margin-left: 2%;
+      font-size: 12px;
+      width: 25%;
+    }
+  }
+
+  .pageContainerScrollWork {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 0 0 100px;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .pageContainerScrollWork {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      position: unset;
+      position: fixed;
+      display: inline-block;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+    }
+  }
+  
+  .workContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .workTitle {
+    display: flex;
+    color: $base-hover-color;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    align-self: center;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .workTitle {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+    }
+  }
+  
+  .workPageArrow {
+    padding-top: 20px;
+    -webkit-animation: arrowAnimation 2s ease-in-out infinite ;
+  }
+  
+  @keyframes arrowAnimation {
+    0%   { transform:translate(0,-20px); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { transform:translate(0,20px); opacity: 0; }
+  }
+  
+  .stickyCardImage {
+    display: flex;
+    width: 100%;
+    max-width: 210px;
+    color: white;
+    align-items: center;
+  }
+  
+  

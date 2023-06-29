@@ -95,6 +95,12 @@
   background-color: transparent;
 }
 
+@media only screen and (max-width: 600px) {
+  .contactBtn {
+    width: 100%;
+  }
+}
+
 .contactBtn:hover {
   background-color: $base-hover-color;
   color: $base-background-color;
@@ -113,28 +119,34 @@
 
 @media only screen and (max-width: 600px) {
   .allHeadingsBtn {
-    padding: 0 5px;
-    width: 100%;
+    width: 95%;
   }
 }
 
 .subHeading {
-  width: 350px;
+  width: 100%;
   display: flex;
   justify-content: left;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 3px;
   color: $secondary-font-color;
   font-weight: 400;
-  font-size: 11px;
+  font-size: 18px;
   margin: 0;
   padding-top: 20px;
 }
 
+@media only screen and (max-width: 1100px) {
+  .subHeading {
+    padding-top: 0;
+    font-size: 14px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .subHeading {
-    width: 200px;
     padding-top: 0;
+    font-size: 11px;
   }
 }
 

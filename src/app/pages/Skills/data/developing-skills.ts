@@ -18,6 +18,11 @@ const developingSkills = [
         alt: 'Svelte Logo',
     },
     {
+        name: 'Python',
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+        alt: 'Python Logo',
+    },
+    {
         name: 'Go',
         image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg',
         alt: 'Go Mascot',

@@ -19,6 +19,7 @@
     width: 100%;
     align-self: flex-end;
     display: flex;
+    transition: opacity 0.3s;
   }
 
   .scrollCards {
@@ -35,6 +36,7 @@
     flex-wrap: wrap;
     color: $base-font-color;
     opacity: 0;
+    transition: opacity 0.3s;
 
     .companyInfo {
       text-align: left;
@@ -55,10 +57,10 @@
 
   &:hover {
     filter: drop-shadow(0 0 0.75rem $secondary-font-color);
-    img {
+    .projCardImg {
       opacity: 0.4;
     }
-    .scroll-cards {
+    .scrollCards {
       opacity: 1;
     }
   }
@@ -70,37 +72,16 @@
   }
 }
 
-.projCard:hover {
-  filter: drop-shadow(0 0 0.75rem $secondary-font-color);
-  // background-color: opacify($color: #000000, $amount: 0);
-  // opacity: 1;
-  // visibility: visible;
-
-  // .scroll-cards {
-  //   opacity: 1;
-  //   h4 {
-  //     opacity: 1;
-
-  //   }
-  //   p {
-  //     opacity: 1;
-
-  //   }
-  // }
-}
-
-.scrollCards:hover {
-  opacity: 0.4;
-
-  h4 {
-    opacity: 1;
-    visibility: visible;
-  }
-  p {
-    opacity: 1;
-    visibility: visible;
-  }
-}
+// .scrollCards:hover {
+//   h4 {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+//   p {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+// }
 
 .cardLink {
   display: flex;

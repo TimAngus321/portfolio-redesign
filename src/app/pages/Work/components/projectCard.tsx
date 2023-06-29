@@ -4,17 +4,20 @@ import styles from '../style/projCardStyle.module.scss';
 const ProjectCard = (props: personalProj) => {
   const { link, name, desc, techTitle, techStack, img } = props;
 
-  const mobileStyle = {
-    justifyContent: `${name === "Gavel Mobile" ? "unset" : "flex-end"}`,
+  const toggleStyle = () => {
+    if (name === "Gavel Mobile") {
+      return styles?.mobileCard
+    } else {
+      return styles?.cardLink 
+    }
   }
 
   return (
     <a
       href={link}
-      className={styles?.cardLink}
+      className={toggleStyle()}
       target="_blank"
       rel="noopener noreferrer"
-      style={mobileStyle}
     >
       <div className={styles?.projCard}>
         <img src={img} alt={name} className={styles?.projCardImg} />

@@ -10,7 +10,7 @@ const reactProjects = [
     desc: "Mobile App for live auctions & selling TCGs and collectibles while streaming.",
     techTitle: "Tech Used",
     techStack:
-      "React Native, Redux, CSS in JS, custom hooks, APIs & React Component Library",
+      "React Native, Redux, Typescript CSS in JS, custom hooks, APIs & React Component Library",
     link: "https://letsgavel.com/",
     img: gavelMobileImg,
   },
@@ -19,7 +19,7 @@ const reactProjects = [
     desc: "Web App for live auctions & selling TCGs and collectibles while streaming.",
     techTitle: "Tech Used",
     techStack:
-      "React, Redux, SCSS modules, custom hooks, APIs & antd component library",
+      "React, Redux, Typescript, SCSS modules, custom hooks, APIs & antd component library",
     link: "https://letsgavel.com/",
     img: gavelWebImg,
   },
@@ -36,7 +36,7 @@ const reactProjects = [
     desc: "A personal portfolio to let people know about my skills and advertise myself.",
     techTitle: "Tech Used",
     techStack:
-      "React, SCSS, Quote Loop, CSS Transition, CSS in JS and figma. Design based off an Awwards winner.",
+      "React, SCSS, Typescript, Quote Loop, CSS Transition, SCSS modules and figma. Design based off an Awwards winner.",
     link: "www.tim-angus.com",
     img: personalPortfolioImg,
   },

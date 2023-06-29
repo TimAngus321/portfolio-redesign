@@ -19,7 +19,7 @@
     width: 100%;
     align-self: flex-end;
     display: flex;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s filter 0.3;
   }
 
   .scrollCards {
@@ -39,26 +39,34 @@
     transition: opacity 0.3s;
 
     .companyInfo {
-      text-align: left;
+      text-align: center;
       text-shadow: 0 1px 0 black;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
 
     .projectInfo {
-      text-align: left;
+      text-align: center;
       text-shadow: 0 1px 0 black;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+    }
+    h4 {
+      flex-wrap: wrap;
+    }
+    p {
+      flex-wrap: wrap;
     }
   }
 
   &:hover {
-    filter: drop-shadow(0 0 0.75rem $secondary-font-color);
     .projCardImg {
-      opacity: 0.4;
+      opacity: 0.2;
+      filter: drop-shadow(0 0 0.75rem $secondary-font-color);
     }
     .scrollCards {
       opacity: 1;
@@ -66,32 +74,27 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
-  .scrollCards {
-    padding: 10px;
-  }
-}
-
-// .scrollCards:hover {
-//   h4 {
-//     opacity: 1;
-//     visibility: visible;
-//   }
-//   p {
-//     opacity: 1;
-//     visibility: visible;
-//   }
-// }
-
 .cardLink {
   display: flex;
   justify-content: flex-end;
+}
+
+.mobileCard {
+  display: flex;
+  justify-content: unset;
+}
+
+@media only screen and (max-width: 900px) {
+  .mobileCard {
+    justify-content: flex-end;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
   .projCard {
     margin-right: 15%;
     width: 50%;
+    justify-content: flex-end;
   }
 }
 
@@ -99,13 +102,31 @@
   .projCard {
     margin-right: 8%;
     width: 55%;
-  }
-  .scroll-cards {
-    h4 {
-      font-size: 14px;
+
+    .scrollCards {
+      h4 {
+        font-size: 14px;
+        margin: 5px 0;
+      }
+      p {
+        font-size: 12px;
+        margin: 5px 0;
+      }
     }
-    p {
-      font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .projCard {
+    .scrollCards {
+      h4 {
+        font-size: 10px;
+        margin: 2.5px 0;
+      }
+      p {
+        font-size: 8px;
+        margin: 2.5px 0;
+      }
     }
   }
 }

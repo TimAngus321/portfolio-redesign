@@ -24,7 +24,7 @@
 - New animations using framer motion
 - Redo routes in a more traditional manner ✅
 - Optimize Images ⚙️
-- Update parallax scroll ⚙️
+- Update parallax scroll ✅
 - Clean up code with typescript, code splitting with custom hooks, SCSS modules & more ⚙️
 
 ## Deployed on Netlify with custom domain:

@@ -11,7 +11,7 @@ import ProjectCard from "../components/projectCard";
 import expressProjects from "../data/express-project-data";
 
 const Work = () => {
-  const alignCenter = {
+  const alignCenter: any = {
     display: "flex",
     alignItems: "center",
     width: "100%",

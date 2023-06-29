@@ -12,7 +12,7 @@ export default function useEmail() {
   const templateId: string = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
   const serviceID: string = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 
-  const initial: object = {};
+  const initial: Record<string, unknown> = {};
 
   const form = useRef<HTMLButtonElement>(null);
   const [inputs, setInputs] = useState<inputs>(initial);
@@ -20,7 +20,7 @@ export default function useEmail() {
   function handleChange(e: any) {
     e.preventDefault();
 
-    let { value, name } = e.target;
+    const { value, name } = e.target;
 
     setInputs({
       // copy existing state
@@ -55,7 +55,7 @@ export default function useEmail() {
     e.preventDefault();
 
     const emailReg =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if (
       !inputs?.email ||

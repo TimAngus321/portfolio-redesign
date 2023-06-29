@@ -7,7 +7,7 @@ const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>(languages);
 
   const clearState = () => {
-    let currentState: skills[] = [];
+    const currentState: skills[] = [];
     setSkillSet(currentState);
   };
 

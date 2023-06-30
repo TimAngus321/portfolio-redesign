@@ -1,5 +1,5 @@
-import ShopifyLiquid from '../images/Shopify-liquid.webp'
-import sqlLogo from '../images/sql.png'
+import ShopifyLiquid from '../../../../assets/skillsImages/shopifyLogos/shopifyLiquid.png'
+import sqlLogo from '../../../../assets/skillsImages/backendLogos/sql.png'
 
 const languages = [
     {

@@ -26,6 +26,7 @@
 - Optimize Images ⚙️
 - Update parallax scroll ✅
 - Clean up code with typescript, code splitting with custom hooks, SCSS modules & more ⚙️
+- Use react-colour-extractor package to add cool effect on skills page
 
 ## Deployed on Netlify with custom domain:
 

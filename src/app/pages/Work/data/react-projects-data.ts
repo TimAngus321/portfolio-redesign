@@ -6,7 +6,7 @@ import personalPortfolioImg from "../../../../assets/workImages/personalPortfoli
 
 const reactProjects = [
   {
-    name: "Gavel Mobile",
+    name: "Company: Gavel (Mobile)",
     desc: "Mobile App for live auctions & selling TCGs and collectibles while streaming.",
     techTitle: "Tech Used",
     techStack:
@@ -15,7 +15,7 @@ const reactProjects = [
     img: gavelMobileImg,
   },
   {
-    name: "Gavel Web",
+    name: "Company: Gavel (Web)",
     desc: "Web App for live auctions & selling TCGs and collectibles while streaming.",
     techTitle: "Tech Used",
     techStack:
@@ -24,7 +24,7 @@ const reactProjects = [
     img: gavelWebImg,
   },
   {
-    name: "Pokemon App",
+    name: "Project: Pokemon App",
     desc: "Pokemon App for searching & browsing pokemon with a handy autocomplete feature.",
     techTitle: "Tech Used",
     techStack: "React, SCSS, PokeApi",
@@ -32,7 +32,7 @@ const reactProjects = [
     img: pokemonAppImg,
   },
   {
-    name: "Personal Portfolio",
+    name: "Project: Personal Portfolio",
     desc: "A personal portfolio to let people know about my skills and advertise myself.",
     techTitle: "Tech Used",
     techStack:
@@ -41,7 +41,7 @@ const reactProjects = [
     img: personalPortfolioImg,
   },
   {
-    name: "React Flats",
+    name: "Project: React Flats",
     desc: "LeWagon React & Redux tutorial on the basics of building React apps with Redux.",
     techTitle: "Tech Used",
     techStack: "React, HTML, SCSS & Google Maps API",

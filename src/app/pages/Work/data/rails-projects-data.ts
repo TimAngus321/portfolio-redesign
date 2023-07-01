@@ -2,11 +2,11 @@ import colaborateImg from "../../../../assets/workImages/collaborateImg.webp";
 
 const railsProjects = [
   {
-    name: "Collaborate",
-    desc: "A music collaboartion tool for musicians to connect to others that can provide a piece of music to a track. This was my final project that I build at LeWagon with my small team.",
+    name: "Founded: Collaborate",
+    desc: "A music collaboartion tool for musicians to connect to others so that they can provide a piece of music to another musician's track. This was my final project that I build at LeWagon with my small team.",
     techTitle: "Tech Used",
     techStack:
-      "Rails, Ruby, Bootstrap, CSS, HTML, PostgreSQL, Heroku, Cloudzilla, Javascript packages, whimsical and figma",
+      "Rails, Ruby, Bootstrap, CSS, HTML, PostgreSQL, Heroku, Cloudzilla, Javascript as well as whimsical and figma for planning & designing",
     link: "https://www.collaborate.today/",
     img: colaborateImg,
   },

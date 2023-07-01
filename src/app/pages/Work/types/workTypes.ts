@@ -9,7 +9,6 @@ export interface personalProj {
 }
 
 export interface workProj {
-    companyTitle: string;
     company: string;
     projectTitle: string;
     project: string;

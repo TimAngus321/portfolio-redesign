@@ -5,7 +5,7 @@ const useProjCard = (props: personalProj) => {
   const { link, name, desc, techTitle, techStack, img } = props;
 
   const toggleStyle = () => {
-    if (name === "Gavel Mobile") {
+    if (name.includes("Gavel (Mobile)")) {
       return styles?.mobileCard;
     } else {
       return styles?.cardLink;

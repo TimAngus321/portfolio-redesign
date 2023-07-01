@@ -21,10 +21,11 @@
 - Custom Hooks
 
 ## TodDo
-- New animations using framer motion
+- New animations in skills page
 - Redo routes in a more traditional manner ✅
-- Optimize Images ⚙️
+- Optimize Images ✅
 - Update parallax scroll ✅
+- Make it progressive web app
 - Clean up code with typescript, code splitting with custom hooks, SCSS modules & more ⚙️
 - Use react-colour-extractor package to add cool effect on skills page
 

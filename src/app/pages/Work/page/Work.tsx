@@ -174,7 +174,6 @@ const Work = () => {
             >
               <WorkProjCard
                 key={key}
-                companyTitle={previousClients[i]?.companyTitle}
                 company={previousClients[i]?.company}
                 projectTitle={previousClients[i]?.projectTitle}
                 project={previousClients[i]?.project}

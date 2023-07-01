@@ -14,6 +14,7 @@ const ProjectCard = (props: personalProj) => {
     img,
   } = useProjCard(props);
 
+  // ToDo wrap anchor tag around img only. You'll need to redo styling.
   return (
     <a
       href={link}

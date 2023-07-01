@@ -35,27 +35,10 @@
     justify-content: center;
     align-items: center;
     font-size: 5rem;
-    height: 10rem;
-    width: 25%;
+    max-height: 10rem;
+    max-width: 25%;
+    width: 100%;
     text-align: center;
-  }
-  
-  .sticky {
-    color: $base-font-color;
-  }
-
-  .workExpLink {
-    color: white;
-  }
-
-  @media (max-width: 900px) {
-    .card {
-      width: 40%;
-    }
-    .sticky {
-      font-size: 12px;
-      width: 25%;
-    }
   }
 
   .pageContainerScrollWork {
@@ -101,7 +84,8 @@
     color: $base-hover-color;
     justify-content: center;
     text-align: center;
-    height: 100%;
+    height: auto;
+    max-width: 100%;
     align-self: center;
   }
   
@@ -109,7 +93,6 @@
     .workTitle {
       display: flex;
       align-items: flex-start;
-      width: 100%;
     }
   }
   
@@ -128,7 +111,7 @@
     display: flex;
     width: 100%;
     max-width: 210px;
-    color: white;
+    height: auto;
     align-items: center;
   }
   

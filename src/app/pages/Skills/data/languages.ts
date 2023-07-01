@@ -1,4 +1,4 @@
-import ShopifyLiquid from '../../../../assets/skillsImages/shopifyLogos/shopifyLiquid.png'
+import ShopifyLiquid from '../../../../assets/skillsImages/shopifyLogos/shopifyLiquid.webp'
 import sqlLogo from '../../../../assets/skillsImages/backendLogos/sql.png'
 
 const languages = [

@@ -1,4 +1,4 @@
-import netlifyLogo from '../images/netlifyLogo.svg';
+import netlifyLogo from '../../../../assets/skillsImages/hostLogos/netlifyLogo.svg';
 
 const hostingUsed = [
     {

@@ -16,11 +16,11 @@ const WorkProjCard = (workProjects: workProj) => {
         <img src={img} alt={projectTitle} className={styles?.projCardImg} />
         <div className={styles?.scrollCards}>
           <div className={styles?.companyInfo}>
-            <h3 className={styles?.company}>{companyTitle}</h3>
+            <h4 className={styles?.company}>{companyTitle}</h4>
             <p className={styles?.companyName}>{company}</p>
           </div>
           <div className={styles?.projectInfo}>
-            <h3 className={styles?.project}>{projectTitle}</h3>
+            <h4 className={styles?.project}>{projectTitle}</h4>
             <p className={styles?.projectInfo}>{project}</p>
           </div>
         </div>

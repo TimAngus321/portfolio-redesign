@@ -1,4 +1,4 @@
-import prismaLogo from '../images/prismaLogo.svg';
+import prismaLogo from '../../../../assets/skillsImages/backendLogos/prismaLogo.svg';
 
 const backendSkillSet = [
     {

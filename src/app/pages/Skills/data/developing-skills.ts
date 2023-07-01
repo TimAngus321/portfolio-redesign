@@ -1,4 +1,4 @@
-import ShopifyHydrogen from '../images/HydrogenLogo.png';
+import ShopifyHydrogen from '../../../../assets/skillsImages/shopifyLogos/HydrogenLogo.png';
 
 const developingSkills = [
     {

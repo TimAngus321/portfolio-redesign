@@ -6,7 +6,7 @@ import reactProjects from "../data/react-projects-data";
 import previousClients from "../data/work-project-data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import shopifyLogo from "../images/Shopify-Logo.png";
+import shopifyLogo from "../../../../assets/workImages/shopifyLogo.webp";
 import ProjectCard from "../components/projectCard";
 import expressProjects from "../data/express-project-data";
 
@@ -31,17 +31,20 @@ const Work = () => {
           style={{
             display: "flex",
             height: "100%",
+            gap: "30%",
           }}
         >
           <ParallaxLayer
             offset={0}
             speed={0.5}
             className={styles?.workTitle}
-            style={{ alignItems: "flex-start", justifyContent: "flex-start" }}
           >
             <div className={styles?.scrollText}>
               <p>Previous Work & Personal Projects</p>
-              <FontAwesomeIcon className={styles?.workPageArrow} icon={faArrowDown} />
+              <FontAwesomeIcon
+                className={styles?.workPageArrow}
+                icon={faArrowDown}
+              />
             </div>
           </ParallaxLayer>
 

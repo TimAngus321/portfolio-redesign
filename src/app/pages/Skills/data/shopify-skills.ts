@@ -1,5 +1,5 @@
-import appInt from '../images/app-integration.png'
-import ui from '../images/UI.png'
+import appInt from '../../../../assets/skillsImages/shopifyLogos/appIntegration.png'
+import ui from '../../../../assets/skillsImages/shopifyLogos/UI.png'
 
 const shopifySkillSet = [
     {

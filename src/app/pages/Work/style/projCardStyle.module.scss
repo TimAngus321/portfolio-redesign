@@ -1,8 +1,9 @@
 @import "../../../globalStyle/colours.scss";
 
 .projCard {
-  margin-right: 10%;
-  width: 60%;
+  margin-right: 15%;
+  max-width: 100%;
+  min-width: 5%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -16,10 +17,13 @@
   position: relative;
 
   .projCardImg {
-    width: 100%;
     align-self: flex-end;
     display: flex;
-    transition: opacity 0.3s filter 0.3;
+    max-width: 100%;
+    min-width: 5%;
+    transition: opacity 0.3s ease-in-out;
+    transition: filter 0.3s ease-in-out;
+    border-radius: 15px;
   }
 
   .scrollCards {
@@ -36,7 +40,7 @@
     flex-wrap: wrap;
     color: $base-font-color;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease-in-out;
 
     .companyInfo {
       text-align: center;
@@ -77,31 +81,44 @@
 .cardLink {
   display: flex;
   justify-content: flex-end;
+  max-width: 75%;
+  min-width: 5%;
+  width: 75%;
 }
 
 .mobileCard {
   display: flex;
-  justify-content: unset;
-}
-
-@media only screen and (max-width: 900px) {
-  .mobileCard {
-    justify-content: flex-end;
-  }
+  justify-content: flex-end;
+  max-width: 75%;
+  width: 75%;
+  min-width: 5%;
+  margin-right: 15%;
 }
 
 @media only screen and (max-width: 1200px) {
   .projCard {
-    margin-right: 15%;
-    width: 50%;
     justify-content: flex-end;
+  }
+
+  .mobileCard {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
   }
 }
 
 @media only screen and (max-width: 900px) {
+  .mobileCard {
+    margin-right: 5%;
+    width: 80%;
+    .projCard {
+      margin-right: 0;
+    }
+  }
+
   .projCard {
-    margin-right: 8%;
-    width: 55%;
+    margin-right: 5%;
+    width: 80%;
 
     .scrollCards {
       h4 {
@@ -117,7 +134,15 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .mobileCard {
+    width: 70%;
+    .projCard {
+      margin-right: 0;
+    }
+  }
   .projCard {
+    margin-right: 5%;
+
     .scrollCards {
       h4 {
         font-size: 10px;
@@ -126,6 +151,22 @@
       p {
         font-size: 8px;
         margin: 2.5px 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 300px) {
+
+  .projCard {
+    .scrollCards {
+      h4 {
+        font-size: 8px;
+        margin: 2px 0;
+      }
+      p {
+        font-size: 6px;
+        margin: 2px 0;
       }
     }
   }

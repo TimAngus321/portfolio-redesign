@@ -52,7 +52,7 @@ const Work = () => {
             sticky={{ start: 1, end: 5 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
-            <div className={styles?.stickyCard}>
+            <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                 alt="React Logo"
@@ -87,7 +87,7 @@ const Work = () => {
             sticky={{ start: 6, end: 7 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
-            <div className={styles?.stickyCard}>
+            <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg"
                 alt="Rails Logo"
@@ -121,7 +121,7 @@ const Work = () => {
             sticky={{ start: 8, end: 10 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
-            <div className={styles?.stickyCard}>
+            <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                 alt="Express Logo"
@@ -155,7 +155,7 @@ const Work = () => {
             sticky={{ start: 11, end: 16 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
-            <div className={styles?.stickyCard}>
+            <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
                 src={shopifyLogo}
                 alt="Shopify Logo"

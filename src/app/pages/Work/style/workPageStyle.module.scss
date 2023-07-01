@@ -29,6 +29,18 @@
     }
   }
 
+  @media (max-width: 900px) {
+    .parallax {
+      margin-right: 1.5rem;
+    }
+  
+    .sticky {
+      margin-left: 1.5rem;
+      font-size: 12px;
+
+    }
+  }
+
   .stickyCard {
     display: flex;
     flex-direction: column;
@@ -49,6 +61,7 @@
     height: 100vh;
     position: fixed;
     display: inline-block;
+    overflow: hidden;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
          box-sizing: border-box;

@@ -6,47 +6,42 @@ import mikrunImg from "../../../../assets/workImages/milkrunImg.webp";
 
 const previousClients = [
   {
-    companyTitle: "Company",
-    company: "Josephinen Hütte",
-    projectTitle: "Project",
+    company: "Company: Josephinen Hütte",
+    projectTitle: "Project Description",
     project:
-      "Shopify Theme Development. Deal with issues regarding pricing, images and adding or modifying components and pages",
+    "Fixed Shopify theme issues like incorrect pricing, image optimisation, added features and added new or improved components and pages",
     link: "https://josephinen.com/",
     img: josephinenHutteImg,
   },
   {
-    companyTitle: "Company",
-    company: "Costaboard",
-    projectTitle: "Project",
+    company: "Company: Costaboard",
+    projectTitle: "Project Description",
     project:
-      "Shopify theme development. Debugging their theme and theme editor and  automating fulfillments for their store. ",
+      "Debugged issues in their theme and also theme editor functionality as well as automating fulfillments for their store.",
     link: "https://costaboard.com",
     img: costaboardImg,
   },
   {
-    companyTitle: "Company",
-    company: "Fleeky",
-    projectTitle: "Project",
+    company: "Company: Fleeky",
+    projectTitle: "Project Description",
     project:
-      "Shopify Theme Development. Implement a redesign by adding components like: sticky navbars, cards, sections, fonts and responsiveness",
+      "Implement a redesign of their theme by adding or improving components like: sticky navbars, cards, sections, fonts and responsiveness",
     link: "https://fleeky.de",
     img: fleekyImg,
   },
   {
-    companyTitle: "Company",
-    company: "Cosmetic Beate Bulang",
-    projectTitle: "Project",
+    company: "Company: Cosmetic Beate Bulang",
+    projectTitle: "Project Description",
     project:
-      "Shopify Theme Development. Fix issues caused when updating prices when quantities changed, add coutner for reviews required and ensure information is updating immediately rather than on load",
+      "Fixed issues caused when updating prices when quantities changed, added a counter for reviews and ensured information is updated immediately rather than on load",
     link: "https://cosmetic-bulang.de/",
     img: cosmeticBeateBulangImg,
   },
   {
-    companyTitle: "Company",
-    company: "MilkRun",
-    projectTitle: "Project",
+    company: "Company: MilkRun",
+    projectTitle: "Project Description",
     project:
-      "Large project integrating different stores into one store that incldued a lot of use of APIs, 3rd party app customisation, cart validation and more.",
+      "Large project where I integrated different stores into one. Project required using a lot of use of APIs, 3rd party apps customisation, cart validation and more.",
     link: "https://farmersmarket.localmilkrun.com/",
     img: mikrunImg,
   },

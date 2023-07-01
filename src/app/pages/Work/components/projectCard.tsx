@@ -1,16 +1,18 @@
 import { personalProj } from "../types/workTypes";
 import styles from '../style/projCardStyle.module.scss';
+import useProjCard from "../hooks/useProjCard";
 
 const ProjectCard = (props: personalProj) => {
-  const { link, name, desc, techTitle, techStack, img } = props;
 
-  const toggleStyle = () => {
-    if (name === "Gavel Mobile") {
-      return styles?.mobileCard
-    } else {
-      return styles?.cardLink 
-    }
-  }
+  const {
+    toggleStyle,
+    link,
+    name,
+    desc,
+    techTitle,
+    techStack,
+    img,
+  } = useProjCard(props);
 
   return (
     <a

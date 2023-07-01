@@ -6,7 +6,7 @@ import reactProjects from "../data/react-projects-data";
 import previousClients from "../data/work-project-data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import shopifyLogo from "../images/shopifyLogo.png";
+import shopifyLogo from "../../../../assets/workImages/shopifyLogo.webp";
 import ProjectCard from "../components/projectCard";
 import expressProjects from "../data/express-project-data";
 

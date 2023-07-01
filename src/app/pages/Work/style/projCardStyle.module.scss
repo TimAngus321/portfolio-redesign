@@ -1,8 +1,8 @@
 @import "../../../globalStyle/colours.scss";
 
 .projCard {
-  margin-right: 10%;
-  width: 60%;
+  margin-right: 12%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -16,10 +16,11 @@
   position: relative;
 
   .projCardImg {
-    width: 100%;
     align-self: flex-end;
     display: flex;
-    transition: opacity 0.3s filter 0.3;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    transition: filter 0.5 ease-in-out;
   }
 
   .scrollCards {
@@ -36,7 +37,7 @@
     flex-wrap: wrap;
     color: $base-font-color;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.5s ease-in-out;
 
     .companyInfo {
       text-align: center;
@@ -77,23 +78,25 @@
 .cardLink {
   display: flex;
   justify-content: flex-end;
+  width: 75%;
 }
 
 .mobileCard {
   display: flex;
   justify-content: unset;
+  margin-right: 20%;
 }
 
 @media only screen and (max-width: 900px) {
   .mobileCard {
     justify-content: flex-end;
+    margin-right: 5%;
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .projCard {
-    margin-right: 15%;
-    width: 50%;
+    margin-right: 20%;
     justify-content: flex-end;
   }
 }
@@ -101,7 +104,7 @@
 @media only screen and (max-width: 900px) {
   .projCard {
     margin-right: 8%;
-    width: 55%;
+    width: 80%;
 
     .scrollCards {
       h4 {
@@ -118,6 +121,8 @@
 
 @media only screen and (max-width: 600px) {
   .projCard {
+    width: 70%;
+    margin-right: 5%;
     .scrollCards {
       h4 {
         font-size: 10px;
@@ -133,6 +138,8 @@
 
 @media only screen and (max-width: 300px) {
   .projCard {
+    width: 55%;
+    margin-right: 2.5%;
     .scrollCards {
       h4 {
         font-size: 8px;

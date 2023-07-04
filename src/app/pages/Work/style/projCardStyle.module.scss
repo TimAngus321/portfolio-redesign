@@ -81,7 +81,7 @@
 .cardLink {
   display: flex;
   justify-content: flex-end;
-  max-width: 75%;
+  max-width: 100%;
   min-width: 5%;
   width: 75%;
 }
@@ -100,6 +100,10 @@
     justify-content: flex-end;
   }
 
+  .cardLink { 
+    width: 80%
+  }
+
   .mobileCard {
     display: flex;
     justify-content: flex-end;
@@ -110,15 +114,19 @@
 @media only screen and (max-width: 900px) {
   .mobileCard {
     margin-right: 5%;
-    width: 80%;
+    width: 90%;
     .projCard {
       margin-right: 0;
     }
   }
 
+  .cardLink { 
+    width: 80%
+  }
+
   .projCard {
     margin-right: 5%;
-    width: 80%;
+    width: 90%;
 
     .scrollCards {
       h4 {
@@ -135,7 +143,7 @@
 
 @media only screen and (max-width: 600px) {
   .mobileCard {
-    width: 70%;
+    width: 85%;
     .projCard {
       margin-right: 0;
     }

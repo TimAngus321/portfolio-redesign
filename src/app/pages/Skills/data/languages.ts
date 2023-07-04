@@ -1,35 +1,41 @@
-import ShopifyLiquid from '../../../../assets/skillsImages/shopifyLogos/shopifyLiquid.webp'
-import sqlLogo from '../../../../assets/skillsImages/backendLogos/sql.png'
+import ShopifyLiquid from '../../../../assets/skillsImages/languageLogos/shopifyLiquid.webp'
+import sqlLogo from '../../../../assets/skillsImages/languageLogos/sql.png'
+import jsLogo from '../../../../assets/skillsImages/languageLogos/javascript-original.svg';
+import tsLogo from '../../../../assets/skillsImages/languageLogos/typescript-original.svg';
+import htmlLogo from '../../../../assets/skillsImages/languageLogos/html5-original.svg';
+import scssLogo from '../../../../assets/skillsImages/languageLogos/sass-original.svg';
+import rubyLogo from '../../../../assets/skillsImages/languageLogos/ruby-original.svg';
+import cssLogo from '../../../../assets/skillsImages/languageLogos/css3-original.svg';
 
 const languages = [
     {
         name: "Javascript",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        image: jsLogo,
         alt: "JS logo"
     }, 
     {
         name: "Typescript",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        image: tsLogo,
         alt: "Typescript logo"
     },
     {
         name: "HTML",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        image: htmlLogo,
         alt: "HTML logo"
     },
     {
         name: "SCSS",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+        image: scssLogo,
         alt: "SCSS logo"
     },
     {
         name: "CSS",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        image: cssLogo,
         alt: "CSS logo"
     },
     {
         name: "Ruby",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg",
+        image: rubyLogo,
         alt: "Ruby Logo"
     },
     {

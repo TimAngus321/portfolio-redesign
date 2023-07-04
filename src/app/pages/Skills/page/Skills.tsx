@@ -91,7 +91,7 @@ const Skills = () => {
                     classNames="skill-card"
                     key={key}
                     timeout={{
-                      enter: 1000,
+                      enter: 1500,
                       exit: 500,
                     }}
                   >

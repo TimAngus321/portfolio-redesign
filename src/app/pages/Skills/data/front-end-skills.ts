@@ -1,17 +1,21 @@
+import reactLogo from '../../../../assets/skillsImages/frontendLogos/react-original.svg';
+import reduxLogo from '../../../../assets/skillsImages/frontendLogos/redux-original.svg';
+import jqueryLogo from '../../../../assets/skillsImages/frontendLogos/jquery-original.svg';
+
 const frontendSkillSet = [
     {
         name: "React",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        image: reactLogo,
         alt: "React Logo" 
     },
     {
         name: "Redux",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+        image: reduxLogo,
         alt: "Redux Logo"
     },
     {
         name: "jQuery",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+        image: jqueryLogo,
         alt: "jQuery Logo"
     },
 ];

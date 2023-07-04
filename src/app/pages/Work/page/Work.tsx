@@ -9,6 +9,10 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import shopifyLogo from "../../../../assets/workImages/shopifyLogo.webp";
 import ProjectCard from "../components/projectCard";
 import expressProjects from "../data/express-project-data";
+import reactLogo from '../../../../assets/skillsImages/frontendLogos/react-original.svg';
+import railsLogo from '../../../../assets/skillsImages/backendLogos/rails-plain.svg';
+import expressLogo from '../../../../assets/skillsImages/backendLogos/express-original.svg';
+
 
 const Work = () => {
   const alignCenter: any = {
@@ -54,7 +58,7 @@ const Work = () => {
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                src={reactLogo}
                 alt="React Logo"
                 className={styles?.stickyCardImage}
               />
@@ -89,7 +93,7 @@ const Work = () => {
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg"
+                src={railsLogo}
                 alt="Rails Logo"
                 className={styles?.stickyCardImage}
               />
@@ -123,7 +127,7 @@ const Work = () => {
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                src={expressLogo}
                 alt="Express Logo"
                 className={`${styles?.stickyCardImage} inverseWhite`}
               />

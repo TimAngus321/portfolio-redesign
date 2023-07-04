@@ -7,6 +7,7 @@ const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>(languages);
   const [colors, setColors] = useState<string[] | null>(null);
   const [selectedImage, setSelectedImage] = useState<string>("");
+  const skillLogoColors: object = {};
   // let selectedImage: string = '';
   // let colors: string[] | null = null;
 
@@ -33,7 +34,8 @@ const useSkills = () => {
 
   // Seems to get colours once then never again perhaps store in array and refer back if needed
   // e.g create object with key image url and colours as values 
-  // inside handleImageHover if image === something in the array do the animation function if not do getColor
+  // inside handleImageHover if image === something in the array do the animation function if return as
+  // get color would then run as intended
 
 
   const getColors = (detectedColorCodes: string[] | null) => {

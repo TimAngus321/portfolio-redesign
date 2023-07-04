@@ -1,20 +1,23 @@
-import netlifyLogo from '../../../../assets/skillsImages/hostLogos/netlifyLogo.svg';
+import netlifyLogo from '../../../../assets/skillsImages/hostLogos/netlifyLogo.webp';
+import githubLogo from '../../../../assets/skillsImages/hostLogos/github-original.svg';
+import herokuLogo from '../../../../assets/skillsImages/hostLogos/heroku-original.svg';
+import awsLogo from '../../../../assets/skillsImages/hostLogos/amazonwebservices-original.svg';
 
 const hostingUsed = [
     {
         name: "Github Pages",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        image: githubLogo,
         alt: "Github Pages Logo",
         styleClass: 'inverseWhite'
     }, 
     {
         name: "Heroku",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg",
+        image: herokuLogo,
         alt: "Heroku Logo"
     }, 
     {
         name: "AWS",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+        image: awsLogo,
         alt: "Heroku Logo"
     },
     {

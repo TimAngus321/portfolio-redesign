@@ -1,131 +1,157 @@
-@import '../../../globalStyle/colours.scss';
+@import "../../../globalStyle/colours.scss";
 
 .background {
-    background: linear-gradient($base-background-color);
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-  }
-  
+  background: linear-gradient($base-background-color);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.scrollText {
+  font-size: 2.5rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+}
+
+@media only screen and (max-width: 900px) {
   .scrollText {
-    font-size: 2.5rem;
-    width: 100%;
-    height: 100vh;
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .parallax {
+    margin-right: 1.5rem;
+  }
+
+  .sticky {
+    margin-left: 1.5rem;
+    font-size: 12px;
+  }
+}
+
+.stickyCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  max-height: 10rem;
+  max-width: 25%;
+  width: 100%;
+  text-align: center;
+}
+
+.pageContainerScrollWork {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 0 100px;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 900px) {
+  .pageContainerScrollWork {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-right: 100px;
-  }
-
-  @media only screen and (max-width: 900px) {
-    .scrollText {
-      margin: 0;
-      font-size: 1rem;
-    }
-  }
-
-  @media (max-width: 900px) {
-    .parallax {
-      margin-right: 1.5rem;
-    }
-  
-    .sticky {
-      margin-left: 1.5rem;
-      font-size: 12px;
-
-    }
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: unset;
+    position: fixed;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 
   .stickyCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
-    max-height: 10rem;
-    max-width: 25%;
-    width: 100%;
-    text-align: center;
+    max-width: 15%;
   }
+}
 
-  .pageContainerScrollWork {
-    display: flex;
-    justify-content: flex-start;
-    margin: 0 0 0 100px;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    display: inline-block;
-    overflow: hidden;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-         box-sizing: border-box;
-  }
-  
-  @media only screen and (max-width: 900px) {
-    .pageContainerScrollWork {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-content: center;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      position: unset;
-      position: fixed;
-      display: inline-block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-           box-sizing: border-box;
-    }
-  }
-  
-  .workContainer {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
-  
+.workContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.workTitle {
+  display: flex;
+  color: $base-hover-color;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  max-width: 100%;
+  align-self: center;
+}
+
+@media only screen and (max-width: 900px) {
   .workTitle {
     display: flex;
-    color: $base-hover-color;
-    justify-content: center;
-    text-align: center;
-    height: auto;
-    max-width: 100%;
-    align-self: center;
+    align-items: flex-start;
   }
-  
-  @media only screen and (max-width: 900px) {
-    .workTitle {
-      display: flex;
-      align-items: flex-start;
-    }
+}
+
+.workPageArrow {
+  padding-top: 20px;
+  -webkit-animation: arrowAnimation 2s ease-in-out infinite;
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: translate(0, -20px);
+    opacity: 0;
   }
-  
-  .workPageArrow {
-    padding-top: 20px;
-    -webkit-animation: arrowAnimation 2s ease-in-out infinite ;
+  50% {
+    opacity: 1;
   }
-  
-  @keyframes arrowAnimation {
-    0%   { transform:translate(0,-20px); opacity: 0;  }
-    50%  { opacity: 1;  }
-    100% { transform:translate(0,20px); opacity: 0; }
+  100% {
+    transform: translate(0, 20px);
+    opacity: 0;
   }
-  
+}
+
+.stickyCardImage {
+  display: flex;
+  width: 100%;
+  max-width: 210px;
+  height: auto;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .stickyCard {
+    max-width: 15%;
+  }
+
   .stickyCardImage {
-    display: flex;
-    width: 100%;
-    max-width: 210px;
-    height: auto;
-    align-items: center;
+    max-width: 150px;
   }
-  
-  
+}
+
+@media only screen and (max-width: 600px) {
+  .stickyCard {
+    max-width: 12%;
+  }
+}
+

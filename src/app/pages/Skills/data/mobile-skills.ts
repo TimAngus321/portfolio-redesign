@@ -1,12 +1,15 @@
+import reactNativeLogo from '../../../../assets/skillsImages/frontendLogos/react-original.svg';
+import reduxLogo from '../../../../assets/skillsImages/frontendLogos/redux-original.svg';
+
 const mobileSkillset = [
     {
         name: "React Native",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        image: reactNativeLogo,
         alt: "React Logo" 
     },
     {
         name: "Redux",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+        image: reduxLogo,
         alt: "Redux Logo"
     }
 ];

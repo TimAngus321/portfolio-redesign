@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import languages from "../data/languages";
 import { useNavigate } from "react-router-dom";
 import { skills } from "../types/skillsetType";
 
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>(languages);
+  const [colors, setColors] = useState<string[] | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string>("");
+
+  const navigate = useNavigate();
 
   const clearState = () => {
     const currentState: skills[] = [];
@@ -18,12 +22,30 @@ const useSkills = () => {
     }, 500);
   };
 
-  const navigate = useNavigate();
+  const handleImageHover = (image: string) => {
+    setSelectedImage(image);
+  };
+
+  const getColors = (detectedColorCodes: string[] | null) => {
+    setColors(detectedColorCodes);
+  };
+
+  // useEffect(() => {
+  //   getColors()
+  // }, [selectedImage]);
+
+  // console.log(selectedImage)
+  console.log(colors);
 
   return {
     updateSkillSet,
     skillSet,
-    navigate
+    navigate,
+    colors,
+    setColors,
+    getColors,
+    handleImageHover,
+    selectedImage,
   };
 };
 

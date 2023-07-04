@@ -26,6 +26,7 @@
   "include": [
     "src",
     "types",
-    "dancingLines.d.ts"
+    "dancingLines.d.ts",
+    "colorExtractor.d.ts"
   ]
 }

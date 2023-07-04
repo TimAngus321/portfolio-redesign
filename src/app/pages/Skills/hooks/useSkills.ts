@@ -7,6 +7,8 @@ const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>(languages);
   const [colors, setColors] = useState<string[] | null>(null);
   const [selectedImage, setSelectedImage] = useState<string>("");
+  // let selectedImage: string = '';
+  // let colors: string[] | null = null;
 
   const navigate = useNavigate();
 
@@ -24,10 +26,20 @@ const useSkills = () => {
 
   const handleImageHover = (image: string) => {
     setSelectedImage(image);
+    // selectedImage = image;
+    console.log(selectedImage)
+    // getColors()
   };
+
+  // Seems to get colours once then never again perhaps store in array and refer back if needed
+  // e.g create object with key image url and colours as values 
+  // inside handleImageHover if image === something in the array do the animation function if not do getColor
+
 
   const getColors = (detectedColorCodes: string[] | null) => {
     setColors(detectedColorCodes);
+    console.log(detectedColorCodes)
+    console.log(colors);
   };
 
   // useEffect(() => {
@@ -35,14 +47,14 @@ const useSkills = () => {
   // }, [selectedImage]);
 
   // console.log(selectedImage)
-  console.log(colors);
+  // console.log(colors);
 
   return {
     updateSkillSet,
     skillSet,
     navigate,
     colors,
-    setColors,
+    // setColors,
     getColors,
     handleImageHover,
     selectedImage,

@@ -28,7 +28,7 @@ const Skills = () => {
               Feel free to check out my tech stack and{" "}
               <span
                 className={skillPageStyle?.contactLink}
-                onClick={(e) => navigate("/work")}
+                onClick={() => navigate("/work")}
               >
                 projects I've built
               </span>{" "}
@@ -36,7 +36,7 @@ const Skills = () => {
               projects or company and need help feel free to get in{" "}
               <span
                 className={skillPageStyle?.contactLink}
-                onClick={(e) => navigate("/contact")}
+                onClick={() => navigate("/contact")}
               >
                 contact{" "}
               </span>{" "}
@@ -45,43 +45,43 @@ const Skills = () => {
             <div className={skillPageStyle?.aboutMySkills}>
               <button
                 className="about-btn"
-                onClick={(e) => updateSkillSet(languages)}
+                onClick={() => updateSkillSet(languages)}
               >
                 &nbsp;Languages&nbsp;
               </button>
               <button
                 className="about-btn"
-                onClick={(e) => updateSkillSet(frontendSkillSet)}
+                onClick={() => updateSkillSet(frontendSkillSet)}
               >
                 &nbsp;Front-end&nbsp;
               </button>
               <button
                 className="about-btn"
-                onClick={(e) => updateSkillSet(mobileSkillset)}
+                onClick={() => updateSkillSet(mobileSkillset)}
               >
                 &nbsp;Mobile&nbsp;
               </button>
               <button
                 className="about-btn"
-                onClick={(e) => updateSkillSet(backendSkillSet)}
+                onClick={() => updateSkillSet(backendSkillSet)}
               >
                 &nbsp;Backend&nbsp;
               </button>
               <button
                 className="about-btn"
-                onClick={(e) => updateSkillSet(hostingUsed)}
+                onClick={() => updateSkillSet(hostingUsed)}
               >
                 &nbsp;Hosting&nbsp;
               </button>
               <button
                 className="about-btn"
-                onClick={(e) => updateSkillSet(shopifySkillSet)}
+                onClick={() => updateSkillSet(shopifySkillSet)}
               >
                 &nbsp;Shopify&nbsp;
               </button>
               <button
                 className="about-btn"
-                onClick={(e) => updateSkillSet(developingSkills)}
+                onClick={() => updateSkillSet(developingSkills)}
               >
                 &nbsp;Learning&nbsp;
               </button>

@@ -6,8 +6,7 @@ import { ColorExtractor } from "react-color-extractor";
 
 const SkillCard = (props: skills) => {
   const { name, image, styleClass, alt } = props;
-  const { colors, setColors, getColors, handleImageHover, selectedImage } =
-    useSkills();
+  const { getColors, handleImageHover, selectedImage } = useSkills();
 
   return (
     <>
@@ -24,7 +23,7 @@ const SkillCard = (props: skills) => {
         />
         <h3 className={styles?.skillName}>{name}</h3>
       </TransitionGroup>
-      <ColorExtractor src={selectedImage} getColors={getColors}/>
+      <ColorExtractor src={selectedImage} getColors={getColors} />
     </>
   );
 };

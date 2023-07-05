@@ -50,3 +50,78 @@ Animations must be global file
     }
   }
 }
+
+/******************************************************************* 
+New Skill Card animations
+********************************************************************/
+
+$duration: 150ms;
+$inline: 10px;
+$block: 0;
+
+
+.tail {
+  transition: all $duration;
+  width: $inline;
+  height: $block;
+  border: solid $secondary-font-color 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.tail.top {
+  // background-image: linear-gradient(to right, var(--color1), var(--color2));
+  height: $inline;
+  width: $block;
+  transition-delay: calc($duration * 2);
+}
+
+.tail.right {
+  right: 0;
+  left: unset;
+  background: --color2;
+  transition-delay: $duration;
+}
+
+.tail.bottom {
+  height: $inline;
+  width: $block;
+  bottom: 0;
+  right: 0;
+  left: unset;
+  top: unset;
+  // background-image: linear-gradient(to right, var(--color1), var(--color2));
+  transition-delay: 0ms;
+}
+
+.tail.left {
+  bottom: 0;
+  top: unset;
+  transition-delay: calc($duration * 3);
+}
+
+.snake:where(.start, :hover) .tail.top {
+  transition-delay: $duration;
+}
+.snake:where(.start, :hover) .tail.right {
+  transition-delay: calc($duration * 2);
+}
+.snake:where(.start, :hover) .tail.bottom {
+  transition-delay: calc($duration * 3);
+}
+.snake:where(.start, :hover) .tail.left {
+  transition-delay: 0ms;
+}
+
+.snake {
+  position: relative;
+}
+
+.snake.start .tail {
+  $block: 0;
+}
+.snake:hover .tail {
+  $block: 100%;
+}

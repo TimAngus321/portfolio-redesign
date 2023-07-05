@@ -6,12 +6,14 @@ import { skills, skillColorsObj } from "../types/skillsetType";
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>(languages);
   const [selectedImage, setSelectedImage] = useState<string>("");
+  const [selectedCard, setSelectedCard] = useState<string>("");
   const [skillLogoColors, setSkillLogoColors] = useState<skillColorsObj>({
     imgUrl: "",
     colors: [],
   });
 
   const navigate = useNavigate();
+  // const skillCardStyle = {}
 
   const clearState = () => {
     const currentState: skills[] = [];
@@ -37,13 +39,12 @@ const useSkills = () => {
     }));
   };
 
-
   useEffect(() => {
+    console.log(skillLogoColors);
     
-  },[skillLogoColors]);
+  }, [skillLogoColors]);
 
-  
-  console.log(skillLogoColors);
+
 
   return {
     updateSkillSet,
@@ -52,6 +53,9 @@ const useSkills = () => {
     getColors,
     handleImageHover,
     selectedImage,
+    skillLogoColors,
+    setSelectedCard,
+    selectedCard
   };
 };
 

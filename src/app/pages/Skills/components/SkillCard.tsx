@@ -6,15 +6,21 @@ import { ColorExtractor } from "react-color-extractor";
 
 const SkillCard = (props: skills) => {
   const { name, image, styleClass, alt } = props;
-  const { getColors, handleImageHover, selectedImage } = useSkills();
+  const { getColors, handleImageHover, selectedImage, skillLogoColors } =
+    useSkills();
 
   return (
     <>
       <TransitionGroup
         component="li"
-        className={styles?.skillCard}
+        className={`${styles?.skillCard} snake`}
         onMouseOver={() => handleImageHover(image)}
       >
+        <div className="tail top" style={{backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[0]}, ${skillLogoColors?.colors[1]})`}}></div>
+        <div className="tail right" style={{backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[1]}, ${skillLogoColors?.colors[2]})`}}></div>
+        <div className="tail bottom" style={{backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[3]}, ${skillLogoColors?.colors[4]})`}}></div>
+        <div className="tail left" style={{backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[4]}, ${skillLogoColors?.colors[5]})`}}></div>
+
         <img
           loading="lazy"
           className={`${styles?.skillImage} ${styleClass}`}

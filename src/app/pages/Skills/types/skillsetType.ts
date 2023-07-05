@@ -10,6 +10,3 @@ export interface skillColorsObj {
   colors: string[] | null;
 }
 
-// export interface SkillColorsArr {
-//       skillColors: skillColorsObj[];
-// }

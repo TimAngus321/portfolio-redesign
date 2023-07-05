@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
 import languages from "../data/languages";
 import { useNavigate } from "react-router-dom";
-import { skills } from "../types/skillsetType";
+import { skills, SkillColorsArr, skillColorsObj } from "../types/skillsetType";
 
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>(languages);
-  const [colors, setColors] = useState<string[] | null>(null);
+  // const [colors, setColors] = useState<string[] | null>(null);
   const [selectedImage, setSelectedImage] = useState<string>("");
-  const skillLogoColors: object = {};
-  // let selectedImage: string = '';
-  // let colors: string[] | null = null;
+  // const [skillLogoColors, setSkillLogoColors] = useState<SkillColorsArr>({
+  //   skillColors: [],
+  // });
+  const [skillLogoColors, setSkillLogoColors] = useState<skillColorsObj>({
+    imgUrl: "",
+    colors: [],
+  });
 
   const navigate = useNavigate();
 
@@ -28,34 +32,34 @@ const useSkills = () => {
   const handleImageHover = (image: string) => {
     setSelectedImage(image);
     // selectedImage = image;
-    console.log(selectedImage)
-    // getColors()
+    // console.log(skillLogoColors)
+
+    // for (let i = 0; i < skillLogoColors?.length; i++) {
+    //   if (skillLogoColors?.imgUrl[i] === image) {
+    //   } else {
+    //     // trigger animation
+    //   }
+    // }
+    // console.log(skillLogoColors)
   };
 
-  // Seems to get colours once then never again perhaps store in array and refer back if needed
-  // e.g create object with key image url and colours as values 
-  // inside handleImageHover if image === something in the array do the animation function if return as
-  // get color would then run as intended
 
 
   const getColors = (detectedColorCodes: string[] | null) => {
-    setColors(detectedColorCodes);
-    console.log(detectedColorCodes)
-    console.log(colors);
+    setSkillLogoColors((prevState) => ({
+      ...prevState,
+      imgUrl: selectedImage,
+      colors: detectedColorCodes,
+    }));
   };
-
-  // useEffect(() => {
-  //   getColors()
-  // }, [selectedImage]);
-
-  // console.log(selectedImage)
-  // console.log(colors);
+  
+  console.log(skillLogoColors);
 
   return {
     updateSkillSet,
     skillSet,
     navigate,
-    colors,
+    // colors,
     // setColors,
     getColors,
     handleImageHover,

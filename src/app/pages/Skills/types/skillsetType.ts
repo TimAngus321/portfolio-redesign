@@ -7,6 +7,6 @@ export interface skills {
 
 export interface skillColorsObj {
   imgUrl: string;
-  colors: string[] | null;
+  colors: string[];
 }
 

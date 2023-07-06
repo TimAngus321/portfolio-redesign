@@ -30,17 +30,13 @@ const useSkills = () => {
     setSelectedImage(image);
   };
 
-  const getColors = (detectedColorCodes: string[] | null) => {
+  const getColors = (detectedColorCodes: string[]) => {
     setSkillLogoColors((prevState) => ({
       ...prevState,
       imgUrl: selectedImage,
       colors: detectedColorCodes,
     }));
   };
-
-  useEffect(() => {
-    console.log(skillLogoColors);
-  }, [skillLogoColors]);
 
   return {
     updateSkillSet,

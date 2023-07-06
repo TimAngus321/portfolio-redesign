@@ -13,7 +13,7 @@ import skillPageStyle from "../style/skillCardPageStyle.module.scss";
 import colorExtractor from "react-color-extractor";
 
 const Skills = () => {
-  const { skillSet, updateSkillSet, navigate, skillLogoColors } = useSkills();
+  const { skillSet, updateSkillSet, navigate } = useSkills();
 
   return (
     <section className={skillPageStyle?.pageContainerSkills}>

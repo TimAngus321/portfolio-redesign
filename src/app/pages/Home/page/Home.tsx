@@ -17,13 +17,16 @@ const Home = () => {
           <p className={styles?.subHeading}>
             Full-Stack / React / Express / Rails / Shopify
           </p>
-          <button className={styles?.contactBtn} onClick={(e) => navigate("/contact")}>
+          <button className="default-btn" onClick={(e) => navigate("/contact")}>
             Contact Me
           </button>
         </div>
-        {/* <div className={styles?.timLogo}>
+        {/* 
+        Removed as new animation added
+        <div className={styles?.timLogo}>
           <img src={vinylPlayer} alt="Vinyl Player" />
-        </div> */}
+        </div> 
+        */}
       </div>
     </div>
   );

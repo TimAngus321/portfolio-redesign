@@ -26,29 +26,29 @@ const SkillCard = (props: skills) => {
           <h3 className={styles?.skillName}>{name}</h3>
         </div>
         <div
-            className="tail top"
-            style={{
-              backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[0]}, ${skillLogoColors?.colors[1]})`,
-            }}
-          ></div>
-          <div
-            className="tail right"
-            style={{
-              backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[1]}, ${skillLogoColors?.colors[2]})`,
-            }}
-          ></div>
-          <div
-            className="tail bottom"
-            style={{
-              backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[2]}, ${skillLogoColors?.colors[3]})`,
-            }}
-          ></div>
-          <div
-            className="tail left"
-            style={{
-              backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[4]}, ${skillLogoColors?.colors[5]})`,
-            }}
-          ></div>
+          className="tail top"
+          style={{
+            backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[0]}, ${skillLogoColors?.colors[1] ?? skillLogoColors?.colors[0]} )`,
+          }}
+        ></div>
+        <div
+          className="tail right"
+          style={{
+            backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[1] ?? skillLogoColors?.colors[0]}, ${skillLogoColors?.colors[2] ?? skillLogoColors?.colors[0]})`,
+          }}
+        ></div>
+        <div
+          className="tail bottom"
+          style={{
+            backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[2] ?? skillLogoColors?.colors[0]}, ${skillLogoColors?.colors[3] ?? skillLogoColors?.colors[0]})`,
+          }}
+        ></div>
+        <div
+          className="tail left"
+          style={{
+            backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[4] ?? skillLogoColors?.colors[0]}, ${skillLogoColors?.colors[5] ?? skillLogoColors?.colors[0]})`,
+          }}
+        ></div>
       </TransitionGroup>
       <ColorExtractor src={selectedImage} getColors={getColors} />
     </>

@@ -1,0 +1,23 @@
+@import "../../../globalStyle/colours.scss";
+
+.workExpCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: solid $secondary-font-color 1px;
+  background-color: $base-background-grey;
+  border-radius: 10px;
+  margin: 0 0 40px 0;
+  padding: 20px;
+  color: white;
+
+  h2,
+  h4,
+  p {
+    margin: 5px 0;
+  }
+
+  &:hover {
+    filter: drop-shadow(0 0 0.75rem $secondary-font-color);
+  }
+}

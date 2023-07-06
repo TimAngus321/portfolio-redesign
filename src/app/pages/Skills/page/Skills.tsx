@@ -43,43 +43,43 @@ const Skills = () => {
             </p>
             <div className={skillPageStyle?.aboutMySkills}>
               <button
-                className="about-btn"
+                className="default-btn"
                 onClick={() => updateSkillSet(languages)}
               >
                 &nbsp;Languages&nbsp;
               </button>
               <button
-                className="about-btn"
+                className="default-btn"
                 onClick={() => updateSkillSet(frontendSkillSet)}
               >
                 &nbsp;Front-end&nbsp;
               </button>
               <button
-                className="about-btn"
+                className="default-btn"
                 onClick={() => updateSkillSet(mobileSkillset)}
               >
                 &nbsp;Mobile&nbsp;
               </button>
               <button
-                className="about-btn"
+                className="default-btn"
                 onClick={() => updateSkillSet(backendSkillSet)}
               >
                 &nbsp;Backend&nbsp;
               </button>
               <button
-                className="about-btn"
+                className="default-btn"
                 onClick={() => updateSkillSet(hostingUsed)}
               >
                 &nbsp;Hosting&nbsp;
               </button>
               <button
-                className="about-btn"
+                className="default-btn"
                 onClick={() => updateSkillSet(shopifySkillSet)}
               >
                 &nbsp;Shopify&nbsp;
               </button>
               <button
-                className="about-btn"
+                className="default-btn"
                 onClick={() => updateSkillSet(developingSkills)}
               >
                 &nbsp;Learning&nbsp;

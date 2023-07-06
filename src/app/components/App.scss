@@ -336,166 +336,166 @@ Mobile Nav
   position: fixed;
 }
 
-/******************************************************************* 
-Contact Page
-********************************************************************/
+// /*******************************************************************
+// Contact Page
+// ********************************************************************/
 
-.top-buffer {
-  display: none;
-}
+// .top-buffer {
+//   display: none;
+// }
 
-@media only screen and (max-width: 900px) {
-  .top-buffer {
-    height: 100px;
-    width: 100%;
-  }
-}
+// @media only screen and (max-width: 900px) {
+//   .top-buffer {
+//     height: 100px;
+//     width: 100%;
+//   }
+// }
 
-.contact-component {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  padding: 0 140px 0 20px;
-  width: 100%;
-}
+// .contact-component {
+//   display: flex;
+//   flex-direction: column;
+//   align-self: center;
+//   padding: 0 140px 0 20px;
+//   width: 100%;
+// }
 
-@media only screen and (max-width: 900px) {
-  .contact-component {
-    width: 90%;
-    margin: 0px 50px 0 40px;
-    padding: 0;
-  }
-}
+// @media only screen and (max-width: 900px) {
+//   .contact-component {
+//     width: 90%;
+//     margin: 0px 50px 0 40px;
+//     padding: 0;
+//   }
+// }
 
-.contact-title {
-  color: $base-hover-color;
-  display: flex;
-  justify-content: flex-start;
-  font-size: 40px;
-}
+// .contact-title {
+//   color: $base-hover-color;
+//   display: flex;
+//   justify-content: flex-start;
+//   font-size: 40px;
+// }
 
-.contact-blurb {
-  color: white;
-  padding: 10px 0 40px 0;
-  font-size: 14px;
-}
+// .contact-blurb {
+//   color: white;
+//   padding: 10px 0 40px 0;
+//   font-size: 14px;
+// }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-}
+// .contact-form {
+//   display: flex;
+//   flex-direction: column;
+// }
 
-.contact-form-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+// .contact-form-ul {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+//   overflow: hidden;
+// }
 
-.name-and-email {
-  display: flex;
-  flex-direction: row;
-  height: 50px;
-  justify-content: space-between;
-  padding-bottom: 20px;
-}
+// .name-and-email {
+//   display: flex;
+//   flex-direction: row;
+//   height: 50px;
+//   justify-content: space-between;
+//   padding-bottom: 20px;
+// }
 
-@media only screen and (max-width: 900px) {
-  .name-and-email {
-    flex-direction: column;
-    justify-content: space-between;
-    height: 120px;
-  }
-}
+// @media only screen and (max-width: 900px) {
+//   .name-and-email {
+//     flex-direction: column;
+//     justify-content: space-between;
+//     height: 120px;
+//   }
+// }
 
-input.name-input {
-  width: 100%;
-  height: 100%;
-  background: #2b2b2b;
-  border: none;
-  padding-left: 20px;
-  color: white;
-}
+// input.name-input {
+//   width: 100%;
+//   height: 100%;
+//   background: #2b2b2b;
+//   border: none;
+//   padding-left: 20px;
+//   color: white;
+// }
 
-input.email-input {
-  width: 100%;
-  height: 100%;
-  background: #2b2b2b;
-  border: none;
-  padding-left: 20px;
-  color: white;
-}
+// input.email-input {
+//   width: 100%;
+//   height: 100%;
+//   background: #2b2b2b;
+//   border: none;
+//   padding-left: 20px;
+//   color: white;
+// }
 
-input.subject-input {
-  width: 100%;
-  height: 100%;
-  background: #2b2b2b;
-  border: none;
-  padding-left: 20px;
-  color: white;
-}
+// input.subject-input {
+//   width: 100%;
+//   height: 100%;
+//   background: #2b2b2b;
+//   border: none;
+//   padding-left: 20px;
+//   color: white;
+// }
 
-textarea.message-input {
-  width: 100%;
-  height: 100%;
-  background: #2b2b2b;
-  border: none;
-  padding: 20px 0 0 20px;
-  color: white;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
+// textarea.message-input {
+//   width: 100%;
+//   height: 100%;
+//   background: #2b2b2b;
+//   border: none;
+//   padding: 20px 0 0 20px;
+//   color: white;
+//   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+//     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+//     sans-serif;
+//   -webkit-font-smoothing: antialiased;
+// }
 
-li.name {
-  width: 100%;
-  padding-right: 20px;
-}
+// li.name {
+//   width: 100%;
+//   padding-right: 20px;
+// }
 
-@media only screen and (max-width: 900px) {
-  li.name {
-    width: 100%;
-    padding-right: 20px;
-    height: 50px;
-  }
-}
+// @media only screen and (max-width: 900px) {
+//   li.name {
+//     width: 100%;
+//     padding-right: 20px;
+//     height: 50px;
+//   }
+// }
 
-li.email {
-  width: 100%;
-  padding: 0 0 0 20px;
-}
+// li.email {
+//   width: 100%;
+//   padding: 0 0 0 20px;
+// }
 
-@media only screen and (max-width: 900px) {
-  li.email {
-    width: 100%;
-    padding: 0 20px 0 0;
-    height: 50px;
-  }
-}
+// @media only screen and (max-width: 900px) {
+//   li.email {
+//     width: 100%;
+//     padding: 0 20px 0 0;
+//     height: 50px;
+//   }
+// }
 
-li.subject {
-  width: 100%;
-  height: 50px;
-  padding: 0 0 20px 0;
-}
+// li.subject {
+//   width: 100%;
+//   height: 50px;
+//   padding: 0 0 20px 0;
+// }
 
-li.message {
-  width: 100%;
-  height: 100px;
-  padding: 0 0 40px 0;
-}
+// li.message {
+//   width: 100%;
+//   height: 100px;
+//   padding: 0 0 40px 0;
+// }
 
-.btn-container {
-  display: flex;
-  justify-content: flex-end;
-}
+// .btn-container {
+//   display: flex;
+//   justify-content: flex-end;
+// }
 
 /******************************************************************* 
 Global Contact Style Btn
 ********************************************************************/
 
-.contact-btn {
+.default-btn {
   color: $base-hover-color;
   cursor: pointer;
   font-size: 13px;
@@ -509,229 +509,16 @@ Global Contact Style Btn
   text-align: center;
   font-weight: 500;
   background-color: transparent;
-  float: right;
-}
 
-.contact-btn:hover {
-  background-color: $base-hover-color;
-  color: $base-background-color;
-  border-color: $base-hover-color;
-}
-
-/******************************************************************* 
-About Me Page
-********************************************************************/
-
-.page-container-about {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0 40px 0 100px;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-}
-
-@media only screen and (max-width: 900px) {
-  .page-container-about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    position: unset;
-    width: 100%;
-    height: 100%;
-    margin: 0;
+  &:hover {
+    background-color: $base-hover-color;
+    color: $base-background-color;
+    border-color: $base-hover-color;
   }
 }
 
-.about-me-sub-container {
-  display: flex;
-  flex-direction: row;
-  width: 95%;
-}
-
 @media only screen and (max-width: 900px) {
-  .about-me-sub-container {
-    flex-direction: column;
-    height: 100vh;
-    padding: 40px 0 0 0;
-    width: 100%;
-  }
-}
-
-.about-me-container {
-  display: flex;
-  flex-direction: column;
-  width: 45%;
-  height: 100%;
-  justify-content: center;
-  padding-right: 20px;
-}
-
-@media only screen and (max-width: 900px) {
-  .about-me-container {
-    width: 100%;
-    text-align: center;
-    padding: 0 0 20px 0;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.about-title {
-  color: $base-hover-color;
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  margin: 60px 0 0 20px;
-}
-
-@media only screen and (max-width: 900px) {
-  .about-title {
-    justify-content: center;
-    margin: 60px 0 0 0;
-  }
-}
-
-.about-btn-info-container {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  height: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-@media only screen and (max-width: 900px) {
-  .about-btn-info-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    width: unset;
-    margin-bottom: 40px;
-    height: 250px;
-    position: relative;
-  }
-}
-
-.about-btn {
-  color: $base-hover-color;
-  cursor: pointer;
-  font-size: 13px;
-  letter-spacing: 4px;
-  font-family: "Open Sans", sans-serif;
-  text-decoration: none;
-  padding: 10px 18px;
-  border: 1px solid $base-hover-color;
-  width: 150px;
-  text-align: center;
-  font-weight: 500;
-  background-color: transparent;
-  margin: 30px 0;
-}
-
-@media only screen and (max-width: 900px) {
-  .about-btn {
+  .default-btn {
     margin-top: 25px;
   }
-}
-
-.about-btn:hover {
-  background-color: $base-hover-color;
-  color: $base-background-color;
-  border-color: $base-hover-color;
-}
-
-.about-me-information-container {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  height: 65%;
-  justify-content: space-evenly;
-  color: white;
-  text-align: center;
-  align-self: center;
-  background: #2b2b2b;
-}
-
-@media only screen and (max-width: 900px) {
-  .about-me-information-container {
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-self: center;
-    color: white;
-    text-align: center;
-  }
-}
-
-.about-me-blurb {
-  color: white;
-  width: 100%;
-  margin: 60px 0 0 20px;
-}
-
-@media only screen and (max-width: 900px) {
-  .about-me-blurb {
-    margin: 60px 60px 20px 60px;
-    text-align: center;
-  }
-}
-.work-experience-container {
-  display: flex;
-  width: 45%;
-  justify-content: center;
-  align-items: center;
-  padding-right: 20px;
-}
-
-@media only screen and (max-width: 900px) {
-  .work-experience-container {
-    width: 100%;
-    padding: 20px 0 0 0;
-  }
-}
-
-/******************************************************************* 
-Work Experience Card
-********************************************************************/
-
-.work-exp-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border: solid $secondary-font-color 1px;
-  background-color: $base-background-grey;
-  border-radius: 10px;
-  margin: 0 0 40px 0;
-  padding: 20px;
-  color: white;
-
-  .work-exp-role {
-    margin: 5px 0;
-  }
-
-  .company-name {
-    margin: 5px 0;
-  }
-
-  .work-period {
-    margin: 5px 0;
-  }
-
-  .company-desc {
-    margin: 5px 0;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .work-exp-cards {
-    padding-left: 0;
-    width: 95%;
-  }
-}
-
-.work-exp-card:hover {
-  filter: drop-shadow(0 0 0.75rem $secondary-font-color);
 }

@@ -1,7 +1,8 @@
 # Portfolio: 
 
 ## Purpose of this App:
-- Demonstrate skills, experiences, and attributes.
+- Demonstrate skills, experiences, and attributes
+- Include nice animations 
 - Build a react application with multiple pages 
 - Use a dark theme 
 - Experiement with different React based technologies

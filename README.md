@@ -21,13 +21,13 @@
 - Custom Hooks
 
 ## TodDo
-- New animations in skills page
+- New animations in skills page ✅
 - Redo routes in a more traditional manner ✅
 - Optimize Images ✅
 - Update parallax scroll ✅
 - Update so it's a progressive web app
 - Clean up code with typescript, code splitting with custom hooks, SCSS modules & more ⚙️
-- Use react-colour-extractor package to add cool effect on skills page
+- Use react-colour-extractor package to add cool effect on skills page ✅
 
 ## Deployed on Netlify with custom domain:
 

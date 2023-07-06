@@ -13,7 +13,6 @@ const useSkills = () => {
   });
 
   const navigate = useNavigate();
-  // const skillCardStyle = {}
 
   const clearState = () => {
     const currentState: skills[] = [];
@@ -41,10 +40,7 @@ const useSkills = () => {
 
   useEffect(() => {
     console.log(skillLogoColors);
-    
   }, [skillLogoColors]);
-
-
 
   return {
     updateSkillSet,

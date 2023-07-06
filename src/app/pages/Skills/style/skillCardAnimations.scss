@@ -55,16 +55,41 @@ Animations must be global file
 New Skill Card animations
 ********************************************************************/
 
-$duration: 150ms;
-$inline: 10px;
-$block: 0;
+.skillCard {
+  --inline: 10px;
+  --block: 0;
+  --duration: 150ms;
+  --padding: 4px;
+  --border: 1px;
+  --radius: 10px;
+  background-color: $base-background-grey;
+  box-shadow: inset 0 0 0 var(--border) $secondary-font-color;
+  max-width: 85%;
+  width: 100%;
+  margin: 0 0 40px 0;
+  padding: var(--padding);
+  border-radius: calc(var(--radius) + var(--padding));
+  overflow: hidden;
+  display: flex;
+}
 
+.inner {
+  background-color: $base-background-grey;
+  z-index: 2;
+  padding: 10px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
 
 .tail {
-  transition: all $duration;
-  width: $inline;
-  height: $block;
-  border: solid $secondary-font-color 1px;
+  transition: all var(--duration);
+  width: var(--inline);
+  height: var(--block);
   position: absolute;
   top: 0;
   left: 0;
@@ -72,44 +97,41 @@ $block: 0;
 }
 
 .tail.top {
-  // background-image: linear-gradient(to right, var(--color1), var(--color2));
-  height: $inline;
-  width: $block;
-  transition-delay: calc($duration * 2);
+  height: var(--inline);
+  width: var(--block);
+  transition-delay: calc(var(--duration) * 2);
 }
 
 .tail.right {
   right: 0;
   left: unset;
-  background: --color2;
-  transition-delay: $duration;
+  transition-delay: var(--duration);
 }
 
 .tail.bottom {
-  height: $inline;
-  width: $block;
+  height: var(--inline);
+  width: var(--block);
   bottom: 0;
   right: 0;
   left: unset;
   top: unset;
-  // background-image: linear-gradient(to right, var(--color1), var(--color2));
   transition-delay: 0ms;
 }
 
 .tail.left {
   bottom: 0;
   top: unset;
-  transition-delay: calc($duration * 3);
+  transition-delay: calc(var(--duration) * 3);
 }
 
 .snake:where(.start, :hover) .tail.top {
-  transition-delay: $duration;
+  transition-delay: var(--duration);
 }
 .snake:where(.start, :hover) .tail.right {
-  transition-delay: calc($duration * 2);
+  transition-delay: calc(var(--duration) * 2);
 }
 .snake:where(.start, :hover) .tail.bottom {
-  transition-delay: calc($duration * 3);
+  transition-delay: calc(var(--duration) * 3);
 }
 .snake:where(.start, :hover) .tail.left {
   transition-delay: 0ms;
@@ -120,8 +142,8 @@ $block: 0;
 }
 
 .snake.start .tail {
-  $block: 0;
+  --block: 0;
 }
 .snake:hover .tail {
-  $block: 100%;
+  --block: 100%;
 }

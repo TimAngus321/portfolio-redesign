@@ -13,21 +13,42 @@ const SkillCard = (props: skills) => {
     <>
       <TransitionGroup
         component="li"
-        className={`${styles?.skillCard} snake`}
+        className={`skillCard snake`}
         onMouseOver={() => handleImageHover(image)}
       >
-        <div className="tail top" style={{backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[0]}, ${skillLogoColors?.colors[1]})`}}></div>
-        <div className="tail right" style={{backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[1]}, ${skillLogoColors?.colors[2]})`}}></div>
-        <div className="tail bottom" style={{backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[3]}, ${skillLogoColors?.colors[4]})`}}></div>
-        <div className="tail left" style={{backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[4]}, ${skillLogoColors?.colors[5]})`}}></div>
-
-        <img
-          loading="lazy"
-          className={`${styles?.skillImage} ${styleClass}`}
-          src={image}
-          alt={alt}
-        />
-        <h3 className={styles?.skillName}>{name}</h3>
+        <div className="inner">
+          <img
+            loading="lazy"
+            className={`${styles?.skillImage} ${styleClass}`}
+            src={image}
+            alt={alt}
+          />
+          <h3 className={styles?.skillName}>{name}</h3>
+        </div>
+        <div
+            className="tail top"
+            style={{
+              backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[0]}, ${skillLogoColors?.colors[1]})`,
+            }}
+          ></div>
+          <div
+            className="tail right"
+            style={{
+              backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[1]}, ${skillLogoColors?.colors[2]})`,
+            }}
+          ></div>
+          <div
+            className="tail bottom"
+            style={{
+              backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[2]}, ${skillLogoColors?.colors[3]})`,
+            }}
+          ></div>
+          <div
+            className="tail left"
+            style={{
+              backgroundImage: `linear-gradient(to right, ${skillLogoColors?.colors[4]}, ${skillLogoColors?.colors[5]})`,
+            }}
+          ></div>
       </TransitionGroup>
       <ColorExtractor src={selectedImage} getColors={getColors} />
     </>

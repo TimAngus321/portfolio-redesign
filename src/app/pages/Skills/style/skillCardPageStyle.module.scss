@@ -54,7 +54,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   margin: 0px;
-  position: sticky;
+  // position: sticky;
   width: 100%;
 }
 
@@ -67,7 +67,6 @@
 }
 
 .selectedSkillset {
-  width: 60%;
   color: $base-hover-color;
   font-weight: bold;
   text-align: center;
@@ -76,6 +75,10 @@
   justify-content: center;
   overflow: auto;
   max-height: 100vh;
+
+  ul {
+    list-style-type: none;  
+  }
 }
 
 .skillsBlurb {

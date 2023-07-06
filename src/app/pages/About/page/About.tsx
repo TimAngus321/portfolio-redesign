@@ -36,7 +36,7 @@ const About = () => {
           </p>
         </div>
         <div className={styles?.workExperienceContainer}>
-          <ul className="work-exp-cards">
+          <ul className={styles?.workExpCards}>
             {Object.keys(workExpInfo).map((key, i) => (
               <WorkExpCard
                 key={key}

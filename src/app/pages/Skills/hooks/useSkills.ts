@@ -28,15 +28,20 @@ const useSkills = () => {
 
   const handleImageHover = (image: string) => {
     setSelectedImage(image);
+    console.log("hovered ", image);
   };
 
   const getColors = (detectedColorCodes: string[]) => {
-    setSkillLogoColors((prevState) => ({
-      ...prevState,
+    setSkillLogoColors({
       imgUrl: selectedImage,
       colors: detectedColorCodes,
-    }));
+    });
   };
+
+  // debug skillColorEffect
+  // useEffect(() => {
+  //   console.log(skillLogoColors);
+  // }, [skillLogoColors]);
 
   return {
     updateSkillSet,
@@ -47,7 +52,7 @@ const useSkills = () => {
     selectedImage,
     skillLogoColors,
     setSelectedCard,
-    selectedCard
+    selectedCard,
   };
 };
 

@@ -1,24 +1,25 @@
 import useEmail from "../hooks/useEmail";
+import styles from '../style/contactStyle.module.scss';
 
 const ContactMe = () => {
   const { onSubmit, inputs, handleChange, form } = useEmail();
 
   return (
-    <div className="page-container-fixed">
-      <div className="contact-component">
-        <div className="form-item">
-          <h1 className="contact-title">Contact Me</h1>
-          <p className="contact-blurb">
+    <div className={styles?.contactPageContainerFixed}>
+      <div className={styles?.contactComponent}>
+        <div className={styles?.formItem}>
+          <h1 className={styles?.contactTitle}>Contact Me</h1>
+          <p className={styles?.contactBlurb}>
             Please feel free to contact me regarding React, Javascript/Typescript, Shopify
             and Rails projects and positions. Send me a message with this form
             and I'll let you know if I can help you with your project or be a good fit for your company.
           </p>
-          <form className="contact-form">
-            <ul className="contact-form-ul">
-              <div className="name-and-email">
-                <li className="name">
+          <form className={styles?.contactForm}>
+            <ul className={styles?.contactFormUl}>
+              <div className={styles?.nameAndEmail}>
+                <li className={styles?.name}>
                   <input
-                    className="name-input"
+                    className={styles?.nameInput}
                     type="text"
                     name="name"
                     placeholder="Name"
@@ -26,9 +27,9 @@ const ContactMe = () => {
                     onChange={handleChange}
                   />
                 </li>
-                <li className="email">
+                <li className={styles?.email}>
                   <input
-                    className="email-input"
+                    className={styles?.emailInput}
                     name="email"
                     placeholder="Email"
                     value={inputs?.email}
@@ -36,18 +37,18 @@ const ContactMe = () => {
                   />
                 </li>
               </div>
-              <li className="subject">
+              <li className={styles?.subject}>
                 <input
-                  className="subject-input"
+                  className={styles?.subjectInput}
                   name="subject"
                   placeholder="Subject"
                   value={inputs?.subject}
                   onChange={handleChange}
                 />
               </li>
-              <li className="message">
+              <li className={styles?.message}>
                 <textarea
-                  className="message-input"
+                  className={styles?.messageInput}
                   name="message"
                   placeholder="Message"
                   value={inputs?.message}
@@ -55,11 +56,11 @@ const ContactMe = () => {
                 />
               </li>
             </ul>
-            <div className="btn-container">
+            <div className={styles?.btnContainer}>
               <button
                 ref={form}
                 onClick={onSubmit}
-                className="contact-btn"
+                className="default-btn"
                 type="submit"
                 value="Send"
               >Send</button>

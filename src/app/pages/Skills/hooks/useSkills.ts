@@ -28,7 +28,6 @@ const useSkills = () => {
 
   const handleImageHover = (image: string) => {
     setSelectedImage(image);
-    console.log("hovered ", image);
   };
 
   const getColors = (detectedColorCodes: string[]) => {

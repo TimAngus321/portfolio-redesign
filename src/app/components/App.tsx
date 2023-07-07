@@ -1,9 +1,9 @@
 
 import './App.scss';
 import NavBar from './NavigationBar/NavBar'
-import Hamburger from './Hamburger/index.js';
+import Hamburger from './Hamburger/hamburger-menu';
 import { useState, useRef } from 'react';
-import Menu from './Menu/index.js';
+import Menu from './Menu/Menu';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter} from "react-router-dom";

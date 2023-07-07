@@ -37,7 +37,7 @@ const reactProjects = [
     techTitle: "Tech Used",
     techStack:
       "React, SCSS, Typescript, Quote Loop, CSS Transition, SCSS modules and figma. Design based off an Awwards winner.",
-    link: "www.tim-angus.com",
+    link: "/home",
     img: personalPortfolioImg,
   },
   {

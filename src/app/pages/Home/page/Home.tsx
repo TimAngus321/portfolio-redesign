@@ -2,12 +2,12 @@ import QuoteLoop from "../components/quote-text-loop";
 import vinylPlayer from "../images/vinylPlayer.gif";
 import useHome from "../hooks/useHome";
 import DancingLines from "react-dancing-lines";
-import styles from '../style/homeStyle.module.scss';
+import styles from "../style/homeStyle.module.scss";
 
 const Home = () => {
   const { navigate } = useHome();
   return (
-    <div className={styles?.pageContainerFixedHome}>
+    <section className={styles?.pageContainerFixedHome}>
       <DancingLines backgroundColor="rgb(30,30,30)" />
       <div className={styles?.photoQuote}>
         <div className={styles?.allHeadingsBtn}>
@@ -28,8 +28,8 @@ const Home = () => {
         </div> 
         */}
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default Home;

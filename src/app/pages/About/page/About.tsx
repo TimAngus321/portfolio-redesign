@@ -7,21 +7,21 @@ const About = () => {
   const { navigate } = useAbout();
 
   return (
-    <div className={styles?.pageContainerAbout}>
+    <section className={styles?.pageContainerAbout}>
       <div className={styles?.aboutMeSubContainer}>
-        <div className={styles?.aboutMeContainer}>
+        <header className={styles?.aboutMeContainer}>
           <h1 className={styles?.aboutTitle}>About Me</h1>
           <p className={styles?.aboutMeBlurb}>
             Le Wagon alumni that learnt full-stack development with the Rails
             framework. Since then I have continued delving deeper into
-            Javascript and building projects with React, React Native, Express
+            Javascript/Typescript and building projects with React, React Native, Express
             and Shopify.
             <br />
             <br />
-            I've worked fulltime as a full-stack developer for Gavel, MilkRun
-            and Merconic as well as freelance for various clients. I have used a
-            variety technologies and you can see what technologies I use{" "}
-            <span className="contact-link" onClick={(e) => navigate("/skills")}>
+            I've worked fulltime as a full-stack developer for Gavel, MilkRun,
+            Merconic and freelance for various clients using a 
+            variety of technologies and that you can see {" "}
+            <span className={styles?.textLink} onClick={() => navigate("/skills")}>
               here
             </span>
             .
@@ -34,7 +34,7 @@ const About = () => {
             To keep my mind sharp I enjoy reading news, dev articles, novels and
             watching documenteries.{" "}
           </p>
-        </div>
+        </header>
         <div className={styles?.workExperienceContainer}>
           <ul className={styles?.workExpCards}>
             {Object.keys(workExpInfo).map((key, i) => (
@@ -50,7 +50,7 @@ const About = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

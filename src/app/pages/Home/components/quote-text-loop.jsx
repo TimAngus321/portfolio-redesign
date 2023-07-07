@@ -16,7 +16,6 @@ const Section = cxs("div")({
 class QuoteLoop extends React.PureComponent {
   render() {
     return (
-      // <div>
       <Section>
         <Quotes>
           <span>
@@ -31,7 +30,6 @@ class QuoteLoop extends React.PureComponent {
           </TextLoop>
         </Quotes>
       </Section>
-      // </div>
     );
   }
 }

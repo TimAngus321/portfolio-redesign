@@ -1,12 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
 const useSkills = () => {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
-
-    return {
-        navigate
-    }
-}
+  return {
+    navigate,
+  };
+};
 
 export default useSkills;

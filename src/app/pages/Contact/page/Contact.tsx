@@ -1,19 +1,22 @@
 import useEmail from "../hooks/useEmail";
-import styles from '../style/contactStyle.module.scss';
+import styles from "../style/contactStyle.module.scss";
 
 const ContactMe = () => {
   const { onSubmit, inputs, handleChange, form } = useEmail();
 
   return (
-    <div className={styles?.contactPageContainerFixed}>
+    <section className={styles?.contactPageContainerFixed}>
       <div className={styles?.contactComponent}>
         <div className={styles?.formItem}>
-          <h1 className={styles?.contactTitle}>Contact Me</h1>
-          <p className={styles?.contactBlurb}>
-            Please feel free to contact me regarding React, Javascript/Typescript, Shopify
-            and Rails projects and positions. Send me a message with this form
-            and I'll let you know if I can help you with your project or be a good fit for your company.
-          </p>
+          <header>
+            <h1 className={styles?.contactTitle}>Contact Me</h1>
+            <p className={styles?.contactBlurb}>
+              Please feel free to contact me regarding React,
+              Javascript/Typescript, Shopify and Rails projects and positions.
+              Send me a message with this form and I'll let you know if I can
+              help you with your project or be a good fit for your company.
+            </p>
+          </header>
           <form className={styles?.contactForm}>
             <ul className={styles?.contactFormUl}>
               <div className={styles?.nameAndEmail}>
@@ -63,13 +66,15 @@ const ContactMe = () => {
                 className="default-btn"
                 type="submit"
                 value="Send"
-              >Send</button>
+              >
+                Send
+              </button>
             </div>
           </form>
         </div>
         <div className="map"></div>
       </div>
-    </div>
+    </section>
   );
 };
 

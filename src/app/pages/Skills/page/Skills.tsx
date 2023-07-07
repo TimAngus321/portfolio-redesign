@@ -1,30 +1,30 @@
-import backendSkillSet from "../data/backend-skills";
-import shopifySkillSet from "../data/shopify-skills";
-import developingSkills from "../data/developing-skills";
-import hostingUsed from "../data/hosting-used";
-import mobileSkillset from "../data/mobile-skills";
-import languages from "../data/languages";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import SkillCard from "../components/SkillCard";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-import useSkills from "../hooks/useSkills";
+import backendSkillSet from "../data/backend-skills";
+import developingSkills from "../data/developing-skills";
 import frontendSkillSet from "../data/front-end-skills";
+import hostingUsed from "../data/hosting-used";
+import languages from "../data/languages";
+import mobileSkillset from "../data/mobile-skills";
+import shopifySkillSet from "../data/shopify-skills";
+import useSkills from "../hooks/useSkills";
 import "../style/skillCardAnimations.scss";
 import skillPageStyle from "../style/skillCardPageStyle.module.scss";
-import colorExtractor from "react-color-extractor";
 
 const Skills = () => {
   const { skillSet, updateSkillSet, navigate } = useSkills();
 
   return (
     <section className={skillPageStyle?.pageContainerSkills}>
-      <main className={skillPageStyle?.skillsContainer}>
+      <div className={skillPageStyle?.skillsContainer}>
         <div className={skillPageStyle?.selectSkillsContainer}>
           <div className={skillPageStyle?.selectSkills}>
             <header>
-              <h2 className={skillPageStyle?.skillsTitle}>Tech Stack</h2>
-            </header>
+              <h1 className={skillPageStyle?.skillsTitle}>Tech Stack</h1>
+            
             <p className={skillPageStyle?.skillsBlurb}>
-              Feel free to check out my tech stack and{" "}
+              Feel free to check out what I'm learning, my current tech stack
+              and{" "}
               <span
                 className={skillPageStyle?.contactLink}
                 onClick={() => navigate("/work")}
@@ -32,15 +32,17 @@ const Skills = () => {
                 projects I've built
               </span>{" "}
               using the following tech. If you use these technologies in your
-              projects or company and need help feel free to get in{" "}
+              projects or company and need a dev or just an extra pair of hands
+              feel free to get in{" "}
               <span
                 className={skillPageStyle?.contactLink}
                 onClick={() => navigate("/contact")}
               >
-                contact{" "}
-              </span>{" "}
+                contact
+              </span>
               .
             </p>
+            </header>
             <div className={skillPageStyle?.aboutMySkills}>
               <button
                 className="default-btn"
@@ -113,7 +115,7 @@ const Skills = () => {
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </section>
   );
 };

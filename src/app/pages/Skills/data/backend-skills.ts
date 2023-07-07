@@ -1,9 +1,9 @@
-import prismaLogo from "../../../../assets/skillsImages/backendLogos/prismaLogo.svg";
-import nodejsLogo from "../../../../assets/skillsImages/backendLogos/nodejs-original.svg";
 import expressLogo from "../../../../assets/skillsImages/backendLogos/express-original.svg";
-import railsLogo from "../../../../assets/skillsImages/backendLogos/rails-plain.svg";
-import postgresLogo from "../../../../assets/skillsImages/backendLogos/postgresql-original.svg";
 import mysqlLogo from "../../../../assets/skillsImages/backendLogos/mysql-original.svg";
+import nodejsLogo from "../../../../assets/skillsImages/backendLogos/nodejs-original.svg";
+import postgresLogo from "../../../../assets/skillsImages/backendLogos/postgresql-original.svg";
+import prismaLogo from "../../../../assets/skillsImages/backendLogos/prismaLogo.svg";
+import railsLogo from "../../../../assets/skillsImages/backendLogos/rails-plain.svg";
 
 const backendSkillSet = [
   {

@@ -35,7 +35,7 @@
   }
 
   .sticky {
-    margin-left: 1.5rem;
+    margin-left: .5rem;
     font-size: 12px;
   }
 }
@@ -100,15 +100,17 @@
   color: $base-hover-color;
   justify-content: center;
   text-align: center;
-  height: auto;
   max-width: 100%;
   align-self: center;
+  font-weight: 500;
+  font-size: 40px;
 }
 
 @media only screen and (max-width: 900px) {
   .workTitle {
     display: flex;
     align-items: flex-start;
+    font-size: 20px;
   }
 }
 

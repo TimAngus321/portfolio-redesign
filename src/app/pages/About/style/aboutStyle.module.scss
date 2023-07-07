@@ -1,4 +1,4 @@
-@import '../../../globalStyle/colours.scss';
+@import "../../../globalStyle/colours.scss";
 
 .pageContainerAbout {
   display: flex;
@@ -31,6 +31,8 @@
   width: 100%;
   justify-content: flex-start;
   margin: 60px 0 0 20px;
+  font-weight: 500;
+  font-size: 40px;
 }
 
 .aboutBtnInfoContainer {
@@ -68,6 +70,10 @@
   padding-right: 20px;
 }
 
+.textLink {
+  color: $base-hover-color;
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 900px) {
   .pageContainerAbout {

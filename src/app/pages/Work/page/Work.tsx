@@ -25,7 +25,7 @@ const Work = () => {
   };
 
   return (
-    <div className={styles?.pageContainerScrollWork}>
+    <section className={styles?.pageContainerScrollWork}>
       <div className={styles?.workContainer}>
         <Parallax
           pages={17}
@@ -43,13 +43,13 @@ const Work = () => {
             speed={0.5}
             className={styles?.workTitle}
           >
-            <div className={styles?.scrollText}>
-              <p>Previous Work & Personal Projects</p>
+            <header className={styles?.scrollText}>
+              <h1 className={styles?.workTitle}>Previous Work & Personal Projects</h1>
               <FontAwesomeIcon
                 className={styles?.workPageArrow}
                 icon={faArrowDown}
               />
-            </div>
+            </header>
           </ParallaxLayer>
 
           <ParallaxLayer
@@ -188,7 +188,7 @@ const Work = () => {
           ))}
         </Parallax>
       </div>
-    </div>
+    </section>
   );
 };
 

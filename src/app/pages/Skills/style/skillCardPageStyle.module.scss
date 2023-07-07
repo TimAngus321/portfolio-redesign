@@ -18,7 +18,8 @@
 
 .skillsTitle {
   color: $base-hover-color;
-  justify-content: center;
+  font-weight: 500;
+  font-size: 40px;
 }
 
 .revealedSkillsContainer {
@@ -115,7 +116,9 @@
   .skillsTitle {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
+    margin-top: 50px;
   }
 
   .revealedSkillsContainer {

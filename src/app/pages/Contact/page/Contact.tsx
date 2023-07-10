@@ -5,7 +5,7 @@ const ContactMe = () => {
   const { onSubmit, inputs, handleChange, form } = useEmail();
 
   return (
-    <section className={styles?.contactPageContainerFixed}>
+    <section className={styles?.contactPageContainer}>
       <div className={styles?.contactComponent}>
         <div className={styles?.formItem}>
           <header>

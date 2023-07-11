@@ -11,14 +11,13 @@
 - Typescript
 - Javascript
 - SCSS modules
+- Custom Hooks
 - HTML
 - EmailJS
 - CSS Transition
 - Media Queries
 - Key Frames
 - Yarn
-
-- Custom Hooks
 
 - ## Deployed on Netlify with custom domain:
 

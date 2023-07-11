@@ -21,9 +21,9 @@
       "purpose": "any maskable"
     }, 
     {
-      "src": "Icons/favicon512.webp",
+      "src": "Icons/favicon512.png",
       "sizes": "512x512",
-      "type": "image/webp",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ],

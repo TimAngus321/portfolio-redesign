@@ -1,6 +1,8 @@
 {
   "short_name": "Tim's Portfolio",
   "name": "Tim's Personal Portfolio",
+  "scope": ".",
+  "start_url": "/",
   "icons": [
     {
       "src": "Icons/favicon144.webp",
@@ -27,8 +29,7 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": "/",
-  "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "display": "standalone"
 }

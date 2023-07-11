@@ -19,7 +19,7 @@
 - Key Frames
 - Yarn
 
-- ## Deployed on Netlify with custom domain:
+## Deployed on Netlify with custom domain:
 
 [Check it out here ](https://www.tim-angus.com/)
 

@@ -26,7 +26,7 @@
 - Redo routes in a more traditional manner ✅
 - Optimize Images ✅
 - Update parallax scroll ✅
-- Update so it's a progressive web app
+- Update so it's a progressive web app ✅
 - Clean up code with typescript, code splitting with custom hooks, SCSS modules & more ⚙️
 - Use react-colour-extractor package to add cool effect on skills page ✅
 

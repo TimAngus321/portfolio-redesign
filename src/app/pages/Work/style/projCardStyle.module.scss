@@ -89,7 +89,7 @@
 .mobileCard {
   display: flex;
   justify-content: flex-end;
-  max-width: 75%;
+  max-width: 499px;
   width: 75%;
   min-width: 5%;
   margin-right: 15%;
@@ -113,7 +113,6 @@
 
 @media only screen and (max-width: 900px) {
   .mobileCard {
-    margin-right: 5%;
     width: 90%;
     .projCard {
       margin-right: 0;

@@ -2,12 +2,18 @@ import workExpInfo from "../data/work-exp-info";
 import WorkExpCard from "../components/work-exp-card";
 import useAbout from "../hooks/useAbout";
 import styles from "../style/aboutStyle.module.scss";
+import SEO from '../../../components/SEOComponent/SEO';
 
 const About = () => {
   const { navigate } = useAbout();
 
   return (
     <section className={styles?.pageContainerAbout}>
+      <SEO
+        title={`Tim Angus's Porftolio - About Page`}
+        description={`About page of Timothy Angus's portfolio. A brief paragraph about Tim Angus and links to my previous employers company websites`}
+        link={`https://tim-angus.com/about`}
+        />
       <div className={styles?.aboutMeSubContainer}>
         <header className={styles?.aboutMeContainer}>
           <h1 className={styles?.aboutTitle}>About Me</h1>

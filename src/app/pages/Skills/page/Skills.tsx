@@ -10,12 +10,18 @@ import shopifySkillSet from "../data/shopify-skills";
 import useSkills from "../hooks/useSkills";
 import "../style/skillCardAnimations.scss";
 import skillPageStyle from "../style/skillCardPageStyle.module.scss";
+import SEO from '../../../components/SEOComponent/SEO';
 
 const Skills = () => {
   const { skillSet, updateSkillSet, navigate } = useSkills();
 
   return (
     <section className={skillPageStyle?.pageContainerSkills}>
+      <SEO
+        title={`Tim Angus's Porftolio - Skills Page`}
+        description={`Skill page of Timothy Angus's portfolio. Discover all of my technical skills with some fun animations`}
+        link={`https://tim-angus.com/skills`}
+        />
       <div className={skillPageStyle?.skillsContainer}>
         <div className={skillPageStyle?.selectSkillsContainer}>
           <div className={skillPageStyle?.selectSkills}>

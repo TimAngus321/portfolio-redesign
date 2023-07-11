@@ -1,11 +1,17 @@
 import useEmail from "../hooks/useEmail";
 import styles from "../style/contactStyle.module.scss";
+import SEO from '../../../components/SEOComponent/SEO';
 
 const ContactMe = () => {
   const { onSubmit, inputs, handleChange, form } = useEmail();
 
   return (
     <section className={styles?.contactPageContainer}>
+      <SEO
+        title={`Tim Angus's Porftolio - Contact Page`}
+        description={`Contact page of Timothy Angus's portfolio. Use the contact form to get in contact with me regarding positions or freelance projects. Error handler uses toast notifcations to warn the user about issues and prevent spamming`}
+        link={`https://tim-angus.com/contact`}
+        />
       <div className={styles?.contactComponent}>
         <div className={styles?.formItem}>
           <header>

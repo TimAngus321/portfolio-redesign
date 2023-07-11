@@ -12,6 +12,7 @@ import expressProjects from "../data/express-project-data";
 import reactLogo from '../../../../assets/skillsImages/frontendLogos/react-original.svg';
 import railsLogo from '../../../../assets/skillsImages/backendLogos/rails-plain.svg';
 import expressLogo from '../../../../assets/skillsImages/backendLogos/express-original.svg';
+import SEO from '../../../components/SEOComponent/SEO';
 
 
 const Work = () => {
@@ -26,6 +27,11 @@ const Work = () => {
 
   return (
     <section className={styles?.pageContainerScrollWork}>
+      <SEO
+        title={`Tim Angus's Porftolio - Work Page`}
+        description={`Work page of Timothy Angus's portfolio. Discover all of my previous work and personal projects skills using a cool parallax scroll effect!`}
+        link={`https://tim-angus.com/work`}
+        />
       <div className={styles?.workContainer}>
         <Parallax
           pages={17}

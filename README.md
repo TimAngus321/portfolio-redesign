@@ -2,24 +2,27 @@
 
 ## Purpose of this App:
 - Demonstrate skills, experiences, and attributes
-- Include nice animations 
-- Build a react application with multiple pages 
-- Use a dark theme 
-- Experiement with different React based technologies
+- SPA with dark theme, animations and experiement with react packages
+- Make sure performance, accessibility, best practices and SEO are good
+- Make first PWA 
 
 ## Technologies Used:
 - React
-- SCSS
-- HTML
-- Javascript
 - Typescript
+- Javascript
+- SCSS modules
+- HTML
 - EmailJS
 - CSS Transition
 - Media Queries
 - Key Frames
 - Yarn
-- SCSS modules
+
 - Custom Hooks
+
+- ## Deployed on Netlify with custom domain:
+
+[Check it out here ](https://www.tim-angus.com/)
 
 ## TodDo
 - New animations in skills page ✅
@@ -29,8 +32,3 @@
 - Update so it's a progressive web app ✅
 - Clean up code with typescript, code splitting with custom hooks, SCSS modules & more ⚙️
 - Use react-colour-extractor package to add cool effect on skills page ✅
-
-## Deployed on Netlify with custom domain:
-
-[Check it out here ](https://www.tim-angus.com/)
-

@@ -1,5 +1,9 @@
 # Portfolio: 
 
+## Deployed on Netlify with custom domain:
+
+[Check it out here ](https://www.tim-angus.com/)
+
 ## Purpose of this App:
 - Demonstrate skills, experiences, and attributes
 - SPA with dark theme, animations and experiement with react packages
@@ -18,10 +22,6 @@
 - Media Queries
 - Key Frames
 - Yarn
-
-## Deployed on Netlify with custom domain:
-
-[Check it out here ](https://www.tim-angus.com/)
 
 ## TodDo
 - New animations in skills page ✅

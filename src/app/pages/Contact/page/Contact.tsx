@@ -2,8 +2,19 @@ import useEmail from "../hooks/useEmail";
 import styles from "../style/contactStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
 
+
 const ContactMe = () => {
-  const { onSubmit, inputs, handleChange, form } = useEmail();
+  const {
+    onSubmit,
+    inputs,
+    handleChange,
+    form,
+    emailInputfieldWarning,
+    nameEmpty,
+    emailEmpty,
+    subjectEmpty,
+    msgEmpty,
+  } = useEmail();
 
   return (
     <section className={styles?.contactPageContainer}>
@@ -28,7 +39,9 @@ const ContactMe = () => {
               <div className={styles?.nameAndEmail}>
                 <li className={styles?.name}>
                   <input
-                    className={styles?.nameInput}
+                    className={`${styles?.nameInput} ${
+                      nameEmpty ? styles?.redWarning : inputs?.name ? null : null
+                    }`}
                     type="text"
                     name="name"
                     placeholder="Name"
@@ -38,7 +51,9 @@ const ContactMe = () => {
                 </li>
                 <li className={styles?.email}>
                   <input
-                    className={styles?.emailInput}
+                    className={`${styles?.emailInput} ${
+                      emailInputfieldWarning ? styles?.emailWarning : null
+                    } ${emailEmpty ? styles?.redWarning : null} `}
                     name="email"
                     placeholder="Email"
                     value={inputs?.email}
@@ -48,7 +63,9 @@ const ContactMe = () => {
               </div>
               <li className={styles?.subject}>
                 <input
-                  className={styles?.subjectInput}
+                  className={`${styles?.subjectInput} ${
+                    subjectEmpty ? styles?.redWarning : null
+                  }`}
                   name="subject"
                   placeholder="Subject"
                   value={inputs?.subject}
@@ -57,7 +74,9 @@ const ContactMe = () => {
               </li>
               <li className={styles?.message}>
                 <textarea
-                  className={styles?.messageInput}
+                  className={`${styles?.messageInput} ${
+                    msgEmpty ? styles?.redWarning : null
+                  }`}
                   name="message"
                   placeholder="Message"
                   value={inputs?.message}

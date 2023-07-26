@@ -10,7 +10,7 @@ import {
 import { Icon } from "@iconify/react";
 import githubFilled from "@iconify/icons-codicon/github-inverted";
 import linkedinRect from "@iconify/icons-brandico/linkedin-rect";
-import styles from './navBarStyle.module.scss';
+import styles from "./navBarStyle.module.scss";
 
 function NavBar() {
   const navigate = useNavigate();
@@ -35,12 +35,15 @@ function NavBar() {
             <FontAwesomeIcon icon={faWrench} className={styles?.workIcon} />
           </li>
           <li className={styles?.contact} onClick={() => navigate("/contact")}>
-            <FontAwesomeIcon icon={faEnvelope} className={styles?.contactIcon} />
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              className={styles?.contactIcon}
+            />
           </li>
         </ul>
       }
       <ul className={styles?.socialMedia}>
-        <li className={styles?.github}>
+        <li>
           <a
             href="https://github.com/TimAngus321"
             target="_blank"
@@ -49,7 +52,7 @@ function NavBar() {
             <Icon icon={githubFilled} />
           </a>
         </li>
-        <li className="linkedin">
+        <li>
           <a
             href="https://www.linkedin.com/in/timothy-angus-b94969113/"
             target="_blank"

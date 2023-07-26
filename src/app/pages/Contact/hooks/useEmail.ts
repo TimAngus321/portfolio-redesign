@@ -5,17 +5,28 @@ import { inputs } from "../types/emailTypes";
 
 export default function useEmail() {
   toast.configure();
-  const [subCount, setSubCount] = useState<number>(0);
-  const [allowRedoMessage, setAllowRedoMessage] = useState<boolean>(false);
 
   const userID: string = process.env.REACT_APP_EMAILJS_USER_ID;
   const templateId: string = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
   const serviceID: string = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 
   const initial: Record<string, unknown> = {};
+  const emailReg: RegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
+  // old email validation regex - revert back if there's issues with streamlined version above
+  // const emailReg: RegExp =
+  //   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const form = useRef<HTMLButtonElement>(null);
   const [inputs, setInputs] = useState<inputs>(initial);
+  const [subCount, setSubCount] = useState<number>(0);
+  const [allowRedoMessage, setAllowRedoMessage] = useState<boolean>(false);
+  const [nameEmpty, setNameEmpty] = useState<boolean>(false);
+  const [emailEmpty, setEmailEmpty] = useState<boolean>(false);
+  const [subjectEmpty, setSubjectEmpty] = useState<boolean>(false);
+  const [msgEmpty, setMsgEmpty] = useState<boolean>(false);
+  const [emailInputfieldWarning, setEmailInputWarning] =
+    useState<boolean>(false);
 
   function handleChange(e: any) {
     e.preventDefault();
@@ -27,6 +38,31 @@ export default function useEmail() {
       ...inputs,
       [name]: value,
     });
+
+    // Must use e target so that state is updated immediately
+    if (e?.target?.name === "name" && e?.target?.value?.length !== 0)
+      setNameEmpty(false);
+
+    if (e?.target?.name === "email" && e?.target?.value?.length !== 0)
+      setEmailEmpty(false);
+
+    if (e?.target?.name === "email" && emailReg.test(e?.target?.value)) {
+      setEmailInputWarning(false);
+    } else if (e?.target?.name === "email" && e?.target?.value?.length === 0) {
+      setEmailInputWarning(false);
+    } else if (
+      e?.target?.name === "email" &&
+      e?.target?.value?.length !== 0 &&
+      !emailReg.test(e?.target?.value)
+    ) {
+      setEmailInputWarning(true);
+    }
+
+    if (e?.target?.name === "subject" && e?.target?.value?.length !== 0)
+      setSubjectEmpty(false);
+
+    if (e?.target?.name === "message" && e?.target?.value?.length !== 0)
+      setMsgEmpty(false);
   }
 
   function clearForm() {
@@ -44,7 +80,6 @@ export default function useEmail() {
 
         // After successful submission update submission count state
         setSubCount(subCount + 1);
-        console.log(subCount);
       })
       .catch((err) =>
         console.error("Submission Error. Error details: ", err, notifyFailure())
@@ -53,9 +88,6 @@ export default function useEmail() {
 
   const onSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-
-    const emailReg =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if (
       !inputs?.email ||
@@ -82,6 +114,39 @@ export default function useEmail() {
     } else {
       notifyMessageReceived();
     }
+
+    console.log(inputs);
+
+    // Name field check
+    if (!inputs?.name) {
+      setNameEmpty(true);
+    } else {
+      setNameEmpty(false);
+    }
+
+    // email field check
+    if (!inputs?.email) {
+      setEmailEmpty(true);
+      setEmailInputWarning(false);
+    } else if (!emailReg.test(inputs?.email)) {
+      setEmailInputWarning(true);
+    } else {
+      setEmailEmpty(false);
+    }
+
+    // subject field check
+    if (!inputs?.subject) {
+      setSubjectEmpty(true);
+    } else {
+      setSubjectEmpty(false);
+    }
+
+    // msg field check
+    if (!inputs?.message) {
+      setMsgEmpty(true);
+    } else {
+      setMsgEmpty(false);
+    }
   };
 
   const notifyErrors = () => {
@@ -95,19 +160,20 @@ export default function useEmail() {
     toast.success(`😀 Thank you ${inputs?.name} for your message!`, {
       position: toast.POSITION.BOTTOM_RIGHT,
       hideProgressBar: true,
+      autoClose: 20000,
     });
   };
 
   const notifyEmailIssue = () => {
     toast.warning(
-      `There is a problem with your email. Please check it is correct`,
+      `🕵🏾 There's a problem with your email. Please check it's correct.`,
       { position: toast.POSITION.BOTTOM_RIGHT, hideProgressBar: true }
     );
   };
 
   const notifyFailure = () => {
     toast.error(
-      `Unforutnately there was a problem sending your message. Please try again later.`,
+      `🤔 Unforutnately there was a problem sending your message. Please try again later.`,
       {
         position: toast.POSITION.BOTTOM_RIGHT,
         hideProgressBar: true,
@@ -152,5 +218,10 @@ export default function useEmail() {
     handleChange,
     clearForm,
     form,
+    emailInputfieldWarning,
+    nameEmpty,
+    emailEmpty,
+    subjectEmpty,
+    msgEmpty,
   };
 }

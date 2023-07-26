@@ -74,9 +74,9 @@
       }
 
       .workIcon {
-        // width: 100px;
+        width: 100px;
         position: absolute;
-        animation: crankIt 1s 1;
+        animation: crankIt 0.5s 1;
 
         @keyframes crankIt {
           0% {
@@ -97,7 +97,7 @@
       .techIcon {
         width: 100px;
         position: absolute;
-        animation: spinOut 1s 1;
+        animation: spinOut 0.5s 1;
         animation-timing-function: ease-out;
 
         @keyframes spinOut {
@@ -161,7 +161,9 @@
     display: flex;
     justify-content: center;
     color: $base-hover-color;
-    animation: fadeIn 2.5s 1;
+    animation: fadeIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
     text-decoration: none;
   }
 
@@ -172,7 +174,9 @@
     display: flex;
     justify-content: center;
     color: $base-hover-color;
-    animation: fadeIn 2.5s 1;
+    animation: fadeIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
     text-decoration: none;
   }
 
@@ -183,7 +187,9 @@
     display: flex;
     justify-content: center;
     color: $base-hover-color;
-    animation: fadeIn 1s 1;
+    animation: fadeIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
     text-decoration: none;
   }
 

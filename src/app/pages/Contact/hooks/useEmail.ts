@@ -115,8 +115,6 @@ export default function useEmail() {
       notifyMessageReceived();
     }
 
-    console.log(inputs);
-
     // Name field check
     if (!inputs?.name) {
       setNameEmpty(true);

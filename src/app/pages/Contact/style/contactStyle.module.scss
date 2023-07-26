@@ -48,8 +48,53 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+
+    &:focus {
+      outline: $base-hover-color solid 1px;
+      border: $base-hover-color solid 1px;
+    }
   }
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 40rem $secondary-background-black inset;
+}
+
+.redWarning {
+  border: $mar solid 1px !important;
+  outline: unset !important;
+  animation: redGlowWarning 1s infinite alternate ease-in-out;
+}
+
+@keyframes redGlowWarning {
+  from {
+    box-shadow: 0 0 1px -1px $mar;
+    }
+    to {
+    box-shadow: 0 0 5px 2px $mar;
+    }
+}
+
+.emailWarning {
+  border: $mellowYellow solid 1px !important;
+  outline: unset !important;
+  animation: emailGlowWarning 1s infinite alternate ease-in-out;
+}
+
+@keyframes emailGlowWarning {
+  from {
+    box-shadow: 0 0 1px -1px $mellowYellow;
+    }
+    to {
+    box-shadow: 0 0 5px 2px $mellowYellow;
+    }
+}
+
+
+
 
 .nameAndEmail {
   display: flex;

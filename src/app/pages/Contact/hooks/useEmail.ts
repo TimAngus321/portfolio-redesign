@@ -2,13 +2,14 @@ import { send } from "emailjs-com";
 import { toast } from "react-toastify";
 import { useState, useRef } from "react";
 import { inputs } from "../types/emailTypes";
+require 
 
 export default function useEmail() {
   toast.configure();
 
-  const userID: string = process.env.REACT_APP_EMAILJS_USER_ID;
-  const templateId: string = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-  const serviceID: string = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const publicKey: string|undefined = process.env.REACT_APP_PUBLIC_KEY
+  const templateId: string = process.env.REACT_APP_EMAILJS_TEMPLATE_ID
+  const serviceID: string = process.env.REACT_APP_EMAILJS_SERVICE_ID
 
   const initial: Record<string, unknown> = {};
   const emailReg: RegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
@@ -73,7 +74,7 @@ export default function useEmail() {
   }
 
   const sendEmail = () => {
-    send(serviceID, templateId, inputs, userID)
+    send(serviceID, templateId, inputs, publicKey)
       .then((res) => {
         // emailjs.send.reset();
         console.log(res.text);

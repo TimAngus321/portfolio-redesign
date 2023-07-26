@@ -2,7 +2,6 @@ import { send } from "emailjs-com";
 import { toast } from "react-toastify";
 import { useState, useRef } from "react";
 import { inputs } from "../types/emailTypes";
-require 
 
 export default function useEmail() {
   toast.configure();

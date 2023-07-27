@@ -6,7 +6,7 @@ import { inputs } from "../types/emailTypes";
 export default function useEmail() {
   toast.configure();
 
-  const publicKey: string | undefined = process.env.REACT_APP_PUBLIC_KEY;
+  const publicKey: string|undefined = process.env.REACT_APP_PUBLIC_KEY;
   const templateId: string = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
   const serviceID: string = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 
@@ -130,7 +130,7 @@ export default function useEmail() {
     if (!inputs?.email) {
       setEmailEmpty(true);
       setEmailInputWarning(false);
-    } else if (!emailReg.test(inputs?.email)) {
+    } else if (!inputs?.email && !emailReg.test(inputs?.email)) {
       setEmailInputWarning(true);
     } else {
       setEmailEmpty(false);
@@ -162,7 +162,7 @@ export default function useEmail() {
     toast.success(`😀 Thank you ${inputs?.name} for your message!`, {
       position: toast.POSITION.TOP_RIGHT,
       hideProgressBar: true,
-      autoClose: 20000,
+      autoClose: 15000,
     });
   };
 
@@ -185,7 +185,7 @@ export default function useEmail() {
 
   useEffect(() => {
     if (checkingEmail) {
-    toast.warning(`👀 Just checking to see if your email looks right...`, {
+    toast.warning(`👀 I'm not sure your email looks right... Did you make a typo?`, {
       position: toast.POSITION.TOP_RIGHT,
       hideProgressBar: true,
       autoClose: 2500,
@@ -196,7 +196,7 @@ export default function useEmail() {
 
   useEffect(() => {
     if (possValidEmail) {
-    toast.success(`👍 Email looks right!`, {
+    toast.success(`Email is formatted correctly! Nice 👍`, {
       position: toast.POSITION.TOP_RIGHT,
       hideProgressBar: true,
       autoClose: 2500,
@@ -221,7 +221,7 @@ export default function useEmail() {
       {
         position: toast.POSITION.TOP_RIGHT,
         hideProgressBar: true,
-        autoClose: 20000,
+        autoClose: 15000,
       }
     );
   };
@@ -232,7 +232,7 @@ export default function useEmail() {
       {
         position: toast.POSITION.TOP_RIGHT,
         hideProgressBar: true,
-        autoClose: 20000,
+        autoClose: 15000,
       }
     );
   };

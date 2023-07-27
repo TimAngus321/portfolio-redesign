@@ -17,7 +17,9 @@ const Router = () => {
   return (
     <div className="App">
       <HelmetProvider context={helmetContext}>
-        <ToastContainer />
+        <ToastContainer
+          newestOnTop={true}
+         />
         <BrowserRouter>
           <NavBar />
           <PageRoutes />

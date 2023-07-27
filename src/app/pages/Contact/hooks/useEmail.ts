@@ -1,14 +1,14 @@
 import { send } from "emailjs-com";
 import { toast } from "react-toastify";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { inputs } from "../types/emailTypes";
 
 export default function useEmail() {
   toast.configure();
 
-  const publicKey: string|undefined = process.env.REACT_APP_PUBLIC_KEY
-  const templateId: string = process.env.REACT_APP_EMAILJS_TEMPLATE_ID
-  const serviceID: string = process.env.REACT_APP_EMAILJS_SERVICE_ID
+  const publicKey: string | undefined = process.env.REACT_APP_PUBLIC_KEY;
+  const templateId: string = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const serviceID: string = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 
   const initial: Record<string, unknown> = {};
   const emailReg: RegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
@@ -27,6 +27,8 @@ export default function useEmail() {
   const [msgEmpty, setMsgEmpty] = useState<boolean>(false);
   const [emailInputfieldWarning, setEmailInputWarning] =
     useState<boolean>(false);
+  const [checkingEmail, setCheckingEmail] = useState<boolean>();
+  const [possValidEmail, setPossValidEmail] = useState<boolean>();
 
   function handleChange(e: any) {
     e.preventDefault();
@@ -48,6 +50,7 @@ export default function useEmail() {
 
     if (e?.target?.name === "email" && emailReg.test(e?.target?.value)) {
       setEmailInputWarning(false);
+      setPossValidEmail(true);
     } else if (e?.target?.name === "email" && e?.target?.value?.length === 0) {
       setEmailInputWarning(false);
     } else if (
@@ -56,6 +59,7 @@ export default function useEmail() {
       !emailReg.test(e?.target?.value)
     ) {
       setEmailInputWarning(true);
+      setCheckingEmail(true);
     }
 
     if (e?.target?.name === "subject" && e?.target?.value?.length !== 0)
@@ -149,14 +153,14 @@ export default function useEmail() {
 
   const notifyErrors = () => {
     toast.error("😨 Please fill in all the form fields!", {
-      position: toast.POSITION.BOTTOM_RIGHT,
+      position: toast.POSITION.TOP_RIGHT,
       hideProgressBar: true,
     });
   };
 
   const notifySuccess = () => {
     toast.success(`😀 Thank you ${inputs?.name} for your message!`, {
-      position: toast.POSITION.BOTTOM_RIGHT,
+      position: toast.POSITION.TOP_RIGHT,
       hideProgressBar: true,
       autoClose: 20000,
     });
@@ -165,7 +169,7 @@ export default function useEmail() {
   const notifyEmailIssue = () => {
     toast.warning(
       `🕵🏾 There's a problem with your email. Please check it's correct.`,
-      { position: toast.POSITION.BOTTOM_RIGHT, hideProgressBar: true }
+      { position: toast.POSITION.TOP_RIGHT, hideProgressBar: true }
     );
   };
 
@@ -173,17 +177,40 @@ export default function useEmail() {
     toast.error(
       `🤔 Unforutnately there was a problem sending your message. Please try again later.`,
       {
-        position: toast.POSITION.BOTTOM_RIGHT,
+        position: toast.POSITION.TOP_RIGHT,
         hideProgressBar: true,
       }
     );
   };
 
+  useEffect(() => {
+    if (checkingEmail) {
+    toast.warning(`👀 Just checking to see if your email looks right...`, {
+      position: toast.POSITION.TOP_RIGHT,
+      hideProgressBar: true,
+      autoClose: 2500,
+    });
+    setPossValidEmail(false)
+  }
+  }, [checkingEmail]);
+
+  useEffect(() => {
+    if (possValidEmail) {
+    toast.success(`👍 Email looks right!`, {
+      position: toast.POSITION.TOP_RIGHT,
+      hideProgressBar: true,
+      autoClose: 2500,
+    });
+    setCheckingEmail(false)
+  }
+
+}, [possValidEmail]);
+
   // Stop allowing submissions after 2 to prevent spamming and overloading emailJS. If they need to correct something allow them to click within the notification to send again.
 
   const notifyMessageReceived = () => {
     toast.warning(`🙏 I have received your message. I will get back to you!`, {
-      position: toast.POSITION.BOTTOM_RIGHT,
+      position: toast.POSITION.TOP_RIGHT,
       hideProgressBar: true,
     });
   };
@@ -192,7 +219,7 @@ export default function useEmail() {
     toast.success(
       `😀 Thank you ${inputs?.name} for your message!. I will get back to you! Your next message will be your last attempt. Take care!`,
       {
-        position: toast.POSITION.BOTTOM_RIGHT,
+        position: toast.POSITION.TOP_RIGHT,
         hideProgressBar: true,
         autoClose: 20000,
       }
@@ -203,7 +230,7 @@ export default function useEmail() {
     toast.warning(
       `🙏 This was your last attempt to redo the message. If you still made an error don't worry I will get back to you regardless`,
       {
-        position: toast.POSITION.BOTTOM_RIGHT,
+        position: toast.POSITION.TOP_RIGHT,
         hideProgressBar: true,
         autoClose: 20000,
       }

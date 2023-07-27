@@ -19,11 +19,13 @@ const useSkills = () => {
     setSkillSet(currentState);
   };
 
-  const updateSkillSet = (skillSet: skills[]) => {
+  const sleep = async (delay: number) =>
+    new Promise((resolve) => setTimeout(resolve, delay));
+
+  const updateSkillSet = async (skillSet: skills[]) => {
     clearState();
-    setTimeout(() => {
-      setSkillSet(skillSet);
-    }, 500);
+    await sleep(500);
+    setSkillSet(skillSet);
   };
 
   const handleImageHover = (image: string) => {

@@ -66,7 +66,7 @@ input:-webkit-autofill:focus {
 .redWarning {
   border: $mar solid 1px !important;
   outline: unset !important;
-  animation: redGlowWarning 1s infinite alternate ease-in-out;
+  animation: redGlowWarning 1s 6 alternate ease-in-out;
 }
 
 @keyframes redGlowWarning {
@@ -81,7 +81,7 @@ input:-webkit-autofill:focus {
 .emailWarning {
   border: $mellowYellow solid 1px !important;
   outline: unset !important;
-  animation: emailGlowWarning 1s infinite alternate ease-in-out;
+  animation: emailGlowWarning 1s 6 alternate ease-in-out;
 }
 
 @keyframes emailGlowWarning {
@@ -92,8 +92,6 @@ input:-webkit-autofill:focus {
     box-shadow: 0 0 5px 2px $mellowYellow;
     }
 }
-
-
 
 
 .nameAndEmail {

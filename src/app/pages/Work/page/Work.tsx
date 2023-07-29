@@ -82,7 +82,6 @@ const Work = () => {
               <ProjectCard
                 className={`${styles?.projectCard} ${styles?.parallax}`}
                 key={key}
-                uniqueInfo={reactProjects[i]?.uniqueInfo}
                 name={reactProjects[i]?.name}
                 desc={reactProjects[i]?.desc}
                 techTitle={reactProjects[i]?.techTitle}
@@ -152,7 +151,6 @@ const Work = () => {
             >
               <ProjectCard
                 key={key}
-                uniqueInfo={expressProjects[i]?.uniqueInfo}
                 name={expressProjects[i]?.name}
                 desc={expressProjects[i]?.desc}
                 techTitle={expressProjects[i]?.techTitle}

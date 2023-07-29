@@ -1,5 +1,5 @@
 export interface personalProj {
-    uniqueInfo: string | undefined | null;
+    uniqueInfo?: string;
     name: string;
     desc: string;
     techTitle: string;

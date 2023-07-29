@@ -3,12 +3,17 @@ import styles from "../style/projCardStyle.module.scss";
 import useProjCard from "../hooks/useProjCard";
 
 const ProjectCard = (props: personalProj) => {
-  const { toggleStyle, link, name, desc, techTitle, techStack, img, uniqueInfo } =
-    useProjCard(props);
+  const {
+    toggleStyle,
+    link,
+    name,
+    desc,
+    techTitle,
+    techStack,
+    img,
+    uniqueInfo,
+  } = useProjCard(props);
 
-    console.log(props);
-
-  // ToDo wrap anchor tag around img only. You'll need to redo styling.
   return (
     <div className={toggleStyle()}>
       <a

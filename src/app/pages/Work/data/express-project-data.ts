@@ -3,7 +3,6 @@ import gavelLandingPage from "../../../../assets/workImages/gavelLandingPageImg.
 
 const expressProjects = [
   {
-    uniqueInfo: "",
     name: "Company: Costaboard (Backend)",
     desc: "Express App Deployed on AWS Lambda. Debugged & customised a Private Shopify App repsonsible for fulillment",
     techTitle: "Tech Used",
@@ -12,7 +11,6 @@ const expressProjects = [
     img: costaboardImg,
   },
   {
-    uniqueInfo: "",
     name: "Comapny: Gavel (Backend)",
     desc: "Fixed bugs, built and debugged APIs & socket events, added queries and added to schema",
     techTitle: "Tech Used",

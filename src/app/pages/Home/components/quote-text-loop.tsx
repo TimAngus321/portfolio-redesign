@@ -1,4 +1,3 @@
-import React from "react";
 import TextLoop from "./TextLoop.jsx";
 import cxs from "cxs/component";
 import styles from "./quoteLoopStyle.module.scss";
@@ -13,8 +12,7 @@ const Section = cxs("div")({
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
 });
 
-class QuoteLoop extends React.PureComponent {
-  render() {
+const QuoteLoop = () => {
     return (
       <Section>
         <Quotes>
@@ -31,7 +29,6 @@ class QuoteLoop extends React.PureComponent {
         </Quotes>
       </Section>
     );
-  }
 }
 
 export default QuoteLoop;

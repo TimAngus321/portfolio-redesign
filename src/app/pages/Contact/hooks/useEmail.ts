@@ -7,10 +7,11 @@ import axios from 'axios';
 export default function useEmail() {
   toast.configure();
 
-  const publicKey: string|undefined = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+  // Remember to define types for new .env vars in environment.d.ts flle
+  const publicKey: string = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
   const templateId: string = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
   const serviceID: string = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-  const abstractAPIKey: string|undefined = process.env.REACT_APP_ABSTRACT_API_KEY;
+  const abstractAPIKey: string = process.env.REACT_APP_ABSTRACT_API_KEY;
   const abstractURL: string =`https://emailvalidation.abstractapi.com/v1/?api_key=${abstractAPIKey}`
 
   const initial: Record<string, unknown> = {};
@@ -110,14 +111,11 @@ export default function useEmail() {
   const emailValidation = async (email: string|undefined) => {
     try {
       const response = await axios.get(`${abstractURL}&email=${email}`);
-      console.log(response)
       return response?.data?.deliverability;
     } catch (err) {
       throw err
     }
   }
-
-  
 
   const onSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -200,7 +198,7 @@ export default function useEmail() {
   };
 
   const notifyEmailInalid = () => {
-    toast.error(`❌ Your email: ${inputs?.email} is invalid and undeliverable! Please check for errors or try a different email.`, {
+    toast.error(`❌ I couldn't validate your email: ${inputs?.email} and unfortunately it's undeliverable! Please check for errors or try a different email.`, {
       position: toast.POSITION.TOP_RIGHT,
       hideProgressBar: true,
       autoClose: 15000,

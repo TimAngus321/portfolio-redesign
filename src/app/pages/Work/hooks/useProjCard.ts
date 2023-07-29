@@ -2,7 +2,7 @@ import styles from "../style/projCardStyle.module.scss";
 import { personalProj } from "../types/workTypes";
 
 const useProjCard = (props: personalProj) => {
-  const { link, name, desc, techTitle, techStack, img } = props;
+  const { link, name, desc, techTitle, techStack, img, uniqueInfo } = props;
 
   const toggleStyle = () => {
     if (name.includes("Gavel (Mobile)")) {
@@ -14,6 +14,7 @@ const useProjCard = (props: personalProj) => {
 
   return {
     toggleStyle,
+    uniqueInfo,
     link,
     name,
     desc,

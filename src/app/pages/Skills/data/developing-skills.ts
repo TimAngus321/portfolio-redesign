@@ -8,6 +8,7 @@ import pythonLogo from "../../../../assets/skillsImages/learningLogos/python-ori
 import vueLogo from "../../../../assets/skillsImages/learningLogos/vuejs-original.svg";
 import flutterLogo from "../../../../assets/skillsImages/learningLogos/flutter-original.svg";
 import dartLogo from "../../../../assets/skillsImages/learningLogos/dart-original.svg";
+import dockerLogo from "../../../../assets/skillsImages/learningLogos/docker-plain.svg";
 
 const developingSkills = [
   {
@@ -20,6 +21,11 @@ const developingSkills = [
     name: "GraphQL",
     image: graphqlLogo,
     alt: "GraphQL Logo",
+  },
+  {
+    name: "Docker",
+    image: dockerLogo,
+    alt: "Docker Logo",
   },
   {
     name: "Svelte",

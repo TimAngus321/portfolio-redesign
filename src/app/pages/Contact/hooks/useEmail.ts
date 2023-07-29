@@ -2,13 +2,17 @@ import { send } from "emailjs-com";
 import { toast } from "react-toastify";
 import { useState, useRef, useEffect } from "react";
 import { inputs } from "../types/emailTypes";
+import axios from 'axios';
 
 export default function useEmail() {
   toast.configure();
 
-  const publicKey: string|undefined = process.env.REACT_APP_PUBLIC_KEY;
+  // Remember to define types for new .env vars in environment.d.ts flle
+  const publicKey: string = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
   const templateId: string = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
   const serviceID: string = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const abstractAPIKey: string = process.env.REACT_APP_ABSTRACT_API_KEY;
+  const abstractURL: string =`https://emailvalidation.abstractapi.com/v1/?api_key=${abstractAPIKey}`
 
   const initial: Record<string, unknown> = {};
   const emailReg: RegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
@@ -76,11 +80,20 @@ export default function useEmail() {
     setInputs(blankState);
   }
 
-  const sendEmail = () => {
+  const sendEmail = async () => {
+
+   const isEmailValid = await emailValidation(inputs?.email);
+   
+
+   if (isEmailValid === 'DELIVERABLE') {
+    notifyEmailValid();
     send(serviceID, templateId, inputs, publicKey)
       .then((res) => {
         // emailjs.send.reset();
         console.log(res.text);
+
+        notifySuccess();
+        clearForm();
 
         // After successful submission update submission count state
         setSubCount(subCount + 1);
@@ -88,7 +101,21 @@ export default function useEmail() {
       .catch((err) =>
         console.error("Submission Error. Error details: ", err, notifyFailure())
       );
+    } else {
+      setEmailInputWarning(true);
+      notifyEmailInalid();
+    }
+
   };
+
+  const emailValidation = async (email: string|undefined) => {
+    try {
+      const response = await axios.get(`${abstractURL}&email=${email}`);
+      return response?.data?.deliverability;
+    } catch (err) {
+      throw err
+    }
+  }
 
   const onSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -104,12 +131,9 @@ export default function useEmail() {
       notifyEmailIssue();
     } else if (subCount === 0 && !allowRedoMessage) {
       sendEmail();
-      notifySuccess();
-      clearForm();
     } else if (subCount === 1 && !allowRedoMessage) {
       sendEmail();
       notifyLastAttempt();
-      clearForm();
       setAllowRedoMessage(true);
     } else if (allowRedoMessage === true) {
       allowRedoMesage();
@@ -160,6 +184,21 @@ export default function useEmail() {
 
   const notifySuccess = () => {
     toast.success(`😀 Thank you ${inputs?.name} for your message!`, {
+      position: toast.POSITION.TOP_RIGHT,
+      hideProgressBar: true,
+      autoClose: 15000,
+    });
+  };
+
+  const notifyEmailValid = () => {
+    toast.success(`✅ Your email: ${inputs?.email} has been verified!`, {
+      position: toast.POSITION.TOP_RIGHT,
+      hideProgressBar: true
+    });
+  };
+
+  const notifyEmailInalid = () => {
+    toast.error(`❌ I couldn't validate your email: ${inputs?.email}. Please check for errors or try a different email.`, {
       position: toast.POSITION.TOP_RIGHT,
       hideProgressBar: true,
       autoClose: 15000,

@@ -3,8 +3,10 @@ import styles from "../style/projCardStyle.module.scss";
 import useProjCard from "../hooks/useProjCard";
 
 const ProjectCard = (props: personalProj) => {
-  const { toggleStyle, link, name, desc, techTitle, techStack, img } =
+  const { toggleStyle, link, name, desc, techTitle, techStack, img, uniqueInfo } =
     useProjCard(props);
+
+    console.log(props);
 
   // ToDo wrap anchor tag around img only. You'll need to redo styling.
   return (
@@ -18,6 +20,7 @@ const ProjectCard = (props: personalProj) => {
         <img src={img} alt={name} className={styles?.projCardImg} />
         <div className={styles?.scrollCards}>
           <div className={styles?.companyInfo}>
+            <h4 className={styles?.uniqueInfo}>{uniqueInfo}</h4>
             <h4 className={styles?.company}>{name}</h4>
             <p className={styles?.companyName}>{desc}</p>
           </div>

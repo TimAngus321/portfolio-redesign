@@ -191,14 +191,14 @@ export default function useEmail() {
   };
 
   const notifyEmailValid = () => {
-    toast.success(`✅ Your email: ${inputs?.email} is verified valid!`, {
+    toast.success(`✅ Your email: ${inputs?.email} has been verified!`, {
       position: toast.POSITION.TOP_RIGHT,
       hideProgressBar: true
     });
   };
 
   const notifyEmailInalid = () => {
-    toast.error(`❌ I couldn't validate your email: ${inputs?.email} and unfortunately it's undeliverable! Please check for errors or try a different email.`, {
+    toast.error(`❌ I couldn't validate your email: ${inputs?.email}. Please check for errors or try a different email.`, {
       position: toast.POSITION.TOP_RIGHT,
       hideProgressBar: true,
       autoClose: 15000,

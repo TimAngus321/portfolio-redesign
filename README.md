@@ -23,7 +23,7 @@
 - Key Frames
 - Yarn
 
-## TodDo
+## ToDo
 - New animations in skills page ✅
 - Redo routes in a more traditional manner ✅
 - Optimize Images ✅

@@ -11,7 +11,6 @@ import { HelmetProvider } from "react-helmet-async";
 
 const Router = () => {
   const [open, setOpen] = useState(false);
-  const node = useRef<HTMLDivElement>(null);
   const helmetContext = {};
 
   return (
@@ -23,7 +22,7 @@ const Router = () => {
         <BrowserRouter>
           <NavBar />
           <PageRoutes />
-          <div ref={node} className="mobile-nav">
+          <div className="mobile-nav">
             <Hamburger open={open} setOpen={setOpen} />
             <Menu open={open} setOpen={setOpen} />
           </div>

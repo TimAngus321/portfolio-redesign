@@ -83,7 +83,6 @@ export default function useEmail() {
   const sendEmail = async () => {
 
    const isEmailValid = await emailValidation(inputs?.email);
-   
 
    if (isEmailValid === 'DELIVERABLE') {
     notifyEmailValid();
@@ -94,9 +93,16 @@ export default function useEmail() {
 
         notifySuccess();
         clearForm();
-
-        // After successful submission update submission count state
         setSubCount(subCount + 1);
+
+        if (subCount === 1 && !allowRedoMessage) {
+          notifyLastAttempt();
+          setAllowRedoMessage(true);
+        } else if (allowRedoMessage === true) {
+          lastAttemptSentConfirmation();
+          setAllowRedoMessage(false);
+        }
+
       })
       .catch((err) =>
         console.error("Submission Error. Error details: ", err, notifyFailure())
@@ -117,31 +123,31 @@ export default function useEmail() {
     }
   }
 
-  const onSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const onSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    if (
+    const maxedOutMsgSubmissions = await localStorage.getItem('maxedOutMsgSubmissions');
+    
+    if (subCount > 1 || maxedOutMsgSubmissions === 'true') {
+      notifyMessageReceived();
+    }
+    else if (
       !inputs?.email ||
       !inputs?.message ||
       !inputs?.name ||
       !inputs?.subject
     ) {
-      notifyErrors();
-    } else if (!emailReg.test(inputs?.email)) {
+      notifyEmptyFields();
+    } else if (!emailReg.test(inputs?.email) && allowRedoMessage) {
       notifyEmailIssue();
     } else if (subCount === 0 && !allowRedoMessage) {
       sendEmail();
     } else if (subCount === 1 && !allowRedoMessage) {
       sendEmail();
-      notifyLastAttempt();
-      setAllowRedoMessage(true);
     } else if (allowRedoMessage === true) {
-      allowRedoMesage();
       sendEmail();
-      setAllowRedoMessage(false);
-    } else {
-      notifyMessageReceived();
-    }
+      localStorage.setItem('maxedOutMsgSubmissions', 'true')
+    } 
 
     // Name field check
     if (!inputs?.name) {
@@ -175,7 +181,7 @@ export default function useEmail() {
     }
   };
 
-  const notifyErrors = () => {
+  const notifyEmptyFields = () => {
     toast.error("😨 Please fill in all the form fields!", {
       position: toast.POSITION.TOP_RIGHT,
       hideProgressBar: true,
@@ -245,10 +251,8 @@ export default function useEmail() {
 
 }, [possValidEmail]);
 
-  // Stop allowing submissions after 2 to prevent spamming and overloading emailJS. If they need to correct something allow them to click within the notification to send again.
-
   const notifyMessageReceived = () => {
-    toast.warning(`🙏 I have received your message. I will get back to you!`, {
+    toast.warning(`🙏 You have already sent 3 messages and I have received them. I will get back to you.`, {
       position: toast.POSITION.TOP_RIGHT,
       hideProgressBar: true,
     });
@@ -265,7 +269,7 @@ export default function useEmail() {
     );
   };
 
-  const allowRedoMesage = () => {
+  const lastAttemptSentConfirmation = () => {
     toast.warning(
       `🙏 This was your last attempt to redo the message. If you still made an error don't worry I will get back to you regardless`,
       {

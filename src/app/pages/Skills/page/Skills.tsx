@@ -10,7 +10,7 @@ import shopifySkillSet from "../data/shopify-skills";
 import useSkills from "../hooks/useSkills";
 import "../style/skillCardAnimations.scss";
 import skillPageStyle from "../style/skillCardPageStyle.module.scss";
-import SEO from '../../../components/SEOComponent/SEO';
+import SEO from "../../../components/SEOComponent/SEO";
 
 const Skills = () => {
   const { skillSet, updateSkillSet, navigate } = useSkills();
@@ -21,76 +21,76 @@ const Skills = () => {
         title={`Tim Angus's Porftolio - Skills Page`}
         description={`Skill page of Timothy Angus's portfolio. Discover all of my technical skills with some fun animations`}
         link={`https://tim-angus.com/skills`}
-        />
+      />
       <div className={skillPageStyle?.skillsContainer}>
         <div className={skillPageStyle?.selectSkillsContainer}>
           <div className={skillPageStyle?.selectSkills}>
             <header>
               <h1 className={skillPageStyle?.skillsTitle}>Tech Stack</h1>
-            
-            <p className={skillPageStyle?.skillsBlurb}>
-              Feel free to check out what I'm learning, my current tech stack
-              and{" "}
-              <span
-                className={skillPageStyle?.contactLink}
-                onClick={() => navigate("/work")}
-              >
-                projects I've built
-              </span>{" "}
-              using the following tech. If you use these technologies in your
-              projects or company and need a dev or just an extra pair of hands
-              feel free to get in{" "}
-              <span
-                className={skillPageStyle?.contactLink}
-                onClick={() => navigate("/contact")}
-              >
-                contact
-              </span>
-              .
-            </p>
+
+              <p className={skillPageStyle?.skillsBlurb}>
+                Feel free to check out what I'm learning, my current tech stack
+                and{" "}
+                <span
+                  className={skillPageStyle?.contactLink}
+                  onClick={() => navigate("/work")}
+                >
+                  projects I've built
+                </span>{" "}
+                using the following tech. If you use these technologies in your
+                projects or company and need a dev or just an extra pair of
+                hands feel free to get in{" "}
+                <span
+                  className={skillPageStyle?.contactLink}
+                  onClick={() => navigate("/contact")}
+                >
+                  contact
+                </span>
+                .
+              </p>
             </header>
             <div className={skillPageStyle?.aboutMySkills}>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(languages)}
               >
-                &nbsp;Languages&nbsp;
+                Languages
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(frontendSkillSet)}
               >
-                &nbsp;Front-end&nbsp;
+                Front-end
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(mobileSkillset)}
               >
-                &nbsp;Mobile&nbsp;
+                Mobile
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(backendSkillSet)}
               >
-                &nbsp;Backend&nbsp;
+                Backend
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(hostingUsed)}
               >
-                &nbsp;Hosting&nbsp;
+                Hosting
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(shopifySkillSet)}
               >
-                &nbsp;Shopify&nbsp;
+                Shopify
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(developingSkills)}
               >
-                &nbsp;Learning&nbsp;
+                Learning
               </button>
             </div>
           </div>

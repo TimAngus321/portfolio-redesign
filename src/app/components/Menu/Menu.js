@@ -29,11 +29,11 @@ const Menu = ({ open, setOpen, ...props }) => {
       </div>
       <div aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => mobileTogglePage('/skills')} {...props}>
         <span aria-hidden="true"></span>
-        SKILLS
+        Skills
       </div>
       <div aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => mobileTogglePage('/work')} {...props}>
         <span aria-hidden="true"></span>
-        WORK
+        Work
         </div>
       <div aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => mobileTogglePage('/contact')} {...props}>
         <span aria-hidden="true"></span>

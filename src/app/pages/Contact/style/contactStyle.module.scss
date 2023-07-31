@@ -55,6 +55,7 @@
       border-radius: 8px;
       -webkit-border-radius: 8px; 
       -moz-border-radius: 8px; 
+      outline: none;
     }
   }
 }
@@ -67,6 +68,7 @@ input:-webkit-autofill:focus {
   border-radius: 8px;
   -webkit-border-radius: 8px; 
   -moz-border-radius: 8px; 
+  outline: none;
 }
 
 .redWarning {

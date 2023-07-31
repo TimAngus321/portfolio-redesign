@@ -5,7 +5,7 @@ import { skills, skillColorsObj } from "../types/skillsetType";
 
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>(languages);
-  const [selectedImage, setSelectedImage] = useState<string>("");
+  const [selectedImage, setSelectedImage] = useState<string>("/static/media/javascript-original.4c1b5332.svg");
   const [selectedCard, setSelectedCard] = useState<string>("");
   const [skillLogoColors, setSkillLogoColors] = useState<skillColorsObj>({
     imgUrl: "",
@@ -28,7 +28,9 @@ const useSkills = () => {
     setSkillSet(skillSet);
   };
 
-  const handleImageHover = (image: string) => {
+  const handleImageHover = (e: MouseEvent | TouchEvent, image: string) => {
+    e.preventDefault()
+    console.log('hover on card ran')
     setSelectedImage(image);
   };
 

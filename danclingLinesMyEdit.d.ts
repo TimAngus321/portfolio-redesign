@@ -1,0 +1,1 @@
+declare module 'react-dancing-lines-safari-firefox-support';

@@ -27,6 +27,7 @@
     "src",
     "types",
     "dancingLines.d.ts",
-    "colorExtractor.d.ts"
+    "colorExtractor.d.ts",
+    "danclingLinesMyEdit.d.ts",
   ]
 }

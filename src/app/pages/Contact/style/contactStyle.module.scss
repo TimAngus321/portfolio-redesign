@@ -53,6 +53,8 @@
       outline: $base-hover-color solid 1px;
       border: $base-hover-color solid 1px;
       border-radius: 8px;
+      -webkit-border-radius: 8px; 
+      -moz-border-radius: 8px; 
     }
   }
 }
@@ -63,6 +65,8 @@ input:-webkit-autofill:focus {
   -webkit-text-fill-color: white;
   -webkit-box-shadow: 0 0 0px 40rem $secondary-background-black inset;
   border-radius: 8px;
+  -webkit-border-radius: 8px; 
+  -moz-border-radius: 8px; 
 }
 
 .redWarning {

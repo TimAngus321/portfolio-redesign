@@ -138,7 +138,7 @@ export default function useEmail() {
       !inputs?.subject
     ) {
       notifyEmptyFields();
-    } else if (!emailReg.test(inputs?.email) && allowRedoMessage) {
+    } else if (!emailReg.test(inputs?.email)) {
       notifyEmailIssue();
     } else if (subCount === 0 && !allowRedoMessage) {
       sendEmail();

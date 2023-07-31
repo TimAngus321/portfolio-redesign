@@ -13646,10 +13646,10 @@ react-color-extractor@^1.1.2:
   dependencies:
     node-vibrant "^3.0.0"
 
-react-dancing-lines-safari-firefox-support@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/react-dancing-lines-safari-firefox-support/-/react-dancing-lines-safari-firefox-support-1.1.4.tgz#e6445ad82d77631cf103c5a5436945b3a49a3acd"
-  integrity sha512-aDP6gvZkFavl4tvtLWX6z1+et3hDuuGS20QZr+1og0GvMAFtGUAG8eYUJGIgVdupNTMC/GPQygVIhmc0sSBgiQ==
+react-dancing-lines-safari-firefox-support@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/react-dancing-lines-safari-firefox-support/-/react-dancing-lines-safari-firefox-support-1.1.6.tgz#211acc77abcb84df280a74ecd0175425cbd04fa0"
+  integrity sha512-ZAm+AAwFxJUZzYIbptl3XaIWbPOcEHCZZxv/9MZOFrSm7V1QdrDemDAswK8NQQDtXa+du8uJlEWHWFieIZVpew==
   dependencies:
     webpack-cli "^4.9.0"
 

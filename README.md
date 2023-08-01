@@ -32,3 +32,5 @@
 - Update so it's a progressive web app ✅
 - Clean up code with typescript, code splitting with custom hooks, SCSS modules & more ⚙️
 - Use react-colour-extractor package to add cool effect on skills page ✅
+- Replace react-color-extractor with node-vibrant for full control ⚙️
+- Add limiter for abstract email validator API

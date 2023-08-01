@@ -14,7 +14,7 @@ const SkillCard = (props: skills) => {
       <TransitionGroup
         component="li"
         className={`skillCard snake`}
-        onMouseOver={(e: MouseEvent | TouchEvent) => handleImageHover(e, image)}
+        onMouseOver={() => handleImageHover(image)}
       >
         <div className="inner">
           <img
@@ -62,4 +62,5 @@ const SkillCard = (props: skills) => {
     </>
   );
 };
+
 export default SkillCard;

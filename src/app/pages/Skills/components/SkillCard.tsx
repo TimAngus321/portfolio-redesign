@@ -2,17 +2,18 @@ import { TransitionGroup } from "react-transition-group";
 import styles from "../style/skillCard.module.scss";
 import { skills } from "../types/skillsetType";
 import useSkills from "../hooks/useSkills";
-import { ColorExtractor } from "react-color-extractor";
+// import { ColorExtractor } from "react-color-extractor";
 
 const SkillCard = (props: skills) => {
-  const { name, image, styleClass, alt } = props;
+  const { name, image, styleClass, alt, waterfall } = props;
   const {
-    // getColors,
-    // handleImageHover,
+    // skillLogoColors,
     getColorPalette,
-    // selectedImage,
-    skillLogoColors,
+    hoverColors,
+    // waterfallColors,
   } = useSkills();
+
+  console.log(props);
 
   return (
     <>
@@ -20,6 +21,7 @@ const SkillCard = (props: skills) => {
         component="li"
         className={`skillCard snake`}
         onMouseOver={() => getColorPalette(image)}
+        // onMouseOver={null}
       >
         <div className="inner">
           <img
@@ -30,40 +32,55 @@ const SkillCard = (props: skills) => {
           />
           <h3 className={styles?.skillName}>{name}</h3>
         </div>
+
         <div
           className="tail top"
           style={{
-            backgroundImage: `linear-gradient(to right, ${
-              skillLogoColors?.colors[0]
-            }, ${skillLogoColors?.colors[1] ?? skillLogoColors?.colors[0]} )`,
+            backgroundImage: `linear-gradient(to right, ${hoverColors[0]}
+            , ${hoverColors[1] ?? hoverColors[0]})`,
           }}
+          // style={{
+          //   backgroundImage: `linear-gradient(to right,
+          // ${waterfall[0]}, ${waterfall[1] ?? waterfall[0]})`,
+          // }}
         ></div>
         <div
           className="tail right"
           style={{
             backgroundImage: `linear-gradient(to right, ${
-              skillLogoColors?.colors[1] ?? skillLogoColors?.colors[0]
-            }, ${skillLogoColors?.colors[2] ?? skillLogoColors?.colors[0]})`,
+              hoverColors[1] ?? hoverColors[0]
+            }, ${hoverColors[2] ?? hoverColors[0]})`,
           }}
+          // style={{
+          //   backgroundImage: `linear-gradient(to right,
+          //   ${waterfall[1]}, ${waterfall[2] ?? waterfall[0]})`,
+          // }}
         ></div>
         <div
           className="tail bottom"
           style={{
             backgroundImage: `linear-gradient(to right, ${
-              skillLogoColors?.colors[2] ?? skillLogoColors?.colors[0]
-            }, ${skillLogoColors?.colors[3] ?? skillLogoColors?.colors[0]})`,
+              hoverColors[2] ?? hoverColors[0]
+            }, ${hoverColors[3] ?? hoverColors[0]})`,
           }}
+          // style={{
+          //   backgroundImage: `linear-gradient(to right,
+          //   ${waterfall[2]}, ${waterfall[3] ?? waterfall[0]})`,
+          // }}
         ></div>
         <div
           className="tail left"
           style={{
             backgroundImage: `linear-gradient(to right, ${
-              skillLogoColors?.colors[4] ?? skillLogoColors?.colors[0]
-            }, ${skillLogoColors?.colors[5] ?? skillLogoColors?.colors[0]})`,
+              hoverColors[4] ?? hoverColors[0]
+            }, ${hoverColors[5] ?? hoverColors[0]})`,
           }}
+          // style={{
+          //   backgroundImage: `linear-gradient(to right,
+          //   ${waterfall[4]}, ${waterfall[5] ?? waterfall[0]})`,
+          // }}
         ></div>
       </TransitionGroup>
-      {/* <ColorExtractor src={selectedImage} getColors={getColors} /> */}
     </>
   );
 };

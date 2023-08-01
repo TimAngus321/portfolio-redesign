@@ -5,12 +5,14 @@ const mobileSkillset = [
     {
         name: "React Native",
         image: reactNativeLogo,
-        alt: "React Logo" 
+        alt: "React Logo",
+        waterfall: [""] 
     },
     {
         name: "Redux",
         image: reduxLogo,
-        alt: "Redux Logo"
+        alt: "Redux Logo",
+        waterfall: [""]
     }
 ];
 

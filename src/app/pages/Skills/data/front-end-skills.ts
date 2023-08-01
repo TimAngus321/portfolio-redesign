@@ -6,17 +6,20 @@ const frontendSkillSet = [
     {
         name: "React",
         image: reactLogo,
-        alt: "React Logo" 
+        alt: "React Logo",
+        waterfall: [""]
     },
     {
         name: "Redux",
         image: reduxLogo,
-        alt: "Redux Logo"
+        alt: "Redux Logo",
+        waterfall: [""]
     },
     {
         name: "jQuery",
         image: jqueryLogo,
-        alt: "jQuery Logo"
+        alt: "jQuery Logo",
+        waterfall: [""]
     },
 ];
 

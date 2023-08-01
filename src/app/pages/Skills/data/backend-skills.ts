@@ -10,33 +10,39 @@ const backendSkillSet = [
     name: "Node.js",
     image: nodejsLogo,
     alt: "Node.js Logo",
+    waterfall: [""]
   },
   {
     name: "Express.js",
     image: expressLogo,
     alt: "Express.js Logo",
     styleClass: "inverseWhite",
+    waterfall: [""]
   },
   {
     name: "Ruby on Rails",
     image: railsLogo,
     alt: "Ruby on Rails Logo",
+    waterfall: [""]
   },
   {
     name: "PostgreSQL",
     image: postgresLogo,
     alt: "PostgreSQL Logo",
+    waterfall: [""]
   },
   {
     name: "Mysql",
     image: mysqlLogo,
     alt: "Mysql Logo",
+    waterfall: [""]
   },
   {
     name: "Prisma",
     image: prismaLogo,
     alt: "Prisma Logo",
     styleClass: "inverseWhite",
+    waterfall: [""]
   },
 ];
 

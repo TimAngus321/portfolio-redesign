@@ -114,6 +114,8 @@ const Skills = () => {
                       image={skillSet[i]?.image}
                       alt={skillSet[i]?.alt}
                       styleClass={skillSet[i]?.styleClass}
+                      // waterfall={Object.keys(waterfall).map((key, i) => (waterfall?.imgUrl[i] ===  skillSet[i]?.image ? waterfall?.colors : null))  }
+                      waterfall={skillSet[i]?.waterfall}
                     />
                   </CSSTransition>
                 ))}

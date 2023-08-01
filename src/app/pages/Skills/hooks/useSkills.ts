@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import languages from "../data/languages";
 import { useNavigate } from "react-router-dom";
 import { skills, skillColorsObj } from "../types/skillsetType";
+import Vibrant from 'node-vibrant';
+
 
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>(languages);
@@ -12,6 +14,7 @@ const useSkills = () => {
   });
 
   const navigate = useNavigate();
+
 
   const clearState = () => {
     const currentState: skills[] = [];
@@ -31,12 +34,23 @@ const useSkills = () => {
     setSelectedImage(image);
   };
 
-  const getColors = (detectedColorCodes: string[]) => {
-    setSkillLogoColors({
-      imgUrl: selectedImage,
-      colors: detectedColorCodes,
-    });
-  };
+  const getColorPalette = async (image: string) => {
+    setSelectedImage(image);
+    const getColors = await Vibrant.from(image).getPalette();
+    console.log(getColors)
+    Object.keys
+  //   setSkillLogoColors({...skillLogoColors, 
+  //   imgUrl: selectedImage,
+  //   colors: getColors
+  // })
+  }
+
+  // const getColors = (detectedColorCodes: string[]) => {
+  //   setSkillLogoColors({ ...skillLogoColors,
+  //     imgUrl: selectedImage,
+  //     colors: detectedColorCodes,
+  //   });
+  // };
 
   // debug skillColorEffect
   // useEffect(() => {
@@ -47,10 +61,11 @@ const useSkills = () => {
     updateSkillSet,
     skillSet,
     navigate,
-    getColors,
+    // getColors,
     handleImageHover,
-    selectedImage,
+    // selectedImage,
     skillLogoColors,
+    getColorPalette
   };
 };
 

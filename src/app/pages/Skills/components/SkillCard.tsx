@@ -6,15 +6,20 @@ import { ColorExtractor } from "react-color-extractor";
 
 const SkillCard = (props: skills) => {
   const { name, image, styleClass, alt } = props;
-  const { getColors, handleImageHover, selectedImage, skillLogoColors } =
-    useSkills();
+  const {
+    // getColors,
+    // handleImageHover,
+    getColorPalette,
+    // selectedImage,
+    skillLogoColors,
+  } = useSkills();
 
   return (
     <>
       <TransitionGroup
         component="li"
         className={`skillCard snake`}
-        onMouseOver={() => handleImageHover(image)}
+        onMouseOver={() => getColorPalette(image)}
       >
         <div className="inner">
           <img
@@ -58,7 +63,7 @@ const SkillCard = (props: skills) => {
           }}
         ></div>
       </TransitionGroup>
-      <ColorExtractor src={selectedImage} getColors={getColors} />
+      {/* <ColorExtractor src={selectedImage} getColors={getColors} /> */}
     </>
   );
 };

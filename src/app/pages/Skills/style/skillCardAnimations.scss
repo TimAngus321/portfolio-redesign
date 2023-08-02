@@ -147,3 +147,28 @@ New Skill Card animations
 .snake:hover .tail {
   --block: 100%;
 }
+
+// .snake:where(.start, .active) .tail.top {
+//   transition-delay: var(--duration);
+// }
+// .snake:where(.start, .active) .tail.right {
+//   transition-delay: calc(var(--duration) * 2);
+// }
+// .snake:where(.start, .active) .tail.bottom {
+//   transition-delay: calc(var(--duration) * 3);
+// }
+// .snake:where(.start, .active) .tail.left {
+//   transition-delay: 0ms;
+// }
+
+// .snake {
+//   position: relative;
+// }
+
+// .snake.start .tail {
+//   --block: 0;
+// }
+// .snake .active .tail {
+//   --block: 100%;
+// }
+

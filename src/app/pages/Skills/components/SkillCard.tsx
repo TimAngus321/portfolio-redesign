@@ -19,7 +19,7 @@ const SkillCard = (props: skills) => {
     <>
       <TransitionGroup
         component="li"
-        className={`skillCard snake`}
+        className={`skillCard snake ${waterfall ? 'active' : null}`}
         onMouseOver={() => getColorPalette(image)}
         // onMouseOver={null}
       >
@@ -34,51 +34,51 @@ const SkillCard = (props: skills) => {
         </div>
 
         <div
-          className="tail top"
-          style={{
-            backgroundImage: `linear-gradient(to right, ${hoverColors[0]}
-            , ${hoverColors[1] ?? hoverColors[0]})`,
-          }}
+          className={`tail top ${waterfall ? 'active' : null}`}
           // style={{
-          //   backgroundImage: `linear-gradient(to right,
-          // ${waterfall[0]}, ${waterfall[1] ?? waterfall[0]})`,
+          //   backgroundImage: `linear-gradient(to right, ${hoverColors[0]}
+          //   , ${hoverColors[1] ?? hoverColors[0]})`,
           // }}
+          style={{
+            backgroundImage: `linear-gradient(to right,
+          ${waterfall[0]}, ${waterfall[1] ?? waterfall[0]})`,
+          }}
         ></div>
         <div
-          className="tail right"
-          style={{
-            backgroundImage: `linear-gradient(to right, ${
-              hoverColors[1] ?? hoverColors[0]
-            }, ${hoverColors[2] ?? hoverColors[0]})`,
-          }}
+          className={`tail right ${waterfall ? 'active' : null}`}
           // style={{
-          //   backgroundImage: `linear-gradient(to right,
-          //   ${waterfall[1]}, ${waterfall[2] ?? waterfall[0]})`,
+          //   backgroundImage: `linear-gradient(to right, ${
+          //     hoverColors[1] ?? hoverColors[0]
+          //   }, ${hoverColors[2] ?? hoverColors[0]})`,
           // }}
+          style={{
+            backgroundImage: `linear-gradient(to right,
+            ${waterfall[1]}, ${waterfall[2] ?? waterfall[0]})`,
+          }}
         ></div>
         <div
-          className="tail bottom"
-          style={{
-            backgroundImage: `linear-gradient(to right, ${
-              hoverColors[2] ?? hoverColors[0]
-            }, ${hoverColors[3] ?? hoverColors[0]})`,
-          }}
+          className={`tail bottom ${waterfall ? 'active' : null}`}
           // style={{
-          //   backgroundImage: `linear-gradient(to right,
-          //   ${waterfall[2]}, ${waterfall[3] ?? waterfall[0]})`,
+          //   backgroundImage: `linear-gradient(to right, ${
+          //     hoverColors[2] ?? hoverColors[0]
+          //   }, ${hoverColors[3] ?? hoverColors[0]})`,
           // }}
+          style={{
+            backgroundImage: `linear-gradient(to right,
+            ${waterfall[2]}, ${waterfall[3] ?? waterfall[0]})`,
+          }}
         ></div>
         <div
-          className="tail left"
-          style={{
-            backgroundImage: `linear-gradient(to right, ${
-              hoverColors[4] ?? hoverColors[0]
-            }, ${hoverColors[5] ?? hoverColors[0]})`,
-          }}
+          className={`tail left ${waterfall ? 'active' : null}`}
           // style={{
-          //   backgroundImage: `linear-gradient(to right,
-          //   ${waterfall[4]}, ${waterfall[5] ?? waterfall[0]})`,
+          //   backgroundImage: `linear-gradient(to right, ${
+          //     hoverColors[4] ?? hoverColors[0]
+          //   }, ${hoverColors[5] ?? hoverColors[0]})`,
           // }}
+          style={{
+            backgroundImage: `linear-gradient(to right,
+            ${waterfall[4]}, ${waterfall[5] ?? waterfall[0]})`,
+          }}
         ></div>
       </TransitionGroup>
     </>

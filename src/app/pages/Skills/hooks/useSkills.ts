@@ -23,7 +23,6 @@ const useSkills = () => {
   ]);
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
-
   const navigate = useNavigate();
 
   const clearState = () => {
@@ -72,6 +71,8 @@ const useSkills = () => {
 }
   }
 
+  // Try using framer animation then give up
+
 
 
   const getColorPalette = async (image: string) => {
@@ -105,13 +106,6 @@ const useSkills = () => {
   // }, [skillLogoColors]);
 
   useEffect(() => {
-    // When waterfall data is updated, set shouldAnimate to true
-    if (skillSet[0]?.waterfall?.length > 0) {
-      setShouldAnimate(true);
-    }
-  }, [skillSet[0]?.waterfall?.length > 0]);
-
-  useEffect(() => {
     createWaterfall(skillSet);
   }, [skillSet[0]?.waterfall?.length === 0]);
   
@@ -127,8 +121,6 @@ const useSkills = () => {
     hoverColors,
     getColorPalette,
     // waterfall,
-    shouldAnimate,
-
   };
 
 };

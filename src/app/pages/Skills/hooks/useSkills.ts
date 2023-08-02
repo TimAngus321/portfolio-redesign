@@ -21,7 +21,6 @@ const useSkills = () => {
     "#943004",
     "#892a0f",
   ]);
-  const [shouldAnimate, setShouldAnimate] = useState(false);
 
   const navigate = useNavigate();
 
@@ -57,7 +56,7 @@ const useSkills = () => {
         });
     } catch (error) {
       // Handle any errors that occur during the color extraction process
-      console.error("Error while getting the color palette:", error);
+      console.error("Error while getting the color palette: ", error);
     }
 
     const delayEachSkillcardColorUpdate = async () => {

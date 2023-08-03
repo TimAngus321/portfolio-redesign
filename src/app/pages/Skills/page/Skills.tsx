@@ -11,6 +11,7 @@ import useSkills from "../hooks/useSkills";
 import "../style/skillCardAnimations.scss";
 import skillPageStyle from "../style/skillCardPageStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
+import { motion } from 'framer-motion';
 
 const Skills = () => {
   const { skillSet, updateSkillSet, navigate } = useSkills();
@@ -98,8 +99,22 @@ const Skills = () => {
         <div className={skillPageStyle?.revealedSkillsContainer}>
           <div className={skillPageStyle?.revealSkills}>
             <div className={skillPageStyle?.selectedSkillset}>
-              <TransitionGroup component="ul">
+              <motion.ul
+              initial={{
+                opacity: 1
+              }}
+              animate={{ 
+                // opacity: 1,
+                translateX: '0%',
+              }}
+              exit={{
+                // opacity: 1,
+                translateX: '220%',
+              }}
+              transition={{duration: 10000}}
+              >
                 {Object.keys(skillSet).map((key, i) => (
+                  
                   <CSSTransition
                     classNames="skill-card"
                     key={key}
@@ -114,12 +129,11 @@ const Skills = () => {
                       image={skillSet[i]?.image}
                       alt={skillSet[i]?.alt}
                       styleClass={skillSet[i]?.styleClass}
-                      // waterfall={Object.keys(waterfall).map((key, i) => (waterfall?.imgUrl[i] ===  skillSet[i]?.image ? waterfall?.colors : null))  }
                       waterfall={skillSet[i]?.waterfall}
                     />
                   </CSSTransition>
                 ))}
-              </TransitionGroup>
+              </motion.ul>
             </div>
           </div>
         </div>

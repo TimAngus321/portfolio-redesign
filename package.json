@@ -26,6 +26,7 @@
     "emailjs": "^3.3.0",
     "emailjs-com": "^2.6.4",
     "env-cmd": "^10.1.0",
+    "framer-motion": "^10.15.0",
     "history": "^5.0.0",
     "i": "^0.3.7",
     "netlify-cli": "^9.16.7",

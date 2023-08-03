@@ -4,52 +4,52 @@
 Animations must be global file 
 ********************************************************************/
 
-.skill-card-enter {
-  opacity: 0;
-  transition: 1s;
-  transform: translateX(220%);
+// .skill-card-enter {
+//   opacity: 0;
+//   transition: 1s;
+//   transform: translateX(220%);
 
-  &.skill-card-enter-active {
-    transition: 1s;
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
+//   &.skill-card-enter-active {
+//     transition: 1s;
+//     transform: translateX(0%);
+//     opacity: 1;
+//   }
+// }
 
-.skill-card-exit {
-  opacity: 1;
-  transition: 0.5s;
-  transform: translateX(0);
-  &.skill-card-exit-active {
-    transition: 0.5s;
-    transform: translateX(220%);
-    opacity: 0.01;
-  }
-}
+// .skill-card-exit {
+//   opacity: 1;
+//   transition: 0.5s;
+//   transform: translateX(0);
+//   &.skill-card-exit-active {
+//     transition: 0.5s;
+//     transform: translateX(220%);
+//     opacity: 0.01;
+//   }
+// }
 
-@media only screen and (max-width: 900px) {
-  .skill-card-enter {
-    opacity: 0;
-    transition: 1s;
-    transform: unset;
-    &.skill-card-enter-active {
-      transition: 1s;
-      opacity: 1;
-      transform: unset;
-    }
-  }
+// @media only screen and (max-width: 900px) {
+//   .skill-card-enter {
+//     opacity: 0;
+//     transition: 1s;
+//     transform: unset;
+//     &.skill-card-enter-active {
+//       transition: 1s;
+//       opacity: 1;
+//       transform: unset;
+//     }
+//   }
 
-  .skill-card-exit {
-    opacity: 1;
-    transition: 0.5s;
-    transform: unset;
-    &.skill-card-exit-active {
-      transition: 0.5s;
-      opacity: 0.01;
-      transform: unset;
-    }
-  }
-}
+//   .skill-card-exit {
+//     opacity: 1;
+//     transition: 0.5s;
+//     transform: unset;
+//     &.skill-card-exit-active {
+//       transition: 0.5s;
+//       opacity: 0.01;
+//       transform: unset;
+//     }
+//   }
+// }
 
 /******************************************************************* 
 New Skill Card animations
@@ -147,28 +147,4 @@ New Skill Card animations
 .snake:hover .tail {
   --block: 100%;
 }
-
-// .snake:where(.start, .active) .tail.top {
-//   transition-delay: var(--duration);
-// }
-// .snake:where(.start, .active) .tail.right {
-//   transition-delay: calc(var(--duration) * 2);
-// }
-// .snake:where(.start, .active) .tail.bottom {
-//   transition-delay: calc(var(--duration) * 3);
-// }
-// .snake:where(.start, .active) .tail.left {
-//   transition-delay: 0ms;
-// }
-
-// .snake {
-//   position: relative;
-// }
-
-// .snake.start .tail {
-//   --block: 0;
-// }
-// .snake .active .tail {
-//   --block: 100%;
-// }
 

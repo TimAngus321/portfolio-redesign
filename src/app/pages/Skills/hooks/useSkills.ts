@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { skills, waterfallObj } from "../types/skillsetType";
 import Vibrant from "node-vibrant";
 
+
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>(languages);
   const [selectedImage, setSelectedImage] = useState<string>(
@@ -14,12 +15,12 @@ const useSkills = () => {
   //   colors: ["#e64f24", "#fcb494", "#77240d", "#892a0f", "#943004", "#892a0f"],
   // });
   const [hoverColors, setHoverColors] = useState<string[]>([
-    "#e64f24",
-    "#fcb494",
-    "#77240d",
-    "#892a0f",
-    "#943004",
-    "#892a0f",
+    // "#e64f24",
+    // "#fcb494",
+    // "#77240d",
+    // "#892a0f",
+    // "#943004",
+    // "#892a0f",
   ]);
 
   const navigate = useNavigate();
@@ -76,7 +77,7 @@ const useSkills = () => {
 
   const getColorPalette = async (image: string) => {
     // console.log('hovered')
-    // // setSelectedImage(image);
+    // setSelectedImage(image);
     // const hexCodes: string[] | any = [];
 
     // try {
@@ -97,6 +98,33 @@ const useSkills = () => {
   
     //   setHoverColors(hexCodes);
   };
+
+//   const [scope, animate] = useAnimate();
+//   const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
+//   const staggerAnimation = (skillSetChange: skills[]) => {
+  
+//   useEffect(() => {
+//     animate(
+//       "skill-card-enter-done",
+//       skillSet ? { opacity: 1, scale: 1, filter: "blur(0px)" }
+//       : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
+//       {
+//       duration: 0.2,
+//         delay: skillSet ? staggerMenuItems : 0
+//       }
+      
+
+//     )
+//     if (skillSet.length > 0) {
+//       staggerAnimation(skillSet);
+//     }
+//   }, [skillSet]);
+// }
+
+// const [isOpen, setIsOpen] = useState(false);
+// const scope = useMenuAnimation(isOpen);
+
+
 
 
   // debug skillColorEffect

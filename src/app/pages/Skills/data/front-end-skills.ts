@@ -4,18 +4,21 @@ import jqueryLogo from '../../../../assets/skillsImages/frontendLogos/jquery-ori
 
 const frontendSkillSet = [
     {
+        key: 1,
         name: "React",
         image: reactLogo,
         alt: "React Logo",
         waterfall: [""]
     },
     {
+        key: 2,
         name: "Redux",
         image: reduxLogo,
         alt: "Redux Logo",
         waterfall: [""]
     },
     {
+        key: 3,
         name: "jQuery",
         image: jqueryLogo,
         alt: "jQuery Logo",

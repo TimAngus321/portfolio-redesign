@@ -36,38 +36,38 @@ const useSkills = () => {
     clearState();
     await sleep(500);
     await setSkillSet(skillSet);
-    await createWaterfall(skillSet);
+    // await createWaterfall(skillSet);
   };
 
-  const createWaterfall = async (skillSet: any) => {
-    for (let i = 0; i < skillSet?.length; i++) {
-      const hexCodes: string[] = [];
-      try {
-        await Vibrant.from(skillSet[i]?.image)
-          .getPalette()
-          .then((palette) => {
-            for (let color in palette) {
-              const hex: string | undefined = palette[color]?.getHex();
-              if (hex) {
-                hexCodes.push(hex);
-              }
-            }
-          });
-      } catch (error) {
-        // Handle any errors that occur during the color extraction process
-        console.error("Error while getting the color palette: ", error);
-      }
+  // const createWaterfall = async (skillSet: any) => {
+  //   for (let i = 0; i < skillSet?.length; i++) {
+  //     const hexCodes: string[] = [];
+  //     try {
+  //       await Vibrant.from(skillSet[i]?.image)
+  //         .getPalette()
+  //         .then((palette) => {
+  //           for (let color in palette) {
+  //             const hex: string | undefined = palette[color]?.getHex();
+  //             if (hex) {
+  //               hexCodes.push(hex);
+  //             }
+  //           }
+  //         });
+  //     } catch (error) {
+  //       // Handle any errors that occur during the color extraction process
+  //       console.error("Error while getting the color palette: ", error);
+  //     }
 
-      const delayEachSkillcardColorUpdate = async () => {
-        setSkillSet((prevSkillSet) => {
-          const updatedSkillSet = [...prevSkillSet];
-          updatedSkillSet[i].waterfall = hexCodes;
-          return updatedSkillSet;
-        });
-      };
-      await delayEachSkillcardColorUpdate();
-    }
-  };
+  //     const delayEachSkillcardColorUpdate = async () => {
+  //       setSkillSet((prevSkillSet) => {
+  //         const updatedSkillSet = [...prevSkillSet];
+  //         updatedSkillSet[i].waterfall = hexCodes;
+  //         return updatedSkillSet;
+  //       });
+  //     };
+  //     await delayEachSkillcardColorUpdate();
+  //   }
+  // };
 
   // Try using framer animation then give up
 
@@ -100,9 +100,9 @@ const useSkills = () => {
   // }, [skillLogoColors]);
 
   // For initial waterfall load
-  useEffect(() => {
-    createWaterfall(skillSet);
-  }, [skillSet[0]?.waterfall?.length === 0]);
+  // useEffect(() => {
+  //   createWaterfall(skillSet);
+  // }, [skillSet[0]?.waterfall?.length === 0]);
 
   return {
     updateSkillSet,

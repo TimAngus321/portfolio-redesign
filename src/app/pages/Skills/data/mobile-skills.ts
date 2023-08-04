@@ -3,12 +3,14 @@ import reduxLogo from '../../../../assets/skillsImages/frontendLogos/redux-origi
 
 const mobileSkillset = [
     {
+        key: 1,
         name: "React Native",
         image: reactNativeLogo,
         alt: "React Logo",
         waterfall: [""] 
     },
     {
+        key: 2,
         name: "Redux",
         image: reduxLogo,
         alt: "Redux Logo",

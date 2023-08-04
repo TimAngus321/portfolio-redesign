@@ -1,5 +1,4 @@
-import { CSSTransition, TransitionGroup } from "react-transition-group";
-import SkillCard from "../components/SkillCard";
+// import { CSSTransition, TransitionGroup } from "react-transition-group";
 import backendSkillSet from "../data/backend-skills";
 import developingSkills from "../data/developing-skills";
 import frontendSkillSet from "../data/front-end-skills";
@@ -11,10 +10,12 @@ import useSkills from "../hooks/useSkills";
 import "../style/skillCardAnimations.scss";
 import skillPageStyle from "../style/skillCardPageStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
-import { motion, AnimatePresence, easeInOut } from "framer-motion";
+import { motion, AnimatePresence, easeInOut, stagger } from "framer-motion";
+import useFramerAnimation from "../hooks/useFramerAnimation";
 
 const Skills = () => {
-  const { skillSet, updateSkillSet, navigate } = useSkills();
+  const { updateSkillSet, navigate } = useSkills();
+  const { parentAnimation } = useFramerAnimation();
 
   return (
     <section className={skillPageStyle?.pageContainerSkills}>
@@ -97,64 +98,7 @@ const Skills = () => {
           </div>
         </div>
 
-        <div className={skillPageStyle?.revealedSkillsContainer}>
-          <div className={skillPageStyle?.revealSkills}>
-            <div className={skillPageStyle?.selectedSkillset}>
-              <ul>
-                <AnimatePresence>
-                  {Object.keys(skillSet).map((key, i) => (
-                    <motion.li
-                      className="skill-card"
-                      key={key}
-                      initial={{
-                        opacity: 1,
-                        x: "220%",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                      animate={{
-                        transition: {
-                          duration: 1,
-                          ease: easeInOut,
-                          alignItems: "center",
-                          justifyContent: "center",
-                          staggerChildren: 0.15,
-                        },
-                        opacity: 1,
-                        x: "0%",
-                      }}
-                      exit={{
-                        opacity: 0,
-                        x: "220%",
-                        transition: {
-                          duration: 0.3,
-                          ease: easeInOut,
-                          staggerChildren: 0.15,
-                          when: "afterChildren",
-                        },
-                      }}
-                      transition={{
-                        duration: 0.7,
-                        ease: easeInOut,
-                        type: "spring",
-                      }}
-                      layout
-                    >
-                      <SkillCard
-                        key={key}
-                        name={skillSet[i]?.name}
-                        image={skillSet[i]?.image}
-                        alt={skillSet[i]?.alt}
-                        styleClass={skillSet[i]?.styleClass}
-                        waterfall={skillSet[i]?.waterfall}
-                      />
-                    </motion.li>
-                  ))}
-                </AnimatePresence>
-              </ul>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </section>
   );

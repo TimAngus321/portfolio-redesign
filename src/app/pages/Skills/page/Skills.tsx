@@ -10,12 +10,22 @@ import useSkills from "../hooks/useSkills";
 import "../style/skillCardAnimations.scss";
 import skillPageStyle from "../style/skillCardPageStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
-import { motion, AnimatePresence, easeInOut, stagger } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  easeInOut,
+  stagger,
+  useAnimate,
+  useAnimation,
+} from "framer-motion";
 import useFramerAnimation from "../hooks/useFramerAnimation";
+import SkillCard from "../components/SkillCard";
+import { useRef } from "react";
 
 const Skills = () => {
-  const { updateSkillSet, navigate } = useSkills();
-  const { parentAnimation } = useFramerAnimation();
+  const { updateSkillSet, navigate, skillSet, controls } = useSkills();
+  const { ulVariants } = useFramerAnimation();
+  const ulRef = useRef(null);
 
   return (
     <section className={skillPageStyle?.pageContainerSkills}>
@@ -98,7 +108,67 @@ const Skills = () => {
           </div>
         </div>
 
-       
+        <div className={skillPageStyle?.revealedSkillsContainer}>
+          <div className={skillPageStyle?.revealSkills}>
+            <div className={skillPageStyle?.selectedSkillset}>
+              <AnimatePresence>
+                <motion.ul
+                  className="skill-card"
+                  // animate={controls}
+                  ref={ulRef}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={ulVariants}
+                  // animate="enter"
+                  // exit="exit"
+                  // initial: {
+                  //   opacity: 1,
+                  //   x: "220%",
+                  //   alignItems: "center",
+                  //   justifyContent: "center",
+                  //   ease: "easeInOut",
+                  // },
+                  // animate: {
+                  //   transition: {
+                  //     duration: 1,
+                  //     ease: "easeInOut",
+                  //     alignItems: "center",
+                  //     justifyContent: "center",
+                  //     type: "spring",
+                  //     bounce: 0.3,
+                  //   },
+                  //   opacity: 1,
+                  //   x: "0%",
+                  // },
+                  // exit: {
+                  //   opacity: 0,
+                  //   x: "220%",
+                  //   transition: {
+                  //     duration: 0.3,
+                  //     ease: "easeInOut",
+                  //   },
+                  // },
+                  //   transition: {
+                  //     duration: 0.7,
+                  //     ease: "easeInOut",
+                  //   }
+                >
+                  {Object.keys(skillSet).map((key, i) => (
+                    <SkillCard
+                      key={key}
+                      name={skillSet[i]?.name}
+                      image={skillSet[i]?.image}
+                      alt={skillSet[i]?.alt}
+                      styleClass={skillSet[i]?.styleClass}
+                      waterfall={skillSet[i]?.waterfall}
+                    />
+                  ))}
+                </motion.ul>
+              </AnimatePresence>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

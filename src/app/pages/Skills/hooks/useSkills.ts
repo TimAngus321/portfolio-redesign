@@ -3,6 +3,7 @@ import languages from "../data/languages";
 import { useNavigate } from "react-router-dom";
 import { skills, waterfallObj } from "../types/skillsetType";
 import Vibrant from "node-vibrant";
+import useFramerAnimation from "./useFramerAnimation";
 
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>(languages);
@@ -23,6 +24,7 @@ const useSkills = () => {
   ]);
 
   const navigate = useNavigate();
+  const { controls, enterAnimation, exitAnimation, colorWaterfall } = useFramerAnimation();
 
   const clearState = () => {
     const currentState: skills[] = [];
@@ -33,41 +35,49 @@ const useSkills = () => {
     new Promise((resolve) => setTimeout(resolve, delay));
 
   const updateSkillSet = async (skillSet: skills[]) => {
+    await controls.start(exitAnimation);
+
     clearState();
     await sleep(500);
     await setSkillSet(skillSet);
-    // await createWaterfall(skillSet);
+    await createWaterfall(skillSet);
+
+    await controls.start(enterAnimation);
+    // await controls.start(colorWaterfall)
+    // await childControls.start(enterAnimation);
+
+
   };
 
-  // const createWaterfall = async (skillSet: any) => {
-  //   for (let i = 0; i < skillSet?.length; i++) {
-  //     const hexCodes: string[] = [];
-  //     try {
-  //       await Vibrant.from(skillSet[i]?.image)
-  //         .getPalette()
-  //         .then((palette) => {
-  //           for (let color in palette) {
-  //             const hex: string | undefined = palette[color]?.getHex();
-  //             if (hex) {
-  //               hexCodes.push(hex);
-  //             }
-  //           }
-  //         });
-  //     } catch (error) {
-  //       // Handle any errors that occur during the color extraction process
-  //       console.error("Error while getting the color palette: ", error);
-  //     }
+  const createWaterfall = async (skillSet: any) => {
+    for (let i = 0; i < skillSet?.length; i++) {
+      const hexCodes: string[] = [];
+      try {
+        await Vibrant.from(skillSet[i]?.image)
+          .getPalette()
+          .then((palette) => {
+            for (let color in palette) {
+              const hex: string | undefined = palette[color]?.getHex();
+              if (hex) {
+                hexCodes.push(hex);
+              }
+            }
+          });
+      } catch (error) {
+        // Handle any errors that occur during the color extraction process
+        console.error("Error while getting the color palette: ", error);
+      }
 
-  //     const delayEachSkillcardColorUpdate = async () => {
-  //       setSkillSet((prevSkillSet) => {
-  //         const updatedSkillSet = [...prevSkillSet];
-  //         updatedSkillSet[i].waterfall = hexCodes;
-  //         return updatedSkillSet;
-  //       });
-  //     };
-  //     await delayEachSkillcardColorUpdate();
-  //   }
-  // };
+      const delayEachSkillcardColorUpdate = async () => {
+        setSkillSet((prevSkillSet) => {
+          const updatedSkillSet = [...prevSkillSet];
+          updatedSkillSet[i].waterfall = hexCodes;
+          return updatedSkillSet;
+        });
+      };
+      await delayEachSkillcardColorUpdate();
+    }
+  };
 
   // Try using framer animation then give up
 
@@ -93,6 +103,9 @@ const useSkills = () => {
     //   setHoverColors(hexCodes);
   };
 
+  // useEffect(() => {
+  //   control
+  // }, [skillSet]);
 
   // debug skillColorEffect
   // useEffect(() => {
@@ -115,6 +128,7 @@ const useSkills = () => {
     hoverColors,
     getColorPalette,
     sleep,
+    controls,
     // waterfall,
   };
 };

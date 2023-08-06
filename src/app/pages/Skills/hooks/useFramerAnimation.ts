@@ -1,60 +1,85 @@
-import {motion, useAnimate, usePresence} from "framer-motion";
-
+import { useAnimation, useAnimate, Variants, stagger } from "framer-motion";
 
 const useFramerAnimation = () => {
+  const controls = useAnimation();
+  const childControls = useAnimation();
 
-    const [isPresent, safeToRemove ] = usePresence();
-    const [scope, animate ] = useAnimate();
-
-  
-    const parentAnimation = {
-    initial: {
+    const exitAnimation = {
       opacity: 1,
       x: "220%",
-      alignItems: "center",
-      justifyContent: "center",
-      ease: "easeInOut",
-    },
-    animate: {
       transition: {
-        duration: 1,
+        duration: 0.5,
         ease: "easeInOut",
         alignItems: "center",
         justifyContent: "center",
-        type: "spring",
-        bounce: 0.3,
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
       },
+    };
+
+    const enterAnimation = {
       opacity: 1,
       x: "0%",
-    },
-    exit: {
-      opacity: 0,
-      x: "220%",
+      alignItems: "center",
+      justifyContent: "center",
       transition: {
-        duration: 0.3,
         ease: "easeInOut",
+        duration: 0.3,
+        type: "spring",
+        bounce: 0.2,
+        staggerChildren: 0.3,
       },
+
+    };
+
+    const colorWaterfall = {
+      border: "red",
+      alignItems: "bottom",
+      transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+      boxShadow: "inset 0 0 0 1px red"
+      }
+    }
+
+  const ulVariants: Variants = {
+    exit: { 
+        x: "220%",
+        alignItems: "center",
+        justifyContent: "center",
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            ease: "easeInOut",
+        }},
+    enter: {
+        x: "0%",        
+        alignItems: "center",
+        justifyContent: "center",
+      transition: {
+        type: "spring",
+        bounce: 0.2,
+        staggerChildren: 0.3,
+      }
     },
-    //   transition: {
-    //     duration: 0.7,
-    //     ease: "easeInOut",
-    //   }
   };
 
-  const childAnimations = {
-    exit: { opacity: 1, x: "220%" },
-    // transition: { exit: { duration: 2} }
+  const liVariants: Variants = {
+    // exit: {
+        
+
+    // },
+    exit: {
+        opacity: 1,
+        ['--block' as string]: '100%',
+    },
   };
 
   return {
-    parentAnimation,
-    childAnimations,
-    isPresent, 
-    safeToRemove,
-    scope, 
-    animate 
+    controls,
+    exitAnimation,
+    enterAnimation,
+    liVariants,
+    ulVariants,
+    colorWaterfall
   };
 };
 

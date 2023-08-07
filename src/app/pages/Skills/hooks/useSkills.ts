@@ -3,7 +3,8 @@ import languages from "../data/languages";
 import { useNavigate } from "react-router-dom";
 import { skills, waterfallObj } from "../types/skillsetType";
 import Vibrant from "node-vibrant";
-import useFramerAnimation from "./useFramerAnimation";
+// import useFramerAnimation from "./useFramerAnimation";
+import { stagger, useAnimate, usePresence } from "framer-motion";
 
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>(languages);
@@ -24,8 +25,12 @@ const useSkills = () => {
   ]);
 
   const navigate = useNavigate();
-  const { controls, enterAnimation, exitAnimation, colorWaterfall } = useFramerAnimation();
+  // const { controls, enterAnimation, exitAnimation, colorWaterfall } = useFramerAnimation();
+  // const [scope, animate] = useAnimate();
+  const [scope, animate] = useAnimate();
+  const [isPresent, safeToRemove] = usePresence();
 
+ 
   const clearState = () => {
     const currentState: skills[] = [];
     setSkillSet(currentState);
@@ -35,19 +40,24 @@ const useSkills = () => {
     new Promise((resolve) => setTimeout(resolve, delay));
 
   const updateSkillSet = async (skillSet: skills[]) => {
-    await controls.start(exitAnimation);
+    // await controls.start(exitAnimation);
+    await animate(scope.current, { x: "100vw" }, { duration: 0.5 });
 
     clearState();
     await sleep(500);
     await setSkillSet(skillSet);
     await createWaterfall(skillSet);
-
-    await controls.start(enterAnimation);
-    // await controls.start(colorWaterfall)
-    // await childControls.start(enterAnimation);
-
-
+    animate(scope.current, { x: 0 }, { duration: 0.5});
+    await sleep(500);
+    if (isPresent) {
+      await animate('ul.skill-card > li.skillCard', {['--block' as string]: '100%'}, { delay: stagger(0.3)}  );
+      await sleep(500);
+      await animate('ul.skill-card > li.skillCard', {['--block' as string]: '0%'}, { delay: stagger(0.3)}  );
+    }
+    return scope;
   };
+
+   
 
   const createWaterfall = async (skillSet: any) => {
     for (let i = 0; i < skillSet?.length; i++) {
@@ -127,9 +137,11 @@ const useSkills = () => {
     // skillLogoColors,
     hoverColors,
     getColorPalette,
-    sleep,
-    controls,
+    // sleep,
+    // controls,
     // waterfall,
+    scope,
+    animate
   };
 };
 

@@ -17,15 +17,15 @@ import {
   stagger,
   useAnimate,
   useAnimation,
+  usePresence,
 } from "framer-motion";
-import useFramerAnimation from "../hooks/useFramerAnimation";
+// import useFramerAnimation from "../hooks/useFramerAnimation";
 import SkillCard from "../components/SkillCard";
-import { useRef } from "react";
+import { useState, useEffect } from "react";
+import { skills, waterfallObj } from "../types/skillsetType";
 
 const Skills = () => {
-  const { updateSkillSet, navigate, skillSet, controls } = useSkills();
-  const { ulVariants } = useFramerAnimation();
-  const ulRef = useRef(null);
+  const { navigate, skillSet, scope, updateSkillSet } = useSkills();  
 
   return (
     <section className={skillPageStyle?.pageContainerSkills}>
@@ -108,18 +108,18 @@ const Skills = () => {
           </div>
         </div>
 
-        <div className={skillPageStyle?.revealedSkillsContainer}>
+        <div ref={scope} className={skillPageStyle?.revealedSkillsContainer}>
           <div className={skillPageStyle?.revealSkills}>
             <div className={skillPageStyle?.selectedSkillset}>
               <AnimatePresence>
-                <motion.ul
+                <ul
                   className="skill-card"
                   // animate={controls}
-                  ref={ulRef}
-                  initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                  variants={ulVariants}
+
+                  // initial="hidden"
+                  // animate="visible"
+                  // exit="hidden"
+                  // variants={ulVariants}
                   // animate="enter"
                   // exit="exit"
                   // initial: {
@@ -164,7 +164,7 @@ const Skills = () => {
                       waterfall={skillSet[i]?.waterfall}
                     />
                   ))}
-                </motion.ul>
+                </ul>
               </AnimatePresence>
             </div>
           </div>

@@ -10,22 +10,12 @@ import useSkills from "../hooks/useSkills";
 import "../style/skillCardAnimations.scss";
 import skillPageStyle from "../style/skillCardPageStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
-import {
-  motion,
-  AnimatePresence,
-  easeInOut,
-  stagger,
-  useAnimate,
-  useAnimation,
-  usePresence,
-} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 // import useFramerAnimation from "../hooks/useFramerAnimation";
 import SkillCard from "../components/SkillCard";
-import { useState, useEffect } from "react";
-import { skills, waterfallObj } from "../types/skillsetType";
 
 const Skills = () => {
-  const { navigate, skillSet, scope, updateSkillSet } = useSkills();  
+  const { navigate, skillSet, scope, updateSkillSet, processing } = useSkills();
 
   return (
     <section className={skillPageStyle?.pageContainerSkills}>
@@ -65,42 +55,49 @@ const Skills = () => {
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(languages)}
+                disabled={processing}
               >
                 Languages
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(frontendSkillSet)}
+                disabled={processing}
               >
                 Front-end
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(mobileSkillset)}
+                disabled={processing}
               >
                 Mobile
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(backendSkillSet)}
+                disabled={processing}
               >
                 Backend
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(hostingUsed)}
+                disabled={processing}
               >
                 Hosting
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(shopifySkillSet)}
+                disabled={processing}
               >
                 Shopify
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(developingSkills)}
+                disabled={processing}
               >
                 Learning
               </button>
@@ -112,48 +109,7 @@ const Skills = () => {
           <div className={skillPageStyle?.revealSkills}>
             <div className={skillPageStyle?.selectedSkillset}>
               <AnimatePresence>
-                <ul
-                  className="skill-card"
-                  // animate={controls}
-
-                  // initial="hidden"
-                  // animate="visible"
-                  // exit="hidden"
-                  // variants={ulVariants}
-                  // animate="enter"
-                  // exit="exit"
-                  // initial: {
-                  //   opacity: 1,
-                  //   x: "220%",
-                  //   alignItems: "center",
-                  //   justifyContent: "center",
-                  //   ease: "easeInOut",
-                  // },
-                  // animate: {
-                  //   transition: {
-                  //     duration: 1,
-                  //     ease: "easeInOut",
-                  //     alignItems: "center",
-                  //     justifyContent: "center",
-                  //     type: "spring",
-                  //     bounce: 0.3,
-                  //   },
-                  //   opacity: 1,
-                  //   x: "0%",
-                  // },
-                  // exit: {
-                  //   opacity: 0,
-                  //   x: "220%",
-                  //   transition: {
-                  //     duration: 0.3,
-                  //     ease: "easeInOut",
-                  //   },
-                  // },
-                  //   transition: {
-                  //     duration: 0.7,
-                  //     ease: "easeInOut",
-                  //   }
-                >
+                <motion.ul className="skill-card">
                   {Object.keys(skillSet).map((key, i) => (
                     <SkillCard
                       key={key}
@@ -164,7 +120,7 @@ const Skills = () => {
                       waterfall={skillSet[i]?.waterfall}
                     />
                   ))}
-                </ul>
+                </motion.ul>
               </AnimatePresence>
             </div>
           </div>

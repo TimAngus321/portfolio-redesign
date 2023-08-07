@@ -15,26 +15,12 @@ const SkillCard = (props: skills) => {
     // controls,
     // waterfallColors,
   } = useSkills();
-  // const { liVariants } = useFramerAnimation();
-
 
   return (
     <AnimatePresence>
     <motion.li
       className={`skillCard snake `}
       onMouseOver={() => getColorPalette(image)}
-      // variants={liVariants}
-      // animate={{ transition: { staggerChildren: 0.3, ['--block' as string]: '100%' },}}
-     
-        
-    
-      // style={{['--block' as string]: '100%' }}
-      // style={
-      //   {
-      //   `--block`: 100%, 
-      //   boxShadow: `inset 0 0 0 var(--block) ${waterfall[0]}`} as customCSS
-      // }
-
     >
       <div className="inner">
         <img

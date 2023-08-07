@@ -15,20 +15,16 @@ const useFramerAnimation = () => {
 //       },
 //     };
 
-//     const enterAnimation = {
-//       opacity: 1,
-//       x: "0%",
-//       alignItems: "center",
-//       justifyContent: "center",
-//       transition: {
-//         ease: "easeInOut",
-//         duration: 0.3,
-//         type: "spring",
-//         bounce: 0.2,
-//         staggerChildren: 0.3,
-//       },
-
-//     };
+    // const enterAnimation = {
+    //   opacity: 1,
+    //   x: "0%",
+    //   alignItems: "center",
+    //   justifyContent: "center",
+    //   transition: {
+    //     ease: "easeInOut",
+    //     duration: 0.3,
+    //   }
+    // };
 
 //     const colorWaterfall = {
 //       border: "red",
@@ -73,14 +69,14 @@ const useFramerAnimation = () => {
 //     },
 //   };
 
-//   return {
-//     controls,
-//     exitAnimation,
-//     enterAnimation,
-//     liVariants,
-//     ulVariants,
-//     colorWaterfall
-//   };
+  return {
+    // controls,
+    // exitAnimation,
+    // enterAnimation,
+    // liVariants,
+    // ulVariants,
+    // colorWaterfall
+  };
 };
 
 export default useFramerAnimation;

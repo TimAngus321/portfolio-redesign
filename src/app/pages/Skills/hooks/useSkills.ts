@@ -1,13 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import languages from "../data/languages";
 import { useNavigate } from "react-router-dom";
 import { skills, waterfallObj } from "../types/skillsetType";
 import Vibrant from "node-vibrant";
-// import useFramerAnimation from "./useFramerAnimation";
-import { stagger, useAnimate, usePresence } from "framer-motion";
+import useFramerAnimation from "./useFramerAnimation";
+import {
+  stagger,
+  useAnimate,
+  usePresence,
+  useAnimation,
+  PresenceContext,
+} from "framer-motion";
 
 const useSkills = () => {
-  const [skillSet, setSkillSet] = useState<skills[]>(languages);
+  const [skillSet, setSkillSet] = useState<skills[]>([]);
   const [selectedImage, setSelectedImage] = useState<string>(
     "/static/media/javascript-original.4c1b5332.svg"
   );
@@ -25,12 +31,12 @@ const useSkills = () => {
   ]);
 
   const navigate = useNavigate();
-  // const { controls, enterAnimation, exitAnimation, colorWaterfall } = useFramerAnimation();
-  // const [scope, animate] = useAnimate();
+  // const { enterAnimation} = useFramerAnimation();
   const [scope, animate] = useAnimate();
-  const [isPresent, safeToRemove] = usePresence();
+  const controls = useAnimation();
+  const [isPresent] = usePresence();
+  const [processing, setProcessing] = useState<boolean>(false);
 
- 
   const clearState = () => {
     const currentState: skills[] = [];
     setSkillSet(currentState);
@@ -40,24 +46,71 @@ const useSkills = () => {
     new Promise((resolve) => setTimeout(resolve, delay));
 
   const updateSkillSet = async (skillSet: skills[]) => {
-    // await controls.start(exitAnimation);
-    await animate(scope.current, { x: "100vw" }, { duration: 0.5 });
-
-    clearState();
-    await sleep(500);
-    await setSkillSet(skillSet);
-    await createWaterfall(skillSet);
-    animate(scope.current, { x: 0 }, { duration: 0.5});
-    await sleep(500);
-    if (isPresent) {
-      await animate('ul.skill-card > li.skillCard', {['--block' as string]: '100%'}, { delay: stagger(0.3)}  );
+    if (!processing) {
+    setProcessing(true);
+    try {
+      await animate(scope.current, { x: "100vw" }, { duration: 0.3 });
+      await clearState();
       await sleep(500);
-      await animate('ul.skill-card > li.skillCard', {['--block' as string]: '0%'}, { delay: stagger(0.3)}  );
+      await setSkillSet(skillSet);
+      await createWaterfall(skillSet);
+      if (isPresent) {
+        await animate(scope.current, { x: 0 }, { duration: 0.3 });
+
+        await animate(
+          "li.skillCard",
+          { ["--block" as string]: "100%" },
+          { delay: stagger(0.3) }
+        );
+        await sleep(150);
+        await animate(
+          "li.skillCard",
+          { ["--block" as string]: "0%" },
+          { delay: stagger(0.3) }
+        );
+      }
+    } catch (err) {
+      console.log("Animation error: ", err);
     }
+  }
+    setProcessing(false);
     return scope;
   };
 
-   
+  const initialSkillSet = async (skillSet: skills[]) => {
+    try {
+      setProcessing(true)
+      await setSkillSet(skillSet);
+      await createWaterfall(skillSet);
+      if (isPresent) {
+        await animate(
+          "li.skillCard",
+          { ["--block" as string]: "100%" },
+          { delay: stagger(0.3) }
+        );
+        await sleep(150);
+        await animate(
+          "li.skillCard",
+          { ["--block" as string]: "0%" },
+          { delay: stagger(0.3) }
+        );
+      }
+    } catch (err) {
+      console.log("Animation error: ", err);
+    }
+    setProcessing(false)
+    return scope;
+  };
+
+  // For initial waterfall effect load
+  useEffect(() => {
+    const initialSkillLoad = async () => {
+      if (scope.current && !processing) {
+        await initialSkillSet(languages);
+      }
+    };
+    initialSkillLoad();
+  }, [skillSet[0]?.waterfall?.length === 0]);
 
   const createWaterfall = async (skillSet: any) => {
     for (let i = 0; i < skillSet?.length; i++) {
@@ -73,26 +126,28 @@ const useSkills = () => {
               }
             }
           });
-      } catch (error) {
+      } catch (err) {
         // Handle any errors that occur during the color extraction process
-        console.error("Error while getting the color palette: ", error);
+        console.error("Error while getting the color palette: ", err);
       }
 
-      const delayEachSkillcardColorUpdate = async () => {
-        setSkillSet((prevSkillSet) => {
-          const updatedSkillSet = [...prevSkillSet];
-          updatedSkillSet[i].waterfall = hexCodes;
-          return updatedSkillSet;
-        });
-      };
-      await delayEachSkillcardColorUpdate();
+      try {
+        const delayEachSkillcardColorUpdate = async () => {
+          setSkillSet((prevSkillSet) => {
+            const updatedSkillSet = [...prevSkillSet];
+            updatedSkillSet[i].waterfall = hexCodes;
+            return updatedSkillSet;
+          });
+        };
+        await delayEachSkillcardColorUpdate();
+      } catch (err) {
+        console.log("error while setting color palette ", err);
+      }
     }
   };
 
-  // Try using framer animation then give up
-
   const getColorPalette = async (image: string) => {
-    // console.log('hovered')
+    // Don't delete unless you know you want the waterfall option to be permenant
     // setSelectedImage(image);
     // const hexCodes: string[] | any = [];
     // try {
@@ -122,11 +177,6 @@ const useSkills = () => {
   //   console.log(skillLogoColors);
   // }, [skillLogoColors]);
 
-  // For initial waterfall load
-  // useEffect(() => {
-  //   createWaterfall(skillSet);
-  // }, [skillSet[0]?.waterfall?.length === 0]);
-
   return {
     updateSkillSet,
     skillSet,
@@ -141,7 +191,8 @@ const useSkills = () => {
     // controls,
     // waterfall,
     scope,
-    animate
+    animate,
+    processing,
   };
 };
 

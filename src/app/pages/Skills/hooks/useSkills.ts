@@ -46,40 +46,42 @@ const useSkills = () => {
     new Promise((resolve) => setTimeout(resolve, delay));
 
   const updateSkillSet = async (skillSet: skills[]) => {
-    if (!processing) {
-    setProcessing(true);
     try {
-      await animate(scope.current, { x: "100vw" }, { duration: 0.3 });
-      await clearState();
-      await sleep(500);
-      await setSkillSet(skillSet);
-      await createWaterfall(skillSet);
-      if (isPresent) {
-        await animate(scope.current, { x: 0 }, { duration: 0.3 });
+      // uncomment if !processing duirng development to remove unecessary error
+      // if (!processing) {
+        setProcessing(true);
 
-        await animate(
-          "li.skillCard",
-          { ["--block" as string]: "100%" },
-          { delay: stagger(0.3) }
-        );
-        await sleep(150);
-        await animate(
-          "li.skillCard",
-          { ["--block" as string]: "0%" },
-          { delay: stagger(0.3) }
-        );
-      }
+        await animate(scope.current, { x: "100vw" }, { duration: 0.3 });
+        await clearState();
+        await sleep(500);
+        await setSkillSet(skillSet);
+        await createWaterfall(skillSet);
+        if (isPresent) {
+          await animate(scope.current, { x: 0 }, { duration: 0.3 });
+
+          await animate(
+            "li.skillCard",
+            { ["--block" as string]: "100%" },
+            { delay: stagger(0.3) }
+          );
+          await sleep(150);
+          await animate(
+            "li.skillCard",
+            { ["--block" as string]: "0%" },
+            { delay: stagger(0.3) }
+          );
+        }
+      // }
+      // setProcessing(false);
+      return scope;
     } catch (err) {
       console.log("Animation error: ", err);
     }
-  }
-    setProcessing(false);
-    return scope;
   };
 
   const initialSkillSet = async (skillSet: skills[]) => {
     try {
-      setProcessing(true)
+      // setProcessing(true);
       await setSkillSet(skillSet);
       await createWaterfall(skillSet);
       if (isPresent) {
@@ -95,11 +97,11 @@ const useSkills = () => {
           { delay: stagger(0.3) }
         );
       }
-    } catch (err) {
-      console.log("Animation error: ", err);
-    }
-    setProcessing(false)
+    // setProcessing(false);
     return scope;
+  } catch (err) {
+    console.log("Animation error: ", err);
+  }
   };
 
   // For initial waterfall effect load

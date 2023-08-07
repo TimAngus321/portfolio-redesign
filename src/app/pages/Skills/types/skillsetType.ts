@@ -1,5 +1,3 @@
-import { CSSProperties } from "react";
-
 export interface skills {
   name: string;
   image: string;

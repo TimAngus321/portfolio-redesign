@@ -55,49 +55,49 @@ const Skills = () => {
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(languages)}
-                disabled={processing}
+                // disabled={processing}
               >
                 Languages
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(frontendSkillSet)}
-                disabled={processing}
+                // disabled={processing}
               >
                 Front-end
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(mobileSkillset)}
-                disabled={processing}
+                // disabled={processing}
               >
                 Mobile
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(backendSkillSet)}
-                disabled={processing}
+                // disabled={processing}
               >
                 Backend
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(hostingUsed)}
-                disabled={processing}
+                // disabled={processing}
               >
                 Hosting
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(shopifySkillSet)}
-                disabled={processing}
+                // disabled={processing}
               >
                 Shopify
               </button>
               <button
                 className="default-btn"
                 onClick={() => updateSkillSet(developingSkills)}
-                disabled={processing}
+                // disabled={processing}
               >
                 Learning
               </button>

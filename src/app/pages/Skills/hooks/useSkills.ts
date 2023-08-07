@@ -59,16 +59,16 @@ const useSkills = () => {
         if (isPresent) {
           await animate(scope.current, { x: 0 }, { duration: 0.3 });
 
-          await animate(
+        await animate(
             "li.skillCard",
             { ["--block" as string]: "100%" },
-            { delay: stagger(0.3) }
+            { delay: stagger(0.2) }
           );
-          await sleep(150);
+          await sleep(250);
           await animate(
             "li.skillCard",
             { ["--block" as string]: "0%" },
-            { delay: stagger(0.3) }
+            { delay: stagger(0.2) }
           );
         }
       // }

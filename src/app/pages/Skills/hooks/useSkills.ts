@@ -3,14 +3,7 @@ import languages from "../data/languages";
 import { useNavigate } from "react-router-dom";
 import { skills, waterfallObj } from "../types/skillsetType";
 import Vibrant from "node-vibrant";
-import useFramerAnimation from "./useFramerAnimation";
-import {
-  stagger,
-  useAnimate,
-  usePresence,
-  useAnimation,
-  PresenceContext,
-} from "framer-motion";
+import { stagger, useAnimate, usePresence, useAnimation } from "framer-motion";
 
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>([]);
@@ -48,41 +41,40 @@ const useSkills = () => {
   const updateSkillSet = async (skillSet: skills[]) => {
     try {
       // uncomment if !processing duirng development to remove unecessary error
-      // If someone switches between skillSets to quickly it will error gracefully but not 
+      // If someone switches between skillSets to quickly it will error gracefully but not
       // perform entire waterfall animation
       // if (!processing) {
-        // setProcessing(true);
+      // setProcessing(true);
 
-        if (window.innerWidth > 900) {
+      if (window.innerWidth > 900) {
         await animate(scope.current, { x: "100vw" }, { duration: 0.3 });
-        } else  {
-          await animate(scope.current, {opacity: 0}, {duration: 0.3});
-        }
-
-        await clearState();
-        await sleep(500);
-        await setSkillSet(skillSet);
-        await createWaterfall(skillSet);
-        if (isPresent) {
-          if (window.innerWidth > 900) {
-        await animate(scope.current, { x: 0 }, { duration: 0.3 });
       } else {
-        await animate(scope.current, {opacity: 1}, {duration: 0.3});
+        await animate(scope.current, { opacity: 0 }, { duration: 0.3 });
       }
+
+      await clearState();
+      await sleep(500);
+      await setSkillSet(skillSet);
+      await createWaterfall(skillSet);
+      if (isPresent) {
+        if (window.innerWidth > 900) {
+          await animate(scope.current, { x: 0 }, { duration: 0.3 });
+        } else {
+          await animate(scope.current, { opacity: 1 }, { duration: 0.3 });
+        }
         await animate(
-            "li.skillCard",
-            { ["--block" as string]: "100%" },
-            { delay: stagger(0.2) }
-          );
-          await sleep(250);
-          await animate(
-            "li.skillCard",
-            { ["--block" as string]: "0%" },
-            { delay: stagger(0.2) }
-          );
-          // add mobile animations here
-       
-      } 
+          "li.skillCard",
+          { ["--block" as string]: "100%" },
+          { delay: stagger(0.2) }
+        );
+        await sleep(250);
+        await animate(
+          "li.skillCard",
+          { ["--block" as string]: "0%" },
+          { delay: stagger(0.2) }
+        );
+        // add mobile animations here
+      }
       // }
       // setProcessing(false);
       return scope;
@@ -109,11 +101,11 @@ const useSkills = () => {
           { delay: stagger(0.3) }
         );
       }
-    // setProcessing(false);
-    return scope;
-  } catch (err) {
-    console.log("Animation error: ", err);
-  }
+      // setProcessing(false);
+      return scope;
+    } catch (err) {
+      console.log("Animation error: ", err);
+    }
   };
 
   // For initial color waterfall effect load
@@ -147,11 +139,11 @@ const useSkills = () => {
 
       try {
         const delayEachSkillcardColorUpdate = async () => {
-          setSkillSet((prevSkillSet) => {
-            const updatedSkillSet = [...prevSkillSet];
-            updatedSkillSet[i].waterfall = hexCodes;
-            return updatedSkillSet;
-          });
+            setSkillSet((prevSkillSet) => {
+              const updatedSkillSet = [...prevSkillSet];
+              updatedSkillSet[i].waterfall = hexCodes;
+              return updatedSkillSet;
+            });
         };
         await delayEachSkillcardColorUpdate();
       } catch (err) {
@@ -181,10 +173,6 @@ const useSkills = () => {
     // }
     //   setHoverColors(hexCodes);
   };
-
-  // useEffect(() => {
-  //   control
-  // }, [skillSet]);
 
   // debug skillColorEffect
   // useEffect(() => {

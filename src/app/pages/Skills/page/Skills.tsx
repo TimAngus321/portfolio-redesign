@@ -1,4 +1,3 @@
-// import { CSSTransition, TransitionGroup } from "react-transition-group";
 import backendSkillSet from "../data/backend-skills";
 import developingSkills from "../data/developing-skills";
 import frontendSkillSet from "../data/front-end-skills";
@@ -11,7 +10,6 @@ import "../style/skillCardAnimations.scss";
 import skillPageStyle from "../style/skillCardPageStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
 import { motion, AnimatePresence } from "framer-motion";
-// import useFramerAnimation from "../hooks/useFramerAnimation";
 import SkillCard from "../components/SkillCard";
 
 const Skills = () => {

@@ -2,9 +2,7 @@
 import styles from "../style/skillCard.module.scss";
 import { skills } from "../types/skillsetType";
 import useSkills from "../hooks/useSkills";
-// import { ColorExtractor } from "react-color-extractor";
 import { motion, AnimatePresence } from "framer-motion";
-import useFramerAnimation from "../hooks/useFramerAnimation";
 
 const SkillCard = (props: skills) => {
   const { name, image, styleClass, alt, waterfall } = props;

@@ -48,11 +48,17 @@ const useSkills = () => {
   const updateSkillSet = async (skillSet: skills[]) => {
     try {
       // uncomment if !processing duirng development to remove unecessary error
+      // If someone switches between skillSets to quickly it will error gracefully but not 
+      // perform entire waterfall animation
       // if (!processing) {
         // setProcessing(true);
 
-        
+        if (window.innerWidth > 900) {
         await animate(scope.current, { x: "100vw" }, { duration: 0.3 });
+        } else  {
+          await animate(scope.current, {opacity: 0}, {duration: 0.3});
+        }
+
         await clearState();
         await sleep(500);
         await setSkillSet(skillSet);
@@ -60,6 +66,9 @@ const useSkills = () => {
         if (isPresent) {
           if (window.innerWidth > 900) {
         await animate(scope.current, { x: 0 }, { duration: 0.3 });
+      } else {
+        await animate(scope.current, {opacity: 1}, {duration: 0.3});
+      }
         await animate(
             "li.skillCard",
             { ["--block" as string]: "100%" },
@@ -72,9 +81,7 @@ const useSkills = () => {
             { delay: stagger(0.2) }
           );
           // add mobile animations here
-        } else {
-          console.log(`i'm mobile width`)
-        }
+       
       } 
       // }
       // setProcessing(false);
@@ -148,13 +155,13 @@ const useSkills = () => {
         };
         await delayEachSkillcardColorUpdate();
       } catch (err) {
-        console.log("error while setting color palette ", err);
+        console.log("error when adding colors to skillSet object ", err);
       }
     }
   };
 
+  // Don't delete unless you know you want the waterfall option to be permenant
   const getColorPalette = async (image: string) => {
-    // Don't delete unless you know you want the waterfall option to be permenant
     // setSelectedImage(image);
     // const hexCodes: string[] | any = [];
     // try {

@@ -9,6 +9,8 @@ import { BrowserRouter } from "react-router-dom";
 import PageRoutes from "../Routes/routes";
 import { HelmetProvider } from "react-helmet-async";
 
+
+
 const Router = () => {
   const [open, setOpen] = useState(false);
   const helmetContext = {};

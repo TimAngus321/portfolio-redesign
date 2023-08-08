@@ -105,11 +105,11 @@ const Skills = () => {
           </div>
         </div>
 
-        <div ref={scope} className={skillPageStyle?.revealedSkillsContainer}>
+        <div className={skillPageStyle?.revealedSkillsContainer}>
           <div className={skillPageStyle?.revealSkills}>
             <div className={skillPageStyle?.selectedSkillset}>
               <AnimatePresence>
-                <motion.ul className="skill-card">
+                <motion.ul ref={scope} className="skill-card">
                   {Object.keys(skillSet).map((key, i) => (
                     <SkillCard
                       key={key}

@@ -5,7 +5,6 @@ import awsLogo from '../../../../assets/skillsImages/hostLogos/amazonwebservices
 
 const hostingUsed = [
     {
-        key: 1,
         name: "Github Pages",
         image: githubLogo,
         alt: "Github Pages Logo",
@@ -13,21 +12,18 @@ const hostingUsed = [
         waterfall: [""]
     }, 
     {
-        key: 2,
         name: "Heroku",
         image: herokuLogo,
         alt: "Heroku Logo",
         waterfall: [""]
     }, 
     {
-        key: 3,
         name: "AWS",
         image: awsLogo,
         alt: "Heroku Logo",
         waterfall: [""]
     },
     {
-        key: 4,
         name: "Netlify",
         image: netlifyLogo,
         alt: "Netlify Logo",

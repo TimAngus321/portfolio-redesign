@@ -1,13 +1,17 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "../pages/Home/page/Home";
 import About from "../pages/About/page/About";
 import Skills from "../pages/Skills/page/Skills";
 import Work from "../pages/Work/page/Work";
 import Contact from "../pages/Contact/page/Contact";
+import { AnimatePresence } from "framer-motion";
 
 const PageRoutes = () => {
+  const location = useLocation();
+
   return (
-      <Routes>
+    // <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
@@ -15,6 +19,7 @@ const PageRoutes = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Home />} />
       </Routes>
+    // </AnimatePresence>
   );
 };
 

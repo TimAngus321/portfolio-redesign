@@ -20,23 +20,24 @@
 - Custom Hooks
 - HTML
 - EmailJS
-- CSS Transition
+- Framer Motion
 - Media Queries
 - Key Frames
 - Yarn
 
 ## ToDo
 
-- New animations in skills page ✅
+- New animations replace css transitions with framer motion in skills page ✅
 - Redo routes in a more traditional manner ✅
 - Optimize Images ✅
 - Update parallax scroll ✅
 - Update so it's a progressive web app ✅
-- Clean up code with typescript, code splitting with custom hooks, SCSS modules & more ⚙️
+- Clean up code with typescript, code splitting with custom hooks, SCSS modules & more ✅
 - Use react-colour-extractor package to add cool effect on skills page ✅
 - Replace react-color-extractor package with node-vibrant for full control ✅
 - Add limiter for abstract email validator API (don't allow more than 1 request a sec) ✅
-- Replace min/max height & width with clamp() for better basic responsiveness
+- Replace min/max height & width with clamp() for better basic responsiveness ⚙️
+- Animate page transitions
 
 ## Possible Improvement Ideas
 
@@ -45,3 +46,4 @@
 - Remove styled and use scss module for hamburger menu and burger (redo?)
 - Check process state of skills animation with useContext everywhere to prevent errors when skill page skillSet buttons used too quickly
 - Replace home page animation with interactive framer motion gradient blob
+- GSAP might be a better animation library for more complex animations as it's more consise and clean Framer Motion seems better for simple animations.

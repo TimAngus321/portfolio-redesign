@@ -13,7 +13,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import SkillCard from "../components/SkillCard";
 
 const Skills = () => {
-  const { navigate, skillSet, scope, updateSkillSet, processing } = useSkills();
+  const {
+    navigate,
+    skillSet,
+    scope,
+    updateSkillSet,
+    // , processing
+  } = useSkills();
 
   return (
     <section className={skillPageStyle?.pageContainerSkills}>

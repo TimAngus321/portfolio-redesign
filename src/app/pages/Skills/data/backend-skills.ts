@@ -7,14 +7,12 @@ import railsLogo from "../../../../assets/skillsImages/backendLogos/rails-plain.
 
 const backendSkillSet = [
   {
-    key: 1,
     name: "Node.js",
     image: nodejsLogo,
     alt: "Node.js Logo",
     waterfall: [""]
   },
   {
-    key: 2,
     name: "Express.js",
     image: expressLogo,
     alt: "Express.js Logo",
@@ -22,28 +20,24 @@ const backendSkillSet = [
     waterfall: [""]
   },
   {
-    key: 3,
     name: "Ruby on Rails",
     image: railsLogo,
     alt: "Ruby on Rails Logo",
     waterfall: [""]
   },
   {
-    key: 4,
     name: "PostgreSQL",
     image: postgresLogo,
     alt: "PostgreSQL Logo",
     waterfall: [""]
   },
   {
-    key: 5,
     name: "Mysql",
     image: mysqlLogo,
     alt: "Mysql Logo",
     waterfall: [""]
   },
   {
-    key: 6,
     name: "Prisma",
     image: prismaLogo,
     alt: "Prisma Logo",

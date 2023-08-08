@@ -1,34 +1,28 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import languages from "../data/languages";
 import { useNavigate } from "react-router-dom";
-import { skills, waterfallObj } from "../types/skillsetType";
+import { skills } from "../types/skillsetType";
 import Vibrant from "node-vibrant";
 import { stagger, useAnimate, usePresence, useAnimation } from "framer-motion";
 
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>([]);
-  const [selectedImage, setSelectedImage] = useState<string>(
-    "/static/media/javascript-original.4c1b5332.svg"
-  );
-  // const [waterfall, setWaterfall] = useState<waterfallObj>({
-  //   imgUrl: ["/static/media/html5-original.8664168d5bc90b1a24396f85aadbf623.svg"],
-  //   colors: ["#e64f24", "#fcb494", "#77240d", "#892a0f", "#943004", "#892a0f"],
-  // });
-  const [hoverColors, setHoverColors] = useState<string[]>([
-    // "#e64f24",
-    // "#fcb494",
-    // "#77240d",
-    // "#892a0f",
-    // "#943004",
-    // "#892a0f",
-  ]);
+
+  // State for onHover func
+  // const [hoverColors, setHoverColors] = useState<string[]>([
+  //   "#e64f24",
+  //   "#fcb494",
+  //   "#77240d",
+  //   "#892a0f",
+  //   "#943004",
+  //   "#892a0f",
+  // ]);
 
   const navigate = useNavigate();
-  // const { enterAnimation} = useFramerAnimation();
   const [scope, animate] = useAnimate();
-  const controls = useAnimation();
   const [isPresent] = usePresence();
-  const [processing, setProcessing] = useState<boolean>(false);
+
+  // const [processing, setProcessing] = useState<boolean>(false);
 
   const clearState = () => {
     const currentState: skills[] = [];
@@ -111,7 +105,9 @@ const useSkills = () => {
   // For initial color waterfall effect load
   useEffect(() => {
     const initialSkillLoad = async () => {
-      if (scope.current && !processing) {
+      if (scope.current
+        //  && !processing
+         ) {
         await initialSkillSet(languages);
       }
     };
@@ -133,7 +129,7 @@ const useSkills = () => {
             }
           });
       } catch (err) {
-        // Handle any errors that occur during the color extraction process
+        // Handle any errors that occur during color extraction 
         console.error("Error while getting the color palette: ", err);
       }
 
@@ -174,27 +170,16 @@ const useSkills = () => {
     //   setHoverColors(hexCodes);
   };
 
-  // debug skillColorEffect
-  // useEffect(() => {
-  //   console.log(skillLogoColors);
-  // }, [skillLogoColors]);
 
   return {
+    // processing,
+    // hoverColors,
     updateSkillSet,
     skillSet,
     navigate,
-    // getColors,
-    // handleImageHover,
-    // selectedImage,
-    // skillLogoColors,
-    hoverColors,
     getColorPalette,
-    // sleep,
-    // controls,
-    // waterfall,
     scope,
     animate,
-    processing,
   };
 };
 

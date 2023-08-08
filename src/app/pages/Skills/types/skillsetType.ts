@@ -5,10 +5,3 @@ export interface skills {
   styleClass?: string | undefined;
   waterfall: string[];
 }
-
-export interface waterfallObj {
-    imgUrl: string[];
-    colors: string[];
-}
-
-

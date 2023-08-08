@@ -49,16 +49,17 @@ const useSkills = () => {
     try {
       // uncomment if !processing duirng development to remove unecessary error
       // if (!processing) {
-        setProcessing(true);
+        // setProcessing(true);
 
+        
         await animate(scope.current, { x: "100vw" }, { duration: 0.3 });
         await clearState();
         await sleep(500);
         await setSkillSet(skillSet);
         await createWaterfall(skillSet);
         if (isPresent) {
-          await animate(scope.current, { x: 0 }, { duration: 0.3 });
-
+          if (window.innerWidth > 900) {
+        await animate(scope.current, { x: 0 }, { duration: 0.3 });
         await animate(
             "li.skillCard",
             { ["--block" as string]: "100%" },
@@ -70,7 +71,11 @@ const useSkills = () => {
             { ["--block" as string]: "0%" },
             { delay: stagger(0.2) }
           );
+          // add mobile animations here
+        } else {
+          console.log(`i'm mobile width`)
         }
+      } 
       // }
       // setProcessing(false);
       return scope;
@@ -104,7 +109,7 @@ const useSkills = () => {
   }
   };
 
-  // For initial waterfall effect load
+  // For initial color waterfall effect load
   useEffect(() => {
     const initialSkillLoad = async () => {
       if (scope.current && !processing) {

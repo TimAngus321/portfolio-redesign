@@ -8,22 +8,26 @@ const hostingUsed = [
         name: "Github Pages",
         image: githubLogo,
         alt: "Github Pages Logo",
-        styleClass: 'inverseWhite'
+        styleClass: 'inverseWhite',
+        waterfall: [""]
     }, 
     {
         name: "Heroku",
         image: herokuLogo,
-        alt: "Heroku Logo"
+        alt: "Heroku Logo",
+        waterfall: [""]
     }, 
     {
         name: "AWS",
         image: awsLogo,
-        alt: "Heroku Logo"
+        alt: "Heroku Logo",
+        waterfall: [""]
     },
     {
         name: "Netlify",
         image: netlifyLogo,
-        alt: "Netlify Logo"
+        alt: "Netlify Logo",
+        waterfall: [""]
     }
 ];
 

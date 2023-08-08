@@ -3,10 +3,5 @@ export interface skills {
   image: string;
   alt: string;
   styleClass?: string | undefined;
+  waterfall: string[];
 }
-
-export interface skillColorsObj {
-  imgUrl: string;
-  colors: string[];
-}
-

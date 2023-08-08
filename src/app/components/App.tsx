@@ -16,17 +16,15 @@ const Router = () => {
   return (
     <div className="App">
       <HelmetProvider context={helmetContext}>
-        <ToastContainer
-          newestOnTop={true}
-         />
-        <BrowserRouter>
-          <NavBar />
-          <PageRoutes />
-          <div className="mobile-nav">
-            <Hamburger open={open} setOpen={setOpen} />
-            <Menu open={open} setOpen={setOpen} />
-          </div>
-        </BrowserRouter>
+        <ToastContainer newestOnTop={true} />
+          <BrowserRouter>
+            <NavBar />
+            <PageRoutes />
+            <div className="mobile-nav">
+              <Hamburger open={open} setOpen={setOpen} />
+              <Menu open={open} setOpen={setOpen} />
+            </div>
+          </BrowserRouter>
       </HelmetProvider>
     </div>
   );

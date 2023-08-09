@@ -38,6 +38,7 @@
 - Add limiter for abstract email validator API (don't allow more than 1 request a sec) ✅
 - Replace min/max height & width with clamp() for better basic responsiveness ⚙️
 - Animate page transitions
+- Have skill card animations loop round continuously rather than reverse
 
 ## Possible Improvement Ideas
 

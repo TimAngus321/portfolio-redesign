@@ -59,15 +59,14 @@ const useSkills = () => {
         await animate(
           "li.skillCard",
           { ["--block" as string]: "100%" },
-          { delay: stagger(0.2) }
+          { delay: stagger(0.3) }
         );
         await sleep(250);
         await animate(
           "li.skillCard",
           { ["--block" as string]: "0%" },
-          { delay: stagger(0.2) }
+          { delay: stagger(0.3) }
         );
-        // add mobile animations here
       }
       // }
       // setProcessing(false);

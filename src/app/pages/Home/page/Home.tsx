@@ -14,7 +14,7 @@ const Home = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
     >
       <SEO
         title={`Tim Angus's Porftolio - Home Page`}
@@ -22,7 +22,7 @@ const Home = () => {
         link={`https://tim-angus.com`}
       />
       <DancingLinesMyEdit backgroundColor="rgb(30,30,30)" />
-      <div className={styles?.photoQuote}>
+      <section className={styles?.photoQuote}>
         <div className={styles?.allHeadingsBtn}>
           <div className={styles?.animatedQuotes}>
             <QuoteLoop />
@@ -34,7 +34,7 @@ const Home = () => {
             Contact Me
           </button>
         </div>
-      </div>
+      </section>
     </motion.main>
   );
 };

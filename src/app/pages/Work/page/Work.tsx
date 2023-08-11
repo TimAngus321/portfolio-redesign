@@ -31,7 +31,7 @@ const Work = () => {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
-    transition={{duration: 0.5}}
+    transition={{duration: 1}}
     className={styles?.pageContainerScrollWork}
      >
       <SEO
@@ -39,7 +39,7 @@ const Work = () => {
         description={`Work page of Timothy Angus's portfolio. Discover all of my previous work and personal projects skills using a cool parallax scroll effect!`}
         link={`https://tim-angus.com/work`}
         />
-      <div className={styles?.workContainer}>
+      <section className={styles?.workContainer}>
         <Parallax
           pages={17}
           innerStyle={{
@@ -201,7 +201,7 @@ const Work = () => {
             </ParallaxLayer>
           ))}
         </Parallax>
-      </div>
+      </section>
     </motion.main>
   );
 };

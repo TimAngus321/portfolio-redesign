@@ -2,12 +2,12 @@
 
 ## Deployed on Netlify with custom domain
 
-[Check it out here ](https://www.tim-angus.com/)
+[Check it out here](https://www.tim-angus.com/)
 
 ## Purpose of this App
 
 - Demonstrate skills, experiences, and attributes
-- SPA with dark theme, animations and experiement with react packages
+- SPA with dark theme, animations and experiment with react packages
 - Make sure performance, accessibility, best practices and SEO are good
 - Make first PWA
 
@@ -20,7 +20,11 @@
 - Custom Hooks
 - HTML
 - EmailJS
+- Text Loop
 - Framer Motion
+- Abstract API
+- React Dancing Lines
+- Node Vibrant
 - Media Queries
 - Key Frames
 - Yarn
@@ -36,15 +40,21 @@
 - Use react-colour-extractor package to add cool effect on skills page ✅
 - Replace react-color-extractor package with node-vibrant for full control ✅
 - Add limiter for abstract email validator API (don't allow more than 1 request a sec) ✅
-- Replace min/max height & width with clamp() for better basic responsiveness ⚙️
-- Animate page transitions
+- Animate page transitions ⚙️
+- Add testing libraries skillSet
+- Add misc skillset figma, warp, whimsical, popSQL, Postman?
+
+## Add to next Version
+
 - Have skill card animations loop round continuously rather than reverse
-
-## Possible Improvement Ideas
-
 - Carousel skillset selector for mobile version of skills page
+- Replace home page animation with interactive framer motion gradient blob
+- Replace min/max height & width with clamp(), use flexbox gap, and go over scss improvements generally  
+
+## Improvement Ideas
+
 - Investigate errors for firefox on Skills Page
+- Check quality of images for work page. Looks like they got a bit blury/grainy after optimisation.
 - Remove styled and use scss module for hamburger menu and burger (redo?)
 - Check process state of skills animation with useContext everywhere to prevent errors when skill page skillSet buttons used too quickly
-- Replace home page animation with interactive framer motion gradient blob
-- GSAP might be a better animation library for more complex animations as it's more consise and clean Framer Motion seems better for simple animations.
+- GSAP might be a better animation library for more complex animations as it's more consise and clean. Framer Motion seems better for simple animations.

@@ -119,7 +119,7 @@ export default function useEmail() {
       const response = await axios.get(`${abstractURL}&email=${email}`);
       return response?.data?.deliverability;
     } catch (err) {
-      throw err
+      console.log(err)
     }
   }
 

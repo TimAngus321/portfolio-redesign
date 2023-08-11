@@ -4,11 +4,18 @@ import styles from "../style/homeStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
 import QuoteLoop from "../components/QuoteLoop";
 import DancingLinesMyEdit from "react-dancing-lines-safari-firefox-support";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const { navigate } = useHome();
   return (
-    <section className={styles?.pageContainerHome}>
+    <motion.main
+      className={styles?.pageContainerHome}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <SEO
         title={`Tim Angus's Porftolio - Home Page`}
         description={`This is the home page of the portfolio of Timothy Angus who also goes by Tim Angus. Find out more about Tim Angus, navigate around Tim's site, enjoy the new animations and get in contact with Tim if he can help you with your project or at your company!`}
@@ -28,7 +35,7 @@ const Home = () => {
           </button>
         </div>
       </div>
-    </section>
+    </motion.main>
   );
 };
 

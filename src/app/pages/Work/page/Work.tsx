@@ -13,6 +13,7 @@ import reactLogo from '../../../../assets/skillsImages/frontendLogos/react-origi
 import railsLogo from '../../../../assets/skillsImages/backendLogos/rails-plain.svg';
 import expressLogo from '../../../../assets/skillsImages/backendLogos/express-original.svg';
 import SEO from '../../../components/SEOComponent/SEO';
+import { motion } from "framer-motion";
 
 
 const Work = () => {
@@ -26,7 +27,13 @@ const Work = () => {
   };
 
   return (
-    <section className={styles?.pageContainerScrollWork}>
+    <motion.main
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{duration: 0.5}}
+    className={styles?.pageContainerScrollWork}
+     >
       <SEO
         title={`Tim Angus's Porftolio - Work Page`}
         description={`Work page of Timothy Angus's portfolio. Discover all of my previous work and personal projects skills using a cool parallax scroll effect!`}
@@ -195,7 +202,7 @@ const Work = () => {
           ))}
         </Parallax>
       </div>
-    </section>
+    </motion.main>
   );
 };
 

@@ -40,9 +40,11 @@
 - Use react-colour-extractor package to add cool effect on skills page ✅
 - Replace react-color-extractor package with node-vibrant for full control ✅
 - Add limiter for abstract email validator API (don't allow more than 1 request a sec) ✅
-- Animate page transitions ⚙️
-- Add testing libraries skillSet
-- Add misc skillset figma, warp, whimsical, popSQL, Postman?
+- Animate page transitions ✅
+- Change flexbox to grid for skill buttons and add the following skillsets
+    - Testing libraries 
+    - Design tools
+    - Maybe add misc skillset figma, warp, whimsical...
 
 ## Add to next Version
 

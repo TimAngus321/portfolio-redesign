@@ -9,14 +9,14 @@ const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>([]);
 
   // State for onHover func
-  // const [hoverColors, setHoverColors] = useState<string[]>([
-  //   "#e64f24",
-  //   "#fcb494",
-  //   "#77240d",
-  //   "#892a0f",
-  //   "#943004",
-  //   "#892a0f",
-  // ]);
+  const [hoverColors, setHoverColors] = useState<string[]>([
+    "#e64f24",
+    "#fcb494",
+    "#77240d",
+    "#892a0f",
+    "#943004",
+    "#892a0f",
+  ]);
 
   const navigate = useNavigate();
   const [scope, animate] = useAnimate();
@@ -59,15 +59,14 @@ const useSkills = () => {
         await animate(
           "li.skillCard",
           { ["--block" as string]: "100%" },
-          { delay: stagger(0.2) }
+          { delay: stagger(0.3) }
         );
         await sleep(250);
         await animate(
           "li.skillCard",
           { ["--block" as string]: "0%" },
-          { delay: stagger(0.2) }
+          { delay: stagger(0.3) }
         );
-        // add mobile animations here
       }
       // }
       // setProcessing(false);
@@ -115,8 +114,10 @@ const useSkills = () => {
   }, [skillSet[0]?.waterfall?.length === 0]);
 
   const createWaterfall = async (skillSet: any) => {
+    
     for (let i = 0; i < skillSet?.length; i++) {
       const hexCodes: string[] = [];
+      if (!navigator?.userAgent?.includes('Firefox')) {
       try {
         await Vibrant.from(skillSet[i]?.image)
           .getPalette()
@@ -132,16 +133,24 @@ const useSkills = () => {
         // Handle any errors that occur during color extraction 
         console.error("Error while getting the color palette: ", err);
       }
-
+    }
+    
       try {
-        const delayEachSkillcardColorUpdate = async () => {
+        const addEachSkillcardHExColors = async () => {
+          if (navigator?.userAgent?.includes('Firefox')) {
+            setSkillSet((prevSkillSet) => {
+              const updatedSkillSet = [...prevSkillSet];
+              updatedSkillSet[i].waterfall = hoverColors;
+              return updatedSkillSet;
+            });
+          } else
             setSkillSet((prevSkillSet) => {
               const updatedSkillSet = [...prevSkillSet];
               updatedSkillSet[i].waterfall = hexCodes;
               return updatedSkillSet;
             });
         };
-        await delayEachSkillcardColorUpdate();
+        await addEachSkillcardHExColors();
       } catch (err) {
         console.log("error when adding colors to skillSet object ", err);
       }

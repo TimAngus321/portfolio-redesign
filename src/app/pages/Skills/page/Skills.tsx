@@ -22,14 +22,20 @@ const Skills = () => {
   } = useSkills();
 
   return (
-    <section className={skillPageStyle?.pageContainerSkills}>
+    <motion.main
+      className={skillPageStyle?.pageContainerSkills}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+    >
       <SEO
         title={`Tim Angus's Porftolio - Skills Page`}
         description={`Skill page of Timothy Angus's portfolio. Discover all of my technical skills with some fun animations`}
         link={`https://tim-angus.com/skills`}
       />
       <div className={skillPageStyle?.skillsContainer}>
-        <div className={skillPageStyle?.selectSkillsContainer}>
+        <section className={skillPageStyle?.selectSkillsContainer}>
           <div className={skillPageStyle?.selectSkills}>
             <header>
               <h1 className={skillPageStyle?.skillsTitle}>Tech Stack</h1>
@@ -107,9 +113,9 @@ const Skills = () => {
               </button>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className={skillPageStyle?.revealedSkillsContainer}>
+        <section className={skillPageStyle?.revealedSkillsContainer}>
           <div className={skillPageStyle?.revealSkills}>
             <div className={skillPageStyle?.selectedSkillset}>
               <AnimatePresence>
@@ -128,9 +134,9 @@ const Skills = () => {
               </AnimatePresence>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
+    </motion.main>
   );
 };
 

@@ -3,12 +3,19 @@ import WorkExpCard from "../components/work-exp-card";
 import useAbout from "../hooks/useAbout";
 import styles from "../style/aboutStyle.module.scss";
 import SEO from '../../../components/SEOComponent/SEO';
+import { motion } from "framer-motion";
 
 const About = () => {
   const { navigate } = useAbout();
 
   return (
-    <section className={styles?.pageContainerAbout}>
+    <motion.main 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{duration: 1}}
+    className={styles?.pageContainerAbout}
+    >
       <SEO
         title={`Tim Angus's Porftolio - About Page`}
         description={`About page of Timothy Angus's portfolio. A brief paragraph about Tim Angus and links to my previous employers company websites`}
@@ -41,7 +48,7 @@ const About = () => {
             watching documenteries.{" "}
           </p>
         </header>
-        <div className={styles?.workExperienceContainer}>
+        <section className={styles?.workExperienceContainer}>
           <ul className={styles?.workExpCards}>
             {Object.keys(workExpInfo).map((key, i) => (
               <WorkExpCard
@@ -54,9 +61,9 @@ const About = () => {
               />
             ))}
           </ul>
-        </div>
+        </section>
       </div>
-    </section>
+    </motion.main>
   );
 };
 

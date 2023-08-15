@@ -8,7 +8,7 @@ import { stagger, useAnimate, usePresence, useAnimation } from "framer-motion";
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>([]);
 
-  // State for onHover func
+  // Firefox colours
   const [hoverColors, setHoverColors] = useState<string[]>([
     "#e64f24",
     "#fcb494",
@@ -158,35 +158,14 @@ const useSkills = () => {
     }
   };
 
-  // Don't delete unless you know you want the waterfall option to be permenant
-  const getColorPalette = async (image: string) => {
-    // setSelectedImage(image);
-    // const hexCodes: string[] | any = [];
-    // try {
-    //   await Vibrant.from(image)
-    //     .getPalette()
-    //     .then((palette) => {
-    //       for (let color in palette) {
-    //         const hex: string | undefined = palette[color]?.getHex();
-    //         if (hex) {
-    //           hexCodes.push(hex);
-    //         }
-    //       }
-    //     });
-    // } catch (error) {
-    //   // Handle any errors that occur during the color extraction process
-    //   console.error("Error while getting the color palette:", error);
-    // }
-    //   setHoverColors(hexCodes);
-  };
+  const triggerHover = async () => {};
 
   return {
     // processing,
-    // hoverColors,
     updateSkillSet,
     skillSet,
     navigate,
-    getColorPalette,
+    triggerHover,
     scope,
     animate,
   };

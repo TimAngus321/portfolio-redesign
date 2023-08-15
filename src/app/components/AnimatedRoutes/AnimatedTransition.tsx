@@ -5,7 +5,6 @@ import { ReactNode } from "react";
 
 const AnimatedTransition = ({ children }: { children: ReactNode }) => {
   const { pageTransitionAnimation, location } = useRouteAnimations();
-  console.log(pageTransitionAnimation);
 
   return (
     <SwitchTransition>

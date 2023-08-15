@@ -24,7 +24,7 @@ const Home = () => {
           <p className={styles?.subHeading}>
             Full-Stack / React / Express / Rails / Shopify
           </p>
-          <button className="default-btn" onClick={(e) => navigate("/contact")}>
+          <button className={styles?.homeContactBtn} onClick={(e) => navigate("/contact")}>
             Contact Me
           </button>
         </div>

@@ -9,12 +9,10 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import shopifyLogo from "../../../../assets/workImages/shopifyLogo.webp";
 import ProjectCard from "../components/projectCard";
 import expressProjects from "../data/express-project-data";
-import reactLogo from '../../../../assets/skillsImages/frontendLogos/react-original.svg';
-import railsLogo from '../../../../assets/skillsImages/backendLogos/rails-plain.svg';
-import expressLogo from '../../../../assets/skillsImages/backendLogos/express-original.svg';
-import SEO from '../../../components/SEOComponent/SEO';
-import { motion } from "framer-motion";
-
+import reactLogo from "../../../../assets/skillsImages/frontendLogos/react-original.svg";
+import railsLogo from "../../../../assets/skillsImages/backendLogos/rails-plain.svg";
+import expressLogo from "../../../../assets/skillsImages/backendLogos/express-original.svg";
+import SEO from "../../../components/SEOComponent/SEO";
 
 const Work = () => {
   const alignCenter: any = {
@@ -27,18 +25,12 @@ const Work = () => {
   };
 
   return (
-    <motion.main
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{duration: 1}}
-    className={styles?.pageContainerScrollWork}
-     >
+    <main className={styles?.pageContainerScrollWork}>
       <SEO
         title={`Tim Angus's Porftolio - Work Page`}
         description={`Work page of Timothy Angus's portfolio. Discover all of my previous work and personal projects skills using a cool parallax scroll effect!`}
         link={`https://tim-angus.com/work`}
-        />
+      />
       <section className={styles?.workContainer}>
         <Parallax
           pages={17}
@@ -51,13 +43,11 @@ const Work = () => {
             gap: "30%",
           }}
         >
-          <ParallaxLayer
-            offset={0}
-            speed={0.5}
-            className={styles?.workTitle}
-          >
+          <ParallaxLayer offset={0} speed={0.5} className={styles?.workTitle}>
             <header className={styles?.scrollText}>
-              <h1 className={styles?.workTitle}>Previous Work & Personal Projects</h1>
+              <h1 className={styles?.workTitle}>
+                Previous Work & Personal Projects
+              </h1>
               <FontAwesomeIcon
                 className={styles?.workPageArrow}
                 icon={faArrowDown}
@@ -202,7 +192,7 @@ const Work = () => {
           ))}
         </Parallax>
       </section>
-    </motion.main>
+    </main>
   );
 };
 

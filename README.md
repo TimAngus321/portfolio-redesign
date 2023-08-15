@@ -42,9 +42,9 @@
 - Add limiter for abstract email validator API (don't allow more than 1 request a sec) ✅
 - Animate page transitions ✅
 - Change flexbox to grid for skill buttons and add the following skillsets
-    - Testing libraries 
-    - Design tools
-    - Maybe add misc skillset figma, warp, whimsical...
+  - Testing libraries
+  - Design tools
+  - Maybe add misc skillset figma, warp, whimsical...
 
 ## Add to next Version
 
@@ -55,8 +55,8 @@
 
 ## Improvement Ideas
 
-- Investigate errors for firefox on Skills Page
+- Perhaps move from framer motion to view transition api for page transitions once firefox supports it
+- Investigate errors for firefox on Skills Page - temp fix implemented ⚙️
 - Check quality of images for work page. Looks like they got a bit blury/grainy after optimisation.
-- Remove styled and use scss module for hamburger menu and burger (redo?)
 - Check process state of skills animation with useContext everywhere to prevent errors when skill page skillSet buttons used too quickly
 - GSAP might be a better animation library for more complex animations as it's more consise and clean. Framer Motion seems better for simple animations.

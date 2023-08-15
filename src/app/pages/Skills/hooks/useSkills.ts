@@ -47,9 +47,9 @@ const useSkills = () => {
       }
 
       await clearState();
-      await sleep(500);
       await setSkillSet(skillSet);
       await createWaterfall(skillSet);
+      await sleep(250);
       if (isPresent) {
         if (window.innerWidth > 900) {
           await animate(scope.current, { x: 0 }, { duration: 0.3 });
@@ -104,9 +104,10 @@ const useSkills = () => {
   // For initial color waterfall effect load
   useEffect(() => {
     const initialSkillLoad = async () => {
-      if (scope.current
+      if (
+        scope.current
         //  && !processing
-         ) {
+      ) {
         await initialSkillSet(languages);
       }
     };
@@ -114,43 +115,43 @@ const useSkills = () => {
   }, [skillSet[0]?.waterfall?.length === 0]);
 
   const createWaterfall = async (skillSet: any) => {
-    
     for (let i = 0; i < skillSet?.length; i++) {
       const hexCodes: string[] = [];
-      if (!navigator?.userAgent?.includes('Firefox')) {
-      try {
-        await Vibrant.from(skillSet[i]?.image)
-          .getPalette()
-          .then((palette) => {
-            for (let color in palette) {
-              const hex: string | undefined = palette[color]?.getHex();
-              if (hex) {
-                hexCodes.push(hex);
+      if (!navigator?.userAgent?.includes("Firefox")) {
+        try {
+          await Vibrant.from(skillSet[i]?.image)
+            .getPalette()
+            .then((palette) => {
+              for (let color in palette) {
+                const hex: string | undefined = palette[color]?.getHex();
+                if (hex) {
+                  hexCodes.push(hex);
+                }
               }
-            }
-          });
-      } catch (err) {
-        // Handle any errors that occur during color extraction 
-        console.error("Error while getting the color palette: ", err);
+            });
+        } catch (err) {
+          // Handle any errors that occur during color extraction
+          console.error("Error while getting the color palette: ", err);
+        }
       }
-    }
-    
+
       try {
-        const addEachSkillcardHExColors = async () => {
-          if (navigator?.userAgent?.includes('Firefox')) {
+        const addEachSkillcardHEXColors = async () => {
+          if (navigator?.userAgent?.includes("Firefox")) {
             setSkillSet((prevSkillSet) => {
               const updatedSkillSet = [...prevSkillSet];
               updatedSkillSet[i].waterfall = hoverColors;
               return updatedSkillSet;
             });
-          } else
+          } else {
             setSkillSet((prevSkillSet) => {
               const updatedSkillSet = [...prevSkillSet];
               updatedSkillSet[i].waterfall = hexCodes;
               return updatedSkillSet;
             });
+          }
         };
-        await addEachSkillcardHExColors();
+        await addEachSkillcardHEXColors();
       } catch (err) {
         console.log("error when adding colors to skillSet object ", err);
       }
@@ -178,7 +179,6 @@ const useSkills = () => {
     // }
     //   setHoverColors(hexCodes);
   };
-
 
   return {
     // processing,

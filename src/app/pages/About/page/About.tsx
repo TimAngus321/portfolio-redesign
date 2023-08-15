@@ -2,39 +2,35 @@ import workExpInfo from "../data/work-exp-info";
 import WorkExpCard from "../components/work-exp-card";
 import useAbout from "../hooks/useAbout";
 import styles from "../style/aboutStyle.module.scss";
-import SEO from '../../../components/SEOComponent/SEO';
-import { motion } from "framer-motion";
+import SEO from "../../../components/SEOComponent/SEO";
 
 const About = () => {
   const { navigate } = useAbout();
 
   return (
-    <motion.main 
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{duration: 1}}
-    className={styles?.pageContainerAbout}
-    >
+    <main className={styles?.pageContainerAbout}>
       <SEO
         title={`Tim Angus's Porftolio - About Page`}
         description={`About page of Timothy Angus's portfolio. A brief paragraph about Tim Angus and links to my previous employers company websites`}
         link={`https://tim-angus.com/about`}
-        />
+      />
       <div className={styles?.aboutMeSubContainer}>
         <header className={styles?.aboutMeContainer}>
           <h1 className={styles?.aboutTitle}>About Me</h1>
           <p className={styles?.aboutMeBlurb}>
             Le Wagon alumni that learnt full-stack development with the Rails
             framework. Since then I have continued delving deeper into
-            Javascript/Typescript and building projects with React, React Native, Express
-            and Shopify.
+            Javascript/Typescript and building projects with React, React
+            Native, Express and Shopify.
             <br />
             <br />
             I've worked fulltime as a full-stack developer for Gavel, MilkRun,
-            Merconic and freelance for various clients using a 
-            variety of technologies and that you can see {" "}
-            <span className={styles?.textLink} onClick={() => navigate("/skills")}>
+            Merconic and freelance for various clients using a variety of
+            technologies and that you can see{" "}
+            <span
+              className={styles?.textLink}
+              onClick={() => navigate("/skills")}
+            >
               here
             </span>
             .
@@ -63,7 +59,7 @@ const About = () => {
           </ul>
         </section>
       </div>
-    </motion.main>
+    </main>
   );
 };
 

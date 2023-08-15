@@ -22,13 +22,7 @@ const Skills = () => {
   } = useSkills();
 
   return (
-    <motion.main
-      className={skillPageStyle?.pageContainerSkills}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
-    >
+    <main className={skillPageStyle?.pageContainerSkills}>
       <SEO
         title={`Tim Angus's Porftolio - Skills Page`}
         description={`Skill page of Timothy Angus's portfolio. Discover all of my technical skills with some fun animations`}
@@ -136,7 +130,7 @@ const Skills = () => {
           </div>
         </section>
       </div>
-    </motion.main>
+    </main>
   );
 };
 

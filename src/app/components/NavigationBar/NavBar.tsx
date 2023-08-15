@@ -11,7 +11,6 @@ import { Icon } from "@iconify/react";
 import githubFilled from "@iconify/icons-codicon/github-inverted";
 import linkedinRect from "@iconify/icons-brandico/linkedin-rect";
 import styles from "./navBarStyle.module.scss";
-import useSkills from "../../pages/Skills/hooks/useSkills";
 
 function NavBar() {
   const navigate = useNavigate();

@@ -8,28 +8,21 @@ import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter } from "react-router-dom";
 import PageRoutes from "../Routes/routes";
 import { HelmetProvider } from "react-helmet-async";
-import { AnimatePresence } from "framer-motion";
 
 const Router = () => {
   const [open, setOpen] = useState(false);
   const helmetContext = {};
 
   return (
-    <div className="App">
-      <HelmetProvider context={helmetContext}>
-        <ToastContainer newestOnTop={true} />
-        <BrowserRouter>
-          <NavBar />
-          <AnimatePresence mode="wait">
-            <PageRoutes />
-            <div className="mobile-nav">
-              <Hamburger open={open} setOpen={setOpen} />
-              <Menu open={open} setOpen={setOpen} />
-            </div>
-          </AnimatePresence>
-        </BrowserRouter>
-      </HelmetProvider>
-    </div>
+    <HelmetProvider context={helmetContext}>
+      <ToastContainer newestOnTop={true} />
+      <NavBar />
+      <PageRoutes />
+      <div className="mobile-nav">
+        <Hamburger open={open} setOpen={setOpen} />
+        <Menu open={open} setOpen={setOpen} />
+      </div>
+    </HelmetProvider>
   );
 };
 

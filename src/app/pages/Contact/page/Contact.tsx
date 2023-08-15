@@ -1,7 +1,6 @@
 import useEmail from "../hooks/useEmail";
 import styles from "../style/contactStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
-import { motion } from "framer-motion";
 
 const ContactMe = () => {
   const {
@@ -17,13 +16,7 @@ const ContactMe = () => {
   } = useEmail();
 
   return (
-    <motion.main
-      className={styles?.contactPageContainer}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
-    >
+    <main className={styles?.contactPageContainer}>
       <SEO
         title={`Tim Angus's Porftolio - Contact Page`}
         description={`Contact page of Timothy Angus's portfolio. Use the contact form to get in contact with me regarding positions or freelance projects. Error handler uses toast notifcations to warn the user about issues and prevent spamming`}
@@ -109,7 +102,7 @@ const ContactMe = () => {
         </div>
         <div className="map"></div>
       </section>
-    </motion.main>
+    </main>
   );
 };
 

@@ -5,13 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const SkillCard = (props: skills) => {
   const { name, image, styleClass, alt, waterfall } = props;
-  const { getColorPalette } = useSkills();
+  const { triggerHover } = useSkills();
 
   return (
     <AnimatePresence>
       <motion.li
         className={`skillCard snake `}
-        onMouseOver={() => getColorPalette(image)}
+        onMouseOver={() => triggerHover()}
       >
         <div className="inner">
           <img
@@ -25,10 +25,6 @@ const SkillCard = (props: skills) => {
 
         <div
           className={`tail top`}
-          // style={{
-          //   backgroundImage: `linear-gradient(to right, ${hoverColors[0]}
-          //   , ${hoverColors[1] ?? hoverColors[0]})`,
-          // }}
           style={{
             backgroundImage: `linear-gradient(to right,
           ${waterfall[0]}, ${waterfall[1] ?? waterfall[0]})`,
@@ -36,11 +32,6 @@ const SkillCard = (props: skills) => {
         ></div>
         <div
           className={`tail right`}
-          // style={{
-          //   backgroundImage: `linear-gradient(to right, ${
-          //     hoverColors[1] ?? hoverColors[0]
-          //   }, ${hoverColors[2] ?? hoverColors[0]})`,
-          // }}
           style={{
             backgroundImage: `linear-gradient(to right,
             ${waterfall[1] ?? waterfall[0]}, ${waterfall[2] ?? waterfall[0]})`,
@@ -48,11 +39,6 @@ const SkillCard = (props: skills) => {
         ></div>
         <div
           className={`tail bottom`}
-          // style={{
-          //   backgroundImage: `linear-gradient(to right, ${
-          //     hoverColors[2] ?? hoverColors[0]
-          //   }, ${hoverColors[3] ?? hoverColors[0]})`,
-          // }}
           style={{
             backgroundImage: `linear-gradient(to right,
             ${waterfall[2] ?? waterfall[0]}, ${waterfall[3] ?? waterfall[0]})`,
@@ -60,14 +46,9 @@ const SkillCard = (props: skills) => {
         ></div>
         <div
           className={`tail left`}
-          // style={{
-          //   backgroundImage: `linear-gradient(to right, ${
-          //     hoverColors[4] ?? hoverColors[0]
-          //   }, ${hoverColors[5] ?? hoverColors[0]})`,
-          // }}
           style={{
             backgroundImage: `linear-gradient(to right,
-            ${waterfall[4] ?? waterfall[0]}, ${waterfall[5] ?? waterfall[0]})`,
+            ${waterfall[4] ?? waterfall[0]}, ${waterfall[5] ?? waterfall[0]}, ${waterfall[6] ?? waterfall[0]})`,
           }}
         ></div>
       </motion.li>

@@ -11,6 +11,8 @@ import skillPageStyle from "../style/skillCardPageStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
 import { motion, AnimatePresence } from "framer-motion";
 import SkillCard from "../components/SkillCard";
+import testingSkills from "../data/testing-skills";
+import miscSkills from "../data/misc-skills";
 
 const Skills = () => {
   const {
@@ -97,6 +99,20 @@ const Skills = () => {
                 // disabled={processing}
               >
                 Shopify
+              </button>
+              <button
+                className="default-btn"
+                onClick={() => updateSkillSet(testingSkills)}
+                // disabled={processing}
+              >
+                Testing
+              </button>
+              <button
+                className="default-btn"
+                onClick={() => updateSkillSet(miscSkills)}
+                // disabled={processing}
+              >
+                Misc
               </button>
               <button
                 className="default-btn"

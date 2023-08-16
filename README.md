@@ -48,6 +48,7 @@
 
 ## Add to next Version
 
+- Use cookies instead of localStorage to set expiry easily
 - Have skill card animations loop round continuously rather than reverse
 - Carousel skillset selector for mobile version of skills page
 - Replace home page animation with interactive framer motion gradient blob

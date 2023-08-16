@@ -92,8 +92,11 @@
         margin-bottom: 20px;
       }
     }
-
   }
+}
+
+.aboutMySkillsButton {
+  justify-self: start;
 }
 
 .skillsBlurb {
@@ -169,6 +172,9 @@
     ul {
       gap: 20px;
     }
- 
+  }
+
+  .aboutMySkillsButton {
+    justify-self: center;
   }
 }

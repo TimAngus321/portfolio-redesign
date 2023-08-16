@@ -59,63 +59,63 @@ const Skills = () => {
             </header>
             <div className={skillPageStyle?.aboutMySkills}>
               <button
-                className="default-btn"
+                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
                 onClick={() => updateSkillSet(languages)}
                 // disabled={processing}
               >
                 Languages
               </button>
               <button
-                className="default-btn"
+                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
                 onClick={() => updateSkillSet(frontendSkillSet)}
                 // disabled={processing}
               >
                 Front-end
               </button>
               <button
-                className="default-btn"
+                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
                 onClick={() => updateSkillSet(mobileSkillset)}
                 // disabled={processing}
               >
                 Mobile
               </button>
               <button
-                className="default-btn"
+                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
                 onClick={() => updateSkillSet(backendSkillSet)}
                 // disabled={processing}
               >
                 Backend
               </button>
               <button
-                className="default-btn"
+                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
                 onClick={() => updateSkillSet(hostingUsed)}
                 // disabled={processing}
               >
                 Hosting
               </button>
               <button
-                className="default-btn"
+                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
                 onClick={() => updateSkillSet(shopifySkillSet)}
                 // disabled={processing}
               >
                 Shopify
               </button>
               <button
-                className="default-btn"
+                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
                 onClick={() => updateSkillSet(testingSkills)}
                 // disabled={processing}
               >
                 Testing
               </button>
               <button
-                className="default-btn"
+                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
                 onClick={() => updateSkillSet(miscSkills)}
                 // disabled={processing}
               >
                 Misc
               </button>
               <button
-                className="default-btn"
+                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
                 onClick={() => updateSkillSet(developingSkills)}
                 // disabled={processing}
               >

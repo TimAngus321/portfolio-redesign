@@ -4,9 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { skills } from "../types/skillsetType";
 import Vibrant from "node-vibrant";
 import { stagger, useAnimate, usePresence, useAnimation } from "framer-motion";
+import strings from "app/constants/strings";
 
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>([]);
+  const [highlightSkillset, setHighlightSkillset] = useState<string>('');
 
   // Firefox colours
   const [hoverColors, setHoverColors] = useState<string[]>([
@@ -32,13 +34,15 @@ const useSkills = () => {
   const sleep = async (delay: number) =>
     new Promise((resolve) => setTimeout(resolve, delay));
 
-  const updateSkillSet = async (skillSet: skills[]) => {
+  const updateSkillSet = async (skillSet: skills[], selectedSkill: string) => {
     try {
       // uncomment if !processing duirng development to remove unecessary error
       // If someone switches between skillSets to quickly it will error gracefully but not
       // perform entire waterfall animation
       // if (!processing) {
       // setProcessing(true);
+      // setHighlightSkillset(skillSet[0].name);
+      await setHighlightSkillset(selectedSkill);
 
       if (window.innerWidth > 900) {
         await animate(scope.current, { x: "100vw" }, { duration: 0.3 });
@@ -79,6 +83,7 @@ const useSkills = () => {
   const initialSkillSet = async (skillSet: skills[]) => {
     try {
       // setProcessing(true);
+      await setHighlightSkillset(strings?.lang);
       await setSkillSet(skillSet);
       await createWaterfall(skillSet);
       if (isPresent) {
@@ -168,6 +173,7 @@ const useSkills = () => {
     triggerHover,
     scope,
     animate,
+    highlightSkillset
   };
 };
 

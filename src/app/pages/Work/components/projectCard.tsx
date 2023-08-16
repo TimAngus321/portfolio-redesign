@@ -22,7 +22,7 @@ const ProjectCard = (props: personalProj) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={img} alt={name} className={styles?.projCardImg} />
+        <img loading="lazy" src={img} alt={name} className={styles?.projCardImg} />
         <div className={styles?.scrollCards}>
           <div className={styles?.companyInfo}>
             <h4 className={styles?.uniqueInfo}>{uniqueInfo}</h4>

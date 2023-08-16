@@ -12,7 +12,9 @@ import SEO from "../../../components/SEOComponent/SEO";
 import { motion, AnimatePresence } from "framer-motion";
 import SkillCard from "../components/SkillCard";
 import testingSkills from "../data/testing-skills";
-import miscSkills from "../data/misc-skills";
+import miscSkills from "../data/misc-tools";
+import projectSkills from "../data/project-skills";
+import strings from "app/constants/strings";
 
 const Skills = () => {
   const {
@@ -20,6 +22,7 @@ const Skills = () => {
     skillSet,
     scope,
     updateSkillSet,
+    highlightSkillset,
     // , processing
   } = useSkills();
 
@@ -41,7 +44,7 @@ const Skills = () => {
                 and{" "}
                 <span
                   className={skillPageStyle?.contactLink}
-                  onClick={() => navigate("/work")}
+                  onClick={() => navigate(strings?.work)}
                 >
                   projects I've built
                 </span>{" "}
@@ -50,7 +53,7 @@ const Skills = () => {
                 hands feel free to get in{" "}
                 <span
                   className={skillPageStyle?.contactLink}
-                  onClick={() => navigate("/contact")}
+                  onClick={() => navigate(strings?.contact)}
                 >
                   contact
                 </span>
@@ -59,67 +62,138 @@ const Skills = () => {
             </header>
             <div className={skillPageStyle?.aboutMySkills}>
               <button
-                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
-                onClick={() => updateSkillSet(languages)}
+                className={`default-btn ${
+                  skillPageStyle?.aboutMySkillsButton
+                } ${
+                  highlightSkillset === strings?.lang
+                    ? skillPageStyle?.clickedBtn
+                    : null
+                }`}
+                onClick={() => updateSkillSet(languages, strings?.lang)}
                 // disabled={processing}
               >
-                Languages
+                {strings?.lang}
               </button>
               <button
-                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
-                onClick={() => updateSkillSet(frontendSkillSet)}
+                className={`default-btn ${
+                  skillPageStyle?.aboutMySkillsButton
+                } ${
+                  highlightSkillset === strings?.front
+                    ? skillPageStyle?.clickedBtn
+                    : null
+                }`}
+                onClick={() => updateSkillSet(frontendSkillSet, strings?.front)}
                 // disabled={processing}
               >
-                Front-end
+                {strings?.front}
               </button>
               <button
-                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
-                onClick={() => updateSkillSet(mobileSkillset)}
+                className={`default-btn ${
+                  skillPageStyle?.aboutMySkillsButton
+                } ${
+                  highlightSkillset === strings?.mobile
+                    ? skillPageStyle?.clickedBtn
+                    : null
+                }`}
+                onClick={() => updateSkillSet(mobileSkillset, strings?.mobile)}
                 // disabled={processing}
               >
-                Mobile
+                {strings?.mobile}
               </button>
               <button
-                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
-                onClick={() => updateSkillSet(backendSkillSet)}
+                className={`default-btn ${
+                  skillPageStyle?.aboutMySkillsButton
+                } ${
+                  highlightSkillset === strings?.back
+                    ? skillPageStyle?.clickedBtn
+                    : null
+                }`}
+                onClick={() => updateSkillSet(backendSkillSet, strings?.back)}
                 // disabled={processing}
               >
-                Backend
+                {strings?.back}
               </button>
               <button
-                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
-                onClick={() => updateSkillSet(hostingUsed)}
+                className={`default-btn ${
+                  skillPageStyle?.aboutMySkillsButton
+                } ${
+                  highlightSkillset === strings?.host
+                    ? skillPageStyle?.clickedBtn
+                    : null
+                }`}
+                onClick={() => updateSkillSet(hostingUsed, strings?.host)}
                 // disabled={processing}
               >
-                Hosting
+                {strings?.host}
               </button>
               <button
-                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
-                onClick={() => updateSkillSet(shopifySkillSet)}
+                className={`default-btn ${
+                  skillPageStyle?.aboutMySkillsButton
+                } ${
+                  highlightSkillset === strings?.shopify
+                    ? skillPageStyle?.clickedBtn
+                    : null
+                }`}
+                onClick={() =>
+                  updateSkillSet(shopifySkillSet, strings?.shopify)
+                }
                 // disabled={processing}
               >
-                Shopify
+                {strings?.shopify}
               </button>
               <button
-                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
-                onClick={() => updateSkillSet(testingSkills)}
+                className={`default-btn ${
+                  skillPageStyle?.aboutMySkillsButton
+                } ${
+                  highlightSkillset === strings?.test
+                    ? skillPageStyle?.clickedBtn
+                    : null
+                }`}
+                onClick={() => updateSkillSet(testingSkills, strings?.test)}
                 // disabled={processing}
               >
-                Testing
+                {strings?.test}
               </button>
               <button
-                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
-                onClick={() => updateSkillSet(miscSkills)}
+                className={`default-btn ${
+                  skillPageStyle?.aboutMySkillsButton
+                } ${
+                  highlightSkillset === strings?.design
+                    ? skillPageStyle?.clickedBtn
+                    : null
+                }`}
+                onClick={() => updateSkillSet(projectSkills, strings?.design)}
                 // disabled={processing}
               >
-                Misc
+                {strings?.design}
               </button>
               <button
-                className={`default-btn ${skillPageStyle?.aboutMySkillsButton}`}
-                onClick={() => updateSkillSet(developingSkills)}
+                className={`default-btn ${
+                  skillPageStyle?.aboutMySkillsButton
+                } ${
+                  highlightSkillset === strings?.tools
+                    ? skillPageStyle?.clickedBtn
+                    : null
+                }`}
+                onClick={() => updateSkillSet(miscSkills, strings?.tools)}
                 // disabled={processing}
               >
-                Learning
+                {strings?.tools}
+              </button>
+              <button
+                className={`default-btn ${
+                  skillPageStyle?.aboutMySkillsButton
+                } ${
+                  highlightSkillset === strings?.learning
+                    ? skillPageStyle?.clickedBtn
+                    : null
+                }`}
+                onClick={() =>
+                  updateSkillSet(developingSkills, strings?.learning)
+                }
+                // disabled={processing}
+              >
+                {strings?.learning}
               </button>
             </div>
           </div>

@@ -42,12 +42,13 @@
 - Add limiter for abstract email validator API (don't allow more than 1 request a sec) ✅
 - Animate page transitions with GSAP ✅
 - Change flexbox to grid for skill buttons and add the following skillsets ✅
-  - Testing libraries
-  - Design tools
-  - Maybe add misc skillset figma, warp, whimsical...
+  - Testing libraries ✅
+  - Design tools ✅
+  - Maybe add misc skillset figma, warp, whimsical... ✅
 
 ## Add to next Version
 
+- Progress bar for background color of button while animation runs on skills page
 - Use cookies instead of localStorage to set expiry easily
 - Have skill card animations loop round continuously rather than reverse
 - Carousel skillset selector for mobile version of skills page

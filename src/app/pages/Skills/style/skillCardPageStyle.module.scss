@@ -28,7 +28,7 @@
   color: $secondary-font-color;
   width: 75%;
   position: relative;
-  margin: 0 0 0 120px;
+  margin: 0 0 0 100px;
   height: 100%;
 }
 
@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 0 0 30px;
-  width: 30%;
+  width: 35%;
   justify-content: center;
   z-index: 1;
   height: 100%;
@@ -97,6 +97,11 @@
 
 .aboutMySkillsButton {
   justify-self: start;
+}
+
+.clickedBtn {
+  color: $base-font-color;
+  background-color: #BD4517;
 }
 
 .skillsBlurb {

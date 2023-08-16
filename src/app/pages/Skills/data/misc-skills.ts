@@ -4,6 +4,7 @@ import warpLogo from "../../../../assets/skillsImages/miscLogos/warp.webp";
 import gsapLogo from "../../../../assets/skillsImages/miscLogos/gsap-greensock.svg";
 import postmanLogo from "../../../../assets/skillsImages/miscLogos/postman.svg";
 import swaggerLogo from "../../../../assets/skillsImages/miscLogos/swagger.svg";
+import whimsicalLogo from "../../../../assets/skillsImages/miscLogos/Whimsical.svg";
 
 const generalSkills = [
   {
@@ -40,6 +41,12 @@ const generalSkills = [
     name: "Swagger",
     image: swaggerLogo,
     alt: "Swagger Logo",
+    waterfall: [""],
+  },
+  {
+    name: "Whimsical",
+    image: whimsicalLogo,
+    alt: "Whimsical Logo",
     waterfall: [""],
   },
 ];

@@ -4,6 +4,7 @@ import nodejsLogo from "../../../../assets/skillsImages/backendLogos/nodejs-orig
 import postgresLogo from "../../../../assets/skillsImages/backendLogos/postgresql-original.svg";
 import prismaLogo from "../../../../assets/skillsImages/backendLogos/prismaLogo.svg";
 import railsLogo from "../../../../assets/skillsImages/backendLogos/rails-plain.svg";
+import swaggerLogo from "../../../../assets/skillsImages/miscLogos/swagger.svg";
 
 const backendSkillSet = [
   {
@@ -43,6 +44,12 @@ const backendSkillSet = [
     alt: "Prisma Logo",
     styleClass: "inverseWhite",
     waterfall: [""]
+  },
+  {
+    name: "Swagger",
+    image: swaggerLogo,
+    alt: "Swagger Logo",
+    waterfall: [""],
   },
 ];
 

@@ -1,6 +1,7 @@
 import { bool, func } from "prop-types";
 import { StyledMenu } from "./Menu.styled";
 import { useNavigate } from "react-router-dom";
+import strings from "app/constants/strings";
 
 const Menu = ({ open, setOpen, ...props }) => {
   const isHidden = open ? true : false;
@@ -19,7 +20,7 @@ const Menu = ({ open, setOpen, ...props }) => {
         aria-label="Toggle menu"
         aria-expanded={isExpanded}
         open={open}
-        onClick={() => mobileTogglePage("/")}
+        onClick={() => mobileTogglePage(strings?.home)}
         {...props}
       >
         <span aria-hidden="true">Home</span>
@@ -28,7 +29,7 @@ const Menu = ({ open, setOpen, ...props }) => {
         aria-label="Toggle menu"
         aria-expanded={isExpanded}
         open={open}
-        onClick={() => mobileTogglePage("/about")}
+        onClick={() => mobileTogglePage(strings?.about)}
         {...props}
       >
         <span aria-hidden="true"></span>
@@ -38,7 +39,7 @@ const Menu = ({ open, setOpen, ...props }) => {
         aria-label="Toggle menu"
         aria-expanded={isExpanded}
         open={open}
-        onClick={() => mobileTogglePage("/skills")}
+        onClick={() => mobileTogglePage(strings?.skills)}
         {...props}
       >
         <span aria-hidden="true"></span>
@@ -48,7 +49,7 @@ const Menu = ({ open, setOpen, ...props }) => {
         aria-label="Toggle menu"
         aria-expanded={isExpanded}
         open={open}
-        onClick={() => mobileTogglePage("/work")}
+        onClick={() => mobileTogglePage(strings?.work)}
         {...props}
       >
         <span aria-hidden="true"></span>
@@ -58,7 +59,7 @@ const Menu = ({ open, setOpen, ...props }) => {
         aria-label="Toggle menu"
         aria-expanded={isExpanded}
         open={open}
-        onClick={() => mobileTogglePage("/contact")}
+        onClick={() => mobileTogglePage(strings?.contact)}
         {...props}
       >
         <span aria-hidden="true"></span>

@@ -9,8 +9,16 @@ import vueLogo from "../../../../assets/skillsImages/learningLogos/vuejs-origina
 import flutterLogo from "../../../../assets/skillsImages/learningLogos/flutter-original.svg";
 import dartLogo from "../../../../assets/skillsImages/learningLogos/dart-original.svg";
 import dockerLogo from "../../../../assets/skillsImages/learningLogos/docker-plain.svg";
+import viteLogo from "../../../../assets/skillsImages/miscLogos/vite-logo.svg";
+
 
 const developingSkills = [
+  {
+    name: "Vite",
+    image: viteLogo,
+    alt: "Vite Logo",
+    waterfall: [""],
+  },
   {
     name: "Next.js",
     image: nextLogo,
@@ -43,7 +51,6 @@ const developingSkills = [
     waterfall: [""]
   },
   {
-    key: 6,
     name: "Go",
     image: goLogo,
     alt: "Go Mascot",

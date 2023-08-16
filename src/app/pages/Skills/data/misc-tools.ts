@@ -1,18 +1,10 @@
-import figmaLogo from "../../../../assets/skillsImages/miscLogos/figma-original.svg";
 import framerLogo from "../../../../assets/skillsImages/miscLogos/framer-motion.svg";
 import warpLogo from "../../../../assets/skillsImages/miscLogos/warp.webp";
 import gsapLogo from "../../../../assets/skillsImages/miscLogos/gsap-greensock.svg";
 import postmanLogo from "../../../../assets/skillsImages/miscLogos/postman.svg";
-import swaggerLogo from "../../../../assets/skillsImages/miscLogos/swagger.svg";
-import whimsicalLogo from "../../../../assets/skillsImages/miscLogos/Whimsical.svg";
+import antdLogo from "../../../../assets/skillsImages/frontendLogos/ant-design-logo.svg";
 
 const generalSkills = [
-  {
-    name: "Figma",
-    image: figmaLogo,
-    alt: "Figma Logo",
-    waterfall: [""],
-  },
   {
     name: "Framer Motion",
     image: framerLogo,
@@ -38,15 +30,9 @@ const generalSkills = [
     waterfall: [""],
   },
   {
-    name: "Swagger",
-    image: swaggerLogo,
-    alt: "Swagger Logo",
-    waterfall: [""],
-  },
-  {
-    name: "Whimsical",
-    image: whimsicalLogo,
-    alt: "Whimsical Logo",
+    name: "Ant Design",
+    image: antdLogo,
+    alt: "Ant Design Logo",
     waterfall: [""],
   },
 ];

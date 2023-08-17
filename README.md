@@ -21,6 +21,7 @@
 - HTML
 - EmailJS
 - Text Loop
+- GSAP
 - Framer Motion
 - Abstract API
 - React Dancing Lines

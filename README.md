@@ -49,7 +49,7 @@
 
 ## Add to next Version
 
-- Progress bar for background color of button while animation runs on skills page
+- Progress bar on background color of button (like netflix next episode btn) while animation runs on skills page
 - Use cookies instead of localStorage to set expiry easily
 - Have skill card animations loop round continuously rather than reverse
 - Carousel skillset selector for mobile version of skills page

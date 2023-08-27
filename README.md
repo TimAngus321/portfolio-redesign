@@ -58,8 +58,7 @@
 
 ## Improvement Ideas
 
-- Perhaps move from framer motion to view transition api for page transitions once firefox supports it
-- Investigate errors for firefox on Skills Page - temp fix implemented ⚙️
+- Investigate errors for firefox on Skills Page - Looks like base64 error from the svg icons that firefox/node vibrant can't process (png files in firefox work fine) - temp fix implemented ⚙️
 - Check quality of images for work page. Looks like they got a bit blury/grainy after optimisation.
-- Check process state of skills animation with useContext everywhere to prevent errors when skill page skillSet buttons used too quickly
+- Check process state of skills animation with useContext everywhere to prevent errors when skill page skillSet buttons used too quickly - might now be unecessary 
 - GSAP might be a better animation library for more complex animations as it's more consise and clean. Framer Motion seems better for simple animations.

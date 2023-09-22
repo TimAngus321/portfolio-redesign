@@ -153,17 +153,17 @@
 
 :global(.x1) {
   color: "white";
-  font-size: 100px;
+  font-size: 7rem;
 }
 
-@media only screen and (max-width: 1100px) {
-  :global(.x1) {
-    font-size: 60px;
-  }
-}
+// @media only screen and (max-width: 1100px) {
+//   :global(.x1) {
+//     font-size: 60px;
+//   }
+// }
 
-@media only screen and (max-width: 600px) {
-  :global(.x1) {
-    font-size: 30px;
-  }
-}
+// @media only screen and (max-width: 600px) {
+//   :global(.x1) {
+//     font-size: 30px;
+//   }
+// }

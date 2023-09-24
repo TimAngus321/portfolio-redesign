@@ -22,9 +22,9 @@ const developingSkills = [
     waterfall: [""],
   },
   {
-    name: "Next.js",
+    name: "Next",
     image: nextLogo,
-    alt: "Next.js Logo",
+    alt: "Next Logo",
     styleClass: "inverseWhite",
     waterfall: [""]
   },
@@ -35,33 +35,15 @@ const developingSkills = [
     waterfall: [""]
   },
   {
-    name: "MongoDB",
+    name: "MongoDB Atlas",
     image: mongoDBLogo,
-    alt: "MongoDB Logo",
+    alt: "MongoDB Atlas Logo",
     waterfall: [""]
   },
   {
-    name: "Docker",
-    image: dockerLogo,
-    alt: "Docker Logo",
-    waterfall: [""]
-  },
-  {
-    name: "Svelte & Sveltekit",
+    name: "Sveltekit",
     image: svelteLogo,
     alt: "Svelte Logo",
-    waterfall: [""]
-  },
-  {
-    name: "Python",
-    image: pythonLogo,
-    alt: "Python Logo",
-    waterfall: [""]
-  },
-  {
-    name: "Go",
-    image: goLogo,
-    alt: "Go Mascot",
     waterfall: [""]
   },
   {
@@ -77,6 +59,30 @@ const developingSkills = [
     waterfall: [""]
   },
   {
+    name: "Docker",
+    image: dockerLogo,
+    alt: "Docker Logo",
+    waterfall: [""]
+  },
+  {
+    name: "Go",
+    image: goLogo,
+    alt: "Go Mascot",
+    waterfall: [""]
+  },
+  {
+    name: "Python",
+    image: pythonLogo,
+    alt: "Python Logo",
+    waterfall: [""]
+  },
+  {
+    name: "Firebase",
+    image: firebaseLogo,
+    alt: "Firebase Logo",
+    waterfall: [""]
+  },
+  {
     name: "Flutter",
     image: flutterLogo,
     alt: "Flutter Logo",
@@ -86,12 +92,6 @@ const developingSkills = [
     name: "Dart",
     image: dartLogo,
     alt: "Dart Logo",
-    waterfall: [""]
-  },
-  {
-    name: "Firebase",
-    image: firebaseLogo,
-    alt: "Firebase Logo",
     waterfall: [""]
   },
   {

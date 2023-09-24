@@ -8,13 +8,13 @@ import swaggerLogo from "../../../../assets/skillsImages/miscLogos/swagger.svg";
 
 const backendSkillSet = [
   {
-    name: "Node.js",
+    name: "Node",
     image: nodejsLogo,
-    alt: "Node.js Logo",
+    alt: "Node Logo",
     waterfall: [""]
   },
   {
-    name: "Express.js",
+    name: "Express",
     image: expressLogo,
     alt: "Express.js Logo",
     styleClass: "inverseWhite",

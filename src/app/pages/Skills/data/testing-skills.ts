@@ -16,7 +16,7 @@ const testingSkills = [
     waterfall: [""],
   },
   {
-    name: "rspec",
+    name: "rSpec",
     image: rspecLogo,
     alt: "rSpec Logo",
     waterfall: [""],

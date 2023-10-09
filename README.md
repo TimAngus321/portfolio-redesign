@@ -1,5 +1,7 @@
 # Portfolio
 
+My personal portfolio all about me and my skills built in react.
+
 ## Deployed on Netlify with custom domain
 
 [Check it out here](https://www.tim-angus.com/)

@@ -5,12 +5,19 @@ import postgresLogo from "../../../../assets/skillsImages/backendLogos/postgresq
 import prismaLogo from "../../../../assets/skillsImages/backendLogos/prismaLogo.svg";
 import railsLogo from "../../../../assets/skillsImages/backendLogos/rails-plain.svg";
 import swaggerLogo from "../../../../assets/skillsImages/miscLogos/swagger.svg";
+import bunLogo from "../../../../assets/skillsImages/backendLogos/bunLogo.svg"
 
 const backendSkillSet = [
   {
     name: "Node",
     image: nodejsLogo,
     alt: "Node Logo",
+    waterfall: [""]
+  },
+  {
+    name: "Bun",
+    image: bunLogo,
+    alt: "Bun Logo",
     waterfall: [""]
   },
   {

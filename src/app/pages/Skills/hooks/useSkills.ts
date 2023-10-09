@@ -8,7 +8,7 @@ import strings from "app/constants/strings";
 
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>([]);
-  const [highlightSkillset, setHighlightSkillset] = useState<string>('');
+  const [highlightSkillset, setHighlightSkillset] = useState<string>("");
 
   // Firefox colours
   const [hoverColors, setHoverColors] = useState<string[]>([
@@ -24,32 +24,22 @@ const useSkills = () => {
   const [scope, animate] = useAnimate();
   const [isPresent] = usePresence();
 
-  // const [processing, setProcessing] = useState<boolean>(false);
-
   const clearState = () => {
     const currentState: skills[] = [];
     setSkillSet(currentState);
   };
 
-  const sleep = async (delay: number) =>
+  const sleep = async (delay: number) => 
     new Promise((resolve) => setTimeout(resolve, delay));
 
   const updateSkillSet = async (skillSet: skills[], selectedSkill: string) => {
     try {
-      // uncomment if !processing duirng development to remove unecessary error
-      // If someone switches between skillSets to quickly it will error gracefully but not
-      // perform entire waterfall animation
-      // if (!processing) {
-      // setProcessing(true);
-      // setHighlightSkillset(skillSet[0].name);
       await setHighlightSkillset(selectedSkill);
-
       if (window.innerWidth > 900) {
         await animate(scope.current, { x: "100vw" }, { duration: 0.3 });
       } else {
         await animate(scope.current, { opacity: 0 }, { duration: 0.3 });
       }
-
       await clearState();
       await setSkillSet(skillSet);
       await createWaterfall(skillSet);
@@ -72,8 +62,6 @@ const useSkills = () => {
           { delay: stagger(0.3) }
         );
       }
-      // }
-      // setProcessing(false);
       return scope;
     } catch (err) {
       console.log("Animation error: ", err);
@@ -99,7 +87,6 @@ const useSkills = () => {
           { delay: stagger(0.3) }
         );
       }
-      // setProcessing(false);
       return scope;
     } catch (err) {
       console.log("Animation error: ", err);
@@ -109,10 +96,7 @@ const useSkills = () => {
   // For initial color waterfall effect load
   useEffect(() => {
     const initialSkillLoad = async () => {
-      if (
-        scope.current
-        //  && !processing
-      ) {
+      if (scope.current) {
         await initialSkillSet(languages);
       }
     };
@@ -166,14 +150,13 @@ const useSkills = () => {
   const triggerHover = async () => {};
 
   return {
-    // processing,
     updateSkillSet,
     skillSet,
     navigate,
     triggerHover,
     scope,
     animate,
-    highlightSkillset
+    highlightSkillset,
   };
 };
 

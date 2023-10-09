@@ -16,9 +16,6 @@ import strings from "app/constants/strings";
 function NavBar() {
   const navigate = useNavigate();
 
-  // State not being lifted via hook need to try out useContext (don't use redux super unecessary)
-  // const {processing} = useSkills();
-
   return (
     <nav className={styles?.navBar}>
       <h1 className={styles?.myName} onClick={() => navigate(strings?.home)}>
@@ -26,29 +23,28 @@ function NavBar() {
       </h1>
       {
         <ul className={styles?.menu}>
-          {/* <li className={styles?.home} onClick={() => processing ? null : navigate(strings?.home)}> */}
           <li className={styles?.home} onClick={() => navigate(strings?.home)}>
-
             <FontAwesomeIcon icon={faHome} className={styles?.homeIcon} />
           </li>
-          {/* <li className={styles?.about} onClick={() => processing ? null : navigate(strings?.about)}> */}
-          <li className={styles?.about} onClick={() =>  navigate(strings?.about)}>
-
+          <li
+            className={styles?.about}
+            onClick={() => navigate(strings?.about)}
+          >
             <FontAwesomeIcon icon={faUser} className={styles?.aboutIcon} />
           </li>
-          {/* <li className={styles?.skills} onClick={() => processing ? null : navigate(strings?.skills)}> */}
-          <li className={styles?.skills} onClick={() => navigate(strings?.skills)}>
-
-            {/* <FontAwesomeIcon icon={faCog} className={`${styles?.techIcon} ${processing ? 'fa-spin' : null}`} /> */}
+          <li
+            className={styles?.skills}
+            onClick={() => navigate(strings?.skills)}
+          >
             <FontAwesomeIcon icon={faCog} className={styles?.techIcon} />
           </li>
-          {/* <li className={styles?.work} onClick={() => processing ? null : navigate(strings?.work)}> */}
           <li className={styles?.work} onClick={() => navigate(strings?.work)}>
-
             <FontAwesomeIcon icon={faWrench} className={styles?.workIcon} />
           </li>
-          {/* <li className={styles?.contact} onClick={() => processing ? null : navigate(strings?.contact)}> */}
-          <li className={styles?.contact} onClick={() => navigate(strings?.contact)}>
+          <li
+            className={styles?.contact}
+            onClick={() => navigate(strings?.contact)}
+          >
             <FontAwesomeIcon
               icon={faEnvelope}
               className={styles?.contactIcon}

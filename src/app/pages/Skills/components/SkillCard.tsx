@@ -1,7 +1,7 @@
+import { AnimatePresence, motion } from "framer-motion";
+import useSkills from "../hooks/useSkills";
 import styles from "../style/skillCard.module.scss";
 import { skills } from "../types/skillsetType";
-import useSkills from "../hooks/useSkills";
-import { motion, AnimatePresence } from "framer-motion";
 
 const SkillCard = (props: skills) => {
   const { name, image, styleClass, alt, waterfall } = props;

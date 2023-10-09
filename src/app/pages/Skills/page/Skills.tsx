@@ -1,30 +1,24 @@
+import strings from "app/constants/strings";
+import { AnimatePresence, motion } from "framer-motion";
+import SEO from "../../../components/SEOComponent/SEO";
+import SkillCard from "../components/SkillCard";
 import backendSkillSet from "../data/backend-skills";
 import developingSkills from "../data/developing-skills";
 import frontendSkillSet from "../data/front-end-skills";
 import hostingUsed from "../data/hosting-used";
 import languages from "../data/languages";
+import miscSkills from "../data/misc-tools";
 import mobileSkillset from "../data/mobile-skills";
+import projectSkills from "../data/project-skills";
 import shopifySkillSet from "../data/shopify-skills";
+import testingSkills from "../data/testing-skills";
 import useSkills from "../hooks/useSkills";
 import "../style/skillCardAnimations.scss";
 import skillPageStyle from "../style/skillCardPageStyle.module.scss";
-import SEO from "../../../components/SEOComponent/SEO";
-import { motion, AnimatePresence } from "framer-motion";
-import SkillCard from "../components/SkillCard";
-import testingSkills from "../data/testing-skills";
-import miscSkills from "../data/misc-tools";
-import projectSkills from "../data/project-skills";
-import strings from "app/constants/strings";
 
 const Skills = () => {
-  const {
-    navigate,
-    skillSet,
-    scope,
-    updateSkillSet,
-    highlightSkillset,
-    // , processing
-  } = useSkills();
+  const { navigate, skillSet, scope, updateSkillSet, highlightSkillset } =
+    useSkills();
 
   return (
     <main className={skillPageStyle?.pageContainerSkills}>
@@ -70,7 +64,6 @@ const Skills = () => {
                     : null
                 }`}
                 onClick={() => updateSkillSet(languages, strings?.lang)}
-                // disabled={processing}
               >
                 {strings?.lang}
               </button>
@@ -83,7 +76,6 @@ const Skills = () => {
                     : null
                 }`}
                 onClick={() => updateSkillSet(frontendSkillSet, strings?.front)}
-                // disabled={processing}
               >
                 {strings?.front}
               </button>
@@ -96,7 +88,6 @@ const Skills = () => {
                     : null
                 }`}
                 onClick={() => updateSkillSet(mobileSkillset, strings?.mobile)}
-                // disabled={processing}
               >
                 {strings?.mobile}
               </button>
@@ -109,7 +100,6 @@ const Skills = () => {
                     : null
                 }`}
                 onClick={() => updateSkillSet(backendSkillSet, strings?.back)}
-                // disabled={processing}
               >
                 {strings?.back}
               </button>
@@ -122,7 +112,6 @@ const Skills = () => {
                     : null
                 }`}
                 onClick={() => updateSkillSet(hostingUsed, strings?.host)}
-                // disabled={processing}
               >
                 {strings?.host}
               </button>
@@ -137,7 +126,6 @@ const Skills = () => {
                 onClick={() =>
                   updateSkillSet(shopifySkillSet, strings?.shopify)
                 }
-                // disabled={processing}
               >
                 {strings?.shopify}
               </button>
@@ -150,7 +138,6 @@ const Skills = () => {
                     : null
                 }`}
                 onClick={() => updateSkillSet(testingSkills, strings?.test)}
-                // disabled={processing}
               >
                 {strings?.test}
               </button>
@@ -163,7 +150,6 @@ const Skills = () => {
                     : null
                 }`}
                 onClick={() => updateSkillSet(projectSkills, strings?.design)}
-                // disabled={processing}
               >
                 {strings?.design}
               </button>
@@ -176,7 +162,6 @@ const Skills = () => {
                     : null
                 }`}
                 onClick={() => updateSkillSet(miscSkills, strings?.tools)}
-                // disabled={processing}
               >
                 {strings?.tools}
               </button>
@@ -191,7 +176,6 @@ const Skills = () => {
                 onClick={() =>
                   updateSkillSet(developingSkills, strings?.learning)
                 }
-                // disabled={processing}
               >
                 {strings?.learning}
               </button>

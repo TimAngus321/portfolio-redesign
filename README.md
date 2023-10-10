@@ -48,6 +48,7 @@ My personal portfolio all about me and my skills built in react.
   - Testing libraries ✅
   - Design tools ✅
   - Maybe add misc skillset figma, warp, whimsical... ✅
+- Just setup useNavigate once in a hook and use it all over the app 
 
 ## Add to next Version
 

@@ -6,6 +6,8 @@ import prismaLogo from "../../../../assets/skillsImages/backendLogos/prismaLogo.
 import railsLogo from "../../../../assets/skillsImages/backendLogos/rails-plain.svg";
 import swaggerLogo from "../../../../assets/skillsImages/miscLogos/swagger.svg";
 import bunLogo from "../../../../assets/skillsImages/backendLogos/bunLogo.svg"
+import nuxtLogo from "../../../../assets/skillsImages/frontendLogos/nuxtjs-original.svg";
+
 
 const backendSkillSet = [
   {
@@ -31,6 +33,12 @@ const backendSkillSet = [
     name: "Ruby on Rails",
     image: railsLogo,
     alt: "Ruby on Rails Logo",
+    waterfall: [""]
+  },
+  {
+    name: "Nuxt",
+    image: nuxtLogo,
+    alt: "Vue Logo",
     waterfall: [""]
   },
   {

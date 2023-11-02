@@ -5,13 +5,12 @@ import nextLogo from "../../../../assets/skillsImages/learningLogos/nextjs-line.
 import graphqlLogo from "../../../../assets/skillsImages/learningLogos/graphql-plain.svg";
 import svelteLogo from "../../../../assets/skillsImages/learningLogos/svelte-original.svg";
 import pythonLogo from "../../../../assets/skillsImages/learningLogos/python-original.svg";
-import vueLogo from "../../../../assets/skillsImages/learningLogos/vuejs-original.svg";
 import flutterLogo from "../../../../assets/skillsImages/learningLogos/flutter-original.svg";
 import dartLogo from "../../../../assets/skillsImages/learningLogos/dart-original.svg";
 import dockerLogo from "../../../../assets/skillsImages/learningLogos/docker-plain.svg";
 import viteLogo from "../../../../assets/skillsImages/miscLogos/vite-logo.svg";
-import nuxtLogo from "../../../../assets/skillsImages/learningLogos/nuxtjs-original.svg";
 import mongoDBLogo from "../../../../assets/skillsImages/learningLogos/mongodb-original.svg";
+import vercelLogo from "../../../../assets/skillsImages/learningLogos/vercel-logo.svg";
 
 
 const developingSkills = [
@@ -35,6 +34,13 @@ const developingSkills = [
     waterfall: [""]
   },
   {
+    name: "Vercel",
+    image: vercelLogo,
+    alt: "Vercel Logo",
+    styleClass: "inverseWhite",
+    waterfall: [""],
+  },
+  {
     name: "MongoDB Atlas",
     image: mongoDBLogo,
     alt: "MongoDB Atlas Logo",
@@ -44,18 +50,6 @@ const developingSkills = [
     name: "Sveltekit",
     image: svelteLogo,
     alt: "Svelte Logo",
-    waterfall: [""]
-  },
-  {
-    name: "Vue",
-    image: vueLogo,
-    alt: "Vue Logo",
-    waterfall: [""]
-  },
-  {
-    name: "Nuxt",
-    image: nuxtLogo,
-    alt: "Vue Logo",
     waterfall: [""]
   },
   {

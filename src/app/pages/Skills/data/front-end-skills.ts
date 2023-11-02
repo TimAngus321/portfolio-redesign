@@ -3,6 +3,9 @@ import reduxLogo from '../../../../assets/skillsImages/frontendLogos/redux-origi
 import jqueryLogo from '../../../../assets/skillsImages/frontendLogos/jquery-original.svg';
 import bootstrapLogo from '../../../../assets/skillsImages/frontendLogos/bootstrap-original.svg';
 import webpackLogo from "../../../../assets/skillsImages/miscLogos/webpack-original.svg";
+import tailwindLogo from "../../../../assets/skillsImages/frontendLogos/tailwindcss-plain.svg";
+import vueLogo from "../../../../assets/skillsImages/frontendLogos/vuejs-original.svg";
+
 
 const frontendSkillSet = [
     {
@@ -12,18 +15,29 @@ const frontendSkillSet = [
         waterfall: [""]
     },
     {
-        name: "Redux",
-        image: reduxLogo,
-        alt: "Redux Logo",
+        name: "Vue",
+        image: vueLogo,
+        alt: "Vue Logo",
         waterfall: [""]
-    },
+      },
     {
         name: "jQuery",
         image: jqueryLogo,
         alt: "jQuery Logo",
         waterfall: [""]
     },
-    
+    {
+        name: "Redux",
+        image: reduxLogo,
+        alt: "Redux Logo",
+        waterfall: [""]
+    },
+    {
+        name: "Tailwind",
+        image: tailwindLogo,
+        alt: "Tailwind Logo",
+        waterfall: [""]
+    },
     {
         name: "Bootstrap",
         image: bootstrapLogo,

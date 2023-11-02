@@ -53,7 +53,7 @@ My personal portfolio all about me and my skills built in react.
 ## Add to next Version
 
 - Update CSS with new ways to deal with responsive layouts
-- Add next JS
+- Add next JS/React Server Side Components
 - Progress bar on background color of button (like netflix next episode btn) while animation runs on skills page
 - Use cookies instead of localStorage to set expiry easily
 - Have skill card animations loop round continuously rather than reverse

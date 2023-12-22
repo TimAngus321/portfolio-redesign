@@ -48,7 +48,7 @@ My personal portfolio all about me and my skills built in react.
   - Testing libraries ✅
   - Design tools ✅
   - Maybe add misc skillset figma, warp, whimsical... ✅
-- Just setup useNavigate once in a hook and use it all over the app 
+- Just setup useNavigate once in a hook and use it all over the app
 
 ## Add to next Version
 
@@ -64,5 +64,4 @@ My personal portfolio all about me and my skills built in react.
 
 - Investigate errors for firefox on Skills Page - Looks like base64 error from the svg icons that firefox/node vibrant can't process (png files in firefox work fine) - temp fix implemented ⚙️
 - Check quality of images for work page. Looks like they got a bit blury/grainy after optimisation.
-- Check process state of skills animation with useContext everywhere to prevent errors when skill page skillSet buttons used too quickly - might now be unecessary 
-- GSAP might be a better animation library for more complex animations as it's more consise and clean. Framer Motion seems better for simple animations.
+- Check process state of skills animation with useContext everywhere to prevent errors when skill page skillSet buttons used too quickly - unecessary

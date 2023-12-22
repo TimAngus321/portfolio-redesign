@@ -1,32 +1,17 @@
 import ShopifyHydrogen from "../../../../assets/skillsImages/shopifyLogos/HydrogenLogo.webp";
 import firebaseLogo from "../../../../assets/skillsImages/learningLogos/firebase-plain.svg";
 import goLogo from "../../../../assets/skillsImages/learningLogos/go-original.svg";
-import nextLogo from "../../../../assets/skillsImages/learningLogos/nextjs-line.svg";
 import graphqlLogo from "../../../../assets/skillsImages/learningLogos/graphql-plain.svg";
 import svelteLogo from "../../../../assets/skillsImages/learningLogos/svelte-original.svg";
 import pythonLogo from "../../../../assets/skillsImages/learningLogos/python-original.svg";
 import flutterLogo from "../../../../assets/skillsImages/learningLogos/flutter-original.svg";
 import dartLogo from "../../../../assets/skillsImages/learningLogos/dart-original.svg";
 import dockerLogo from "../../../../assets/skillsImages/learningLogos/docker-plain.svg";
-import viteLogo from "../../../../assets/skillsImages/miscLogos/vite-logo.svg";
 import mongoDBLogo from "../../../../assets/skillsImages/learningLogos/mongodb-original.svg";
 import vercelLogo from "../../../../assets/skillsImages/learningLogos/vercel-logo.svg";
 
 
 const developingSkills = [
-  {
-    name: "Vite",
-    image: viteLogo,
-    alt: "Vite Logo",
-    waterfall: [""],
-  },
-  {
-    name: "Next",
-    image: nextLogo,
-    alt: "Next Logo",
-    styleClass: "inverseWhite",
-    waterfall: [""]
-  },
   {
     name: "GraphQL",
     image: graphqlLogo,

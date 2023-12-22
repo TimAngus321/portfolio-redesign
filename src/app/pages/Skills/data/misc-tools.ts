@@ -5,6 +5,8 @@ import postmanLogo from "../../../../assets/skillsImages/miscLogos/postman.svg";
 import antdLogo from "../../../../assets/skillsImages/frontendLogos/ant-design-logo.svg";
 import npmLogo from "../../../../assets/skillsImages/miscLogos/npm-original-wordmark.svg";
 import yarnLogo from "../../../../assets/skillsImages/miscLogos/yarn-original.svg";
+import swaggerLogo from "../../../../assets/skillsImages/miscLogos/swagger.svg";
+
 
 const generalSkills = [
   {
@@ -47,6 +49,12 @@ const generalSkills = [
     name: "Yarn",
     image: yarnLogo,
     alt: "Yarn Logo",
+    waterfall: [""],
+  },
+  {
+    name: "Swagger",
+    image: swaggerLogo,
+    alt: "Swagger Logo",
     waterfall: [""],
   },
 ];

@@ -33,7 +33,7 @@ const Work = () => {
       />
       <section className={styles?.workContainer}>
         <Parallax
-          pages={17}
+          pages={18}
           innerStyle={{
             zIndex: "1",
           }}
@@ -43,7 +43,9 @@ const Work = () => {
             gap: "30%",
           }}
         >
-          <ParallaxLayer offset={0} speed={0.5} className={styles?.workTitle}>
+          <ParallaxLayer offset={0} speed={0.5} sticky={{ start: 0, end: 1 }} className={styles?.workTitle}
+            style={{ ...alignCenter, justifyContent: "flex-center" }}
+            >
             <header className={styles?.scrollText}>
               <h1 className={styles?.workTitle}>
                 Previous Work & Personal Projects
@@ -56,7 +58,7 @@ const Work = () => {
           </ParallaxLayer>
 
           <ParallaxLayer
-            sticky={{ start: 1, end: 5 }}
+            sticky={{ start: 2, end: 6 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
@@ -72,7 +74,7 @@ const Work = () => {
             <ParallaxLayer
               key={key}
               className={`${styles?.projectCard} ${styles?.parallax}`}
-              offset={1.5 + i}
+              offset={2.5 + i}
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
@@ -91,7 +93,7 @@ const Work = () => {
 
           <ParallaxLayer
             className="rails-group"
-            sticky={{ start: 6, end: 7 }}
+            sticky={{ start: 7, end: 8 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
@@ -107,7 +109,7 @@ const Work = () => {
             <ParallaxLayer
               key={key}
               className={`${styles?.projectCard} ${styles?.parallax}`}
-              offset={6.5 + i}
+              offset={7.5 + i}
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
@@ -126,7 +128,7 @@ const Work = () => {
 
           <ParallaxLayer
             factor={0.5}
-            sticky={{ start: 8, end: 10 }}
+            sticky={{ start: 9, end: 11 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
@@ -142,7 +144,7 @@ const Work = () => {
             <ParallaxLayer
               key={key}
               className={`${styles?.projectCard} ${styles?.parallax}`}
-              offset={8.5 + i}
+              offset={9.5 + i}
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
@@ -160,7 +162,7 @@ const Work = () => {
 
           <ParallaxLayer
             factor={0.5}
-            sticky={{ start: 11, end: 16 }}
+            sticky={{ start: 12, end: 18 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
@@ -176,7 +178,7 @@ const Work = () => {
             <ParallaxLayer
               key={key}
               className={`${styles?.projectCard} ${styles?.parallax}`}
-              offset={11.5 + i}
+              offset={12.5 + i}
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >

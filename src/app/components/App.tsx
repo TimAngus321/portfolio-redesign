@@ -5,7 +5,6 @@ import { useState } from "react";
 import Menu from "./Menu/Menu";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { BrowserRouter } from "react-router-dom";
 import PageRoutes from "../Routes/routes";
 import { HelmetProvider } from "react-helmet-async";
 

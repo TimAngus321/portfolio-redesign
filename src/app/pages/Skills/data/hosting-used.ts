@@ -2,6 +2,8 @@ import netlifyLogo from '../../../../assets/skillsImages/hostLogos/netlifyLogo.w
 import githubLogo from '../../../../assets/skillsImages/hostLogos/github-original.svg';
 import herokuLogo from '../../../../assets/skillsImages/hostLogos/heroku-original.svg';
 import awsLogo from '../../../../assets/skillsImages/hostLogos/amazonwebservices-original.svg';
+import vercelLogo from "../../../../assets/skillsImages/learningLogos/vercel-logo.svg";
+
 
 const hostingUsed = [
     {
@@ -28,7 +30,14 @@ const hostingUsed = [
         image: netlifyLogo,
         alt: "Netlify Logo",
         waterfall: [""]
-    }
+    },
+    {
+        name: "Vercel",
+        image: vercelLogo,
+        alt: "Vercel Logo",
+        styleClass: "inverseWhite",
+        waterfall: [""],
+      }
 ];
 
 export default hostingUsed;

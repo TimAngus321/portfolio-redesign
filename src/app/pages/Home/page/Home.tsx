@@ -22,7 +22,7 @@ const Home = () => {
             <QuoteLoop />
           </div>
           <p className={styles?.subHeading}>
-            Full-Stack / React / Express / Rails / Shopify
+            Full-Stack / Frontend / Mobile / Shopify
           </p>
           <button className={styles?.homeContactBtn} onClick={(e) => navigate("/contact")}>
             Contact Me

@@ -1,6 +1,7 @@
 {
   "short_name": "Tim's Portfolio",
   "name": "Tim's Personal Portfolio",
+  "description": "Tim's Personal Portfolio a react app that informs users about Tim Angus's technincal and personal skills, experience and allows users to get in contact. ",
   "scope": ".",
   "start_url": "/",
   "icons": [

@@ -8,8 +8,6 @@ import flutterLogo from "../../../../assets/skillsImages/learningLogos/flutter-o
 import dartLogo from "../../../../assets/skillsImages/learningLogos/dart-original.svg";
 import dockerLogo from "../../../../assets/skillsImages/learningLogos/docker-plain.svg";
 import mongoDBLogo from "../../../../assets/skillsImages/learningLogos/mongodb-original.svg";
-import vercelLogo from "../../../../assets/skillsImages/learningLogos/vercel-logo.svg";
-
 
 const developingSkills = [
   {
@@ -17,13 +15,6 @@ const developingSkills = [
     image: graphqlLogo,
     alt: "GraphQL Logo",
     waterfall: [""]
-  },
-  {
-    name: "Vercel",
-    image: vercelLogo,
-    alt: "Vercel Logo",
-    styleClass: "inverseWhite",
-    waterfall: [""],
   },
   {
     name: "MongoDB Atlas",

@@ -6,6 +6,7 @@ import webpackLogo from "../../../../assets/skillsImages/miscLogos/webpack-origi
 import tailwindLogo from "../../../../assets/skillsImages/frontendLogos/tailwindcss-plain.svg";
 import vueLogo from "../../../../assets/skillsImages/frontendLogos/vuejs-original.svg";
 import viteLogo from "../../../../assets/skillsImages/miscLogos/vite-logo.svg";
+import piniaLogo from "../../../../assets/skillsImages/frontendLogos/pinia-seeklogo.svg"
 
 const frontendSkillSet = [
   {
@@ -15,33 +16,27 @@ const frontendSkillSet = [
     waterfall: [""],
   },
   {
-    name: "Vue",
-    image: vueLogo,
-    alt: "Vue Logo",
-    waterfall: [""],
-  },
-  {
-    name: "jQuery",
-    image: jqueryLogo,
-    alt: "jQuery Logo",
-    waterfall: [""],
-  },
-  {
     name: "Redux",
     image: reduxLogo,
     alt: "Redux Logo",
     waterfall: [""],
   },
   {
-    name: "Tailwind",
-    image: tailwindLogo,
-    alt: "Tailwind Logo",
+    name: "Vue",
+    image: vueLogo,
+    alt: "Vue Logo",
     waterfall: [""],
   },
   {
-    name: "Bootstrap",
-    image: bootstrapLogo,
-    alt: "Bootstrap Logo",
+    name: "Pinia",
+    image: piniaLogo,
+    alt: "Pinia Logo",
+    waterfall: [""],
+  },
+  {
+    name: "Tailwind",
+    image: tailwindLogo,
+    alt: "Tailwind Logo",
     waterfall: [""],
   },
   {
@@ -56,6 +51,18 @@ const frontendSkillSet = [
     alt: "Webpack Logo",
     waterfall: [""],
   },
+  {
+    name: "jQuery",
+    image: jqueryLogo,
+    alt: "jQuery Logo",
+    waterfall: [""],
+  },
+  {
+    name: "Bootstrap",
+    image: bootstrapLogo,
+    alt: "Bootstrap Logo",
+    waterfall: [""],
+  }
 ];
 
 export default frontendSkillSet;

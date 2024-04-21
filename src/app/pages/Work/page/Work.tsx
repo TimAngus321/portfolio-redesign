@@ -13,6 +13,8 @@ import reactLogo from "../../../../assets/skillsImages/frontendLogos/react-origi
 import railsLogo from "../../../../assets/skillsImages/backendLogos/rails-plain.svg";
 import expressLogo from "../../../../assets/skillsImages/backendLogos/express-original.svg";
 import SEO from "../../../components/SEOComponent/SEO";
+import nuxtLogo from "../../../../assets/skillsImages/frontendLogos/nuxtjs-original.svg";
+import nuxtProjects from "../data/nuxt-project-data";
 
 const Work = () => {
   const alignCenter: any = {
@@ -33,7 +35,7 @@ const Work = () => {
       />
       <section className={styles?.workContainer}>
         <Parallax
-          pages={18}
+          pages={20}
           innerStyle={{
             zIndex: "1",
           }}
@@ -58,7 +60,41 @@ const Work = () => {
           </ParallaxLayer>
 
           <ParallaxLayer
-            sticky={{ start: 2, end: 6 }}
+            sticky={{ start: 2, end: 3 }}
+            style={{ ...alignCenter, justifyContent: "flex-start" }}
+          >
+            <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
+              <img
+                src={nuxtLogo}
+                alt="React Logo"
+                className={styles?.stickyCardImage}
+              />
+            </div>
+          </ParallaxLayer>
+
+          {Object.keys(nuxtProjects).map((key, i) => (
+            <ParallaxLayer
+              key={key}
+              className={`${styles?.projectCard} ${styles?.parallax}`}
+              offset={2.5 + i}
+              speed={1.5}
+              style={{ ...alignCenter, justifyContent: "flex-end" }}
+            >
+              <ProjectCard
+                className={`${styles?.projectCard} ${styles?.parallax}`}
+                key={key}
+                name={nuxtProjects[i]?.name}
+                desc={nuxtProjects[i]?.desc}
+                techTitle={nuxtProjects[i]?.techTitle}
+                techStack={nuxtProjects[i]?.techStack}
+                link={nuxtProjects[i]?.link}
+                img={nuxtProjects[i]?.img}
+              ></ProjectCard>
+            </ParallaxLayer>
+          ))}
+
+          <ParallaxLayer
+            sticky={{ start: 4, end: 8 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
@@ -74,7 +110,7 @@ const Work = () => {
             <ParallaxLayer
               key={key}
               className={`${styles?.projectCard} ${styles?.parallax}`}
-              offset={2.5 + i}
+              offset={4.5 + i}
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
@@ -93,7 +129,7 @@ const Work = () => {
 
           <ParallaxLayer
             className="rails-group"
-            sticky={{ start: 7, end: 8 }}
+            sticky={{ start: 9, end: 10 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
@@ -109,7 +145,7 @@ const Work = () => {
             <ParallaxLayer
               key={key}
               className={`${styles?.projectCard} ${styles?.parallax}`}
-              offset={7.5 + i}
+              offset={9.5 + i}
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
@@ -128,7 +164,7 @@ const Work = () => {
 
           <ParallaxLayer
             factor={0.5}
-            sticky={{ start: 9, end: 11 }}
+            sticky={{ start: 11, end: 13 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
@@ -144,7 +180,7 @@ const Work = () => {
             <ParallaxLayer
               key={key}
               className={`${styles?.projectCard} ${styles?.parallax}`}
-              offset={9.5 + i}
+              offset={11.5 + i}
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
@@ -162,7 +198,7 @@ const Work = () => {
 
           <ParallaxLayer
             factor={0.5}
-            sticky={{ start: 12, end: 18 }}
+            sticky={{ start: 14, end: 20 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
@@ -178,7 +214,7 @@ const Work = () => {
             <ParallaxLayer
               key={key}
               className={`${styles?.projectCard} ${styles?.parallax}`}
-              offset={12.5 + i}
+              offset={14.5 + i}
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >

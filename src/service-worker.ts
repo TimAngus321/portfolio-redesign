@@ -16,7 +16,8 @@ import { StaleWhileRevalidate } from 'workbox-strategies';
 
 declare const self: ServiceWorkerGlobalScope;
 
-const VERSION: string = require('../package.json').version; 
+// For checking version & updates
+// const VERSION: string = require('../package.json').version; 
 
 clientsClaim();
 

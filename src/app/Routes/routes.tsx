@@ -7,7 +7,6 @@ import Contact from "../pages/Contact/page/Contact";
 import AnimatedTransition from "../../app/components/AnimatedRoutes/AnimatedTransition";
 
 const PageRoutes = () => {
-
   return (
     <Routes>
       <Route

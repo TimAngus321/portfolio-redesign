@@ -20,11 +20,9 @@ const config: Config = {
   onUpdate: (registration) => {
       if (registration && registration.waiting) {
           registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-          toast.success(
-            `A new version of the app will be loaded.`,
-            { position: toast.POSITION.TOP_RIGHT, hideProgressBar: true, autoClose: 2500 }
-          );
+          console.log("service worker & app will be updated")
           window.location.reload();
+          console.log("updated service worker & updated app")
       }
   },
 };

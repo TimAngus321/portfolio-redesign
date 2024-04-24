@@ -3,6 +3,8 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import Router from "./app/components/App";
 import { BrowserRouter } from "react-router-dom";
+import {Config} from "./serviceWorkerRegistration";
+import { toast } from "react-toastify";
 
 // const callback: any = {};
 
@@ -11,25 +13,28 @@ const root = createRoot(container!); // createRoot(container!) if you use TypeSc
 root.render(
   <BrowserRouter>
     <Router/>
-    {/* Remove if not needed for service worker */}
-    {/* <Router callback={callback}/> */}
   </BrowserRouter>
 );
+
+const config: Config = {
+  onUpdate: (registration) => {
+      if (registration && registration.waiting) {
+          registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+          toast.success(
+            `A new version of the app will be loaded.`,
+            { position: toast.POSITION.TOP_RIGHT, hideProgressBar: true, autoClose: 2500 }
+          );
+          window.location.reload();
+      }
+  },
+};
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
 
 // I've modified this to check for new version of App and refresh page
-serviceWorkerRegistration.register(
-//   {
-//   onUpdate: () => {
-//     if(callback.onUpdate){
-//       callback.onUpdate(); // delegating the callback
-//     }
-//   }
-// }
-);
+serviceWorkerRegistration.register(config);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

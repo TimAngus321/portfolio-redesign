@@ -33,7 +33,7 @@ const config: Config = {
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
 
-// I've modified this to check for new version of App and refresh page
+// I've modified this to check for new version of App and refresh page - testing
 serviceWorkerRegistration.register(config);
 
 // If you want to start measuring performance in your app, pass a function

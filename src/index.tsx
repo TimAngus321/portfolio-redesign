@@ -1,12 +1,10 @@
 import { createRoot } from "react-dom/client";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import * as serviceWorker from "./serviceWorker";
 import reportWebVitals from "./reportWebVitals";
 import Router from "./app/components/App";
 import { BrowserRouter } from "react-router-dom";
-import {Config} from "./serviceWorkerRegistration";
+import {Config} from "./serviceWorker";
 import { toast } from "react-toastify";
-
-// const callback: any = {};
 
 const container = document.querySelector("#root");
 const root = createRoot(container!); // createRoot(container!) if you use TypeScript
@@ -20,10 +18,11 @@ const config: Config = {
   onUpdate: (registration) => {
       if (registration && registration.waiting) {
           registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-          toast.success(
-            `A new version of the app will be loaded.`,
-            { position: toast.POSITION.TOP_RIGHT, hideProgressBar: true, autoClose: 2500 }
-          );
+          toast.success(`App has been updated!`, {
+            position: toast.POSITION.TOP_RIGHT,
+            hideProgressBar: true,
+            autoClose: 2500,
+          });
           window.location.reload();
       }
   },
@@ -34,7 +33,7 @@ const config: Config = {
 // Learn more about service workers: https://cra.link/PWA
 
 // I've modified this to check for new version of App and refresh page
-serviceWorkerRegistration.register(config);
+serviceWorker.register(config);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

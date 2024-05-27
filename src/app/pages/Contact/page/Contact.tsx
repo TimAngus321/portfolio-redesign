@@ -27,8 +27,12 @@ const ContactMe = () => {
           <header>
             <h1 className={styles?.contactTitle}>Contact Me</h1>
             <p className={styles?.contactBlurb}>
-              Please feel free to contact me regarding React,
-              Javascript/Typescript, Shopify and Rails projects and positions.
+              Please feel free to contact me regarding projects and positions in the Javascript/Typescript
+              ecosystem. I have experience with Next, React, Nuxt, Vue, React Native, Express and I can also 
+              work with other javascript frameworks and libraries. Additionally I can assist with Ruby projects 
+              especially in Rails. I am also very expereinced in the Shopify ecosystem and have experience working
+              with Express, Rails and Grape backends for Shopify.
+              <br /> <br />
               Send me a message with this form and I'll let you know if I can
               help you with your project or be a good fit for your company.
             </p>

@@ -36,7 +36,7 @@ const reactProjects = [
     desc: "A personal portfolio to let people know about me and my skills.",
     techTitle: "Tech Used",
     techStack:
-      "React, SCSS, Typescript, Quote Loop, GSAP, EmailJS, SCSS modules and figma. Design based off an Awwards winner.",
+      "React, SCSS modules, Typescript, Javascript, Custom Hooks, Text Loop, GSAP, Framer Motion, Abstract API, React Dancing Lines (my version), Node Vibrant, Media Queries, Key Frames, Yarn, EmailJS and figma. Design based off an Awwards winner.",
     link: "/home",
     img: personalPortfolioImg,
   },

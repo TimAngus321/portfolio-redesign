@@ -8,7 +8,7 @@ const About = () => {
   const { navigate } = useAbout();
 
   return (
-    <main className={styles?.pageContainerAbout}>
+    <section className={styles?.pageContainerAbout}>
       <SEO
         title={`Tim Angus's Porftolio - About Page`}
         description={`About page of Timothy Angus's portfolio. A brief paragraph about Tim Angus and links to my previous employers company websites`}
@@ -45,7 +45,7 @@ const About = () => {
             watching documenteries.{" "}
           </p>
         </header>
-        <section className={styles?.workExperienceContainer}>
+        <div className={styles?.workExperienceContainer}>
           <ul className={styles?.workExpCards}>
             {Object.keys(workExpInfo).map((key, i) => (
               <WorkExpCard
@@ -58,9 +58,9 @@ const About = () => {
               />
             ))}
           </ul>
-        </section>
+        </div>
       </div>
-    </main>
+    </section>
   );
 };
 

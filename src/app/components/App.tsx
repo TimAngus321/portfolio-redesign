@@ -16,7 +16,9 @@ const Router = () => {
     <HelmetProvider context={helmetContext}>
       <ToastContainer newestOnTop={true} />
       <NavBar />
-      <PageRoutes />
+      <main>
+        <PageRoutes />
+      </main>
       <div className="mobile-nav">
         <Hamburger open={open} setOpen={setOpen} />
         <Menu open={open} setOpen={setOpen} />

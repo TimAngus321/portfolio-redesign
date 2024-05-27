@@ -27,13 +27,13 @@ const Work = () => {
   };
 
   return (
-    <main className={styles?.pageContainerScrollWork}>
+    <section className={styles?.pageContainerScrollWork}>
       <SEO
         title={`Tim Angus's Porftolio - Work Page`}
         description={`Work page of Timothy Angus's portfolio. Discover all of my previous work and personal projects skills using a cool parallax scroll effect!`}
         link={`https://tim-angus.com/work`}
       />
-      <section className={styles?.workContainer}>
+      <div className={styles?.workContainer}>
         <Parallax
           pages={20}
           innerStyle={{
@@ -229,8 +229,8 @@ const Work = () => {
             </ParallaxLayer>
           ))}
         </Parallax>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
 

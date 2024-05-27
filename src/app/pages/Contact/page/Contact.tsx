@@ -16,13 +16,13 @@ const ContactMe = () => {
   } = useEmail();
 
   return (
-    <main className={styles?.contactPageContainer}>
+    <section className={styles?.contactPageContainer}>
       <SEO
         title={`Tim Angus's Porftolio - Contact Page`}
         description={`Contact page of Timothy Angus's portfolio. Use the contact form to get in contact with me regarding positions or freelance projects. Error handler uses toast notifcations to warn the user about issues and prevent spamming`}
         link={`https://tim-angus.com/contact`}
       />
-      <section className={styles?.contactComponent}>
+      <div className={styles?.contactComponent}>
         <div className={styles?.formItem}>
           <header>
             <h1 className={styles?.contactTitle}>Contact Me</h1>
@@ -105,8 +105,8 @@ const ContactMe = () => {
           </form>
         </div>
         <div className="map"></div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
 

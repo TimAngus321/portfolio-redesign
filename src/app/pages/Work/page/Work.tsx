@@ -50,7 +50,7 @@ const Work = () => {
             >
             <header className={styles?.scrollText}>
               <h1 className={styles?.workTitle}>
-                Previous Work & Personal Projects
+                Highlights of Work & Personal Projects
               </h1>
               <FontAwesomeIcon
                 className={styles?.workPageArrow}

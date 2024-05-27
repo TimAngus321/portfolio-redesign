@@ -57,7 +57,7 @@
   justify-content: flex-start;
   margin: 0 0 0 100px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   display: inline-block;
   overflow: hidden;
@@ -68,10 +68,6 @@
 
 @media only screen and (max-width: 900px) {
   .pageContainerScrollWork {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
     width: 100%;
     height: 100%;
     margin: 0;

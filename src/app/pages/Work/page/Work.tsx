@@ -54,7 +54,7 @@ const Work = () => {
           >
             <header className={styles?.scrollText}>
               <h1 className={styles?.workTitle}>
-                Highlights of Work & Personal Projects
+                Work & Personal Projects Highlights
               </h1>
               <FontAwesomeIcon
                 className={styles?.workPageArrow}

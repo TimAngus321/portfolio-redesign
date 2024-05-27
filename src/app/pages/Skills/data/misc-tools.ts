@@ -6,6 +6,7 @@ import antdLogo from "../../../../assets/skillsImages/frontendLogos/ant-design-l
 import npmLogo from "../../../../assets/skillsImages/miscLogos/npm-original-wordmark.svg";
 import yarnLogo from "../../../../assets/skillsImages/miscLogos/yarn-original.svg";
 import swaggerLogo from "../../../../assets/skillsImages/miscLogos/swagger.svg";
+import retoolLogo from "../../../../assets/skillsImages/miscLogos/Retool.jpeg";
 
 
 const generalSkills = [
@@ -19,6 +20,12 @@ const generalSkills = [
     name: "Warp Terminal",
     image: warpLogo,
     alt: "Warp Terminal Logo",
+    waterfall: [""],
+  },
+  {
+    name: "Retool",
+    image: retoolLogo,
+    alt: "Retool Logo",
     waterfall: [""],
   },
   {

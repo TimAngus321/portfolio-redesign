@@ -4,8 +4,6 @@ import reportWebVitals from "./reportWebVitals";
 import Router from "./app/components/App";
 import { BrowserRouter } from "react-router-dom";
 
-// const callback: any = {};
-
 const container = document.querySelector("#root");
 const root = createRoot(container!); // createRoot(container!) if you use TypeScript
 root.render(
@@ -18,7 +16,6 @@ root.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
 
-// I've modified this to check for new version of App and refresh page - testing
 serviceWorkerRegistration.register();
 
 // If you want to start measuring performance in your app, pass a function

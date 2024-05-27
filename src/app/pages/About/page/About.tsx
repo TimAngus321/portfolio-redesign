@@ -8,7 +8,7 @@ const About = () => {
   const { navigate } = useAbout();
 
   return (
-    <main className={styles?.pageContainerAbout}>
+    <section className={styles?.pageContainerAbout}>
       <SEO
         title={`Tim Angus's Porftolio - About Page`}
         description={`About page of Timothy Angus's portfolio. A brief paragraph about Tim Angus and links to my previous employers company websites`}
@@ -20,8 +20,9 @@ const About = () => {
           <p className={styles?.aboutMeBlurb}>
             Le Wagon alumni that learnt full-stack development with the Rails
             framework. Since then I have continued delving deeper into
-            Javascript/Typescript and building projects with React, React
-            Native, Express and Shopify.
+            Javascript/Typescript and building projects with Next, React, Nuxt,
+            Vue, React Native, Express with PostgeSQL or MySQl and E-Commerce 
+            stores with Shopify Themes and Expess, Rails or Grape backends.
             <br />
             <br />
             I've worked fulltime as a full-stack developer for Gavel, MilkRun,
@@ -44,7 +45,7 @@ const About = () => {
             watching documenteries.{" "}
           </p>
         </header>
-        <section className={styles?.workExperienceContainer}>
+        <div className={styles?.workExperienceContainer}>
           <ul className={styles?.workExpCards}>
             {Object.keys(workExpInfo).map((key, i) => (
               <WorkExpCard
@@ -57,9 +58,9 @@ const About = () => {
               />
             ))}
           </ul>
-        </section>
+        </div>
       </div>
-    </main>
+    </section>
   );
 };
 

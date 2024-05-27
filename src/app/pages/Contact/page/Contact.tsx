@@ -16,19 +16,23 @@ const ContactMe = () => {
   } = useEmail();
 
   return (
-    <main className={styles?.contactPageContainer}>
+    <section className={styles?.contactPageContainer}>
       <SEO
         title={`Tim Angus's Porftolio - Contact Page`}
         description={`Contact page of Timothy Angus's portfolio. Use the contact form to get in contact with me regarding positions or freelance projects. Error handler uses toast notifcations to warn the user about issues and prevent spamming`}
         link={`https://tim-angus.com/contact`}
       />
-      <section className={styles?.contactComponent}>
+      <div className={styles?.contactComponent}>
         <div className={styles?.formItem}>
           <header>
             <h1 className={styles?.contactTitle}>Contact Me</h1>
             <p className={styles?.contactBlurb}>
-              Please feel free to contact me regarding React,
-              Javascript/Typescript, Shopify and Rails projects and positions.
+              Please feel free to contact me regarding projects and positions in the Javascript/Typescript
+              ecosystem. I have experience with Next, React, Nuxt, Vue, React Native, Express and I can also 
+              work with other javascript frameworks and libraries. Additionally I can assist with Ruby projects 
+              especially in Rails. I am also very expereinced in the Shopify ecosystem and have experience working
+              with Express, Rails and Grape backends for Shopify.
+              <br /> <br />
               Send me a message with this form and I'll let you know if I can
               help you with your project or be a good fit for your company.
             </p>
@@ -101,8 +105,8 @@ const ContactMe = () => {
           </form>
         </div>
         <div className="map"></div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
 

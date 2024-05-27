@@ -17,7 +17,7 @@ const previousClients = [
     company: "Company: Costaboard",
     projectTitle: "Project Description",
     project:
-      "Debugged issues in their theme and also theme editor functionality as well as automating fulfillments for their store.",
+      "Debugged issues in their theme and also theme editor. I also improved functionality and automated fulfillments for their store using an Express app, AWS Lambda and Shopify's APIs.",
     link: "https://costaboard.com",
     img: costaboardImg,
   },
@@ -33,7 +33,7 @@ const previousClients = [
     company: "Company: Cosmetic Beate Bulang",
     projectTitle: "Project Description",
     project:
-      "Fixed issues caused when updating prices when quantities changed, added a counter for reviews and ensured information is updated immediately rather than on load",
+      "Fixed numerous issues including a bug when updating prices when quantities changed, added features like a counter for reviews and also resolved a bug where information is updated immediately rather than on load",
     link: "https://cosmetic-bulang.de/",
     img: cosmeticBeateBulangImg,
   },
@@ -41,8 +41,8 @@ const previousClients = [
     company: "Company: MilkRun",
     projectTitle: "Project Description",
     project:
-      "Large project where I integrated different stores into one. Project required using a lot of use of APIs, 3rd party apps customisation, cart validation and more.",
-    link: "https://farmersmarket.localmilkrun.com/",
+      "Large project where I integrated different stores into one. Project required using a lot of use of APIs from Shopify andMilkrun's APIs built in Ruby & Grape, 3rd party apps customisation, cart validation and more.",
+    link: "https://milkrunonline.com/",
     img: mikrunImg,
   },
 ];

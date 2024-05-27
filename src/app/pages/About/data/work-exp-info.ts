@@ -13,7 +13,7 @@ const workExpInfo = [
     workPeriod: "2021",
     companyDesc:
       "Online delviery company based in the USA that delviers farm produce straight to your door",
-    link: "https://farmersmarket.localmilkrun.com/",
+    link: "https://milkrunonline.com/",
   },
   {
     role: "Full-Stack Developer",

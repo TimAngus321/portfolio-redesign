@@ -21,14 +21,14 @@ const Skills = () => {
     useSkills();
 
   return (
-    <main className={skillPageStyle?.pageContainerSkills}>
+    <section className={skillPageStyle?.pageContainerSkills}>
       <SEO
         title={`Tim Angus's Porftolio - Skills Page`}
         description={`Skill page of Timothy Angus's portfolio. Discover all of my technical skills with some fun animations`}
         link={`https://tim-angus.com/skills`}
       />
       <div className={skillPageStyle?.skillsContainer}>
-        <section className={skillPageStyle?.selectSkillsContainer}>
+        <div className={skillPageStyle?.selectSkillsContainer}>
           <div className={skillPageStyle?.selectSkills}>
             <header>
               <h1 className={skillPageStyle?.skillsTitle}>Tech Stack</h1>
@@ -181,9 +181,9 @@ const Skills = () => {
               </button>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section className={skillPageStyle?.revealedSkillsContainer}>
+        <div className={skillPageStyle?.revealedSkillsContainer}>
           <div className={skillPageStyle?.revealSkills}>
             <div className={skillPageStyle?.selectedSkillset}>
               <AnimatePresence>
@@ -202,9 +202,9 @@ const Skills = () => {
               </AnimatePresence>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-    </main>
+    </section>
   );
 };
 

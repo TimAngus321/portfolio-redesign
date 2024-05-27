@@ -14,7 +14,7 @@ const expressProjects = [
     name: "Comapny: Gavel (Backend)",
     desc: "Fixed bugs, built and debugged APIs & socket events and various database work",
     techTitle: "Tech Used",
-    techStack: "Express, Node, AWS, Prisma, MySql, APIs & Socket IO",
+    techStack: "Express, Node, AWS, Prisma, PostgreSQL, MySql, APIs & Socket IO",
     link: "https://www.joingavel.com/",
     img: gavelLandingPage,
   },

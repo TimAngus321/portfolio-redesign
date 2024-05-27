@@ -45,9 +45,13 @@ const Work = () => {
             gap: "30%",
           }}
         >
-          <ParallaxLayer offset={0} speed={0.5} sticky={{ start: 0, end: 1 }} className={styles?.workTitle}
+          <ParallaxLayer
+            offset={0}
+            speed={0.5}
+            sticky={{ start: 0, end: 1 }}
+            className={styles?.workTitle}
             style={{ ...alignCenter, justifyContent: "flex-center" }}
-            >
+          >
             <header className={styles?.scrollText}>
               <h1 className={styles?.workTitle}>
                 Highlights of Work & Personal Projects
@@ -60,41 +64,7 @@ const Work = () => {
           </ParallaxLayer>
 
           <ParallaxLayer
-            sticky={{ start: 2, end: 3 }}
-            style={{ ...alignCenter, justifyContent: "flex-start" }}
-          >
-            <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
-              <img
-                src={nuxtLogo}
-                alt="React Logo"
-                className={styles?.stickyCardImage}
-              />
-            </div>
-          </ParallaxLayer>
-
-          {Object.keys(nuxtProjects).map((key, i) => (
-            <ParallaxLayer
-              key={key}
-              className={`${styles?.projectCard} ${styles?.parallax}`}
-              offset={2.5 + i}
-              speed={1.5}
-              style={{ ...alignCenter, justifyContent: "flex-end" }}
-            >
-              <ProjectCard
-                className={`${styles?.projectCard} ${styles?.parallax}`}
-                key={key}
-                name={nuxtProjects[i]?.name}
-                desc={nuxtProjects[i]?.desc}
-                techTitle={nuxtProjects[i]?.techTitle}
-                techStack={nuxtProjects[i]?.techStack}
-                link={nuxtProjects[i]?.link}
-                img={nuxtProjects[i]?.img}
-              ></ProjectCard>
-            </ParallaxLayer>
-          ))}
-
-          <ParallaxLayer
-            sticky={{ start: 4, end: 8 }}
+            sticky={{ start: 2, end: 6 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
@@ -110,7 +80,7 @@ const Work = () => {
             <ParallaxLayer
               key={key}
               className={`${styles?.projectCard} ${styles?.parallax}`}
-              offset={4.5 + i}
+              offset={2.5 + i}
               speed={1.5}
               style={{ ...alignCenter, justifyContent: "flex-end" }}
             >
@@ -123,6 +93,40 @@ const Work = () => {
                 techStack={reactProjects[i]?.techStack}
                 link={reactProjects[i]?.link}
                 img={reactProjects[i]?.img}
+              ></ProjectCard>
+            </ParallaxLayer>
+          ))}
+
+          <ParallaxLayer
+            sticky={{ start: 7, end: 8 }}
+            style={{ ...alignCenter, justifyContent: "flex-start" }}
+          >
+            <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
+              <img
+                src={nuxtLogo}
+                alt="React Logo"
+                className={styles?.stickyCardImage}
+              />
+            </div>
+          </ParallaxLayer>
+
+          {Object.keys(nuxtProjects).map((key, i) => (
+            <ParallaxLayer
+              key={key}
+              className={`${styles?.projectCard} ${styles?.parallax}`}
+              offset={7.5 + i}
+              speed={1.5}
+              style={{ ...alignCenter, justifyContent: "flex-end" }}
+            >
+              <ProjectCard
+                className={`${styles?.projectCard} ${styles?.parallax}`}
+                key={key}
+                name={nuxtProjects[i]?.name}
+                desc={nuxtProjects[i]?.desc}
+                techTitle={nuxtProjects[i]?.techTitle}
+                techStack={nuxtProjects[i]?.techStack}
+                link={nuxtProjects[i]?.link}
+                img={nuxtProjects[i]?.img}
               ></ProjectCard>
             </ParallaxLayer>
           ))}

@@ -7,6 +7,7 @@ import tailwindLogo from "../../../../assets/skillsImages/frontendLogos/tailwind
 import vueLogo from "../../../../assets/skillsImages/frontendLogos/vuejs-original.svg";
 import viteLogo from "../../../../assets/skillsImages/miscLogos/vite-logo.svg";
 import piniaLogo from "../../../../assets/skillsImages/frontendLogos/pinia-seeklogo.svg"
+import storybookLogo from "../../../../assets/skillsImages/frontendLogos/storybook-original.svg";
 
 const frontendSkillSet = [
   {
@@ -37,6 +38,12 @@ const frontendSkillSet = [
     name: "Tailwind",
     image: tailwindLogo,
     alt: "Tailwind Logo",
+    waterfall: [""],
+  },
+  {
+    name: "Storybook",
+    image: storybookLogo,
+    alt: "Storybook Logo",
     waterfall: [""],
   },
   {

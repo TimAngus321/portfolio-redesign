@@ -28,13 +28,13 @@ const ContactMe = () => {
             <h1 className={styles?.contactTitle}>Contact Me</h1>
             <p className={styles?.contactBlurb}>
               Please feel free to contact me regarding projects I could help you
-              with or positions where you think I might be a good fit. I am very
-              experienced with Next, React, Nuxt, Vue, React Native, Express and
-              I also have worked with many other javascript frameworks and
-              libraries so please ask! Additionally I can assist with Ruby
-              projects and I am very expereinced in the Shopify ecosystem and
-              have experience working with Express, Rails and Grape backends for
-              Shopify.
+              with or positions where you think I might be a good fit. I am
+              experienced with Next, React, Nuxt, Vue, React Native, Ruby on Rails,
+              Express. Moreover, I have worked with many other javascript frameworks
+              and libraries so please ask! Additionally, I am very expereinced in the 
+              Shopify ecosystem and have experience working on Shopify themes, 
+              3rd party apps and portals as well as Shopify backends using Express, Rails
+              and Grape.
               <br /> <br />
               Send me a message with this form and I'll let you know if I can
               help you with your project or be a good fit for your company.

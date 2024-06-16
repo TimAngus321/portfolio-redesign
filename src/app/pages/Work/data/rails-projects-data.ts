@@ -11,6 +11,7 @@ const railsProjects = [
     link: "https://www.collaborate.today/",
     img: colaborateImg,
   },
+  
   // railsApp2: {
   //     name: "BearBnB",
   //     techStack: "Rails, Ruby, Bootstrap, HTML, CSS, PostgreSQL, Heroku and more",

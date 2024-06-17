@@ -18,14 +18,14 @@ const About = () => {
         <header className={styles?.aboutMeContainer}>
           <h1 className={styles?.aboutTitle}>About Me</h1>
           <p className={styles?.aboutMeBlurb}>
-            Le Wagon alumni that learnt fullstack development with the Rails
+            Le Wagon alumni that learnt full-stack development with the Rails
             framework. Since then I have continued delving deeper into
-            Javascript/Typescript and building projects with Next, React, Nuxt,
-            Vue, React Native, Express with PostgeSQL or MySQL and E-Commerce 
+            Javascript/Typescript and built projects with Next, React, Nuxt,
+            Vue, React Native, Express with PostgeSQL and E-Commerce 
             stores with Shopify Themes and Express, Rails or Grape backends.
             <br />
             <br />
-            I've worked fulltime as a fullstack developer for Gavel, MilkRun,
+            I've worked fulltime as a full-stack developer for Gavel, MilkRun,
             Merconic and freelance for various clients using a variety of
             technologies and that you can see{" "}
             <span

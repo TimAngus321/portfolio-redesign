@@ -20,8 +20,8 @@ const About = () => {
           <p className={styles?.aboutMeBlurb}>
             Le Wagon alumni that learnt fullstack development with the Rails
             framework. Since then I have continued delving deeper into
-            Javascript/Typescript and building projects with Next, React, Nuxt,
-            Vue, React Native, Express with PostgeSQL or MySQL and E-Commerce 
+            Javascript/Typescript and built projects with Next, React, Nuxt,
+            Vue, React Native, Express with PostgeSQL and E-Commerce 
             stores with Shopify Themes and Express, Rails or Grape backends.
             <br />
             <br />

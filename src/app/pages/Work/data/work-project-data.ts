@@ -25,7 +25,7 @@ const previousClients = [
     company: "Company: Fleeky",
     projectTitle: "Project Description",
     project:
-      "Implement a redesign of their theme by adding or improving components like: sticky navbars, cards, sections, fonts and responsiveness",
+      "Implement a redesign of their theme by adding or improving components like: sticky navbars, cards, sections, fonts and responsiveness.",
     link: "https://fleeky.de",
     img: fleekyImg,
   },
@@ -33,7 +33,7 @@ const previousClients = [
     company: "Company: Cosmetic Beate Bulang",
     projectTitle: "Project Description",
     project:
-      "Fixed numerous issues including a bug when updating prices when quantities changed, added features like a counter for reviews and also resolved a bug where information is updated immediately rather than on load",
+      "Fixed numerous issues including a bug when updating prices when quantities changed, added features like a counter for reviews and also resolved a bug where information is updated immediately rather than on load.",
     link: "https://cosmetic-bulang.de/",
     img: cosmeticBeateBulangImg,
   },

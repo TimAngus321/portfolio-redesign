@@ -6,7 +6,6 @@ import svelteLogo from "../../../../assets/skillsImages/learningLogos/svelte-ori
 import pythonLogo from "../../../../assets/skillsImages/learningLogos/python-original.svg";
 import flutterLogo from "../../../../assets/skillsImages/learningLogos/flutter-original.svg";
 import dartLogo from "../../../../assets/skillsImages/learningLogos/dart-original.svg";
-import dockerLogo from "../../../../assets/skillsImages/learningLogos/docker-plain.svg";
 import mongoDBLogo from "../../../../assets/skillsImages/learningLogos/mongodb-original.svg";
 
 const developingSkills = [
@@ -28,12 +27,7 @@ const developingSkills = [
     alt: "Svelte Logo",
     waterfall: [""]
   },
-  {
-    name: "Docker",
-    image: dockerLogo,
-    alt: "Docker Logo",
-    waterfall: [""]
-  },
+  
   {
     name: "Go",
     image: goLogo,

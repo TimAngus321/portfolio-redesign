@@ -2,9 +2,9 @@
 
 .contactPageContainer{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 0 40px 0 100px;
-  width: 100%;
+  width: calc(100% - 100px);
   height: 100%;
 }
 
@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   align-self: center;
-  padding: 0 140px 0 20px;
+  padding: 0 2vw;
   width: 100%;
 }
 
@@ -25,12 +25,14 @@
   display: flex;
   justify-content: flex-start;
   font-weight: 500;
-  font-size: clamp(4rem, 3.2500rem + 3.3333vw, 5rem);
+  font-size: clamp(4rem, 3.25rem + 3.3333vw, 5rem);
+  margin: 0;
 }
 
 .contactBlurb {
-  color: white;
-  padding: 1vw 0 2vh 0;
+  color: $base-font-color;
+  padding: 2vh 0 4vh 0;
+  margin: 0;
 }
 
 .contactForm {
@@ -169,7 +171,7 @@ input:-webkit-autofill:focus {
 .message {
   width: 100%;
   height: 100%;
-  padding: 0 0 40px 0;
+  padding: 0 0 4vh 0;
 }
 
 .btnContainer {
@@ -192,8 +194,8 @@ input:-webkit-autofill:focus {
 
   .contactTitle {
     display: flex;
-    justify-content: center;
-    margin: 60px 0 0 0;
+    justify-content: start;
+    margin: 10vh 0 0 0;
   }
 
   .topBuffer {

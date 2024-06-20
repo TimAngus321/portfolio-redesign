@@ -23,7 +23,6 @@ const ContactMe = () => {
         link={`https://tim-angus.com/contact`}
       />
       <div className={styles?.contactComponent}>
-        <div className={styles?.formItem}>
           <header>
             <h1 className={styles?.contactTitle}>Contact Me</h1>
             <p className={styles?.contactBlurb}>
@@ -31,19 +30,6 @@ const ContactMe = () => {
               think I might be a good fit. Leave me a message about the project or position
               and I will get back to you. Please provide as much information as you can 
               about the project or position so I can better assist you with your project. 
-              <br /> <br />
-              I am experienced with Next, React, Nuxt, Vue, React Native, Ruby on Rails and
-              Express. While I am most expreinced with the aforementioned frameworks
-              I have worked with many other javascript frameworks and libraries so please ask
-              if I have experience with your techStack!
-              <br /> <br />
-              Furthermore, I am expereinced in the  Shopify ecosystem and have 
-              experience working on Shopify themes, 3rd party apps, theme portals as well as
-              Shopify backend apps using Express, Rails and Grape.
-              <br /> <br />
-              Send me a message with this form and be sure to check your email is valid and your
-              message is detailed so I can best assess whether I can help with your project or 
-              be a good fit for your company.
             </p>
           </header>
           <form className={styles?.contactForm}>
@@ -112,7 +98,6 @@ const ContactMe = () => {
               </button>
             </div>
           </form>
-        </div>
         <div className="map"></div>
       </div>
     </section>

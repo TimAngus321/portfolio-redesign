@@ -66,15 +66,7 @@ const About = () => {
           </div>
         </div>
         <div className={styles?.workExperienceContainer}>
-          <ul className={styles?.workExpCards}>
-            {Object.keys(workExpInfo).map((key, i) => (
-              <WorkExpCard
-                key={key}
-                title={workExpInfo[i]?.title}
-                desc={workExpInfo[i]?.desc}
-              />
-            ))}
-          </ul>
+          
         </div>
       </div>
     </section>

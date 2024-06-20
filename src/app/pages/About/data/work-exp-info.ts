@@ -1,14 +1,14 @@
 const workExpInfo = [
   {
     title: "Experience",
-    desc: "Gavel blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
+    desc: "",
   },
   {
     title: "Education",
     desc: "",
   },
   {
-    title: "Education",
+    title: "Non Technical Skills",
     desc: "",
   },
 ];

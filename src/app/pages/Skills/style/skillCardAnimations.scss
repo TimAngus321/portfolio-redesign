@@ -129,7 +129,7 @@ New Skill Card animations
 .snake:where(.start, :hover) .tail.right {
   transition-delay: calc(var(--duration) * 2);
 }
-.snake:where(.start, :hover) .tail.bottom {
+.snake:where(.start, :hover) .tail.bottom .skillName {
   transition-delay: calc(var(--duration) * 3);
 }
 .snake:where(.start, :hover) .tail.left {

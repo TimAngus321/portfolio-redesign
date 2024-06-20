@@ -29,7 +29,7 @@ export const StyledMenu = styled.nav`
   }
   div {
     position: relative;
-    font-size: 2rem;
+    font-size: 8vw;
     text-transform: uppercase;
     padding: 20px 0;
     font-weight: bold;

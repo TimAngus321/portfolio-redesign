@@ -55,7 +55,7 @@ const useSkills = () => {
           { ["--block" as string]: "100%" },
           { delay: stagger(0.3) }
         );
-        await sleep(250);
+        await sleep(300);
         await animate(
           "li.skillCard",
           { ["--block" as string]: "0%" },

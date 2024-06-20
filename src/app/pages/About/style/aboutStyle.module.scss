@@ -31,7 +31,7 @@
   width: 100%;
   justify-content: flex-start;
   font-weight: 500;
-  font-size: 4em;
+  font-size: clamp(4rem, 3.2500rem + 3.3333vw, 5rem);
   margin: 2.5vh 0;
 }
 
@@ -41,7 +41,7 @@
   width: 100%;
   justify-content: flex-start;
   font-weight: 500;
-  font-size: 2em;
+  font-size: clamp(2rem, 1.2500rem + 3.3333vw, 3rem);
   margin: 2.5vh 0;
 }
 
@@ -103,7 +103,7 @@
 
   .aboutMeSubContainer {
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     padding: 40px 0 0 0;
     width: 100%;
   }

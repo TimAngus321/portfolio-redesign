@@ -30,8 +30,7 @@
 
 .contactBlurb {
   color: white;
-  padding: 10px 0 40px 0;
-  font-size: 14px;
+  padding: 1vw 0 2vh 0;
 }
 
 .contactForm {
@@ -176,6 +175,7 @@ input:-webkit-autofill:focus {
 .btnContainer {
   display: flex;
   justify-content: flex-end;
+  margin: 0 0 2vh 0;
 }
 
 @media only screen and (max-width: 900px) {

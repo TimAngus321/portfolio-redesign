@@ -99,14 +99,13 @@
   max-width: 100%;
   align-self: center;
   font-weight: 500;
-  font-size: 40px;
+  font-size: clamp(2rem, -0.2500rem + 10.0000vw, 5rem);
 }
 
 @media only screen and (max-width: 900px) {
   .workTitle {
     display: flex;
     align-items: flex-start;
-    font-size: 20px;
   }
 }
 

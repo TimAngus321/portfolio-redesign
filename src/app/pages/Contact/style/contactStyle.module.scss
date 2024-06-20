@@ -5,7 +5,7 @@
   justify-content: flex-start;
   margin: 0 40px 0 100px;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .topBuffer {
@@ -25,7 +25,7 @@
   display: flex;
   justify-content: flex-start;
   font-weight: 500;
-  font-size: 40px;
+  font-size: clamp(4rem, 3.2500rem + 3.3333vw, 5rem);
 }
 
 .contactBlurb {
@@ -193,6 +193,7 @@ input:-webkit-autofill:focus {
   .contactTitle {
     display: flex;
     justify-content: center;
+    margin: 60px 0 0 0;
   }
 
   .topBuffer {

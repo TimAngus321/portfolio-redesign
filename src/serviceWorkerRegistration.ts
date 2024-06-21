@@ -81,11 +81,11 @@ function registerValidSW(swUrl: string, config?: Config) {
                   "tabs for this page are closed. See https://cra.link/PWA."
               );
               toast.info(
-                `Update available! To update, close all windows, reopen the app and do a hard refresh.`,
+                `Update available! To update, open this app in a new window and do a hard refresh.`,
                 {
                   position: toast.POSITION.TOP_RIGHT,
                   hideProgressBar: true,
-                  closeOnClick: true,
+                  closeOnClick: false,
                   autoClose: false,
                 }
               );

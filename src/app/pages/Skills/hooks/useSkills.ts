@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import languages from "../data/languages";
+import frontend from "../data/front-end-skills";
 import { useNavigate } from "react-router-dom";
 import { skills } from "../types/skillsetType";
 import Vibrant from "node-vibrant";
@@ -55,7 +55,7 @@ const useSkills = () => {
           { ["--block" as string]: "100%" },
           { delay: stagger(0.3) }
         );
-        await sleep(250);
+        await sleep(300);
         await animate(
           "li.skillCard",
           { ["--block" as string]: "0%" },
@@ -71,7 +71,7 @@ const useSkills = () => {
   const initialSkillSet = async (skillSet: skills[]) => {
     try {
       // setProcessing(true);
-      await setHighlightSkillset(strings?.lang);
+      await setHighlightSkillset(strings?.front);
       await setSkillSet(skillSet);
       await createWaterfall(skillSet);
       if (isPresent) {
@@ -97,7 +97,7 @@ const useSkills = () => {
   useEffect(() => {
     const initialSkillLoad = async () => {
       if (scope.current) {
-        await initialSkillSet(languages);
+        await initialSkillSet(frontend);
       }
     };
     initialSkillLoad();

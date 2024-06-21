@@ -15,7 +15,7 @@ const Home = () => {
         description={`This is the home page of the portfolio of Timothy Angus who also goes by Tim Angus. Find out more about Tim Angus, navigate around Tim's site, enjoy the new animations and get in contact with Tim if he can help you with your project or at your company!`}
         link={`https://tim-angus.com`}
       />
-      <DancingLinesMyEdit backgroundColor="rgb(30,30,30)" />
+      <DancingLinesMyEdit backgroundColor="black" />
       <div className={styles?.photoQuote}>
         <div className={styles?.allHeadingsBtn}>
           <div className={styles?.animatedQuotes}>

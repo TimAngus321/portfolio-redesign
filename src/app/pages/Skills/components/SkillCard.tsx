@@ -20,7 +20,9 @@ const SkillCard = (props: skills) => {
             src={image}
             alt={alt}
           />
-          <h3 className={styles?.skillName}>{name}</h3>
+          <h5 className={styles?.skillName} style={{
+            color: "white",
+          }}>{name}</h5>
         </div>
 
         <div

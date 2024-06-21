@@ -29,7 +29,7 @@ export const StyledMenu = styled.nav`
   }
   div {
     position: relative;
-    font-size: 2rem;
+    font-size: 8vw;
     text-transform: uppercase;
     padding: 20px 0;
     font-weight: bold;
@@ -43,7 +43,7 @@ export const StyledMenu = styled.nav`
       text-align: center;
     }
     &:hover {
-      color: #bd4517;
+      color: #00fff0;
     }
   }
 `;

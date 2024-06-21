@@ -73,7 +73,7 @@ New Skill Card animations
 }
 
 .inner {
-  background-color: $base-background-grey;
+  background-color: $base-background-color;
   z-index: 2;
   padding: 10px;
   border-radius: var(--radius);
@@ -98,13 +98,13 @@ New Skill Card animations
 .tail.top {
   height: var(--inline);
   width: var(--block);
-  transition-delay: calc(var(--duration) * 2);
+  transition-delay: var(--duration);
 }
 
 .tail.right {
   right: 0;
   left: unset;
-  transition-delay: var(--duration);
+  transition-delay: calc(var(--duration) * 2);
 }
 
 .tail.bottom {
@@ -114,13 +114,13 @@ New Skill Card animations
   right: 0;
   left: unset;
   top: unset;
-  transition-delay: 0ms;
+  transition-delay: calc(var(--duration) * 3);
 }
 
 .tail.left {
   bottom: 0;
   top: unset;
-  transition-delay: calc(var(--duration) * 3);
+  transition-delay: 0ms;
 }
 
 .snake:where(.start, :hover) .tail.top {

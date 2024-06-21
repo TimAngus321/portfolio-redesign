@@ -5,39 +5,41 @@
   justify-content: flex-start;
   width: 100%;
   width: calc(100% - 100px);
-  min-height: 100vh;
-  height: 100vh;
+  height: 100%;
   padding: 0 0 0 100px;
+  position: fixed;
 }
 
 .skillsContainer {
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding: 20px 0;
+  padding: 2vh 0;
 }
 
 .skillsTitle {
   color: $base-hover-color;
   font-weight: 500;
-  font-size: 40px;
+  font-size: clamp(4rem, 3.2500rem + 3.3333vw, 5rem);
+  margin: 0;
 }
 
 .revealedSkillsContainer {
   display: flex;
   color: $secondary-font-color;
-  width: 75%;
+  width: 70%;
   position: relative;
   margin: 0 0 0 100px;
   height: 100%;
+  overflow-y: scroll;
 }
 
 .selectSkillsContainer {
   display: flex;
   flex-direction: column;
   margin: 0 0 0 30px;
-  width: 35%;
-  justify-content: center;
+  width: 30%;
+  justify-content: flex-start;
   z-index: 1;
   height: 100%;
 }
@@ -52,7 +54,7 @@
 
 .aboutMySkills {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin: 25px 0 25px 0;
   width: 100%;
@@ -100,8 +102,8 @@
 }
 
 .clickedBtn {
-  color: $base-font-color;
-  background-color: #BD4517;
+  color: $base-background-color;
+  background-color: $base-hover-color;
 }
 
 .skillsBlurb {
@@ -123,7 +125,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    position: unset;
+    position: static;
     height: unset;
   }
   .skillsContainer {
@@ -139,7 +141,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 50px;
+    margin: 10vh 0 0 0;
   }
 
   .revealedSkillsContainer {
@@ -148,6 +150,7 @@
     display: inline-block;
     padding: 20px 0;
     height: 100%;
+    overflow-y: visible;
   }
 
   .selectSkillsContainer {

@@ -4,7 +4,6 @@ import nodejsLogo from "../../../../assets/skillsImages/backendLogos/nodejs-orig
 import postgresLogo from "../../../../assets/skillsImages/backendLogos/postgresql-original.svg";
 import prismaLogo from "../../../../assets/skillsImages/backendLogos/prismaLogo.svg";
 import railsLogo from "../../../../assets/skillsImages/backendLogos/rails-plain.svg";
-import bunLogo from "../../../../assets/skillsImages/backendLogos/bunLogo.svg";
 import nuxtLogo from "../../../../assets/skillsImages/frontendLogos/nuxtjs-original.svg";
 import nextLogo from "../../../../assets/skillsImages/learningLogos/nextjs-line.svg";
 
@@ -15,12 +14,7 @@ const backendSkillSet = [
     alt: "Node Logo",
     waterfall: [""],
   },
-  {
-    name: "Bun",
-    image: bunLogo,
-    alt: "Bun Logo",
-    waterfall: [""],
-  },
+  
   {
     name: "Express",
     image: expressLogo,

@@ -15,7 +15,7 @@ const QuoteLoop = () => {
         className={styles?.quoteLoop}
         mask={true}
         fade={true}
-        interval={2000}
+        interval={4000}
         children={quoteLoopText}
       />
     </section>

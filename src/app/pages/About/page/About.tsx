@@ -1,14 +1,14 @@
-import workExpInfo from "../data/work-exp-info";
-import WorkExpCard from "../components/work-exp-card";
 import useAbout from "../hooks/useAbout";
 import styles from "../style/aboutStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
+import DancingLinesMyEdit from "react-dancing-lines-safari-firefox-support";
 
 const About = () => {
   const { navigate } = useAbout();
 
   return (
     <section className={styles?.pageContainerAbout}>
+      <DancingLinesMyEdit backgroundColor="black" />
       <SEO
         title={`Tim Angus's Porftolio - About Page`}
         description={`About page of Timothy Angus's portfolio. A brief paragraph about Tim Angus and links to my previous employers company websites`}

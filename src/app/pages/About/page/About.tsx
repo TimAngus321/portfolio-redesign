@@ -19,12 +19,12 @@ const About = () => {
           <header>
             <h1 className={styles?.aboutTitle}>About Me</h1>
             <p className={styles?.aboutMeBlurb}>
-              I have strong experience working with <strong>Javascript</strong>,
-              <strong> Typescript</strong> and <strong> Ruby</strong> for over 5
-              years. During my career I have worked contracts, freelance and
-              full time creating UIs, APIs, E-commerce stores and full-stack
-              features connected to AWS services during my coding carreer. If
-              you think you could use my{" "}
+              I have over 5 years experience working with{" "}
+              <strong>Javascript</strong>,<strong> Typescript</strong> and{" "}
+              <strong> Ruby</strong>. During my career I have worked contracts,
+              freelance and full time creating UIs, APIs, E-commerce stores and
+              full-stack apps connected to AWS services during my coding career.
+              If you think you could use my{" "}
               <span
                 className={styles?.textLink}
                 onClick={() => navigate("/skills")}
@@ -57,27 +57,58 @@ const About = () => {
               expectations quickly. I am able to assess large codebases quickly,
               debug code, test and optimize it, and ensure that it meets the
               standards of the client.
+              <br />
+              <br />I am experienced with Next, React, Nuxt, Vue, React Native,
+              Ruby on Rails and Express. While I am most expreinced with the
+              aforementioned frameworks I have worked with many other javascript
+              frameworks and libraries so please ask if I have experience with
+              your techStack! Furthermore, I am expereinced in the Shopify
+              ecosystem and have experience working on Shopify themes, 3rd party
+              apps, theme portals as well as Shopify backend apps using Express,
+              Rails and Grape.
             </p>
           </div>
         </div>
         <div className={styles?.workExperienceContainer}>
           <h3 className={styles?.aboutSubTitle}>Non Technical Skills</h3>
           <p className={styles?.aboutMeBlurb}>
-            I have worked with on many different projects in very different settings
-            but a constant I have found is having to do more than expected from the 
-            job description. 
+            I have worked on many different projects with very different
+            environments but a constant I have found is having to do more than
+            expected from the job description or project outline. Fortunately, I
+            adapt quickly and due to my vast skillset I'm able to get going
+            quickly. When working freelance & contracts (and often for full time
+            positions 🤫) I needed to work with clients, managers and owners to
+            come up with solutions for their pain poiints or new features they
+            wanted to implement. I researched, developed a stratergy,
+            coordinated the plan in meetings, created my own roadmaps and
+            tickets then delivered the feature or resolved the pain point. When
+            applicable I would sometimes create what was necessary for a
+            feedback loop.
           </p>
           <h3 className={styles?.aboutSubTitle}>Education</h3>
+          <ul className={styles?.aboutMeBlurb}>
           <p className={styles?.aboutMeBlurb}>
-            I am experienced with Next, React, Nuxt, Vue, React Native, Ruby on
-            Rails and Express. While I am most expreinced with the
-            aforementioned frameworks I have worked with many other javascript
-            frameworks and libraries so please ask if I have experience with
-            your techStack! Furthermore, I am expereinced in the Shopify
-            ecosystem and have experience working on Shopify themes, 3rd party
-            apps, theme portals as well as Shopify backend apps using Express,
-            Rails and Grape.
+            As a developer I am always learning, reading docs and getting to grips
+            with new languages, frameworks, libraries and oter tech but when I want
+            to go deeper over a topic I have attended courses and used some of the
+            resources below:
           </p>
+            <li>LeWagon Web Development bootcamp, Berlin, Germany | bootcamp | 2019 </li>
+            <li>Le Wagon React & Redux Track | 2019 </li>
+            <li>
+              {" "}
+              Wes Bos Courses | Javascript | Node | Fullstack React & GraphQL |
+              CSS Grid & Flexbox | Markdown | 2019 - Present
+            </li>
+            <li>Numerous Code Academy Courses | 2019 - Present </li>
+            <li>React, Redux & MERN Courses from Udemy | 2019 - Present </li>
+            <li>
+              {" "}
+              Sheffield Hallam University, Sheffield, England | Bachelor of Arts
+              (with honours) in History | 2012
+            </li>
+            <li>UK-TEFL, London, England | Advanced TEFL Certificate | 2014</li>
+          </ul>
         </div>
       </div>
     </section>

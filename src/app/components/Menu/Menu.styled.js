@@ -43,7 +43,7 @@ export const StyledMenu = styled.nav`
       text-align: center;
     }
     &:hover {
-      color: #bd4517;
+      color: #00fff0;
     }
   }
 `;

@@ -22,8 +22,6 @@ const SkillCard = (props: skills) => {
           />
           <h5 className={styles?.skillName} style={{
             color: "white",
-            // backgroundImage: `${waterfall[0]}` 
-            // -- too goofy looking? 
           }}>{name}</h5>
         </div>
 

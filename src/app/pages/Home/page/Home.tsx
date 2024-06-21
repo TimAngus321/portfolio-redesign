@@ -10,6 +10,11 @@ import {
   // @ts-ignore
   useFrame,
 } from 'shadergradient'
+import { Globals } from "@react-spring/shared";
+
+Globals.assign({
+  frameLoop: "always",
+});
 
 const Home = () => {
   const { navigate } = useHome();

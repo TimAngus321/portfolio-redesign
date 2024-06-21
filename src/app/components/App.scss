@@ -16,17 +16,17 @@ a {
 }
 
 body {
-  font-family: 'General Sans', sans-serif;
+  font-family: "General Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   letter-spacing: 1.8px;
-  font-size: clamp(0.75rem, 0.1875rem + 2.5000vw, 1.5rem);
+  font-size: clamp(0.75rem, 0.1875rem + 2.5vw, 1.5rem);
   width: 100%;
   height: 100%;
-  
 }
 
-main, #root {
+main,
+#root {
   width: 100%;
   height: 100%;
 }
@@ -37,14 +37,20 @@ Toastify Overrides
 
 .Toastify__toast--error {
   background: $mar !important;
+  font-size: 16px !important;
+  letter-spacing: normal !important;
 }
 
 .Toastify__toast--warning {
   background: $mellowYellow !important;
+  font-size: 16px !important;
+  letter-spacing: normal !important;
 }
 
 .Toastify__toast--success {
   background: $warmGreen !important;
+  font-size: 16px !important;
+  letter-spacing: normal !important;
 }
 
 /******************************************************************* 
@@ -93,7 +99,6 @@ Basic Page Containers
   }
 }
 
-
 /******************************************************************* 
 Mobile Nav
 ********************************************************************/
@@ -116,7 +121,6 @@ Mobile Nav
   outline: none;
   position: fixed;
 }
-
 
 /******************************************************************* 
 Global Contact Style Btn

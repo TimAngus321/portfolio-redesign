@@ -27,7 +27,7 @@ const ContactMe = () => {
             <h1 className={styles?.contactTitle}>Contact Me</h1>
             <p className={styles?.contactBlurb}>
               Please feel free to contact me regarding projects or positions you 
-              think I might be a good fit. Leave me a message about the project or position
+              need help with. Leave me a message about the project or position
               and I will get back to you. Please provide as much information as you can 
               about the project or position so I can better assist you with your project. 
             </p>

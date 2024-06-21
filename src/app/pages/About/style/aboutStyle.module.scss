@@ -15,10 +15,10 @@
 .aboutMeContainer {
   display: flex;
   flex-direction: column;
-  max-width: 45%;
+  max-width: 50%;
   width: 100%;
   height: 100%;
-  justify-content: center;
+  justify-content: start;
   padding-right: 20px;
   margin: 0 0 0 30px;
 }
@@ -76,10 +76,10 @@
 
 .workExperienceContainer {
   display: flex;
-  width: 45%;
-  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  justify-content: start;
   align-items: center;
-  padding-right: 20px;
 }
 
 .textLink {

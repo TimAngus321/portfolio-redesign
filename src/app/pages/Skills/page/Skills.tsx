@@ -35,17 +35,16 @@ const Skills = () => {
 
               <p className={skillPageStyle?.skillsBlurb}>
                 This is my current tech stack and what I'm learning. I've built
-                and improved lots of incredible products and 
-                projects with this tech you can explore here. You can also check 
-                out highlights of {" "}
+                and improved lots of incredible products and projects with this
+                tech you can explore here. You can also check out highlights of{" "}
                 <span
                   className={skillPageStyle?.contactLink}
                   onClick={() => navigate(strings?.work)}
                 >
-                  previous projects & apps 
+                  previous projects & apps
                 </span>{" "}
-                I've built using this tech. If there is a
-                project that you need help with {" "}
+                I've built using this tech. If there is a project that you need
+                help with{" "}
                 <span
                   className={skillPageStyle?.contactLink}
                   onClick={() => navigate(strings?.contact)}
@@ -60,18 +59,6 @@ const Skills = () => {
                 className={`default-btn ${
                   skillPageStyle?.aboutMySkillsButton
                 } ${
-                  highlightSkillset === strings?.lang
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() => updateSkillSet(languages, strings?.lang)}
-              >
-                {strings?.lang}
-              </button>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
                   highlightSkillset === strings?.front
                     ? skillPageStyle?.clickedBtn
                     : null
@@ -79,6 +66,18 @@ const Skills = () => {
                 onClick={() => updateSkillSet(frontendSkillSet, strings?.front)}
               >
                 {strings?.front}
+              </button>
+              <button
+                className={`default-btn ${
+                  skillPageStyle?.aboutMySkillsButton
+                } ${
+                  highlightSkillset === strings?.lang
+                    ? skillPageStyle?.clickedBtn
+                    : null
+                }`}
+                onClick={() => updateSkillSet(languages, strings?.lang)}
+              >
+                {strings?.lang}
               </button>
               <button
                 className={`default-btn ${

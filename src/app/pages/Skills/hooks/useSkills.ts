@@ -12,12 +12,7 @@ const useSkills = () => {
 
   // Firefox colours
   const [hoverColors, setHoverColors] = useState<string[]>([
-    "#e64f24",
-    "#fcb494",
-    "#77240d",
-    "#892a0f",
-    "#943004",
-    "#892a0f",
+    "#00fff0",
   ]);
 
   const navigate = useNavigate();

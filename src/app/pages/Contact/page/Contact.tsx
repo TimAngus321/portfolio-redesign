@@ -98,7 +98,6 @@ const ContactMe = () => {
               </button>
             </div>
           </form>
-        <div className="map"></div>
       </div>
     </section>
   );

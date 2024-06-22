@@ -3,9 +3,10 @@
 .pageContainerHome {
   display: flex;
   justify-content: flex-start;
-  margin: 0 40px 0 100px;
+  padding: 5vh 5vw;
   width: 100%;
   height: 100%;
+  max-width: calc(100% - 10vw);
 }
 
 .homeContactBtn {
@@ -79,10 +80,7 @@
 .photoQuote {
   display: flex;
   justify-content: flex-start;
-  width: calc(100% - 100px);
   align-items: center;
-  min-height: 100vh;
-  padding: 0 20px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -90,7 +88,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
     width: 100%;
     align-items: flex-start;
     padding: 0;

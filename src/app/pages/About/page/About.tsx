@@ -102,13 +102,13 @@ const About = () => {
             product.
           </p>
           <h3 className={styles?.aboutSubTitle}>Education</h3>
-          <ul className={styles?.aboutMeBlurb}>
-            <p className={styles?.aboutMeBlurb}>
-              As a developer I am always learning, reading docs and getting to
-              grips with new languages, frameworks, libraries and oter tech but
-              when I want to go deeper into a topic I have attended courses and
-              used some of the resources below:
-            </p>
+          <p className={styles?.aboutMeBlurb}>
+            As a developer I am always learning, reading docs and getting to
+            grips with new languages, frameworks, libraries and oter tech but
+            when I want to go deeper into a topic I have attended courses and
+            used some of the resources below:
+          </p>
+          <ul className={styles?.aboutmeEduList}>
             <li>
               LeWagon Web Development bootcamp, Berlin, Germany | bootcamp |
               2019{" "}

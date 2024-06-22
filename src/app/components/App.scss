@@ -8,7 +8,6 @@ html {
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 body {
@@ -60,6 +59,12 @@ Toastify Overrides
 }
 
 .Toastify__toast--success {
+  background: $warmGreen !important;
+  font-size: 16px !important;
+  letter-spacing: normal !important;
+}
+
+.Toastify__toast--info {
   background: $warmGreen !important;
   font-size: 16px !important;
   letter-spacing: normal !important;

@@ -22,6 +22,7 @@ const Work = () => {
   const alignCenter: any = {
     display: "flex",
     alignItems: "center",
+    maxWidth: "100%",
     width: "100%",
     position: "fixed",
     margin: "0",
@@ -37,14 +38,10 @@ const Work = () => {
       />
       <div className={styles?.workContainer}>
         <Parallax
+          className={styles?.workParallaxContainer}
           pages={22}
           innerStyle={{
             zIndex: "1",
-          }}
-          style={{
-            display: "flex",
-            height: "100%",
-            gap: "30%",
           }}
         >
           <ParallaxLayer
@@ -168,7 +165,7 @@ const Work = () => {
             </ParallaxLayer>
           ))}
 
-<ParallaxLayer
+          <ParallaxLayer
             className="rails-group"
             sticky={{ start: 11, end: 12 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}

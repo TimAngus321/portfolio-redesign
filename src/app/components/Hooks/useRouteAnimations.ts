@@ -6,12 +6,13 @@ const useRouteAnimations = () => {
 
   if (window.innerWidth > 900) {
     pageTransitionAnimation = {
-      timeout: 500,
+      timeout: 750,
       initial: { opacity: 0, duration: 0 },
       enter: { opacity: 1, duration: 1.5 },
       exit: { opacity: 0, duration: 0.5 },
     };
-  } else {
+  } 
+  else {
     pageTransitionAnimation = {
       timeout: 0,
       initial: { opacity: 1, duration: 0 },

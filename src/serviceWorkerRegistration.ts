@@ -81,7 +81,7 @@ function registerValidSW(swUrl: string, config?: Config) {
                   "tabs for this page are closed. See https://cra.link/PWA."
               );
               toast.info(
-                `Update available! To update, open this app in a new window and do a hard refresh.`,
+                `An update is available! To update please do a hard refresh.`,
                 {
                   position: toast.POSITION.TOP_RIGHT,
                   hideProgressBar: true,

@@ -75,7 +75,6 @@ const About = () => {
               expected from the job description or project outline. Fortunately,
               I adapt quickly and due to my vast skillset I'm able to get going
               quickly.
-              <br />
             </p>
           </div>
         </div>

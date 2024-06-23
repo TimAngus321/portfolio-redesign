@@ -118,7 +118,7 @@
 }
 
 .skillsBlurb {
-  color: white;
+  color: $base-font-color;
   width: 100%;
 
   @media only screen and (max-width: 1200px) {
@@ -154,9 +154,13 @@
   .skillsTitle {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     width: 100%;
     font-size: clamp(2.5rem, 2rem + 2.5vw, 3rem);
+  }
+
+  .skillsBlurb {
+    text-align: left;
   }
 
   .revealedSkillsContainer {

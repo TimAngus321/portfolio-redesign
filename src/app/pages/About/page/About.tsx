@@ -81,7 +81,7 @@ const About = () => {
         <div className={styles?.workExperienceContainer}>
           <p className={styles?.aboutMeBlurb}>
             When working freelance & contracts (and often for full time
-            positions 🤫) I needed to work with clients, managers and product
+            positions) I needed to work with clients, managers and product
             owners to come up with solutions for their pain points or new
             features they wanted to implement. To do this I researched,
             developed a stratergy, coordinated the plan in meetings, created my

@@ -75,13 +75,14 @@ const About = () => {
               expected from the job description or project outline. Fortunately,
               I adapt quickly and due to my vast skillset I'm able to get going
               quickly.
+              <br />
             </p>
           </div>
         </div>
         <div className={styles?.workExperienceContainer}>
           <p className={styles?.aboutMeBlurb}>
             When working freelance & contracts (and often for full time
-            positions) I needed to work with clients, managers and product
+            positions 🤫) I needed to work with clients, managers and product
             owners to come up with solutions for their pain points or new
             features they wanted to implement. To do this I researched,
             developed a stratergy, coordinated the plan in meetings, created my

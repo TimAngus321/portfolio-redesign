@@ -12,7 +12,11 @@ html {
 }
 
 body {
-  font-family: "General Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "General Sans", sans-serif,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue" apple color emoji, segoe ui emoji,
+    noto color emoji, android emoji, emojisymbols, emojione mozilla,
+    twemoji mozilla, segoe ui symbol, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   letter-spacing: 1.8px;

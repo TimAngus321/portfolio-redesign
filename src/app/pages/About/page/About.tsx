@@ -1,10 +1,10 @@
-import useAbout from "../hooks/useAbout";
+import { useNavigate } from "react-router-dom";
 import styles from "../style/aboutStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
 import DancingLinesMyEdit from "react-dancing-lines-safari-firefox-support";
 
 const About = () => {
-  const { navigate } = useAbout();
+  const navigate = useNavigate();
 
   return (
     <section className={styles?.pageContainerAbout}>

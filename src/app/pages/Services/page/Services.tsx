@@ -1,10 +1,10 @@
 import SEO from "../../../components/SEOComponent/SEO";
 import DancingLinesMyEdit from "react-dancing-lines-safari-firefox-support";
 import styles from "../style/servicesStyle.module.scss"
-import useServices from "../hooks/useServices";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
-  const {navigate} = useServices();
+  const navigate = useNavigate();
 
   return (
     <section className={styles?.pageContainerAbout}>

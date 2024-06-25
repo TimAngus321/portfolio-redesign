@@ -1,5 +1,13 @@
 const strings = {
 
+    // Navigation
+    home: '/home',
+    about: '/about',
+    services: '/services',
+    skills: '/skills',
+    work: '/work',
+    contact: '/contact',
+
     // Skillsets
     lang: 'Languages',
     front: 'Frontend',
@@ -12,13 +20,11 @@ const strings = {
     tools: 'Tools',
     learning: 'Learning',
 
-    // Navigation
-    home: '/home',
-    about: '/about',
-    services: '/services',
-    skills: '/skills',
-    work: '/work',
-    contact: '/contact',
+    // Services
+    frontDev: 'Frontend Development',
+    fullDev: 'Full-Stack Development',
+    shop: 'Shopify Development',
+    consult: 'Consulting',
 }
 
 export default strings;

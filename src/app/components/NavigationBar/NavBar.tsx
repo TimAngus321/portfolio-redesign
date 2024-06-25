@@ -49,7 +49,7 @@ function NavBar() {
             onMouseOver={() => onHover()}
           >
             <div className={styles?.skillsIcon}>
-              <Player colorize={"#fff"} ref={playerRef} icon={codeIcon} />
+              <Player colorize={"#fff"} size={26} ref={playerRef} icon={codeIcon} />
             </div>
           </li>
           <li className={styles?.work} onClick={() => navigate(strings?.work)}>

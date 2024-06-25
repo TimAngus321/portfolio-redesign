@@ -40,6 +40,16 @@ const Menu = ({ open, setOpen, ...props }) => {
           aria-label="Toggle menu"
           aria-expanded={isExpanded}
           open={open}
+          onClick={() => mobileTogglePage(strings?.services)}
+          {...props}
+        >
+          <span aria-hidden="true"></span>
+          Services
+        </div>
+        <div
+          aria-label="Toggle menu"
+          aria-expanded={isExpanded}
+          open={open}
           onClick={() => mobileTogglePage(strings?.skills)}
           {...props}
         >

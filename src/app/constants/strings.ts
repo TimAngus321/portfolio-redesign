@@ -15,6 +15,7 @@ const strings = {
     // Navigation
     home: '/home',
     about: '/about',
+    services: '/services',
     skills: '/skills',
     work: '/work',
     contact: '/contact',

@@ -1,10 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home/page/Home";
 import About from "../pages/About/page/About";
+import Services from "../pages/Services/page/Services";
 import Skills from "../pages/Skills/page/Skills";
 import Work from "../pages/Work/page/Work";
 import Contact from "../pages/Contact/page/Contact";
 import AnimatedTransition from "../../app/components/AnimatedRoutes/AnimatedTransition";
+import strings from "../constants/strings";
 
 const PageRoutes = () => {
   return (
@@ -18,7 +20,7 @@ const PageRoutes = () => {
         }
       />
       <Route
-        path="/about"
+        path={strings?.about}
         element={
           <AnimatedTransition>
             <About />
@@ -26,7 +28,15 @@ const PageRoutes = () => {
         }
       />
       <Route
-        path="/skills"
+        path={strings?.services}
+        element={
+          <AnimatedTransition>
+            <Services />
+          </AnimatedTransition>
+        }
+      />
+      <Route
+        path={strings?.skills}
         element={
           <AnimatedTransition>
             <Skills />
@@ -34,7 +44,7 @@ const PageRoutes = () => {
         }
       />
       <Route
-        path="/work"
+        path={strings?.work}
         element={
           <AnimatedTransition>
             <Work />
@@ -42,7 +52,7 @@ const PageRoutes = () => {
         }
       />
       <Route
-        path="/contact"
+        path={strings?.contact}
         element={
           <AnimatedTransition>
             <Contact />

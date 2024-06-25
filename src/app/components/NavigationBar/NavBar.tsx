@@ -6,6 +6,7 @@ import {
   faCog,
   faEnvelope,
   faWrench,
+  faCode
 } from "@fortawesome/free-solid-svg-icons";
 import { Icon } from "@iconify/react";
 import githubFilled from "@iconify/icons-codicon/github-inverted";
@@ -33,10 +34,16 @@ function NavBar() {
             <FontAwesomeIcon icon={faUser} className={styles?.aboutIcon} />
           </li>
           <li
+            className={styles?.services}
+            onClick={() => navigate(strings?.services)}
+          >
+            <FontAwesomeIcon icon={faCog} className={styles?.servicesIcon} />
+          </li>
+          <li
             className={styles?.skills}
             onClick={() => navigate(strings?.skills)}
           >
-            <FontAwesomeIcon icon={faCog} className={styles?.techIcon} />
+            <FontAwesomeIcon icon={faCode}  className={styles?.skillsIcon}/>
           </li>
           <li className={styles?.work} onClick={() => navigate(strings?.work)}>
             <FontAwesomeIcon icon={faWrench} className={styles?.workIcon} />

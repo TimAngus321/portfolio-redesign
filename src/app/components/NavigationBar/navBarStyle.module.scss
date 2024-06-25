@@ -70,7 +70,8 @@
 
     &:hover {
       .homeIcon,
-      .aboutIcon {
+      .aboutIcon,
+      .skillsIcon {
         display: none;
       }
 
@@ -95,7 +96,7 @@
         opacity: 0;
       }
 
-      .techIcon {
+      .servicesIcon {
         width: 100px;
         position: absolute;
         animation: spinOut 0.5s 1;
@@ -145,7 +146,7 @@
     text-decoration: none;
   }
 
-  li.about:hover::after {
+  .about:hover::after {
     visibility: visible;
     content: "ABOUT";
     font-size: 11px;
@@ -155,9 +156,9 @@
     text-decoration: none;
   }
 
-  li.skills:hover::after {
+  .services:hover::after {
     visibility: visible;
-    content: "SKILLS";
+    content: "SERVICES";
     font-size: 11px;
     display: flex;
     justify-content: center;
@@ -168,7 +169,17 @@
     text-decoration: none;
   }
 
-  li.work:hover::after {
+  .skills:hover::after {
+    visibility: visible;
+    content: "SKILLS";
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    color: $base-hover-color;
+    text-decoration: none;
+  }
+
+  .work:hover::after {
     visibility: visible;
     content: "WORK";
     font-size: 11px;
@@ -181,7 +192,7 @@
     text-decoration: none;
   }
 
-  li.contact:hover::after {
+  .contact:hover::after {
     visibility: visible;
     content: "CONTACT";
     font-size: 11px;

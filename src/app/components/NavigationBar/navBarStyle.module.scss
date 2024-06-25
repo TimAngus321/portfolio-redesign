@@ -57,6 +57,13 @@
     align-content: center;
     align-items: center;
     fill: $base-hover-color;
+
+    svg {
+      display: var(--fa-display, inline-block);
+      height: 1em;
+      overflow: visible;
+      vertical-align: -0.125em;
+    }
   }
 
   li:hover {
@@ -70,9 +77,31 @@
 
     &:hover {
       .homeIcon,
-      .aboutIcon,
-      .skillsIcon {
+      .aboutIcon {
         display: none;
+      }
+
+      .skillsIcon {
+        color: white;
+        text-decoration: none;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        position: absolute;
+        animation: fadeOut 0.8s 1;
+        animation-timing-function: ease-out;
+
+        @keyframes fadeOut {
+          from {
+            opacity: 1;
+          }
+          to {
+            opacity: 0;
+          }
+        }
+        opacity: 0;
       }
 
       .workIcon {
@@ -164,7 +193,7 @@
     justify-content: center;
     color: $base-hover-color;
     animation: fadeIn;
-    animation-duration: 1s;
+    animation-duration: 1.2s;
     animation-iteration-count: 1;
     text-decoration: none;
   }
@@ -176,6 +205,9 @@
     display: flex;
     justify-content: center;
     color: $base-hover-color;
+    animation: fadeIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
     text-decoration: none;
   }
 

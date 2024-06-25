@@ -68,10 +68,12 @@ const About = () => {
               the Shopify ecosystem and have worked on Shopify themes, 3rd party
               apps, theme portals as well as Shopify backend apps using Express,
               Rails and Grape.
-              <br />
-              <br />
-              <h3 className={styles?.aboutSubTitle}>Non Technical Skills</h3>A
-              constant I have found during my career is having to do more than
+            </p>
+          </div>
+          <div>
+            <h3 className={styles?.aboutSubTitle}>Non Technical Skills</h3>
+            <p className={styles?.aboutMeBlurb}>
+              A constant I have found during my career is having to do more than
               expected from the job description or project outline. Fortunately,
               I adapt quickly and due to my vast skillset I'm able to get going
               quickly.

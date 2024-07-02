@@ -1,9 +1,15 @@
 import SEO from "../../../components/SEOComponent/SEO";
 import DancingLinesMyEdit from "react-dancing-lines-safari-firefox-support";
+import { AnimatePresence, motion } from "framer-motion";
 import styles from "../style/servicesStyle.module.scss";
 import { useNavigate } from "react-router-dom";
 import strings from "../../../../app/constants/strings";
 import useServices from "../hooks/useServices";
+import frontendDev from "../data/frontendDev";
+import shopifyDev from "../data/shopifyDev";
+import mobileDev from "../data/mobileDev";
+import fullstackDev from "../data/fullstackDev";
+import consultation from "../data/consultation";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -40,13 +46,23 @@ const Services = () => {
             </p>
           </header>
           <div className={styles?.myServices}>
+          <button
+              className={`default-btn ${skillPageStyle?.aboutMySkillsButton} ${
+                highlightedService === strings?.back
+                  ? skillPageStyle?.clickedBtn
+                  : null
+              }`}
+              onClick={() => updateService(consultation, strings?.back)}
+            >
+              {strings?.back}
+            </button>
             <button
               className={`default-btn ${styles?.myServicesBtn} ${
                 highlightedService === strings?.frontDev
                   ? styles?.clickedBtn
                   : null
               }`}
-              onClick={() => updateService(frontendSkillSet, strings?.front)}
+              onClick={() => updateService(frontendDev, strings?.front)}
             >
               {strings?.front}
             </button>
@@ -56,7 +72,7 @@ const Services = () => {
                   ? skillPageStyle?.clickedBtn
                   : null
               }`}
-              onClick={() => updateService(languages, strings?.lang)}
+              onClick={() => updateService(fullstackDev, strings?.lang)}
             >
               {strings?.lang}
             </button>
@@ -66,7 +82,7 @@ const Services = () => {
                   ? skillPageStyle?.clickedBtn
                   : null
               }`}
-              onClick={() => updateService(mobileSkillset, strings?.mobile)}
+              onClick={() => updateService(mobileDev, strings?.mobile)}
             >
               {strings?.mobile}
             </button>
@@ -76,7 +92,7 @@ const Services = () => {
                   ? skillPageStyle?.clickedBtn
                   : null
               }`}
-              onClick={() => updateService(backendSkillSet, strings?.back)}
+              onClick={() => updateService(shopifyDev, strings?.back)}
             >
               {strings?.back}
             </button>

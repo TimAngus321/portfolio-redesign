@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { stagger, useAnimate, usePresence, useAnimation } from "framer-motion";
+import { useAnimate, usePresence } from "framer-motion";
 import { services } from "../types/servicesType";
 import strings from "app/constants/strings";
 

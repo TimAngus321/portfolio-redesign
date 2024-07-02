@@ -1,6 +1,6 @@
-export interface skills {
+export interface services {
+    title: string;
     name: string;
-    alt: string;
-    styleClass?: string | undefined;
+    desc: string;
   }
   

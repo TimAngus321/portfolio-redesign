@@ -23,6 +23,7 @@ const strings = {
     // Services
     frontDev: 'Frontend Development',
     fullDev: 'Full-Stack Development',
+    mobileDev: 'Mobile Development',
     shop: 'Shopify Development',
     consult: 'Consulting',
 }

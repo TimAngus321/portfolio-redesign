@@ -1,11 +1,13 @@
 import SEO from "../../../components/SEOComponent/SEO";
 import DancingLinesMyEdit from "react-dancing-lines-safari-firefox-support";
-import styles from "../style/servicesStyle.module.scss"
+import styles from "../style/servicesStyle.module.scss";
 import { useNavigate } from "react-router-dom";
 import strings from "../../../../app/constants/strings";
+import useServices from "../hooks/useServices";
 
 const Services = () => {
   const navigate = useNavigate();
+  const { updateService, service, highlightedService } = useServices();
 
   return (
     <section className={styles?.pageContainerServices}>
@@ -27,9 +29,8 @@ const Services = () => {
               >
                 skills{" "}
               </span>
-              align with the needs of your project then you may be interested in the 
-              services I have to offer. 
-              please feel free to{" "}
+              align with the needs of your project then you may be interested in
+              the services I have to offer. please feel free to{" "}
               <strong
                 className={styles?.textLink}
                 onClick={() => navigate("/contact")}
@@ -39,55 +40,47 @@ const Services = () => {
             </p>
           </header>
           <div className={styles?.myServices}>
-              <button
-                className={`default-btn ${
-                  styles?.myServicesBtn
-                } ${
-                  highlightSkillset === strings?.frontDev
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() => updateSkillSet(frontendSkillSet, strings?.front)}
-              >
-                {strings?.front}
-              </button>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
-                  highlightSkillset === strings?.lang
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() => updateSkillSet(languages, strings?.lang)}
-              >
-                {strings?.lang}
-              </button>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
-                  highlightSkillset === strings?.mobile
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() => updateSkillSet(mobileSkillset, strings?.mobile)}
-              >
-                {strings?.mobile}
-              </button>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
-                  highlightSkillset === strings?.back
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() => updateSkillSet(backendSkillSet, strings?.back)}
-              >
-                {strings?.back}
-              </button>
-              </div>
+            <button
+              className={`default-btn ${styles?.myServicesBtn} ${
+                highlightedService === strings?.frontDev
+                  ? styles?.clickedBtn
+                  : null
+              }`}
+              onClick={() => updateService(frontendSkillSet, strings?.front)}
+            >
+              {strings?.front}
+            </button>
+            <button
+              className={`default-btn ${skillPageStyle?.aboutMySkillsButton} ${
+                highlightedService === strings?.fullDev
+                  ? skillPageStyle?.clickedBtn
+                  : null
+              }`}
+              onClick={() => updateService(languages, strings?.lang)}
+            >
+              {strings?.lang}
+            </button>
+            <button
+              className={`default-btn ${skillPageStyle?.aboutMySkillsButton} ${
+                highlightedService === strings?.mobile
+                  ? skillPageStyle?.clickedBtn
+                  : null
+              }`}
+              onClick={() => updateService(mobileSkillset, strings?.mobile)}
+            >
+              {strings?.mobile}
+            </button>
+            <button
+              className={`default-btn ${skillPageStyle?.aboutMySkillsButton} ${
+                highlightedService === strings?.back
+                  ? skillPageStyle?.clickedBtn
+                  : null
+              }`}
+              onClick={() => updateService(backendSkillSet, strings?.back)}
+            >
+              {strings?.back}
+            </button>
+          </div>
         </div>
         <div className={styles?.revealedSkillsContainer}>
           <div className={styles?.revealSkills}>

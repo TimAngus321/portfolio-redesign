@@ -11,6 +11,8 @@ import mobileDev from "../data/mobileDev";
 import fullstackDev from "../data/fullstackDev";
 import consultation from "../data/consultation";
 import ServiceSection from "../components/serviceSection";
+import SliderBtn from "../../../components/SliderButton/SliderBtn";
+import buttonsData from "../data/sliderBtnData";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -51,7 +53,15 @@ const Services = () => {
             </p>
           </header>
           <div className={styles?.myServices}>
-            <button
+          {buttonsData.map((button, index) => (
+              <SliderBtn
+                key={index}
+                label={button.label}
+                onClick={() => updateService(button.data, button.label)}
+                isActive={highlightedService === button.label}
+              />
+            ))}
+            {/* <button
               className={`default-btn ${styles?.aboutMySkillsButton} ${
                 highlightedService === strings?.consult
                   ? styles?.clickedBtn
@@ -98,7 +108,7 @@ const Services = () => {
               onClick={() => updateService(shopifyDev, strings?.shop)}
             >
               {strings?.shopify}
-            </button>
+            </button> */}
           </div>
         </div>
         <div className={styles?.revealedSkillsContainer}>

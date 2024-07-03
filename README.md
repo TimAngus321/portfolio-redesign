@@ -53,6 +53,9 @@ My personal portfolio all about me and my skills built in react.
 - Use useNavigate normally ✅
 - Update CSS with new ways to deal with responsive layouts ✅
 - Replace home page animation with interactive framer motion gradient blob ✅
+- Make more resuable components
+- Split up logic in hooks
+- Use more conventional react structure
 
 ## Add to next Version
 

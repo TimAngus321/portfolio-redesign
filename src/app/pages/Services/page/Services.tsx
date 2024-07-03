@@ -44,9 +44,10 @@ const Services = () => {
                 onClick={() => navigate("/contact")}
               >
                 contact me
-              </strong>
-              {" "}regarding the service you are interested in. From there we can discuss
-              the specifics of your project, the servies you need and pricing. 
+              </strong>{" "}
+              regarding the service you are interested in. From there we can
+              discuss the specifics of your project, the servies you need and
+              pricing.
             </p>
           </header>
           <div className={styles?.myServices}>
@@ -61,7 +62,7 @@ const Services = () => {
               {strings?.consult}
             </button>
             <button
-              className={`default-btn ${styles?.myServicesBtn} ${
+              className={`default-btn ${styles?.aboutMySkillsButton} ${
                 highlightedService === strings?.frontDev
                   ? styles?.clickedBtn
                   : null
@@ -105,17 +106,8 @@ const Services = () => {
             <div className={styles?.selectedSkillset}>
               <AnimatePresence>
                 <motion.div ref={scope} className="">
-                  {Object.keys(service).map((key, i) => (
-                    <ServiceSection
-                      key={key}
-                      title={service[i]?.title}
-                      subTitle={service[i]?.subTitle}
-                      desc={service[i]?.desc}
-                      subTitle2={service[i]?.subTitle2}
-                      desc2={service[i]?.desc2}
-                      subTitle3={service[i]?.subTitle3}
-                      desc3={service[i]?.desc3}
-                    />
+                  {service.map((info, i) => (
+                    <ServiceSection key={i} {...info} />
                   ))}
                 </motion.div>
               </AnimatePresence>

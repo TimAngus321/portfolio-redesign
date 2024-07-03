@@ -188,14 +188,10 @@ const Skills = () => {
             <div className={skillPageStyle?.selectedSkillset}>
               <AnimatePresence>
                 <motion.ul ref={scope} className="skill-card">
-                  {Object.keys(skillSet).map((key, i) => (
+                  {skillSet.map((skills, i) => (
                     <SkillCard
-                      key={key}
-                      name={skillSet[i]?.name}
-                      image={skillSet[i]?.image}
-                      alt={skillSet[i]?.alt}
-                      styleClass={skillSet[i]?.styleClass}
-                      waterfall={skillSet[i]?.waterfall}
+                      key={i}
+                     {...skills}
                     />
                   ))}
                 </motion.ul>

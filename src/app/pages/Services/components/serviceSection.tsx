@@ -3,7 +3,7 @@ import styles from "../style/servicesStyle.module.scss";
 import { services } from "../types/servicesType";
 
 const ServiceSection = (props: services) => {
-  const { title, subTitle, desc, subTitle2, desc2, subTitle3, desc3 } = props;
+  const { title, subTitle, desc, sections } = props;
 
   return (
     <AnimatePresence>
@@ -11,10 +11,12 @@ const ServiceSection = (props: services) => {
         <h2>{title}</h2>
         <h3>{subTitle}</h3>
         <p>{desc}</p>
-        <h3>{subTitle2}</h3>
-        <p>{desc2}</p>
-        <h3>{subTitle3}</h3>
-        <p>{desc3}</p>
+        {sections?.map((section, index) => (
+          <div key={index}>
+            <h3>{section.subTitle}</h3>
+            <p>{section.desc}</p>
+          </div>
+          ))}
       </motion.div>
     </AnimatePresence>
   );

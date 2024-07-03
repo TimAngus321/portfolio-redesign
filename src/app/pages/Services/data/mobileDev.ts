@@ -1,6 +1,6 @@
 const mobileDev = [
     {
-      title: "Mobil App Development",
+      title: "Mobile App Development",
       subTitle: "React Native Application",
       desc: "",
     },

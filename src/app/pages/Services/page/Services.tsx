@@ -10,10 +10,11 @@ import shopifyDev from "../data/shopifyDev";
 import mobileDev from "../data/mobileDev";
 import fullstackDev from "../data/fullstackDev";
 import consultation from "../data/consultation";
+import ServiceSection from "../components/serviceSection";
 
 const Services = () => {
   const navigate = useNavigate();
-  const { updateService, service, highlightedService } = useServices();
+  const { updateService, service, highlightedService, scope } = useServices();
 
   return (
     <section className={styles?.pageContainerServices}>
@@ -36,25 +37,28 @@ const Services = () => {
                 skills{" "}
               </span>
               align with the needs of your project then you may be interested in
-              the services I have to offer. please feel free to{" "}
+              the services I have to offer. Explore here the services I offer
+              and then please reach out and{" "}
               <strong
                 className={styles?.textLink}
                 onClick={() => navigate("/contact")}
               >
-                contact me.
+                contact me
               </strong>
+              {" "}regarding the service you are interested in. From there we can discuss
+              the specifics of your project, the servies you need and pricing. 
             </p>
           </header>
           <div className={styles?.myServices}>
-          <button
-              className={`default-btn ${skillPageStyle?.aboutMySkillsButton} ${
-                highlightedService === strings?.back
-                  ? skillPageStyle?.clickedBtn
+            <button
+              className={`default-btn ${styles?.aboutMySkillsButton} ${
+                highlightedService === strings?.consult
+                  ? styles?.clickedBtn
                   : null
               }`}
-              onClick={() => updateService(consultation, strings?.back)}
+              onClick={() => updateService(consultation, strings?.consult)}
             >
-              {strings?.back}
+              {strings?.consult}
             </button>
             <button
               className={`default-btn ${styles?.myServicesBtn} ${
@@ -62,24 +66,24 @@ const Services = () => {
                   ? styles?.clickedBtn
                   : null
               }`}
-              onClick={() => updateService(frontendDev, strings?.front)}
+              onClick={() => updateService(frontendDev, strings?.frontDev)}
             >
               {strings?.front}
             </button>
             <button
-              className={`default-btn ${skillPageStyle?.aboutMySkillsButton} ${
+              className={`default-btn ${styles?.aboutMySkillsButton} ${
                 highlightedService === strings?.fullDev
-                  ? skillPageStyle?.clickedBtn
+                  ? styles?.clickedBtn
                   : null
               }`}
-              onClick={() => updateService(fullstackDev, strings?.lang)}
+              onClick={() => updateService(fullstackDev, strings?.fullDev)}
             >
-              {strings?.lang}
+              {strings?.fullstack}
             </button>
             <button
-              className={`default-btn ${skillPageStyle?.aboutMySkillsButton} ${
+              className={`default-btn ${styles?.aboutMySkillsButton} ${
                 highlightedService === strings?.mobile
-                  ? skillPageStyle?.clickedBtn
+                  ? styles?.clickedBtn
                   : null
               }`}
               onClick={() => updateService(mobileDev, strings?.mobile)}
@@ -87,14 +91,12 @@ const Services = () => {
               {strings?.mobile}
             </button>
             <button
-              className={`default-btn ${skillPageStyle?.aboutMySkillsButton} ${
-                highlightedService === strings?.back
-                  ? skillPageStyle?.clickedBtn
-                  : null
+              className={`default-btn ${styles?.aboutMySkillsButton} ${
+                highlightedService === strings?.shop ? styles?.clickedBtn : null
               }`}
-              onClick={() => updateService(shopifyDev, strings?.back)}
+              onClick={() => updateService(shopifyDev, strings?.shop)}
             >
-              {strings?.back}
+              {strings?.shopify}
             </button>
           </div>
         </div>
@@ -102,18 +104,20 @@ const Services = () => {
           <div className={styles?.revealSkills}>
             <div className={styles?.selectedSkillset}>
               <AnimatePresence>
-                <motion.ul ref={scope} className="skill-card">
-                  {Object.keys(skillSet).map((key, i) => (
-                    <SkillCard
+                <motion.div ref={scope} className="">
+                  {Object.keys(service).map((key, i) => (
+                    <ServiceSection
                       key={key}
-                      name={skillSet[i]?.name}
-                      image={skillSet[i]?.image}
-                      alt={skillSet[i]?.alt}
-                      styleClass={skillSet[i]?.styleClass}
-                      waterfall={skillSet[i]?.waterfall}
+                      title={service[i]?.title}
+                      subTitle={service[i]?.subTitle}
+                      desc={service[i]?.desc}
+                      subTitle2={service[i]?.subTitle2}
+                      desc2={service[i]?.desc2}
+                      subTitle3={service[i]?.subTitle3}
+                      desc3={service[i]?.desc3}
                     />
                   ))}
-                </motion.ul>
+                </motion.div>
               </AnimatePresence>
             </div>
           </div>

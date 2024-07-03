@@ -20,6 +20,9 @@ const strings = {
     tools: 'Tools',
     learning: 'Learning',
 
+    //
+    fullstack: 'Fullstack',
+
     // Services
     frontDev: 'Frontend Development',
     fullDev: 'Full-Stack Development',

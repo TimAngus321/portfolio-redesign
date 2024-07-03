@@ -5,7 +5,7 @@ const shopifyDev = [
       desc: "",
       subTitle2: "Shopify Theme Development", 
       desc2: "",
-      subtitle3: "Shopify App Development", 
+      subTitle3: "Shopify App Development", 
       desc3: "",
     },
   ];

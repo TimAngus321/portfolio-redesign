@@ -2,10 +2,11 @@ import { useState } from "react";
 import { useAnimate, usePresence } from "framer-motion";
 import { services } from "../types/servicesType";
 import strings from "app/constants/strings";
+import consultation from "../data/consultation";
 
 const useServices = () => {
-  const [service, setService] = useState<services[]>([]);
-  const [highlightedService, setHighlightedService] = useState<string>(strings?.frontDev);
+  const [service, setService] = useState<services[]>(consultation);
+  const [highlightedService, setHighlightedService] = useState<string>(strings?.consult);
   const [scope, animate] = useAnimate();
   const [isPresent] = usePresence();
 
@@ -44,22 +45,11 @@ const useServices = () => {
     }
   };
 
-
-// Just set intial state for service
-//   const initialSkillSet = async (service: services[]) => {
-//     try {
-//       // setProcessing(true);
-//       await setHighlightedService(strings?.frontDev);
-//       await setService(service);
-//     } catch (err) {
-//       console.log("Animation error: ", err);
-//     }
-//   };
-
   return {
     updateService,
     service,
-    highlightedService
+    highlightedService,
+    scope
   };
 };
 

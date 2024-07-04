@@ -152,6 +152,8 @@ const useSkills = () => {
     scope,
     animate,
     highlightSkillset,
+    clearState,
+    sleep
   };
 };
 

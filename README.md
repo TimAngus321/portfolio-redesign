@@ -54,7 +54,7 @@ My personal portfolio all about me and my skills built in react.
 - Update CSS with new ways to deal with responsive layouts ✅
 - Replace home page animation with interactive framer motion gradient blob ✅
 - Make more resuable components
-- Split up logic in hooks
+- Move notifications from useEmail hook to it's own hook so it's more readable
 - Use more conventional react structure
 
 ## Add to next Version

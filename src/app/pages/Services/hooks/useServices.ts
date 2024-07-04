@@ -3,20 +3,14 @@ import { useAnimate, usePresence } from "framer-motion";
 import { services } from "../types/servicesType";
 import strings from "app/constants/strings";
 import consultation from "../data/consultation";
+import useSkills from "../../Skills/hooks/useSkills";
 
 const useServices = () => {
+  const { sleep, clearState} = useSkills();
   const [service, setService] = useState<services[]>(consultation);
   const [highlightedService, setHighlightedService] = useState<string>(strings?.consult);
   const [scope, animate] = useAnimate();
   const [isPresent] = usePresence();
-
-  const clearState = () => {
-    const currentState: services[] = [];
-    setService(currentState);
-  };
-
-  const sleep = async (delay: number) =>
-    new Promise((resolve) => setTimeout(resolve, delay));
 
   const updateService = async (
     service: services[],

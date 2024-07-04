@@ -1,15 +1,8 @@
 import SEO from "../../../components/SEOComponent/SEO";
-import DancingLinesMyEdit from "react-dancing-lines-safari-firefox-support";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "../style/servicesStyle.module.scss";
 import { useNavigate } from "react-router-dom";
-import strings from "../../../../app/constants/strings";
 import useServices from "../hooks/useServices";
-import frontendDev from "../data/frontendDev";
-import shopifyDev from "../data/shopifyDev";
-import mobileDev from "../data/mobileDev";
-import fullstackDev from "../data/fullstackDev";
-import consultation from "../data/consultation";
 import ServiceSection from "../components/serviceSection";
 import SliderBtn from "../../../components/SliderButton/SliderBtn";
 import buttonsData from "../data/sliderBtnData";
@@ -20,7 +13,6 @@ const Services = () => {
 
   return (
     <section className={styles?.pageContainerServices}>
-      <DancingLinesMyEdit backgroundColor="black" />
       <SEO
         title={`Tim Angus's Porftolio - Services Page`}
         description={`Services page of Timothy Angus's portfolio. Discover all of the servies I offer with some fun animations`}
@@ -53,7 +45,7 @@ const Services = () => {
             </p>
           </header>
           <div className={styles?.myServices}>
-          {buttonsData.map((button, index) => (
+            {buttonsData.map((button, index) => (
               <SliderBtn
                 key={index}
                 label={button.label}
@@ -61,54 +53,6 @@ const Services = () => {
                 isActive={highlightedService === button.label}
               />
             ))}
-            {/* <button
-              className={`default-btn ${styles?.aboutMySkillsButton} ${
-                highlightedService === strings?.consult
-                  ? styles?.clickedBtn
-                  : null
-              }`}
-              onClick={() => updateService(consultation, strings?.consult)}
-            >
-              {strings?.consult}
-            </button>
-            <button
-              className={`default-btn ${styles?.aboutMySkillsButton} ${
-                highlightedService === strings?.frontDev
-                  ? styles?.clickedBtn
-                  : null
-              }`}
-              onClick={() => updateService(frontendDev, strings?.frontDev)}
-            >
-              {strings?.front}
-            </button>
-            <button
-              className={`default-btn ${styles?.aboutMySkillsButton} ${
-                highlightedService === strings?.fullDev
-                  ? styles?.clickedBtn
-                  : null
-              }`}
-              onClick={() => updateService(fullstackDev, strings?.fullDev)}
-            >
-              {strings?.fullstack}
-            </button>
-            <button
-              className={`default-btn ${styles?.aboutMySkillsButton} ${
-                highlightedService === strings?.mobile
-                  ? styles?.clickedBtn
-                  : null
-              }`}
-              onClick={() => updateService(mobileDev, strings?.mobile)}
-            >
-              {strings?.mobile}
-            </button>
-            <button
-              className={`default-btn ${styles?.aboutMySkillsButton} ${
-                highlightedService === strings?.shop ? styles?.clickedBtn : null
-              }`}
-              onClick={() => updateService(shopifyDev, strings?.shop)}
-            >
-              {strings?.shopify}
-            </button> */}
           </div>
         </div>
         <div className={styles?.revealedSkillsContainer}>

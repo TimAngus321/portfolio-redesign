@@ -31,7 +31,7 @@ const Services = () => {
                 skills{" "}
               </span>
               align with the needs of your project then you may be interested in
-              the services I have to offer. Explore here the services I offer
+              the services I have to offer. Explore here what services I offer
               and then please reach out and{" "}
               <strong
                 className={styles?.textLink}

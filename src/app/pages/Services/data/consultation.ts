@@ -2,11 +2,12 @@ const consultation = [
   {
     title: "Consultation",
     subTitle: "General Consultation",
-    desc: `If you're unsure about the type of development skills you require for your project then you'll need
-    to have a consultation with me about what you require for your project. If you're just starting a 
-    project the decisions you make at the beginning of a project can be some of the most important for it to be 
-    a success. Creating the perfect environment, choosing the right tech stack and an infrastructure that
-    works for you is vital to allow you to develop, iterate and grow quickly but also smoothly.`,
+    desc: `If you're unsure about what services you require or have some questions regarding specific needs then we should
+    have a consultation. This is so we can go over the details of your project to figure out what your development needs 
+    are, what services you need and if I'm the right fit for your project. The decisions you make regarding your project's
+    environment, tech stack and infrastructure are vital to allow you to develop, iterate and grow quickly without issue.
+    If you're unsure about your development needs it's essential that you contact an experienced developer like myself so
+    we can ensure your project is a success.`,
   },
 ];
 

@@ -21,9 +21,9 @@ const About = () => {
             <p className={styles?.aboutMeBlurb}>
               I have over 5 years experience working with{" "}
               <strong>Javascript</strong>,<strong> Typescript</strong> and{" "}
-              <strong> Ruby</strong>. During my career I have worked contracts,
+              <strong> Ruby</strong>. During my coding career I have worked contracts,
               freelance and full time creating UIs, APIs, E-commerce stores and
-              full-stack apps connected to AWS services during my coding career.
+              full-stack apps connected to AWS services.
               If you think you could use my{" "}
               <span
                 className={styles?.textLink}

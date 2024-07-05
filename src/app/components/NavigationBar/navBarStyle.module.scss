@@ -11,7 +11,6 @@
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  min-height: 500px;
   background-color: transparent;
   backdrop-filter: blur(10px);
   border-right: $secondary-font-color solid 0.5px;
@@ -58,6 +57,13 @@
     align-content: center;
     align-items: center;
     fill: $base-hover-color;
+
+    svg {
+      display: var(--fa-display, inline-block);
+      height: 1em;
+      overflow: visible;
+      vertical-align: -0.125em;
+    }
   }
 
   li:hover {
@@ -73,6 +79,29 @@
       .homeIcon,
       .aboutIcon {
         display: none;
+      }
+
+      .skillsIcon {
+        color: white;
+        text-decoration: none;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        position: absolute;
+        animation: fadeOut 0.8s 1;
+        animation-timing-function: ease-out;
+
+        @keyframes fadeOut {
+          from {
+            opacity: 1;
+          }
+          to {
+            opacity: 0;
+          }
+        }
+        opacity: 0;
       }
 
       .workIcon {
@@ -96,7 +125,7 @@
         opacity: 0;
       }
 
-      .techIcon {
+      .servicesIcon {
         width: 100px;
         position: absolute;
         animation: spinOut 0.5s 1;
@@ -146,7 +175,7 @@
     text-decoration: none;
   }
 
-  li.about:hover::after {
+  .about:hover::after {
     visibility: visible;
     content: "ABOUT";
     font-size: 11px;
@@ -156,7 +185,20 @@
     text-decoration: none;
   }
 
-  li.skills:hover::after {
+  .services:hover::after {
+    visibility: visible;
+    content: "SERVICES";
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    color: $base-hover-color;
+    animation: fadeIn;
+    animation-duration: 1.2s;
+    animation-iteration-count: 1;
+    text-decoration: none;
+  }
+
+  .skills:hover::after {
     visibility: visible;
     content: "SKILLS";
     font-size: 11px;
@@ -169,7 +211,7 @@
     text-decoration: none;
   }
 
-  li.work:hover::after {
+  .work:hover::after {
     visibility: visible;
     content: "WORK";
     font-size: 11px;
@@ -182,7 +224,7 @@
     text-decoration: none;
   }
 
-  li.contact:hover::after {
+  .contact:hover::after {
     visibility: visible;
     content: "CONTACT";
     font-size: 11px;

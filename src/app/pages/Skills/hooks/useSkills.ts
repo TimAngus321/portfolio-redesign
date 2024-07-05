@@ -27,9 +27,9 @@ const useSkills = () => {
   const sleep = async (delay: number) => 
     new Promise((resolve) => setTimeout(resolve, delay));
 
-  const updateSkillSet = async (skillSet: skills[], selectedSkill: string) => {
+  const updateSkillSet = async (skillSet: skills[], highlightSkillset: string) => {
     try {
-      await setHighlightSkillset(selectedSkill);
+      await setHighlightSkillset(highlightSkillset);
       if (window.innerWidth > 900) {
         await animate(scope.current, { x: "100vw" }, { duration: 0.3 });
       } else {
@@ -152,6 +152,8 @@ const useSkills = () => {
     scope,
     animate,
     highlightSkillset,
+    clearState,
+    sleep
   };
 };
 

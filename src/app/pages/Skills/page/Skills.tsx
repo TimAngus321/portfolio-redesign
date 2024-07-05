@@ -2,19 +2,11 @@ import strings from "app/constants/strings";
 import { AnimatePresence, motion } from "framer-motion";
 import SEO from "../../../components/SEOComponent/SEO";
 import SkillCard from "../components/SkillCard";
-import backendSkillSet from "../data/backend-skills";
-import developingSkills from "../data/developing-skills";
-import frontendSkillSet from "../data/front-end-skills";
-import hostingUsed from "../data/hosting-used";
-import languages from "../data/languages";
-import miscSkills from "../data/misc-tools";
-import mobileSkillset from "../data/mobile-skills";
-import projectSkills from "../data/project-skills";
-import shopifySkillSet from "../data/shopify-skills";
-import testingSkills from "../data/testing-skills";
 import useSkills from "../hooks/useSkills";
 import "../style/skillCardAnimations.scss";
 import skillPageStyle from "../style/skillCardPageStyle.module.scss";
+import sliderButtonsData from "../data/sliderBtnData";
+import SliderBtn from "../../../components/SliderButton/SliderBtn";
 
 const Skills = () => {
   const { navigate, skillSet, scope, updateSkillSet, highlightSkillset } =
@@ -55,148 +47,24 @@ const Skills = () => {
               </p>
             </header>
             <div className={skillPageStyle?.aboutMySkills}>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
-                  highlightSkillset === strings?.front
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() => updateSkillSet(frontendSkillSet, strings?.front)}
-              >
-                {strings?.front}
-              </button>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
-                  highlightSkillset === strings?.lang
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() => updateSkillSet(languages, strings?.lang)}
-              >
-                {strings?.lang}
-              </button>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
-                  highlightSkillset === strings?.mobile
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() => updateSkillSet(mobileSkillset, strings?.mobile)}
-              >
-                {strings?.mobile}
-              </button>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
-                  highlightSkillset === strings?.back
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() => updateSkillSet(backendSkillSet, strings?.back)}
-              >
-                {strings?.back}
-              </button>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
-                  highlightSkillset === strings?.host
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() => updateSkillSet(hostingUsed, strings?.host)}
-              >
-                {strings?.host}
-              </button>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
-                  highlightSkillset === strings?.shopify
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() =>
-                  updateSkillSet(shopifySkillSet, strings?.shopify)
-                }
-              >
-                {strings?.shopify}
-              </button>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
-                  highlightSkillset === strings?.test
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() => updateSkillSet(testingSkills, strings?.test)}
-              >
-                {strings?.test}
-              </button>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
-                  highlightSkillset === strings?.design
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() => updateSkillSet(projectSkills, strings?.design)}
-              >
-                {strings?.design}
-              </button>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
-                  highlightSkillset === strings?.tools
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() => updateSkillSet(miscSkills, strings?.tools)}
-              >
-                {strings?.tools}
-              </button>
-              <button
-                className={`default-btn ${
-                  skillPageStyle?.aboutMySkillsButton
-                } ${
-                  highlightSkillset === strings?.learning
-                    ? skillPageStyle?.clickedBtn
-                    : null
-                }`}
-                onClick={() =>
-                  updateSkillSet(developingSkills, strings?.learning)
-                }
-              >
-                {strings?.learning}
-              </button>
+              {sliderButtonsData.map((button, index) => (
+                <SliderBtn
+                  key={index}
+                  label={button.label}
+                  onClick={() => updateSkillSet(button.data, button.label)}
+                  isActive={highlightSkillset === button.label}
+                />
+              ))}
             </div>
           </div>
         </div>
-
         <div className={skillPageStyle?.revealedSkillsContainer}>
           <div className={skillPageStyle?.revealSkills}>
             <div className={skillPageStyle?.selectedSkillset}>
               <AnimatePresence>
                 <motion.ul ref={scope} className="skill-card">
-                  {Object.keys(skillSet).map((key, i) => (
-                    <SkillCard
-                      key={key}
-                      name={skillSet[i]?.name}
-                      image={skillSet[i]?.image}
-                      alt={skillSet[i]?.alt}
-                      styleClass={skillSet[i]?.styleClass}
-                      waterfall={skillSet[i]?.waterfall}
-                    />
+                  {skillSet.map((skills, i) => (
+                    <SkillCard key={i} {...skills} />
                   ))}
                 </motion.ul>
               </AnimatePresence>

@@ -6,15 +6,20 @@ import {
   faCog,
   faEnvelope,
   faWrench,
+  faCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { Icon } from "@iconify/react";
 import githubFilled from "@iconify/icons-codicon/github-inverted";
 import linkedinRect from "@iconify/icons-brandico/linkedin-rect";
 import styles from "./navBarStyle.module.scss";
 import strings from "app/constants/strings";
+import { Player } from "@lordicon/react";
+import useNavbar from "../Hooks/useNavbar";
 
 function NavBar() {
   const navigate = useNavigate();
+  const codeIcon = require("../../../assets/Icons/codeIcon.json");
+  const { onHover, playerRef } = useNavbar();
 
   return (
     <nav className={styles?.navBar}>
@@ -33,10 +38,19 @@ function NavBar() {
             <FontAwesomeIcon icon={faUser} className={styles?.aboutIcon} />
           </li>
           <li
+            className={styles?.services}
+            onClick={() => navigate(strings?.services)}
+          >
+            <FontAwesomeIcon icon={faCog} className={styles?.servicesIcon} />
+          </li>
+          <li
             className={styles?.skills}
             onClick={() => navigate(strings?.skills)}
+            onMouseOver={() => onHover()}
           >
-            <FontAwesomeIcon icon={faCog} className={styles?.techIcon} />
+            <div className={styles?.skillsIcon}>
+              <Player colorize={"#fff"} size={26} ref={playerRef} icon={codeIcon} />
+            </div>
           </li>
           <li className={styles?.work} onClick={() => navigate(strings?.work)}>
             <FontAwesomeIcon icon={faWrench} className={styles?.workIcon} />

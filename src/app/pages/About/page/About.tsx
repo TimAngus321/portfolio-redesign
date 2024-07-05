@@ -1,10 +1,10 @@
-import useAbout from "../hooks/useAbout";
+import { useNavigate } from "react-router-dom";
 import styles from "../style/aboutStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
 import DancingLinesMyEdit from "react-dancing-lines-safari-firefox-support";
 
 const About = () => {
-  const { navigate } = useAbout();
+  const navigate = useNavigate();
 
   return (
     <section className={styles?.pageContainerAbout}>
@@ -21,9 +21,9 @@ const About = () => {
             <p className={styles?.aboutMeBlurb}>
               I have over 5 years experience working with{" "}
               <strong>Javascript</strong>,<strong> Typescript</strong> and{" "}
-              <strong> Ruby</strong>. During my career I have worked contracts,
+              <strong> Ruby</strong>. During my coding career I have worked contracts,
               freelance and full time creating UIs, APIs, E-commerce stores and
-              full-stack apps connected to AWS services during my coding career.
+              full-stack apps connected to AWS services.
               If you think you could use my{" "}
               <span
                 className={styles?.textLink}
@@ -68,10 +68,12 @@ const About = () => {
               the Shopify ecosystem and have worked on Shopify themes, 3rd party
               apps, theme portals as well as Shopify backend apps using Express,
               Rails and Grape.
-              <br />
-              <br />
-              <h3 className={styles?.aboutSubTitle}>Non Technical Skills</h3>A
-              constant I have found during my career is having to do more than
+            </p>
+          </div>
+          <div>
+            <h3 className={styles?.aboutSubTitle}>Non Technical Skills</h3>
+            <p className={styles?.aboutMeBlurb}>
+              A constant I have found during my career is having to do more than
               expected from the job description or project outline. Fortunately,
               I adapt quickly and due to my vast skillset I'm able to get going
               quickly.

@@ -9,7 +9,7 @@ const mobileDev = [
       sections: [
         {
           subTitle: "Why React Native?",
-          desc: `Why have a seperate apps for IOS and Android when you can have one app and codebase that works on both?
+          desc: `Why have seperate apps for IOS and Android when you can have one app and codebase that works on both?
           For many this is all they need to here but there are many benefits to using an already widely known framework
           as you will be building with a framework that will be around and supported for a long time with a strong 
           developer community behind it. `,

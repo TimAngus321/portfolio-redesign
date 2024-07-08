@@ -10,11 +10,15 @@ const shopifyDev = [
       sections: [
         {
           subTitle: "Shopify Store Setup",
-          desc: `If `,
+          desc: `If you would rather not have to deal with setting up a Shopify store, condsidering the tools you 
+          will need and have peace of mind knowing that your store will be set up well by an experiences professional, 
+          look no further. We will have an initial consultation regarding the needs of your store and then I can provide
+          an action plan for what you'd need for your store. I will then handle the store setup and any backend 
+          infrastucture or 3rd party tools that you will need for your store to work as you need.`,
         },
         {
           subTitle: "Shopify Theme Development",
-          desc: `If you want to change the design, add new sections, or add a new feature in the you will need to work on 
+          desc: `If you want to change the design, add new or modify sections and features you will need to work on 
           Shopify's frontend. When talking about the frontend of Shopify store we're almost always refering to Shopify 
           Themes. It is possible to create your own custom storefront using Shopify Hydrogen however this is normally
           for people who have a very distinct vision of what they want the design of their store to be. If you don't fall
@@ -28,13 +32,18 @@ const shopifyDev = [
         {
           subTitle: "Shopify App Development",
           desc: `Interacting with your Shopify store via Shopify's API can be done by setting up your own app. Using your
-          own app you can perfrom CRUD operations on products, customers, orders, inventory, fulfillment, and more. I can
-          offer Shopify apps using Ruby and Node. `,
+          own app you can perfrom CRUD operations on products, customers, orders, inventory, fulfillment, and more. Dealing
+          with Shopify's APIs can be difficult as Shopify's documentation does not keep up with changes made. Fortunately, 
+          I have experience with this and know where to find up to date information and how to test for changes. I can 
+          offer Shopify apps using Ruby and Node which is perfect as they're also well supported by Shopify iteslf.
+          Additionally, you can use your standalone app like any other backend app and all the functionality they bring.`,
         },
         {
           subTitle: "3rd Party Apps, Portals and more Customizations",
-          desc: `Often it makes more sense to use an existiing app than to build something from scratch. But what do you 
-          do when the app doens't completely match your needs? `,
+          desc: `Often it makes more sense to use an 3rd party offerings rather than building your own apps from scratch.
+          These apps offer great solutions to common Shopify problems but what do you do when the app doens't completely
+          match your needs? Fortunately it's often posible for a developer to customise the app, portal or widget to suit
+          your needs. `,
         },
       ],
     },

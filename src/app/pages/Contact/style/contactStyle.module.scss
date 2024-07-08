@@ -46,7 +46,8 @@
   padding: 0;
 
   textarea,
-  input {
+  input,
+  select {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 
@@ -62,9 +63,12 @@
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
+input:-webkit-autofill:focus, 
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
   -webkit-text-fill-color: white;
-  -webkit-box-shadow: 0 0 0px 40rem $secondary-background-black inset;
+  -webkit-box-shadow: 0 0 0px 40rem $base-background-color inset;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   outline: none;
@@ -134,8 +138,16 @@ input:-webkit-autofill:focus {
   background: $base-background-color;
   border: $secondary-font-color solid 1px;
   text-indent: 20px;
+  --webkit-text-indent: 20px;
   color: white;
   border-radius: 8px;
+  appearance: unset;
+}
+
+@-moz-document url-prefix() {
+  .subjectInput {
+  text-indent: 10px;
+  }
 }
 
 .messageInput {

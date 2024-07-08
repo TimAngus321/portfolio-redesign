@@ -1,6 +1,6 @@
 const consultation = [
   {
-    title: "Consultation",
+    title: "Consulting",
     subTitle: "General Consultation",
     desc: `If you're unsure about what services you require or have some questions regarding specific needs then we should
     have a consultation. This is so we can go over the details of your project to figure out what your development needs 

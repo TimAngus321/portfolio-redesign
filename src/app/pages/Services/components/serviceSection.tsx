@@ -8,13 +8,13 @@ const ServiceSection = (props: services) => {
   return (
     <AnimatePresence>
       <motion.div className={styles?.serviceSectionComponent}>
-        <h2>{title}</h2>
-        <h3>{subTitle}</h3>
-        <p>{desc}</p>
+        <h2 className={styles?.servicesTitle}>{title}</h2>
+        <h3 className={styles?.servicesSubTitle}>{subTitle}</h3>
+        <p className={styles?.servicesBlurb}>{desc}</p>
         {sections?.map((section, index) => (
           <div key={index}>
-            <h3>{section.subTitle}</h3>
-            <p>{section.desc}</p>
+            <h3 className={styles?.servicesSubTitle}>{section.subTitle}</h3>
+            <p className={styles?.servicesBlurb}>{section.desc}</p>
           </div>
           ))}
       </motion.div>

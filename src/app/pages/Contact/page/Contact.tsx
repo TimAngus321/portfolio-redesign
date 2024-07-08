@@ -1,6 +1,7 @@
 import useEmail from "../hooks/useEmail";
 import styles from "../style/contactStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
+import Select from "react-select";
 
 const ContactMe = () => {
   const {
@@ -61,15 +62,30 @@ const ContactMe = () => {
               </li>
             </div>
             <li className={styles?.subject}>
-              <input
+              <select
                 className={`${styles?.subjectInput} ${
                   subjectEmpty ? styles?.redWarning : null
                 }`}
                 name="subject"
-                placeholder="Subject"
+                // placeholder="Subject"
                 value={inputs?.subject}
                 onChange={handleChange}
-              />
+              >
+                <option disabled selected>
+                  What service are you interested in?
+                </option>
+                <option value="General Consultation">
+                  General Consultation
+                </option>
+                <option value="Frontend Development">
+                  Frontend Development
+                </option>
+                <option value="Full-Stack Development">
+                  Full-Stack Development
+                </option>
+                <option value="Mobile Development">Mobile Development</option>
+                <option value="Shopify">Shopify</option>
+              </select>
             </li>
             <li className={styles?.message}>
               <textarea

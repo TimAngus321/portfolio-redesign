@@ -52,10 +52,12 @@ My personal portfolio all about me and my skills built in react.
 - Update any broken links in work page ✅
 - Use useNavigate normally ✅
 - Update CSS with new ways to deal with responsive layouts ✅
-- Replace home page animation with interactive framer motion gradient blob ✅
+- Replace home page animation with nice gradient effect ✅
+- Add select for contact to help users select relevant servies
 - Make more resuable components
 - Move notifications from useEmail hook to it's own hook so it's more readable
 - Use more conventional react structure
+- Create a carousel for sliderBtns for services and skill pages
 
 ## Add to next Version
 

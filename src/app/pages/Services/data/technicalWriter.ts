@@ -8,11 +8,11 @@ const productMan = [
     sections: [
       {
         subTitle: "What Technical Writing experience do I have?",
-        desc: ``,
+        desc: `Documentation for previous roles. Copywriting and more`,
       },
       {
-        subTitle: "What Technical Writing experience do I have?",
-        desc: ``,
+        subTitle: "What is my apporach to technical writing?",
+        desc: `Organisation, research, easy to understand, examples and tools used.`,
       },
     ],
   },

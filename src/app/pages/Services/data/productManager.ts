@@ -10,6 +10,10 @@ const productMan = [
         subTitle: "What Product Management experience do I have?",
         desc: ``,
       },
+      {
+        subTitle: "What is my Product Management style?",
+        desc: `Ticketing system, AGILE/SCRUM etc, Retrospective and whatever else `,
+      },
     ],
   },
 ];

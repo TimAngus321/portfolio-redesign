@@ -8,7 +8,8 @@ const productMan = [
     sections: [
       {
         subTitle: "What Product Management experience do I have?",
-        desc: ``,
+        desc: `During my time working freelance, contract and fulltime I have often found that I have had to manage a 
+        team or a product's development.`,
       },
       {
         subTitle: "What is my Product Management style?",

@@ -53,9 +53,10 @@ My personal portfolio all about me and my skills built in react.
 - Use useNavigate normally ✅
 - Update CSS with new ways to deal with responsive layouts ✅
 - Replace home page animation with nice gradient effect ✅
-- Add select for contact to help users select relevant servies
-- Make more resuable components
+- Add select for contact to help users select relevant servies ⚙️
+- Use grid instead of flexbox for basic layout (it's more robust)
 - Move notifications from useEmail hook to it's own hook so it's more readable
+- Make more resuable components
 - Use more conventional react structure
 - Create a carousel for sliderBtns for services and skill pages
 

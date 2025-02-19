@@ -81,6 +81,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  // Make sure clickable elements inside still work
+  button, a, [role="button"] {
+    pointer-events: auto;
+}
 }
 
 @media only screen and (max-width: 900px) {

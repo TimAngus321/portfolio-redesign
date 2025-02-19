@@ -2,12 +2,13 @@ const consultation = [
   {
     title: "Consulting",
     subTitle: "General Consultation",
-    desc: `If you're having issues with your project getting an outside look can be extremely beneficial. `,
+    desc: `If you're having issues with your project getting an outside look can be extremely beneficial. Get in contact if
+    you need any technical assistance.`,
     sections: [
-      {
-        subTitle: "High Level Consultation",
-        desc: ``,
-      },
+      // {
+      //   subTitle: "High Level Consultation",
+      //   desc: ``,
+      // },
       {
         subTitle: "Dev Consultation",
         desc: `If you're unsure about what development services you require or have some questions regarding specific needs

@@ -111,8 +111,11 @@ const About = () => {
             used some of the resources below:
           </p>
           <ul className={styles?.aboutmeEduList}>
+          <li>
+              Ironhack UX/UI Design Bootcamp, Berlin, Germany | Bootcamp | 2025{" "}
+            </li>
             <li>
-              LeWagon Web Development bootcamp, Berlin, Germany | bootcamp |
+              LeWagon Web Development Bootcamp, Berlin, Germany | Bootcamp |
               2019{" "}
             </li>
             <li>Le Wagon React & Redux Track | 2019 </li>

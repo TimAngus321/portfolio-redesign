@@ -33,26 +33,7 @@ My personal portfolio all about me and my skills built in react.
 - Yarn
 
 ## ToDo
-
-- New animations replace css transitions with framer motion in skills page ✅
-- Redo routes in a more traditional manner ✅
-- Optimize Images ✅
-- Update parallax scroll ✅
-- Update so it's a progressive web app ✅
-- Clean up code with typescript, code splitting with custom hooks, SCSS modules & more ✅
-- Use react-colour-extractor package to add cool effect on skills page ✅
-- Replace react-color-extractor package with node-vibrant for full control ✅
-- Add limiter for abstract email validator API (don't allow more than 1 request a sec) ✅
-- Animate page transitions with GSAP ✅
-- Change flexbox to grid for skill buttons and add the following skillsets ✅
-  - Testing libraries ✅
-  - Design tools ✅
-  - Maybe add misc skillset figma, warp, whimsical... ✅
-- Ensure users see new updates on site without doing reload of app. This is for PWA & performance but it may mean some users don't see updates ✅
-- Update any broken links in work page ✅
-- Use useNavigate normally ✅
-- Update CSS with new ways to deal with responsive layouts ✅
-- Replace home page animation with nice gradient effect ✅
+- For mobile add the correct units for height that take into consideration the nav bar for mobile browsers
 - Add select for contact to help users select relevant servies ⚙️
 - Use grid instead of flexbox for basic layout (it's more robust)
 - Move notifications from useEmail hook to it's own hook so it's more readable

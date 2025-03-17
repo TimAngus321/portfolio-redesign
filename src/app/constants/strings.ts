@@ -16,7 +16,7 @@ const strings = {
     host: 'Hosting',
     shopify: 'Shopify',
     test: 'Testing',
-    design: 'Design',
+    design: 'UI/UX',
     tools: 'Tools',
     learning: 'Learning',
 

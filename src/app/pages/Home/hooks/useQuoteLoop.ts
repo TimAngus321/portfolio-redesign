@@ -3,6 +3,8 @@ const useQuoteLoop = () => {
     "Frontend Developer",
     "Fullstack Developer",
     "Shopify Developer",
+    "UI/UX Engineer",
+    "Product Manager",
     "Music Lover",
   ];
 

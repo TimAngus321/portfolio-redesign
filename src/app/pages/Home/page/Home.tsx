@@ -35,9 +35,6 @@ const Home = () => {
         left: 0,
         zIndex: 1
       }}
-      // onCreated={({ gl }: any) => {
-      //   gl.domElement.style.pointerEvents = 'none'; 
-      // }}
     >
       <ShaderGradient
         control='query'
@@ -53,7 +50,7 @@ const Home = () => {
             <QuoteLoop />
           </div>
           <p className={styles?.subHeading}>
-            Full-stack / Frontend / Mobile / Shopify
+            Full-stack / Frontend / Mobile / UI/UX / Shopify
           </p>
           <button
             className={styles?.homeContactBtn}

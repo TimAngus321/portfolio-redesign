@@ -33,6 +33,7 @@ My personal portfolio that's all about me and my skills built in React.
 - Yarn
 
 ## ToDo
+- Add box shadow/glow effect to skill page animation.
 - Add design skills in skills section
 - For mobile add the correct units for height that take into consideration the nav bar for mobile browsers
 - Add select for contact to help users select relevant servies ⚙️

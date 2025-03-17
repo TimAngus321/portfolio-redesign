@@ -1,6 +1,6 @@
 # Portfolio
 
-My personal portfolio all about me and my skills built in react.
+My personal portfolio that's all about me and my skills built in React.
 
 ## Deployed on Netlify with custom domain
 
@@ -33,6 +33,7 @@ My personal portfolio all about me and my skills built in react.
 - Yarn
 
 ## ToDo
+- Add design skills in skills section
 - For mobile add the correct units for height that take into consideration the nav bar for mobile browsers
 - Add select for contact to help users select relevant servies ⚙️
 - Use grid instead of flexbox for basic layout (it's more robust)

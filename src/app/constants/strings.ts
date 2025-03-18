@@ -30,7 +30,7 @@ const strings = {
     uiUXdev: 'UI/UX Development',
     prodMan: 'Product Management',
     shop: 'Shopify Development',
-    consult: 'Consulting',
+    consult: 'Consultation',
 }
 
 export default strings;

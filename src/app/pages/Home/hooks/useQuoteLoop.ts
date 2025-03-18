@@ -1,8 +1,9 @@
 const useQuoteLoop = () => {
   const quoteLoopText: string[] = [
     "Frontend Developer",
-    "Fullstack Developer",
     "UI/UX Engineer",
+    "Fullstack Developer",
+    "Mobile Developer",
     "Product Manager",
     "Shopify Developer",
     "Music Lover",

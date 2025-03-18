@@ -20,13 +20,15 @@ const strings = {
     tools: 'Tools',
     learning: 'Learning',
 
-    //
+    //Misc
     fullstack: 'Fullstack',
 
     // Services
     frontDev: 'Frontend Development',
     fullDev: 'Full-Stack Development',
     mobileDev: 'Mobile Development',
+    uiUXdev: 'UI/UX Development',
+    prodMan: 'Product Management',
     shop: 'Shopify Development',
     consult: 'Consulting',
 }

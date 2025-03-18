@@ -80,6 +80,9 @@ const ContactMe = () => {
                 <option value="Frontend Development">
                   Frontend Development
                 </option>
+                <option value="Frontend Development">
+                UI/UX Development
+                </option>
                 <option value="Full-Stack Development">
                   Full-Stack Development
                 </option>

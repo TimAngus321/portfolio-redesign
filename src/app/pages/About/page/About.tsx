@@ -19,10 +19,11 @@ const About = () => {
           <header>
             <h1 className={styles?.aboutTitle}>About Me</h1>
             <p className={styles?.aboutMeBlurb}>
-              I have over 5 years experience working with{" "}
-              <strong>Javascript</strong>,<strong> Typescript</strong> and{" "}
-              <strong> Ruby</strong>. During my coding career I have worked contracts,
-              freelance and full time creating UIs, APIs, E-commerce stores and
+              I have over 5 years experience working in tech{" "}. I've worked as 
+              a developer using <strong>Javascript</strong>,<strong> Typescript</strong>
+              and{" "} <strong> Ruby</strong>. Additionally, I've done UI/UX projects
+              using Figma, Framer and  Webflow. During my coding career I have worked 
+              contracts, freelance and full time creating UIs, APIs, E-commerce stores and
               full-stack apps connected to AWS services.
               If you think you could use my{" "}
               <span
@@ -46,13 +47,13 @@ const About = () => {
               I have been fortunate in having the opportunity to work with a
               large range of clients on a variety of projects in different
               industries. My vast array of experience has given me the
-              opportunity to hone my skills and develop an understanding of the
+              opportunity to gain lots of skills and develop an understanding of the
               unique challenges that come with working on projects for a wide
-              range of clients.
+              range of clients and companies.
               <br />
               <br />
               I have worked in industries including: Live Video Streaming
-              Auctions, Retail, Ecommerce, and the Music Industry. All of these
+              Auctions, Retail, E-Commerce, and the Music Industry. All of these
               different projects have required different apporaches and
               considerations, unique coding environments and often challenging
               planning. I have built strong relationships with clients as I am

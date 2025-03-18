@@ -16,19 +16,21 @@ const strings = {
     host: 'Hosting',
     shopify: 'Shopify',
     test: 'Testing',
-    design: 'Design',
+    design: 'UI/UX',
     tools: 'Tools',
     learning: 'Learning',
 
-    //
+    //Misc
     fullstack: 'Fullstack',
 
     // Services
     frontDev: 'Frontend Development',
     fullDev: 'Full-Stack Development',
     mobileDev: 'Mobile Development',
+    uiUXdev: 'UI/UX Development',
+    prodMan: 'Product Management',
     shop: 'Shopify Development',
-    consult: 'Consulting',
+    consult: 'Consultation',
 }
 
 export default strings;

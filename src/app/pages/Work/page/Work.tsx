@@ -283,7 +283,7 @@ const Work = () => {
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
                 src={UIUX4}
-                alt="Shopify Logo"
+                alt="UX/UI Logo"
                 className={styles?.stickyCardImage}
               />
             </div>

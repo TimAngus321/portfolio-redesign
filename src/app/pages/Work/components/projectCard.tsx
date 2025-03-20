@@ -21,8 +21,9 @@ const ProjectCard = (props: personalProj) => {
         className={styles?.projCard}
         target="_blank"
         rel="noopener noreferrer"
+        style={toggleStyle() === styles?.mobileCard ? { height: "95vh" } : { height: "auto" }}
       >
-        <img src={img} alt={name} className={styles?.projCardImg} />
+        <img src={img} alt={name} className={styles?.projCardImg} style={toggleStyle() === styles?.mobileCard ? { height: "100%" } : { height: "auto" }} />
         <div className={styles?.scrollCards}>
           <div className={styles?.companyInfo}>
             <h4 className={styles?.uniqueInfo}>{uniqueInfo}</h4>

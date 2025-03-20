@@ -4,10 +4,12 @@ import WorkProjCard from "../components/workProjCard";
 import railsProjects from "../data/rails-projects-data";
 import reactProjects from "../data/react-projects-data";
 import previousClients from "../data/work-project-data";
+import uxUIProjects from "../data/UXUI-project-data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import shopifyLogo from "../../../../assets/workImages/shopifyLogo.webp";
 import ProjectCard from "../components/projectCard";
+import UiUXCard from "../components/UiUXCard";
 import expressProjects from "../data/express-project-data";
 import reactLogo from "../../../../assets/skillsImages/frontendLogos/react-original.svg";
 import railsLogo from "../../../../assets/skillsImages/backendLogos/rails-plain.svg";
@@ -17,6 +19,12 @@ import nuxtLogo from "../../../../assets/skillsImages/frontendLogos/nuxtjs-origi
 import nuxtProjects from "../data/nuxt-project-data";
 import rubyProjects from "../data/ruby-project-data";
 import rubyLogo from "../../../../assets/skillsImages/languageLogos/ruby-original.svg";
+import UIUXPill from "../../../../assets/workImages/UXUI_Pill.png";
+import UIUX1 from "../../../../assets/workImages/UXUI_dd1.png";
+import UIUX2 from "../../../../assets/workImages/UXUI_dd2.png";
+import UIUX3 from "../../../../assets/workImages/UXUI_dd3.png";
+import UIUX4 from "../../../../assets/workImages/UXUI_dd4.png";
+import UIUXDiCir from "../../../../assets/workImages/UXUI_diamondCircle.png";
 
 const Work = () => {
   const alignCenter: any = {
@@ -39,7 +47,7 @@ const Work = () => {
       <div className={styles?.workContainer}>
         <Parallax
           className={styles?.workParallaxContainer}
-          pages={22}
+          pages={27}
           innerStyle={{
             zIndex: "1",
           }}
@@ -264,6 +272,40 @@ const Work = () => {
                 link={previousClients[i]?.link}
                 img={previousClients[i]?.img}
               ></WorkProjCard>
+            </ParallaxLayer>
+          ))}
+
+          <ParallaxLayer
+            factor={0.5}
+            sticky={{ start: 23, end: 27 }}
+            style={{ ...alignCenter, justifyContent: "flex-start" }}
+          >
+            <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
+              <img
+                src={UIUX4}
+                alt="UX/UI Logo"
+                className={styles?.stickyCardImage}
+              />
+            </div>
+          </ParallaxLayer>
+
+          {Object.keys(uxUIProjects).map((key, i) => (
+            <ParallaxLayer
+              key={key}
+              className={`${styles?.projectCard} ${styles?.parallax}`}
+              offset={23.5 + i}
+              speed={1.5}
+              style={{ ...alignCenter, justifyContent: "flex-end" }}
+            >
+               <UiUXCard
+                key={key}
+                name={uxUIProjects[i]?.name}
+                desc={uxUIProjects[i]?.desc}
+                techTitle={uxUIProjects[i]?.techTitle}
+                techStack={uxUIProjects[i]?.techStack}
+                link={uxUIProjects[i]?.link}
+                img={uxUIProjects[i]?.img}
+              ></UiUXCard>
             </ParallaxLayer>
           ))}
         </Parallax>

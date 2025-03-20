@@ -1,29 +1,29 @@
 import { personalProj } from "../types/workTypes";
 import styles from "../style/projCardStyle.module.scss";
 import useProjCard from "../hooks/useProjCard";
+import projMobileStyle from "../style/projCardStyle.module.scss";
 
-const ProjectCard = (props: personalProj) => {
-  const {
-    toggleStyle,
-    link,
-    name,
-    desc,
-    techTitle,
-    techStack,
-    img,
-    uniqueInfo,
-  } = useProjCard(props);
+const UiUXCard = (props: personalProj) => {
+    const {
+      link,
+      name,
+      desc,
+      techTitle,
+      techStack,
+      img,
+      uniqueInfo,
+    } = useProjCard(props);
 
   return (
-    <div className={toggleStyle()}>
+    <div className={projMobileStyle?.mobileCard}>
       <a
         href={link}
         className={styles?.projCard}
         target="_blank"
         rel="noopener noreferrer"
-        style={toggleStyle() === styles?.mobileCard ? { height: "95vh" } : { height: "auto" }}
+        style={{ height: "95vh" }}
       >
-        <img src={img} alt={name} className={styles?.projCardImg} style={toggleStyle() === styles?.mobileCard ? { height: "100%" } : { height: "auto" }} />
+        <img src={img} alt={name} className={styles?.projCardImg} style={{ height: "100%" }} />
         <div className={styles?.scrollCards}>
           <div className={styles?.companyInfo}>
             <h4 className={styles?.uniqueInfo}>{uniqueInfo}</h4>
@@ -39,5 +39,4 @@ const ProjectCard = (props: personalProj) => {
     </div>
   );
 };
-
-export default ProjectCard;
+export default UiUXCard;

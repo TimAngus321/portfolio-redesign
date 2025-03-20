@@ -97,7 +97,7 @@
   width: 75%;
   min-width: 5%;
   margin-right: 15%;
-  height: 90vh;
+  height: 95%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -113,6 +113,7 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 5%;
+    height: auto;
   }
 }
 
@@ -148,6 +149,7 @@
 @media only screen and (max-width: 600px) {
   .mobileCard {
     width: 85%;
+    height: auto;
     .projCard {
       margin-right: 0;
     }

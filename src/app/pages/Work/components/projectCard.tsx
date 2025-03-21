@@ -21,16 +21,35 @@ const ProjectCard = (props: personalProj) => {
         className={styles?.projCard}
         target="_blank"
         rel="noopener noreferrer"
-        style={toggleStyle() === styles?.mobileCard ? { height: "95%" } : { height: "auto" }}
+        style={
+          toggleStyle() === styles?.mobileCard
+            ? { height: "95%" }
+            : { height: "auto" }
+        }
       >
-        <img src={img} alt={name} className={styles?.projCardImg} style={toggleStyle() === styles?.mobileCard ? { height: "100%" } : { height: "auto" }} />
+        <img
+          src={img}
+          alt={name}
+          className={styles?.projCardImg}
+          style={
+            toggleStyle() === styles?.mobileCard
+              ? { height: "100%", objectFit: "contain" }
+              : { height: "auto" }
+          }
+        />
         <div className={styles?.scrollCards}>
-          <div className={styles?.companyInfo}>
+          <div
+            className={styles?.companyInfo}
+            style={{ width: "75%", alignSelf: "center" }}
+          >
             <h4 className={styles?.uniqueInfo}>{uniqueInfo}</h4>
             <h4 className={styles?.company}>{name}</h4>
             <p className={styles?.companyName}>{desc}</p>
           </div>
-          <div className={styles?.projectInfo}>
+          <div
+            className={styles?.projectInfo}
+            style={{ width: "75%", alignSelf: "center" }}
+          >
             <h4 className={styles?.project}>{techTitle}</h4>
             <p className={styles?.projectInfo}>{techStack}</p>
           </div>

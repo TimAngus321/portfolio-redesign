@@ -3,6 +3,7 @@
 .projCard {
   margin-right: 5%;
   max-width: 100%;
+  width: 100%;
   min-width: 5%;
   height: auto;
   display: flex;
@@ -20,6 +21,7 @@
     align-self: flex-end;
     display: flex;
     max-width: 100%;
+    width: 100%;
     min-width: 5%;
     transition: opacity 0.3s ease-in-out;
     transition: filter 0.3s ease-in-out;
@@ -98,6 +100,12 @@
   min-width: 5%;
   margin-right: 15%;
   height: 95%;
+
+ .companyInfo, .projectInfo {
+    width: 80%;
+    align-self: center;
+  }
+
 }
 
 @media only screen and (max-width: 1200px) {
@@ -113,7 +121,7 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 5%;
-    height: auto;
+    height: 100%;
   }
 }
 
@@ -148,10 +156,14 @@
 
 @media only screen and (max-width: 600px) {
   .mobileCard {
-    width: 85%;
+    width: 90%;
     height: auto;
     .projCard {
       margin-right: 0;
+    }
+    .companyInfo, .projectInfo {
+      width: 90%;
+      align-self: center;
     }
   }
   .projCard {
@@ -159,11 +171,11 @@
 
     .scrollCards {
       h4 {
-        font-size: 10px;
+        font-size: 12px;
         margin: 2.5px 0;
       }
       p {
-        font-size: 8px;
+        font-size: 10px;
         margin: 2.5px 0;
       }
     }

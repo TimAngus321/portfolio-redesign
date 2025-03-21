@@ -25,12 +25,12 @@ const UiUXCard = (props: personalProj) => {
       >
         <img src={img} alt={name} className={styles?.projCardImg} style={{ height: "100%", objectFit: "contain" }} />
         <div className={styles?.scrollCards}>
-          <div className={styles?.companyInfo} style={{ width: "75%", alignSelf: "center"}}>
+          <div className={styles?.companyInfo}>
             <h4 className={styles?.uniqueInfo}>{uniqueInfo}</h4>
             <h4 className={styles?.company}>{name}</h4>
             <p className={styles?.companyName} >{desc}</p>
           </div>
-          <div className={styles?.projectInfo} style={{ width: "75%", alignSelf: "center"}}>
+          <div className={styles?.projectInfo}>
             <h4 className={styles?.project}>{techTitle}</h4>
             <p className={styles?.projectInfo} >{techStack}</p>
           </div>

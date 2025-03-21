@@ -26,7 +26,7 @@ const uxUIProjects  = [
     desc: "UX/UI project with a focus on creating a MVP of a smart home app for pets",
     techTitle: "Tech Used",
     techStack: "UI/UX & Figma.",
-    link: "https://www.joingavel.com/",
+    link: "https://medium.com/@timangusdev/petchi-smart-app-for-pets-da5c3766c90c",
     img: petchiImg,
   },
 ];

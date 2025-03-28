@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import frontend from "../data/front-end-skills";
 import { useNavigate } from "react-router-dom";
 import { skills } from "../types/skillsetType";
@@ -24,11 +24,10 @@ const useSkills = () => {
     setSkillSet(currentState);
   };
 
-  const sleep = useMemo(() => 
-    async (delay: number) => new Promise((resolve) => setTimeout(resolve, delay)),
+  const sleep = useCallback((delay: number) => new Promise((resolve) => setTimeout(resolve, delay)),
   []);
 
-  const createWaterfall = useCallback(async (skillSet: any) => {
+  const createWaterfall = useCallback(async (skillSet: skills[]) => {
     for (let i = 0; i < skillSet?.length; i++) {
       const hexCodes: string[] = [];
       if (!navigator?.userAgent?.includes("Firefox")) {
@@ -106,7 +105,7 @@ const useSkills = () => {
     } catch (err) {
       console.log("Animation error: ", err);
     }
-  }, [animate, clearState, createWaterfall, isPresent, scope, setHighlightSkillset, sleep]);
+  }, [animate, clearState, createWaterfall, isPresent, scope, sleep]);
 
   const initialSkillSet = useCallback(async (skillSet: skills[]) => {
     try {
@@ -131,7 +130,7 @@ const useSkills = () => {
     } catch (err) {
       console.log("Animation error: ", err);
     }
-  }, [animate, createWaterfall, isPresent, scope, setHighlightSkillset, sleep]);
+  }, [animate, createWaterfall, isPresent, scope, sleep]);
 
   // For initial color waterfall effect load
   useEffect(() => {

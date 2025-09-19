@@ -1,4 +1,4 @@
-@import "../../../globalStyle/colours.scss";
+@use "../../../globalStyle/colours.scss";
 
 .pageContainerHome {
   display: flex;
@@ -10,14 +10,14 @@
 }
 
 .homeContactBtn {
-  color: $base-hover-color;
+  color: colours.$base-hover-color;
   cursor: pointer;
   font-size: 13px;
   letter-spacing: 4px;
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
   padding: 10px 18px;
-  border: 1px solid $base-hover-color;
+  border: 1px solid colours.$base-hover-color;
   margin-top: 25px;
   width: 150px;
   text-align: center;
@@ -26,9 +26,9 @@
   z-index: 9;
 
   &:hover {
-    background-color: $base-hover-color;
-    color: $base-background-color;
-    border-color: $base-hover-color;
+    background-color: colours.$base-hover-color;
+    color: colours.$base-background-color;
+    border-color: colours.$base-hover-color;
   }
 }
 
@@ -54,7 +54,7 @@
   justify-content: flex-end;
   align-items: center;
   line-height: 1;
-  color: $base-hover-color;
+  color: colours.$base-hover-color;
   flex-direction: column;
   width: 40%;
   padding-right: 50px;
@@ -138,7 +138,7 @@
   justify-content: left;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 3px;
-  color: $secondary-font-color;
+  color: colours.$secondary-font-color;
   font-weight: 450;
   font-size: 2vw;
   margin: 0;

@@ -1,7 +1,7 @@
-@import "../../globalStyle/colours.scss";
+@use "../../globalStyle/colours.scss";
 
 .clickedBtn {
-  color: $base-background-color;
-  background-color: $base-hover-color;
+  color: colours.$base-background-color;
+  background-color: colours.$base-hover-color;
 }
 

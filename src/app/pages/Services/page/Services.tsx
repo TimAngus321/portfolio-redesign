@@ -1,5 +1,5 @@
 import SEO from "../../../components/SEOComponent/SEO";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import styles from "../style/servicesStyle.module.scss";
 import { useNavigate } from "react-router-dom";
 import useServices from "../hooks/useServices";
@@ -58,13 +58,11 @@ const Services = () => {
         <div className={styles?.revealedSkillsContainer}>
           <div className={styles?.revealSkills}>
             <div className={styles?.selectedSkillset}>
-              <AnimatePresence>
                 <motion.div ref={scope} className="">
                   {service.map((info, i) => (
                     <ServiceSection key={i} {...info} />
                   ))}
                 </motion.div>
-              </AnimatePresence>
             </div>
           </div>
         </div>

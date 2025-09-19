@@ -1,4 +1,4 @@
-@import "../../../globalStyle/colours.scss";
+@use "../../../globalStyle/colours.scss";
 
 .pageContainerSkills {
   padding: 0;
@@ -19,7 +19,7 @@
 }
 
 .skillsTitle {
-  color: $base-hover-color;
+  color: colours.$base-hover-color;
   font-weight: 500;
   font-size: clamp(4rem, 3.25rem + 3.3333vw, 5rem);
   margin: 0;
@@ -31,7 +31,7 @@
 
 .revealedSkillsContainer {
   display: flex;
-  color: $secondary-font-color;
+  color: colours.$secondary-font-color;
   width: 100%;
   max-width: 70%;
   position: relative;
@@ -76,7 +76,7 @@
 }
 
 .selectedSkillset {
-  color: $base-hover-color;
+  color: colours.$base-hover-color;
   font-weight: bold;
   text-align: center;
   width: 100%;
@@ -110,12 +110,12 @@
 }
 
 .clickedBtn {
-  color: $base-background-color;
-  background-color: $base-hover-color;
+  color: colours.$base-background-color;
+  background-color: colours.$base-hover-color;
 }
 
 .skillsBlurb {
-  color: $base-font-color;
+  color: colours.$base-font-color;
   width: 100%;
 
   @media only screen and (max-width: 1200px) {
@@ -124,7 +124,7 @@
 }
 
 .contactLink {
-  color: $base-hover-color;
+  color: colours.$base-hover-color;
   cursor: pointer;
 }
 

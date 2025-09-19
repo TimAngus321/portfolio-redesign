@@ -1,8 +1,8 @@
-@import "../../globalStyle/colours.scss";
+@use "../../globalStyle/colours.scss";
 
 .navBar {
   display: flex;
-  color: $base-font-color;
+  color: colours.$base-font-color;
   top: 0;
   left: 0;
   height: 100%;
@@ -13,14 +13,14 @@
   position: fixed;
   background-color: transparent;
   backdrop-filter: blur(10px);
-  border-right: $secondary-font-color solid 0.5px;
+  border-right: colours.$secondary-font-color solid 0.5px;
   z-index: 100;
   overflow-y: scroll;
 }
 
 @media only screen and (max-width: 900px) {
   .navBar {
-    background-color: $base-background-color;
+    background-color: colours.$base-background-color;
     display: none;
   }
 }
@@ -28,7 +28,7 @@
 .myName {
   font-size: 2rem;
   line-height: 1;
-  color: $base-hover-color;
+  color: colours.$base-hover-color;
   margin-top: 50px;
   width: 100%;
   text-align: center;
@@ -46,7 +46,7 @@
   text-align: center;
 
   li:hover {
-    color: $base-hover-color;
+    color: colours.$base-hover-color;
     cursor: pointer;
   }
 
@@ -56,7 +56,7 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    fill: $base-hover-color;
+    fill: colours.$base-hover-color;
 
     svg {
       display: var(--fa-display, inline-block);
@@ -72,7 +72,7 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    fill: $base-hover-color;
+    fill: colours.$base-hover-color;
     text-decoration: none;
 
     &:hover {
@@ -171,7 +171,7 @@
     font-size: 11px;
     display: flex;
     justify-content: center;
-    color: $base-hover-color;
+    color: colours.$base-hover-color;
     text-decoration: none;
   }
 
@@ -181,7 +181,7 @@
     font-size: 11px;
     display: flex;
     justify-content: center;
-    color: $base-hover-color;
+    color: colours.$base-hover-color;
     text-decoration: none;
   }
 
@@ -191,7 +191,7 @@
     font-size: 11px;
     display: flex;
     justify-content: center;
-    color: $base-hover-color;
+    color: colours.$base-hover-color;
     animation: fadeIn;
     animation-duration: 1.2s;
     animation-iteration-count: 1;
@@ -204,7 +204,7 @@
     font-size: 11px;
     display: flex;
     justify-content: center;
-    color: $base-hover-color;
+    color: colours.$base-hover-color;
     animation: fadeIn;
     animation-duration: 1s;
     animation-iteration-count: 1;
@@ -217,7 +217,7 @@
     font-size: 11px;
     display: flex;
     justify-content: center;
-    color: $base-hover-color;
+    color: colours.$base-hover-color;
     animation: fadeIn;
     animation-duration: 1s;
     animation-iteration-count: 1;
@@ -230,7 +230,7 @@
     font-size: 11px;
     display: flex;
     justify-content: center;
-    color: $base-hover-color;
+    color: colours.$base-hover-color;
     animation: fadeIn;
     animation-duration: 1s;
     animation-iteration-count: 1;
@@ -276,7 +276,7 @@
       font-size: 17px;
 
       &:hover {
-        color: $base-hover-color;
+        color: colours.$base-hover-color;
         cursor: pointer;
       }
     }
@@ -285,18 +285,18 @@
 
 @media only screen and (max-width: 900px) {
   .socialMedia > li > a:hover {
-    color: $base-hover-color;
+    color: colours.$base-hover-color;
     cursor: pointer;
   }
 }
 
 .navBar {
-  color: $base-hover-color;
+  color: colours.$base-hover-color;
   text-decoration: none;
 }
 
 .navBar > li {
-  color: $base-hover-color;
+  color: colours.$base-hover-color;
   text-decoration: none;
   display: flex;
   width: 100%;

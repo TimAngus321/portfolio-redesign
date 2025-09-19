@@ -1,5 +1,5 @@
 import strings from "app/constants/strings";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import SEO from "../../../components/SEOComponent/SEO";
 import SkillCard from "../components/SkillCard";
 import useSkills from "../hooks/useSkills";
@@ -61,13 +61,11 @@ const Skills = () => {
         <div className={skillPageStyle?.revealedSkillsContainer}>
           <div className={skillPageStyle?.revealSkills}>
             <div className={skillPageStyle?.selectedSkillset}>
-              <AnimatePresence>
                 <motion.ul ref={scope} className="skill-card">
                   {skillSet.map((skills, i) => (
                     <SkillCard key={i} {...skills} />
                   ))}
                 </motion.ul>
-              </AnimatePresence>
             </div>
           </div>
         </div>

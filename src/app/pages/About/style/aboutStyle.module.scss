@@ -1,4 +1,4 @@
-@import "../../../globalStyle/colours.scss";
+@use "../../../globalStyle/colours.scss";
 
 .pageContainerAbout {
   display: flex;
@@ -27,7 +27,7 @@
 }
 
 .aboutTitle {
-  color: $base-hover-color;
+  color: colours.$base-hover-color;
   display: flex;
   width: 100%;
   justify-content: flex-start;
@@ -37,7 +37,7 @@
 }
 
 .aboutSubTitle {
-  color: $base-font-color;
+  color: colours.$base-font-color;
   display: flex;
   width: 100%;
   justify-content: flex-start;
@@ -80,7 +80,7 @@
 }
 
 .textLink {
-  color: $base-hover-color;
+  color: colours.$base-hover-color;
   cursor: pointer;
 }
 

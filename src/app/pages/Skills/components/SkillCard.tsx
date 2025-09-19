@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import useSkills from "../hooks/useSkills";
 import styles from "../style/skillCard.module.scss";
 import { skills } from "../types/skillsetType";
@@ -8,7 +8,6 @@ const SkillCard = (props: skills) => {
   const { triggerHover } = useSkills();
 
   return (
-    <AnimatePresence>
       <motion.li
         className={`skillCard snake `}
         onMouseOver={() => triggerHover()}
@@ -54,7 +53,6 @@ const SkillCard = (props: skills) => {
           }}
         ></div>
       </motion.li>
-    </AnimatePresence>
   );
 };
 

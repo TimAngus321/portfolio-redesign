@@ -1,4 +1,4 @@
-@import "../../../globalStyle/colours.scss";
+@use "../../../globalStyle/colours.scss";
 
 .projCard {
   margin-right: 5%;
@@ -40,7 +40,7 @@
     justify-content: center;
     width: 100%;
     flex-wrap: wrap;
-    color: $base-font-color;
+    color: colours.$base-font-color;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 
@@ -76,7 +76,7 @@
   &:hover {
     .projCardImg {
       opacity: 0.2;
-      filter: drop-shadow(0 0 0.75rem $secondary-font-color);
+      filter: drop-shadow(0 0 0.75rem colours.$secondary-font-color);
     }
     .scrollCards {
       opacity: 1;

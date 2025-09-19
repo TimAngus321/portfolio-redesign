@@ -1,4 +1,4 @@
-@import "../../../globalStyle/colours.scss";
+@use "../../../globalStyle/colours.scss";
 
 .pageContainerScrollWork {
   display: flex;
@@ -85,7 +85,7 @@
 
 .workTitle {
   display: flex;
-  color: $base-hover-color;
+  color: colours.$base-hover-color;
   justify-content: center;
   text-align: center;
   width: 100%;

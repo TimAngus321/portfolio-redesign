@@ -1,10 +1,10 @@
-@import "../globalStyle/colours.scss";
+@use "../globalStyle/colours.scss";
 
 /******************************************************************* 
 Layout Styling
 ********************************************************************/
 html {
-  background-color: $base-background-color;
+  background-color: colours.$base-background-color;
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
@@ -57,25 +57,25 @@ Toastify Overrides
 ********************************************************************/
 
 .Toastify__toast--error {
-  background: $mar !important;
+  background: colours.$mar !important;
   font-size: 16px !important;
   letter-spacing: normal !important;
 }
 
 .Toastify__toast--warning {
-  background: $mellowYellow !important;
+  background: colours.$mellowYellow !important;
   font-size: 16px !important;
   letter-spacing: normal !important;
 }
 
 .Toastify__toast--success {
-  background: $warmGreen !important;
+  background: colours.$warmGreen !important;
   font-size: 16px !important;
   letter-spacing: normal !important;
 }
 
 .Toastify__toast--info {
-  background: $warmGreen !important;
+  background: colours.$warmGreen !important;
   font-size: 16px !important;
   letter-spacing: normal !important;
 }
@@ -141,7 +141,7 @@ Mobile Nav
 }
 
 .eidOtH a:hover {
-  color: $base-hover-color;
+  color: colours.$base-hover-color;
 }
 
 .mobile-nav > button {
@@ -154,14 +154,14 @@ Global Contact Style Btn
 ********************************************************************/
 
 .default-btn {
-  color: $base-hover-color;
+  color: colours.$base-hover-color;
   cursor: pointer;
   font-size: 14px;
   letter-spacing: 4px;
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
   padding: 10px 18px;
-  border: 1px solid $base-hover-color;
+  border: 1px solid colours.$base-hover-color;
   // margin-top: 25px;
   width: 175px;
   text-align: center;
@@ -169,9 +169,9 @@ Global Contact Style Btn
   background-color: transparent;
 
   &:hover {
-    background-color: $base-hover-color;
-    color: $base-background-color;
-    border-color: $base-hover-color;
+    background-color: colours.$base-hover-color;
+    color: colours.$base-background-color;
+    border-color: colours.$base-hover-color;
   }
 }
 

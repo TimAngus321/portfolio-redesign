@@ -2,12 +2,20 @@ import reactNativeLogo from '../../../../assets/skillsImages/frontendLogos/react
 import reduxLogo from '../../../../assets/skillsImages/frontendLogos/redux-original.svg';
 import xcodeLogo from "../../../../assets/skillsImages/mobileLogos/xcode-original.svg";
 import androidStudioLogo from "../../../../assets/skillsImages/mobileLogos/androidstudio-original.svg";
+import expoLogo from "../../../../assets/skillsImages/mobileLogos/expo-original.svg";
 const mobileSkillset = [
     {
         name: "React Native",
         image: reactNativeLogo,
         alt: "React Logo",
         waterfall: [""] 
+    },
+    {
+        name: "Expo",
+        image: expoLogo,
+        alt: "Expo Logo",
+        styleClass: "inverseWhite",
+        waterfall: [""]
     },
     {
         name: "Redux",

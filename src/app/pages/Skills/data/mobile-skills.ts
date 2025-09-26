@@ -3,6 +3,8 @@ import reduxLogo from '../../../../assets/skillsImages/frontendLogos/redux-origi
 import xcodeLogo from "../../../../assets/skillsImages/mobileLogos/xcode-original.svg";
 import androidStudioLogo from "../../../../assets/skillsImages/mobileLogos/androidstudio-original.svg";
 import expoLogo from "../../../../assets/skillsImages/mobileLogos/expo-original.svg";
+import zustandLogo from "../../../../assets/skillsImages/frontendLogos/zustand-original.svg";
+
 const mobileSkillset = [
     {
         name: "React Native",
@@ -16,6 +18,12 @@ const mobileSkillset = [
         alt: "Expo Logo",
         styleClass: "inverseWhite",
         waterfall: [""]
+    },
+    {
+        name: "Zustand",
+        image: zustandLogo,
+        alt: "Zustand Logo",
+        waterfall: [""],
     },
     {
         name: "Redux",

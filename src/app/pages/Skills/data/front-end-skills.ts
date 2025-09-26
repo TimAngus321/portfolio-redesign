@@ -8,12 +8,19 @@ import vueLogo from "../../../../assets/skillsImages/frontendLogos/vuejs-origina
 import viteLogo from "../../../../assets/skillsImages/miscLogos/vite-logo.svg";
 import piniaLogo from "../../../../assets/skillsImages/frontendLogos/pinia-seeklogo.svg"
 import storybookLogo from "../../../../assets/skillsImages/frontendLogos/storybook-original.svg";
+import zustandLogo from "../../../../assets/skillsImages/frontendLogos/zustand-original.svg";
 
 const frontendSkillSet = [
   {
     name: "React",
     image: reactLogo,
     alt: "React Logo",
+    waterfall: [""],
+  },
+  {
+    name: "Zustand",
+    image: zustandLogo,
+    alt: "Zustand Logo",
     waterfall: [""],
   },
   {

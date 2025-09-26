@@ -8,7 +8,7 @@ const rubyProjects = [
     techTitle: "Tech Used",
     techStack:
       "Grape, Ruby, Liquid, rSpec, PostgreSQL, Docker, heroku, puma and sidekiq.",
-    link: "https://milkrunonline.com/",
+    link: "https://www.localmilkrun.com/",
     img: milkrunImg,
   },
 

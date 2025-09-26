@@ -42,7 +42,7 @@ const previousClients = [
     projectTitle: "Project Description",
     project:
       "Large project where I integrated different stores into one. Project required using a lot of use of APIs from Shopify andMilkrun's APIs built in Ruby & Grape, 3rd party apps customisation, cart validation and more.",
-    link: "https://milkrunonline.com/",
+    link: "https://www.localmilkrun.com/",
     img: mikrunImg,
   },
 ];

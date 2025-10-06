@@ -1,7 +1,7 @@
 import reactTestingLibrary from "../../../../assets/skillsImages/testingLogos/react-testing-library.svg";
 import jestLogo from "../../../../assets/skillsImages/testingLogos/jest-plain.svg";
 import rspecLogo from "../../../../assets/skillsImages/testingLogos/rspec-original.svg";
-import cypressLogo from "../../../../assets/skillsImages/testingLogos/cypressio-original.svg";
+import cypressLogo from "../../../../assets/skillsImages/testingLogos/Cypress_Logomark_White-Color.svg";
 import vitestLogo from "../../../../assets/skillsImages/testingLogos/vitest-original.svg";
 import playwrightLogo from "../../../../assets/skillsImages/testingLogos/playwright-original.svg";
 

@@ -1,14 +1,19 @@
 import { useNavigate } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import styles from "../style/aboutStyle.module.scss";
 import SEO from "../../../components/SEOComponent/SEO";
-import DancingLinesMyEdit from "react-dancing-lines-safari-firefox-support";
+
+// Lazy load heavy dancing lines animation
+const DancingLinesMyEdit = lazy(() => import("react-dancing-lines-safari-firefox-support"));
 
 const About = () => {
   const navigate = useNavigate();
 
   return (
     <section className={styles?.pageContainerAbout}>
-      <DancingLinesMyEdit backgroundColor="black" />
+      <Suspense fallback={<div style={{ backgroundColor: 'black', height: '100vh', width: '100vw', position: 'absolute' }}></div>}>
+        <DancingLinesMyEdit backgroundColor="black" />
+      </Suspense>
       <SEO
         title={`Tim Angus's Porftolio - About Page`}
         description={`About page of Timothy Angus's portfolio. A brief paragraph about Tim Angus and links to my previous employers company websites`}

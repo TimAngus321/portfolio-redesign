@@ -6,6 +6,7 @@ import prismaLogo from "../../../../assets/skillsImages/backendLogos/prismaLogo.
 import railsLogo from "../../../../assets/skillsImages/backendLogos/rails-plain.svg";
 import nuxtLogo from "../../../../assets/skillsImages/frontendLogos/nuxtjs-original.svg";
 import nextLogo from "../../../../assets/skillsImages/learningLogos/nextjs-line.svg";
+import redisLogo from "../../../../assets/skillsImages/backendLogos/redis-original.svg";
 
 const backendSkillSet = [
   {
@@ -60,6 +61,12 @@ const backendSkillSet = [
     styleClass: "inverseWhite",
     waterfall: [""],
   },
+  {
+    name: "Redis",
+    image: redisLogo,
+    alt: "Redis Logo",
+    waterfall: [""],
+  }
 ];
 
 export default backendSkillSet;

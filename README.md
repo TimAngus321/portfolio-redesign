@@ -33,8 +33,8 @@ My personal portfolio that's all about me and my skills built in React.
 - Yarn
 
 ## ToDo
+
 - Add box shadow/glow effect to skill page animation.
-- Add design skills in skills section
 - For mobile add the correct units for height that take into consideration the nav bar for mobile browsers
 - Add select for contact to help users select relevant servies ⚙️
 - Use grid instead of flexbox for basic layout (it's more robust)
@@ -53,6 +53,4 @@ My personal portfolio that's all about me and my skills built in React.
 
 ## Improvement Ideas
 
-- Investigate errors for firefox on Skills Page - Looks like base64 error from the svg icons that firefox/node vibrant can't process (png files in firefox work fine) - temp fix implemented ⚙️
 - Check quality of images for work page. Looks like they got a bit blury/grainy after optimisation.
-- Check process state of skills animation with useContext everywhere to prevent errors when skill page skillSet buttons used too quickly - unecessary

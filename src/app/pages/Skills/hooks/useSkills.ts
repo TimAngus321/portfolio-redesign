@@ -9,12 +9,6 @@ import strings from "app/constants/strings";
 const useSkills = () => {
   const [skillSet, setSkillSet] = useState<skills[]>([]);
   const [highlightSkillset, setHighlightSkillset] = useState<string>("");
-
-  // Firefox colours
-  const [hoverColors, setHoverColors] = useState<string[]>([
-    "#00fff0",
-  ]);
-
   const navigate = useNavigate();
   const [scope, animate] = useAnimate();
   const [isPresent] = usePresence();
@@ -30,7 +24,6 @@ const useSkills = () => {
   const createWaterfall = useCallback(async (skillSet: skills[]) => {
     for (let i = 0; i < skillSet?.length; i++) {
       const hexCodes: string[] = [];
-      if (!navigator?.userAgent?.includes("Firefox")) {
         try {
           await Vibrant.from(skillSet[i]?.image)
             .getPalette()
@@ -46,30 +39,21 @@ const useSkills = () => {
           // Handle any errors that occur during color extraction
           console.error("Error while getting the color palette: ", err);
         }
-      }
 
       try {
         const addEachSkillcardHEXColors = async () => {
-          if (navigator?.userAgent?.includes("Firefox")) {
-            setSkillSet((prevSkillSet) => {
-              const updatedSkillSet = [...prevSkillSet];
-              updatedSkillSet[i].waterfall = hoverColors;
-              return updatedSkillSet;
-            });
-          } else {
             setSkillSet((prevSkillSet) => {
               const updatedSkillSet = [...prevSkillSet];
               updatedSkillSet[i].waterfall = hexCodes;
               return updatedSkillSet;
             });
-          }
         };
         await addEachSkillcardHEXColors();
       } catch (err) {
         console.log("error when adding colors to skillSet object ", err);
       }
     }
-  }, [hoverColors]);
+  }, []);
 
   const updateSkillSet = useCallback(async (skillSet: skills[], highlightSkillset: string) => {
     try {
@@ -109,7 +93,6 @@ const useSkills = () => {
 
   const initialSkillSet = useCallback(async (skillSet: skills[]) => {
     try {
-      // setProcessing(true);
       await setHighlightSkillset(strings?.front);
       await setSkillSet(skillSet);
       await createWaterfall(skillSet);
@@ -141,8 +124,6 @@ const useSkills = () => {
     };
     initialSkillLoad();
   }, [initialSkillSet, scope]);
-
-  
 
   const triggerHover = async () => {};
 

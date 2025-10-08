@@ -23,7 +23,7 @@ const UiUXCard = (props: personalProj) => {
         rel="noopener noreferrer"
         style={{ height: "95%" }}
       >
-        <img src={img} alt={name} className={styles?.projCardImg} style={{ height: "100%", objectFit: "contain" }} />
+        <img loading="lazy" src={img} alt={name} className={styles?.projCardImg} style={{ height: "100%", objectFit: "contain" }} />
         <div className={styles?.scrollCards}>
           <div className={styles?.companyInfo}>
             <h4 className={styles?.uniqueInfo}>{uniqueInfo}</h4>

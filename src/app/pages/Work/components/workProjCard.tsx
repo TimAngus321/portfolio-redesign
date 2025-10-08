@@ -12,7 +12,7 @@ const WorkProjCard = (workProjects: workProj) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={img} alt={projectTitle} className={styles?.projCardImg} />
+        <img loading="lazy" src={img} alt={projectTitle} className={styles?.projCardImg} />
         <div className={styles?.scrollCards}>
           <div className={styles?.companyInfo}>
             <h4 className={styles?.companyName}>{company}</h4>

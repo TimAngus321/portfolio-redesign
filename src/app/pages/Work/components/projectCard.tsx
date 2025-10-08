@@ -28,6 +28,7 @@ const ProjectCard = (props: personalProj) => {
         }
       >
         <img
+          loading="lazy"
           src={img}
           alt={name}
           className={styles?.projCardImg}

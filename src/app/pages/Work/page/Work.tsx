@@ -76,6 +76,7 @@ const Work = () => {
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
+                loading="lazy"
                 src={reactLogo}
                 alt="React Logo"
                 className={styles?.stickyCardImage}
@@ -110,8 +111,9 @@ const Work = () => {
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
+                loading="lazy"
                 src={nuxtLogo}
-                alt="React Logo"
+                alt="Nuxt Logo"
                 className={styles?.stickyCardImage}
               />
             </div>
@@ -145,6 +147,7 @@ const Work = () => {
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
+                loading="lazy"
                 src={railsLogo}
                 alt="Rails Logo"
                 className={styles?.stickyCardImage}
@@ -180,8 +183,9 @@ const Work = () => {
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
+                loading="lazy"
                 src={rubyLogo}
-                alt="Rails Logo"
+                alt="Ruby Logo"
                 className={styles?.stickyCardImage}
               />
             </div>
@@ -215,6 +219,7 @@ const Work = () => {
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
+                loading="lazy"
                 src={expressLogo}
                 alt="Express Logo"
                 className={`${styles?.stickyCardImage} inverseWhite`}
@@ -249,6 +254,7 @@ const Work = () => {
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
+                loading="lazy"
                 src={shopifyLogo}
                 alt="Shopify Logo"
                 className={styles?.stickyCardImage}
@@ -282,6 +288,7 @@ const Work = () => {
           >
             <div className={`${styles?.stickyCard} ${styles?.sticky}`}>
               <img
+                loading="lazy"
                 src={UIUX4}
                 alt="UX/UI Logo"
                 className={styles?.stickyCardImage}

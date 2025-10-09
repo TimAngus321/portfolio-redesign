@@ -14,6 +14,9 @@ export const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0;
   z-index: 101;
+  @media only screen and (max-width: 900px) and (max-height: 500px) and (orientation: landscape) {
+    right: 4rem;
+  }
   span {
     background-color: white;
     width: 2rem;

@@ -7,12 +7,33 @@ import pythonLogo from "../../../../assets/skillsImages/learningLogos/python-ori
 import flutterLogo from "../../../../assets/skillsImages/learningLogos/flutter-original.svg";
 import dartLogo from "../../../../assets/skillsImages/learningLogos/dart-original.svg";
 import mongoDBLogo from "../../../../assets/skillsImages/learningLogos/mongodb-original.svg";
+import swiftLogo from "../../../../assets/skillsImages/learningLogos/swift-original.svg";
+import kotlinLogo from "../../../../assets/skillsImages/learningLogos/kotlin-original.svg";
+import supabaseLogo from "../../../../assets/skillsImages/learningLogos/supabase-original.svg";
 
 const developingSkills = [
   {
     name: "GraphQL",
     image: graphqlLogo,
     alt: "GraphQL Logo",
+    waterfall: [""]
+  },
+  {
+    name: "Swift",
+    image: swiftLogo,
+    alt: "Swift Logo",
+    waterfall: [""]
+  },
+  {
+    name: "Kotlin",
+    image: kotlinLogo,
+    alt: "Kotlin Logo",
+    waterfall: [""]
+  },
+  {
+    name: "Supabase",
+    image: supabaseLogo,
+    alt: "Supabase Logo",
     waterfall: [""]
   },
   {

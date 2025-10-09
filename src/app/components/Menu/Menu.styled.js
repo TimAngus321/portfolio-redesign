@@ -20,16 +20,25 @@ export const StyledMenu = styled.nav`
   transition: transform 0.3s ease-in-out;
   @media (max-width: 900px) {
     width: 100vw;
-    scroll-behavior: smooth;
-    padding: 25px 0;
-    vertical-align: top;
-    min-height: 100vh;
     height: 100vh;
+    scroll-behavior: smooth;
+    padding: 50px 0;
+    vertical-align: top;
     top: 0;
-    left:0;
+    left: 0;
     position: fixed;
+    overflow-y: visible;
+  }
+
+  // Landscape mode adjustments
+  @media only screen and (max-width: 900px) and (max-height: 500px) and (orientation: landscape) {
+    width: 100vw;
+    height: 100vh;
+    padding: 2vh 0;
     overflow-y: auto;
-    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   div {
     position: relative;
@@ -49,6 +58,13 @@ export const StyledMenu = styled.nav`
     &:hover {
       color: #00fff0;
     }
+
+    // Landscape mode adjustments for menu items
+    @media only screen and (max-width: 900px) and (max-height: 500px) and (orientation: landscape) {
+      font-size: 1.2rem;
+      padding: 1vh 0;
+      letter-spacing: 0.2rem;
+    }
   }
 `;
 
@@ -58,4 +74,12 @@ export const MenuItemContainer = styled.div`
   flex-direction: column;
   justify-content: center; /* Center items vertically */
   align-items: center; /* Center items horizontally */
+
+  // Landscape mode adjustments for container
+  @media only screen and (max-width: 900px) and (max-height: 500px) and (orientation: landscape) {
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+    gap: 0.5vh;
+  }
 `;

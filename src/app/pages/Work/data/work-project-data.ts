@@ -1,8 +1,8 @@
-import josephinenHutteImg from "../../../../assets/workImages/josephinenHutteImg.webp";
-import costaboardImg from "../../../../assets/workImages/costaboardImg.webp";
-import fleekyImg from "../../../../assets/workImages/fleekyImg.webp";
-import cosmeticBeateBulangImg from "../../../../assets/workImages/cosmeticBeateBulangImg.webp";
-import mikrunImg from "../../../../assets/workImages/milkrunImg.webp";
+import josephinenHutteImg from "../../../../assets/workImages/josephinenHutteImg.png";
+import costaboardImg from "../../../../assets/workImages/costaboardNewImg.png";
+import fleekyImg from "../../../../assets/workImages/fleekyNewImg.png";
+import cosmeticBeateBulangImg from "../../../../assets/workImages/cosmeticNewImg.png";
+import mikrunImg from "../../../../assets/workImages/milkrunImg.png";
 
 const previousClients = [
   {

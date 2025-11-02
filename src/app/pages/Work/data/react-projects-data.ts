@@ -1,8 +1,8 @@
-import pokemonAppImg from "../../../../assets/workImages/pokemonAppImg.webp";
-import gavelMobileImg from "../../../../assets/workImages/gavelMobileImg.webp";
-import gavelWebImg from "../../../../assets/workImages/gavelWebImg.webp";
-import reactFlatsImg from "../../../../assets/workImages/reactFlatsImg.webp";
-import personalPortfolioImg from "../../../../assets/workImages/personalPortfolioImg.webp";
+import pokemonAppImg from "../../../../assets/workImages/pokemonApp.png";
+import gavelMobileImg from "../../../../assets/workImages/gavelMobileImg.png";
+import gavelWebImg from "../../../../assets/workImages/gavelWebImg.png";
+import reactFlatsImg from "../../../../assets/workImages/reactFlatsImg.png";
+import personalPortfolioImg from "../../../../assets/workImages/portfolioImg.png";
 
 const reactProjects = [
   {
@@ -10,7 +10,7 @@ const reactProjects = [
     desc: "Mobile App for live auctions & selling TCGs and collectibles while streaming.",
     techTitle: "Tech Used",
     techStack:
-      "React Native, Redux, Typescript, CSS in JS, custom hooks, APIs & React Component Library.",
+      "React Native, Redux, Typescript, CSS in JS, Jest, custom hooks, APIs & React Component Library.",
     link: "https://letsgavel.com/",
     img: gavelMobileImg,
   },
@@ -25,15 +25,15 @@ const reactProjects = [
   },
   {
     name: "Project: Pokemon App",
-    desc: "Pokemon App for searching & browsing pokemon with a handy autocomplete feature.",
+    desc: `Pokemon App for searching for pokemon, a handy autocomplete feature and a "Who's That Pokemon?" game.`,
     techTitle: "Tech Used",
-    techStack: "React, SCSS and PokeApi.",
+    techStack: "React, Javascript, SCSS and PokeApi.",
     link: "https://timangus321.github.io/pokemon-app/",
     img: pokemonAppImg,
   },
   {
     name: "Project: Personal Portfolio",
-    desc: "A personal portfolio to let people know about me and my skills.",
+    desc: "A personal portfolio to let people know about me, my experience, my skills and how to contact me.",
     techTitle: "Tech Used",
     techStack:
       "React, SCSS modules, Typescript, Javascript, Custom Hooks, Text Loop, GSAP, Framer Motion, Abstract API, React Dancing Lines (my version), Node Vibrant, Media Queries, Key Frames, Yarn, EmailJS and figma. Design based off an Awwards winner.",

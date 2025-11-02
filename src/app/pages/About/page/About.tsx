@@ -25,9 +25,8 @@ const About = () => {
             <h1 className={styles?.aboutTitle}>About Me</h1>
             <p className={styles?.aboutMeBlurb}>
               I have over 5 years experience working in tech . I've worked as a
-              developer using <strong>Javascript</strong>,
-              <strong> Typescript</strong>
-              and <strong> Ruby</strong>. Additionally, I've done UI/UX projects
+              developer using <u>Javascript</u>, <u>Typescript</u>&nbsp; 
+              and <u>Ruby</u>. Additionally, I've done UI/UX projects
               using Figma, Framer and Webflow. During my coding career I have
               worked contracts, freelance and full time creating UIs, APIs,
               E-commerce stores and full-stack apps connected to AWS services.
@@ -39,12 +38,12 @@ const About = () => {
                 skills{" "}
               </span>
               please feel free to{" "}
-              <strong
+              <span
                 className={styles?.textLink}
                 onClick={() => navigate("/contact")}
               >
                 contact me.
-              </strong>
+              </span>
             </p>
           </header>
           <div>

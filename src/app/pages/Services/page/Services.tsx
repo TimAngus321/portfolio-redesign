@@ -33,12 +33,12 @@ const Services = () => {
               align with the needs of your project then you may be interested in
               the services I have to offer. Explore here what services I offer
               and then please reach out and{" "}
-              <strong
+              <span
                 className={styles?.textLink}
                 onClick={() => navigate("/contact")}
               >
                 contact me
-              </strong>{" "}
+              </span>{" "}
               regarding the service you are interested in. From there we can
               discuss the specifics of your project, the servies you need and
               pricing.

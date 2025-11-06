@@ -72,6 +72,7 @@ function NavBar() {
             href="https://github.com/TimAngus321"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Link to Timothy Angus's Github Account"
           >
             <Icon icon={githubFilled} />
           </a>
@@ -81,6 +82,7 @@ function NavBar() {
             href="https://www.linkedin.com/in/timothy-angus-b94969113/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Link to Timothy Angus's LinkedIn Account"
           >
             <Icon icon={linkedinRect} />
           </a>

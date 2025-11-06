@@ -2,6 +2,9 @@ import { bool, func } from "prop-types";
 import { StyledMenu, MenuItemContainer } from "./Menu.styled";
 import { useNavigate } from "react-router-dom";
 import strings from "app/constants/strings";
+import { Icon } from "@iconify/react";
+import githubFilled from "@iconify/icons-codicon/github-inverted";
+import linkedinRect from "@iconify/icons-brandico/linkedin-rect";
 
 const Menu = ({ open, setOpen, ...props }) => {
   const isHidden = open ? true : false;
@@ -76,6 +79,28 @@ const Menu = ({ open, setOpen, ...props }) => {
           <span aria-hidden="true"></span>
           Contact
         </div>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/TimAngus321"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link to Timothy Angus's Github Account"
+            >
+              <Icon icon={githubFilled} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/timothy-angus-b94969113/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link to Timothy Angus's LinkedIn Account"
+            >
+              <Icon icon={linkedinRect} />
+            </a>
+          </li>
+        </ul>
       </MenuItemContainer>
     </StyledMenu>
   );

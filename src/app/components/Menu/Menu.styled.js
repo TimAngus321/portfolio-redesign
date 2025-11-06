@@ -66,6 +66,29 @@ export const StyledMenu = styled.nav`
       letter-spacing: 0.2rem;
     }
   }
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-inline-start: 0;
+    gap: 5vw;
+
+     a {
+      display: flex;
+      color: white;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+
+      &:hover {
+        color: #00fff0;
+        cursor: pointer;
+      }
+    }
+  }
 `;
 
 export const MenuItemContainer = styled.div`

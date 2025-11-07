@@ -1,4 +1,4 @@
-import signaloidCurrencyConverterImg from "../../../../assets/workImages/signaloidCurrencyConverterImg.png";
+import signaloidCurrencyConverterImg from "../../../../assets/workImages/signaloidCurrencyConverterImg.webp";
 
 const vueProjects = [
   {

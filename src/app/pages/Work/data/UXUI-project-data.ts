@@ -1,6 +1,6 @@
-import soundcloudRedesignImg from "../../../../assets/workImages/soundcloudRedsign.png";
-import calmBeanImg from "../../../../assets/workImages/calmBean.png";
-import petchiImg from "../../../../assets/workImages/petchi.png";
+import soundcloudRedesignImg from "../../../../assets/workImages/soundcloudRedsign.webp";
+import calmBeanImg from "../../../../assets/workImages/calmBean.webp";
+import petchiImg from "../../../../assets/workImages/petchi.webp";
 
 // Consider creating a new component to allow the Figma embeds to run in the app (add the iframes and create new component to handle Iframes)
 

@@ -1,4 +1,4 @@
-import colaborateImg from "../../../../assets/workImages/collaborateImg.png";
+import colaborateImg from "../../../../assets/workImages/collaborateImg.webp";
 
 const railsProjects = [
   {

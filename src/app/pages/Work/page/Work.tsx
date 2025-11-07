@@ -19,7 +19,7 @@ import nuxtLogo from "../../../../assets/skillsImages/frontendLogos/nuxtjs-origi
 import nuxtProjects from "../data/nuxt-project-data";
 import rubyProjects from "../data/ruby-project-data";
 import rubyLogo from "../../../../assets/skillsImages/languageLogos/ruby-original.svg";
-import UIUX4 from "../../../../assets/workImages/UXUI_dd4.png";
+import UIUX4 from "../../../../assets/workImages/UXUI_dd4.webp";
 import vueLogo from "../../../../assets/skillsImages/frontendLogos/vuejs-original.svg";
 import vueProjects from "../data/vue-project-data";
 

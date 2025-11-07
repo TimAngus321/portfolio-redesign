@@ -1,8 +1,8 @@
-import pokemonAppImg from "../../../../assets/workImages/pokemonApp.png";
-import gavelMobileImg from "../../../../assets/workImages/gavelMobileImg.png";
-import gavelWebImg from "../../../../assets/workImages/gavelWebImg.png";
-import reactFlatsImg from "../../../../assets/workImages/reactFlatsImg.png";
-import personalPortfolioImg from "../../../../assets/workImages/portfolioImg.png";
+import pokemonAppImg from "../../../../assets/workImages/pokemonApp.webp";
+import gavelMobileImg from "../../../../assets/workImages/gavelMobileImg.webp";
+import gavelWebImg from "../../../../assets/workImages/gavelWebImg.webp";
+import reactFlatsImg from "../../../../assets/workImages/reactFlatsImg.webp";
+import personalPortfolioImg from "../../../../assets/workImages/portfolioImg.webp";
 
 const reactProjects = [
   {

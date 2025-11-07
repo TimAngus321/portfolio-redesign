@@ -1,4 +1,4 @@
-import deepSpaceImg from "../../../../assets/workImages/deepSpace.png"
+import deepSpaceImg from "../../../../assets/workImages/deepSpace.webp"
 
 const nuxtProjects = [
   {

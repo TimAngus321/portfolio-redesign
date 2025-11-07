@@ -1,5 +1,5 @@
-import costaboardImg from "../../../../assets/workImages/costaboardNewImg.png"
-import gavelLandingPage from "../../../../assets/workImages/gavelLandingPageImg.png";
+import costaboardImg from "../../../../assets/workImages/costaboardNewImg.webp"
+import gavelLandingPage from "../../../../assets/workImages/gavelLandingPageImg.webp";
 
 const expressProjects = [
   {

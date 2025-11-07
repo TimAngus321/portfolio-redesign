@@ -1,4 +1,4 @@
-import milkrunImg from "../../../../assets/workImages/milkrunImg.png";
+import milkrunImg from "../../../../assets/workImages/milkrunImg.webp";
 
 const rubyProjects = [
 {

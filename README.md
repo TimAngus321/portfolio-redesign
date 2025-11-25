@@ -34,6 +34,7 @@ My personal portfolio that's all about me and my skills built in React.
 
 ## ToDo
 
+- Add Nest.js and tech used for new Collaborate backend
 - Add box shadow/glow effect to skill page animation.
 - For mobile add the correct units for height that take into consideration the nav bar for mobile browsers
 - Add select for contact to help users select relevant servies ⚙️

@@ -7,6 +7,7 @@ import railsLogo from "../../../../assets/skillsImages/backendLogos/rails-plain.
 import nuxtLogo from "../../../../assets/skillsImages/frontendLogos/nuxtjs-original.svg";
 import nextLogo from "../../../../assets/skillsImages/learningLogos/nextjs-line.svg";
 import redisLogo from "../../../../assets/skillsImages/backendLogos/redis-original.svg";
+import nestjsLogo from "../../../../assets/skillsImages/backendLogos/nestjs-original.svg"
 
 const backendSkillSet = [
   {
@@ -15,7 +16,12 @@ const backendSkillSet = [
     alt: "Node Logo",
     waterfall: [""],
   },
-  
+   {
+    name: "Nestjs",
+    image: nestjsLogo,
+    alt: "Nestjs Logo",
+    waterfall: [""],
+  },
   {
     name: "Express",
     image: expressLogo,
@@ -23,6 +29,7 @@ const backendSkillSet = [
     styleClass: "inverseWhite",
     waterfall: [""],
   },
+
   {
     name: "Ruby on Rails",
     image: railsLogo,
